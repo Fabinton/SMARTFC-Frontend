@@ -1,0 +1,3083 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>fc documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/readthedocs.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">fc documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li>GestionarColegioAdminComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/components/Admin/gestionar-colegio-admin/gestionar-colegio-admin.component.ts</code>
+</p>
+
+    <p class="comment">
+        <h3>Description</h3>
+    </p>
+    <p class="comment">
+        <p>Contiene todos los metodos necesarios para administra materias, grados o informacion de los colegios.</p>
+
+    </p>
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                    <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+    </p>
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>app-gestionar-colegio-admin</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./gestionar-colegio-admin.component.css</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./gestionar-colegio-admin.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#areasMaterias">areasMaterias</a>
+                            </li>
+                            <li>
+                                <a href="#colegios">colegios</a>
+                            </li>
+                            <li>
+                                <a href="#colegioSelected">colegioSelected</a>
+                            </li>
+                            <li>
+                                <a href="#colegioToSave">colegioToSave</a>
+                            </li>
+                            <li>
+                                <a href="#correcto">correcto</a>
+                            </li>
+                            <li>
+                                <a href="#correcto1">correcto1</a>
+                            </li>
+                            <li>
+                                <a href="#correcto2">correcto2</a>
+                            </li>
+                            <li>
+                                <a href="#correcto3">correcto3</a>
+                            </li>
+                            <li>
+                                <a href="#docentes">docentes</a>
+                            </li>
+                            <li>
+                                <a href="#error">error</a>
+                            </li>
+                            <li>
+                                <a href="#error1">error1</a>
+                            </li>
+                            <li>
+                                <a href="#error2">error2</a>
+                            </li>
+                            <li>
+                                <a href="#error3">error3</a>
+                            </li>
+                            <li>
+                                <a href="#grados">grados</a>
+                            </li>
+                            <li>
+                                <a href="#gradoToSave">gradoToSave</a>
+                            </li>
+                            <li>
+                                <a href="#MateriaActivaInfo">MateriaActivaInfo</a>
+                            </li>
+                            <li>
+                                <a href="#materias">materias</a>
+                            </li>
+                            <li>
+                                <a href="#materiasVisualizar">materiasVisualizar</a>
+                            </li>
+                            <li>
+                                <a href="#materiaToSave">materiaToSave</a>
+                            </li>
+                            <li>
+                                <a href="#newCont">newCont</a>
+                            </li>
+                            <li>
+                                <a href="#newID">newID</a>
+                            </li>
+                            <li>
+                                <a href="#resColegio">resColegio</a>
+                            </li>
+                            <li>
+                                <a href="#subiendo">subiendo</a>
+                            </li>
+                            <li>
+                                <a href="#temp">temp</a>
+                            </li>
+                            <li>
+                                <a href="#temp2">temp2</a>
+                            </li>
+                            <li>
+                                <a href="#urlTemp">urlTemp</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#actualizarColegio">actualizarColegio</a>
+                            </li>
+                            <li>
+                                <a href="#comprobacionLogin">comprobacionLogin</a>
+                            </li>
+                            <li>
+                                <a href="#crearColegio">crearColegio</a>
+                            </li>
+                            <li>
+                                <a href="#CrearGrado">CrearGrado</a>
+                            </li>
+                            <li>
+                                <a href="#crearMateria">crearMateria</a>
+                            </li>
+                            <li>
+                                <a href="#deleteGrado">deleteGrado</a>
+                            </li>
+                            <li>
+                                <a href="#deleteMateria">deleteMateria</a>
+                            </li>
+                            <li>
+                                <a href="#getColegioinForm">getColegioinForm</a>
+                            </li>
+                            <li>
+                                <a href="#getInformacionCompletaMateriasActivas">getInformacionCompletaMateriasActivas</a>
+                            </li>
+                            <li>
+                                <a href="#getOptions">getOptions</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnInit">ngOnInit</a>
+                            </li>
+                            <li>
+                                <a href="#resetForm">resetForm</a>
+                            </li>
+                            <li>
+                                <a href="#resetPage">resetPage</a>
+                            </li>
+                            <li>
+                                <a href="#saveDataColegio">saveDataColegio</a>
+                            </li>
+                            <li>
+                                <a href="#saveDataGrado">saveDataGrado</a>
+                            </li>
+                            <li>
+                                <a href="#saveDataMateria">saveDataMateria</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(router: <a href="https://angular.io/api/router/Router" target="_blank">Router</a>, AuthAdminService: <a href="../injectables/AuthAdminService.html">AuthAdminService</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="51" class="link-to-prism">src/app/components/Admin/gestionar-colegio-admin/gestionar-colegio-admin.component.ts:51</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>router</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="https://angular.io/api/router/Router" target="_blank" >Router</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>AuthAdminService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/AuthAdminService.html" target="_self" >AuthAdminService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+
+
+    <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="actualizarColegio"></a>
+                    <span class="name">
+                        <b>
+                            actualizarColegio
+                        </b>
+                        <a href="#actualizarColegio"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>actualizarColegio(form: <a href="https://angular.io/api/forms/NgForm" target="_blank">NgForm</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="200"
+                            class="link-to-prism">src/app/components/Admin/gestionar-colegio-admin/gestionar-colegio-admin.component.ts:200</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Permite actualizar los nuevos datos ingresados en el formulario del colegio seleccionado</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>form</td>
+                                    <td>
+                                                <code><a href="https://angular.io/api/forms/NgForm" target="_blank" >NgForm</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="comprobacionLogin"></a>
+                    <span class="name">
+                        <b>
+                            comprobacionLogin
+                        </b>
+                        <a href="#comprobacionLogin"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>comprobacionLogin()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="423"
+                            class="link-to-prism">src/app/components/Admin/gestionar-colegio-admin/gestionar-colegio-admin.component.ts:423</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Permite comprobar que el administrador se encuentra logueado en el sistema al ingresar a la pagina</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="crearColegio"></a>
+                    <span class="name">
+                        <b>
+                            crearColegio
+                        </b>
+                        <a href="#crearColegio"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>crearColegio(form: <a href="https://angular.io/api/forms/NgForm" target="_blank">NgForm</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="161"
+                            class="link-to-prism">src/app/components/Admin/gestionar-colegio-admin/gestionar-colegio-admin.component.ts:161</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Permite crear un nuevo Colegio a partir de los datos ingresados en el formulario</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>form</td>
+                                    <td>
+                                                <code><a href="https://angular.io/api/forms/NgForm" target="_blank" >NgForm</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="CrearGrado"></a>
+                    <span class="name">
+                        <b>
+                            CrearGrado
+                        </b>
+                        <a href="#CrearGrado"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>CrearGrado(form: <a href="https://angular.io/api/forms/NgForm" target="_blank">NgForm</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="322"
+                            class="link-to-prism">src/app/components/Admin/gestionar-colegio-admin/gestionar-colegio-admin.component.ts:322</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Permite crear un nuevo Grado a partir de los datos ingresados en el formulario</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>form</td>
+                                    <td>
+                                                <code><a href="https://angular.io/api/forms/NgForm" target="_blank" >NgForm</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="crearMateria"></a>
+                    <span class="name">
+                        <b>
+                            crearMateria
+                        </b>
+                        <a href="#crearMateria"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>crearMateria(form: <a href="https://angular.io/api/forms/NgForm" target="_blank">NgForm</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="230"
+                            class="link-to-prism">src/app/components/Admin/gestionar-colegio-admin/gestionar-colegio-admin.component.ts:230</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Permite crear una nueva Materia a partir de los datos ingresados en el formulario</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>form</td>
+                                    <td>
+                                                <code><a href="https://angular.io/api/forms/NgForm" target="_blank" >NgForm</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="deleteGrado"></a>
+                    <span class="name">
+                        <b>
+                            deleteGrado
+                        </b>
+                        <a href="#deleteGrado"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>deleteGrado()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="365"
+                            class="link-to-prism">src/app/components/Admin/gestionar-colegio-admin/gestionar-colegio-admin.component.ts:365</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Permite eliminar el Grado seleccionado</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="deleteMateria"></a>
+                    <span class="name">
+                        <b>
+                            deleteMateria
+                        </b>
+                        <a href="#deleteMateria"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>deleteMateria()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="353"
+                            class="link-to-prism">src/app/components/Admin/gestionar-colegio-admin/gestionar-colegio-admin.component.ts:353</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Permite eliminar la Materia seleccionada</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getColegioinForm"></a>
+                    <span class="name">
+                        <b>
+                            getColegioinForm
+                        </b>
+                        <a href="#getColegioinForm"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getColegioinForm(colegiohtml)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="152"
+                            class="link-to-prism">src/app/components/Admin/gestionar-colegio-admin/gestionar-colegio-admin.component.ts:152</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Permite imprimir los datos del colegio en el formulario</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>colegiohtml</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getInformacionCompletaMateriasActivas"></a>
+                    <span class="name">
+                        <b>
+                            getInformacionCompletaMateriasActivas
+                        </b>
+                        <a href="#getInformacionCompletaMateriasActivas"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getInformacionCompletaMateriasActivas()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="108"
+                            class="link-to-prism">src/app/components/Admin/gestionar-colegio-admin/gestionar-colegio-admin.component.ts:108</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Permite obtener la informacion y listado de todas las MateriasActivas</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getOptions"></a>
+                    <span class="name">
+                        <b>
+                            getOptions
+                        </b>
+                        <a href="#getOptions"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getOptions()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="76"
+                            class="link-to-prism">src/app/components/Admin/gestionar-colegio-admin/gestionar-colegio-admin.component.ts:76</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Permite obtener los datos de todos los options</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnInit"></a>
+                    <span class="name">
+                        <b>
+                            ngOnInit
+                        </b>
+                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnInit()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="55"
+                            class="link-to-prism">src/app/components/Admin/gestionar-colegio-admin/gestionar-colegio-admin.component.ts:55</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="resetForm"></a>
+                    <span class="name">
+                        <b>
+                            resetForm
+                        </b>
+                        <a href="#resetForm"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>resetForm(form?: <a href="https://angular.io/api/forms/NgForm" target="_blank">NgForm</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="409"
+                            class="link-to-prism">src/app/components/Admin/gestionar-colegio-admin/gestionar-colegio-admin.component.ts:409</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Permite limpiar toda la informacion que se encuentra en el formulario</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>form</td>
+                                    <td>
+                                                <code><a href="https://angular.io/api/forms/NgForm" target="_blank" >NgForm</a></code>
+                                    </td>
+
+                                    <td>
+                                        Yes
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="resetPage"></a>
+                    <span class="name">
+                        <b>
+                            resetPage
+                        </b>
+                        <a href="#resetPage"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>resetPage()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="402"
+                            class="link-to-prism">src/app/components/Admin/gestionar-colegio-admin/gestionar-colegio-admin.component.ts:402</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Permite recargar la pagina actual</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="saveDataColegio"></a>
+                    <span class="name">
+                        <b>
+                            saveDataColegio
+                        </b>
+                        <a href="#saveDataColegio"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>saveDataColegio(colegiohtml)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="394"
+                            class="link-to-prism">src/app/components/Admin/gestionar-colegio-admin/gestionar-colegio-admin.component.ts:394</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Permite almacenar la informacion de un Colegio de forma temporal</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>colegiohtml</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="saveDataGrado"></a>
+                    <span class="name">
+                        <b>
+                            saveDataGrado
+                        </b>
+                        <a href="#saveDataGrado"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>saveDataGrado(gradohtml)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="386"
+                            class="link-to-prism">src/app/components/Admin/gestionar-colegio-admin/gestionar-colegio-admin.component.ts:386</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Permite almacenar la informacion de una AreaMateria de forma temporal</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>gradohtml</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="saveDataMateria"></a>
+                    <span class="name">
+                        <b>
+                            saveDataMateria
+                        </b>
+                        <a href="#saveDataMateria"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>saveDataMateria(materiahtml)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="378"
+                            class="link-to-prism">src/app/components/Admin/gestionar-colegio-admin/gestionar-colegio-admin.component.ts:378</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Permite almacenar la informacion de una Materia de forma temporal</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>materiahtml</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section>
+    
+        <h3 id="inputs">
+            Properties
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="areasMaterias"></a>
+                        <span class="name">
+                            <b>
+                            areasMaterias</b>
+                            <a href="#areasMaterias"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>AreaMateriaI[]</code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="28" class="link-to-prism">src/app/components/Admin/gestionar-colegio-admin/gestionar-colegio-admin.component.ts:28</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="colegios"></a>
+                        <span class="name">
+                            <b>
+                            colegios</b>
+                            <a href="#colegios"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="../classes/ColegioI.html" target="_self" >ColegioI[]</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="26" class="link-to-prism">src/app/components/Admin/gestionar-colegio-admin/gestionar-colegio-admin.component.ts:26</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="colegioSelected"></a>
+                        <span class="name">
+                            <b>
+                            colegioSelected</b>
+                            <a href="#colegioSelected"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="51" class="link-to-prism">src/app/components/Admin/gestionar-colegio-admin/gestionar-colegio-admin.component.ts:51</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="colegioToSave"></a>
+                        <span class="name">
+                            <b>
+                            colegioToSave</b>
+                            <a href="#colegioToSave"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="../classes/ColegioI.html" target="_self" >ColegioI</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="34" class="link-to-prism">src/app/components/Admin/gestionar-colegio-admin/gestionar-colegio-admin.component.ts:34</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="correcto"></a>
+                        <span class="name">
+                            <b>
+                            correcto</b>
+                            <a href="#correcto"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="40" class="link-to-prism">src/app/components/Admin/gestionar-colegio-admin/gestionar-colegio-admin.component.ts:40</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="correcto1"></a>
+                        <span class="name">
+                            <b>
+                            correcto1</b>
+                            <a href="#correcto1"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="41" class="link-to-prism">src/app/components/Admin/gestionar-colegio-admin/gestionar-colegio-admin.component.ts:41</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="correcto2"></a>
+                        <span class="name">
+                            <b>
+                            correcto2</b>
+                            <a href="#correcto2"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="42" class="link-to-prism">src/app/components/Admin/gestionar-colegio-admin/gestionar-colegio-admin.component.ts:42</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="correcto3"></a>
+                        <span class="name">
+                            <b>
+                            correcto3</b>
+                            <a href="#correcto3"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="43" class="link-to-prism">src/app/components/Admin/gestionar-colegio-admin/gestionar-colegio-admin.component.ts:43</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="docentes"></a>
+                        <span class="name">
+                            <b>
+                            docentes</b>
+                            <a href="#docentes"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="../classes/DocenteI.html" target="_self" >DocenteI[]</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="35" class="link-to-prism">src/app/components/Admin/gestionar-colegio-admin/gestionar-colegio-admin.component.ts:35</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="error"></a>
+                        <span class="name">
+                            <b>
+                            error</b>
+                            <a href="#error"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="44" class="link-to-prism">src/app/components/Admin/gestionar-colegio-admin/gestionar-colegio-admin.component.ts:44</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="error1"></a>
+                        <span class="name">
+                            <b>
+                            error1</b>
+                            <a href="#error1"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="45" class="link-to-prism">src/app/components/Admin/gestionar-colegio-admin/gestionar-colegio-admin.component.ts:45</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="error2"></a>
+                        <span class="name">
+                            <b>
+                            error2</b>
+                            <a href="#error2"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="46" class="link-to-prism">src/app/components/Admin/gestionar-colegio-admin/gestionar-colegio-admin.component.ts:46</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="error3"></a>
+                        <span class="name">
+                            <b>
+                            error3</b>
+                            <a href="#error3"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="47" class="link-to-prism">src/app/components/Admin/gestionar-colegio-admin/gestionar-colegio-admin.component.ts:47</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="grados"></a>
+                        <span class="name">
+                            <b>
+                            grados</b>
+                            <a href="#grados"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="../classes/GradoI.html" target="_self" >GradoI[]</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="31" class="link-to-prism">src/app/components/Admin/gestionar-colegio-admin/gestionar-colegio-admin.component.ts:31</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="gradoToSave"></a>
+                        <span class="name">
+                            <b>
+                            gradoToSave</b>
+                            <a href="#gradoToSave"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="../classes/GradoI.html" target="_self" >GradoI</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="33" class="link-to-prism">src/app/components/Admin/gestionar-colegio-admin/gestionar-colegio-admin.component.ts:33</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="MateriaActivaInfo"></a>
+                        <span class="name">
+                            <b>
+                            MateriaActivaInfo</b>
+                            <a href="#MateriaActivaInfo"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="../interfaces/MateriaActivaVisualizarI.html" target="_self" >MateriaActivaVisualizarI[]</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="36" class="link-to-prism">src/app/components/Admin/gestionar-colegio-admin/gestionar-colegio-admin.component.ts:36</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="materias"></a>
+                        <span class="name">
+                            <b>
+                            materias</b>
+                            <a href="#materias"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="../classes/MateriaI.html" target="_self" >MateriaI[]</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="29" class="link-to-prism">src/app/components/Admin/gestionar-colegio-admin/gestionar-colegio-admin.component.ts:29</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="materiasVisualizar"></a>
+                        <span class="name">
+                            <b>
+                            materiasVisualizar</b>
+                            <a href="#materiasVisualizar"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="../interfaces/MateriaVisualizarI.html" target="_self" >MateriaVisualizarI[]</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="30" class="link-to-prism">src/app/components/Admin/gestionar-colegio-admin/gestionar-colegio-admin.component.ts:30</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="materiaToSave"></a>
+                        <span class="name">
+                            <b>
+                            materiaToSave</b>
+                            <a href="#materiaToSave"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="../classes/MateriaI.html" target="_self" >MateriaI</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="32" class="link-to-prism">src/app/components/Admin/gestionar-colegio-admin/gestionar-colegio-admin.component.ts:32</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="newCont"></a>
+                        <span class="name">
+                            <b>
+                            newCont</b>
+                            <a href="#newCont"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="37" class="link-to-prism">src/app/components/Admin/gestionar-colegio-admin/gestionar-colegio-admin.component.ts:37</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="newID"></a>
+                        <span class="name">
+                            <b>
+                            newID</b>
+                            <a href="#newID"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="38" class="link-to-prism">src/app/components/Admin/gestionar-colegio-admin/gestionar-colegio-admin.component.ts:38</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="resColegio"></a>
+                        <span class="name">
+                            <b>
+                            resColegio</b>
+                            <a href="#resColegio"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="27" class="link-to-prism">src/app/components/Admin/gestionar-colegio-admin/gestionar-colegio-admin.component.ts:27</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="subiendo"></a>
+                        <span class="name">
+                            <b>
+                            subiendo</b>
+                            <a href="#subiendo"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="48" class="link-to-prism">src/app/components/Admin/gestionar-colegio-admin/gestionar-colegio-admin.component.ts:48</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="temp"></a>
+                        <span class="name">
+                            <b>
+                            temp</b>
+                            <a href="#temp"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="39" class="link-to-prism">src/app/components/Admin/gestionar-colegio-admin/gestionar-colegio-admin.component.ts:39</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="temp2"></a>
+                        <span class="name">
+                            <b>
+                            temp2</b>
+                            <a href="#temp2"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="49" class="link-to-prism">src/app/components/Admin/gestionar-colegio-admin/gestionar-colegio-admin.component.ts:49</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="urlTemp"></a>
+                        <span class="name">
+                            <b>
+                            urlTemp</b>
+                            <a href="#urlTemp"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="50" class="link-to-prism">src/app/components/Admin/gestionar-colegio-admin/gestionar-colegio-admin.component.ts:50</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit } from &#x27;@angular/core&#x27;;
+import { Router } from &quot;@angular/router&quot;;
+import { NgForm } from &#x27;@angular/forms&#x27;; 
+import { ColegioI } from &#x27;../../../models/colegio&#x27;;
+import { GradoI } from &#x27;../../../models/grado&#x27;;
+import { MateriaI } from &#x27;../../../models/materia&#x27;;
+import { AreaMateriaI } from &#x27;../../../models/areaMateria&#x27;;
+import { AuthAdminService } from &#x27;../../../services/auth-admin.service&#x27;;
+import { MateriaVisualizarI } from &#x27;../../../models/materiaVisualizar&#x27;;
+import { DocenteI } from &#x27;../../../models/docente&#x27;;
+import { MateriaActivaI } from &#x27;../../../models/materiaActiva&#x27;;
+import { MateriaActivaVisualizarI } from &#x27;../../../models/materiaActivaVisualizar&#x27;;
+import String from &#x27;../../../../../dist/FC/polyfills-es5&#x27;;
+
+/**
+  * Contiene todos los metodos necesarios para administra materias, grados o informacion de los colegios.
+  */
+
+@Component({
+  selector: &#x27;app-gestionar-colegio-admin&#x27;,
+  templateUrl: &#x27;./gestionar-colegio-admin.component.html&#x27;,
+  styleUrls: [&#x27;./gestionar-colegio-admin.component.css&#x27;]
+})
+export class GestionarColegioAdminComponent implements OnInit {
+
+  colegios:ColegioI[];
+  resColegio:any;
+  areasMaterias:AreaMateriaI[];
+  materias:MateriaI[];
+  materiasVisualizar:MateriaVisualizarI[];
+  grados:GradoI[];
+  materiaToSave:MateriaI;
+  gradoToSave:GradoI;
+  colegioToSave:ColegioI;
+  docentes:DocenteI[];
+  MateriaActivaInfo:MateriaActivaVisualizarI[];
+  newCont:number;
+  newID:number;
+  temp:number;
+  correcto:boolean;
+  correcto1:boolean;
+  correcto2:boolean;
+  correcto3:boolean;
+  error:boolean;
+  error1:boolean;
+  error2:boolean;
+  error3:boolean;
+  subiendo:boolean;
+  temp2:any;
+  urlTemp: string;
+  colegioSelected:boolean;
+
+  constructor(private router: Router, private AuthAdminService: AuthAdminService) { }
+
+  ngOnInit() {
+    window.scrollTo(0, 0);
+    this.comprobacionLogin();
+    
+    this.correcto &#x3D; false;
+    this.correcto1 &#x3D; false;
+    this.correcto2 &#x3D; false;
+    this.correcto3 &#x3D; false;
+    this.error &#x3D; false;
+    this.error1 &#x3D; false;
+    this.error2 &#x3D; false;
+    this.error3 &#x3D; false;
+    this.subiendo &#x3D; false;
+    this.colegioSelected &#x3D; false;
+
+    this.getOptions();
+  }
+
+  /**
+  * Permite obtener los datos de todos los options
+  */
+  getOptions(){
+    this.AuthAdminService.allGrade().subscribe(res &#x3D;&gt; {
+      this.grados &#x3D; res as GradoI[];
+    });
+    this.AuthAdminService.loadAllDocentes().subscribe(res &#x3D;&gt; {
+      this.docentes &#x3D; res as DocenteI[];
+    });
+    this.AuthAdminService.loadAllColegios().subscribe(res &#x3D;&gt; {
+      this.colegios &#x3D; res as ColegioI[];
+    });
+    this.AuthAdminService.loadAllAreaSubjects().subscribe(res &#x3D;&gt; {
+      this.areasMaterias &#x3D; res as AreaMateriaI[]; 
+
+      this.AuthAdminService.allSubject().subscribe(res &#x3D;&gt; {
+        this.materias &#x3D; res as MateriaI[];
+        this.materiasVisualizar &#x3D; res as MateriaVisualizarI[];
+
+        for (let i &#x3D; 0; i &lt; this.materias.length; i++) {
+          for (let n &#x3D; 0; n &lt; this.areasMaterias.length; n++) {
+            if (this.materias[i].id_areaMateria &#x3D;&#x3D; this.areasMaterias[n].id_areaMateria) {
+              this.materiasVisualizar[i].areaMateria &#x3D; this.areasMaterias[n].nombre_areaMateria;
+            }
+          }
+        }
+        //console.log(&quot;actividades visualizar:&quot;, this.materiasVisualizar)
+      });
+    });
+  }
+
+  /**
+  * Permite obtener la informacion y listado de todas las MateriasActivas
+  */
+  getInformacionCompletaMateriasActivas(){
+    this.AuthAdminService.allSubject().subscribe(res &#x3D;&gt; {
+      this.materias &#x3D; res as MateriaI[];
+      //console.log(&#x27;info materia&#x27;,this.materia.length);
+
+      this.AuthAdminService.loadAllDocentes().subscribe(res &#x3D;&gt;{
+        this.docentes &#x3D; res as DocenteI[];
+        //console.log(&#x27;info docente&#x27;, this.resDocente);
+  
+        this.AuthAdminService.loadAllColegios().subscribe(res &#x3D;&gt;{
+          this.colegios &#x3D; res as ColegioI[];
+          //console.log(&#x27;info colegio&#x27;, this.resColegio);
+  
+          this.AuthAdminService.loadAllSubjectActives().subscribe(res &#x3D;&gt;{
+            this.AuthAdminService.MateriasActivas &#x3D; res as MateriaActivaI[];
+            this.MateriaActivaInfo &#x3D; res as MateriaActivaVisualizarI[];
+  
+            for (let i &#x3D; 0; i &lt; this.AuthAdminService.MateriasActivas.length; i++) {
+              for (let m &#x3D; 0; m &lt; this.materias.length; m++) {
+                if (this.AuthAdminService.MateriasActivas[i].id_materia &#x3D;&#x3D; this.materias[m].id_materia) {
+                  this.MateriaActivaInfo[i].nombre_materia &#x3D; this.materias[m].nombre_materia;
+                }
+              }
+              for (let m &#x3D; 0; m &lt; this.colegios.length; m++) {
+                if (this.AuthAdminService.MateriasActivas[i].id_colegio &#x3D;&#x3D; this.colegios[m].id_colegio) {
+                  this.MateriaActivaInfo[i].colegio &#x3D; this.colegios[m].nombre_colegio;
+                }
+              }
+              for (let m &#x3D; 0; m &lt; this.docentes.length; m++) {
+                if (this.AuthAdminService.MateriasActivas[i].id_docente &#x3D;&#x3D; this.docentes[m].id_docente) {
+                  this.MateriaActivaInfo[i].docente &#x3D; this.docentes[m].nombre_docente+&quot; &quot;+this.docentes[m].apellido_docente;
+                }
+              }
+            }
+            //console.log(&#x27;materiaActivaVisualizar&#x27;, this.MateriaActivaInfo);
+          });
+        });
+      });
+    });
+  }
+
+  /**
+  * Permite imprimir los datos del colegio en el formulario
+  */
+  getColegioinForm(colegiohtml){
+    this.AuthAdminService.selectedColegio &#x3D; colegiohtml;
+    this.colegioSelected &#x3D; true;
+    //console.log(&#x27;info colegio&#x27;, this.AuthAdminService.selectedColegio);
+  }
+
+  /**
+  * Permite crear un nuevo Colegio a partir de los datos ingresados en el formulario
+  */
+  crearColegio(form: NgForm): void{
+    this.correcto3 &#x3D; false;
+    this.error3 &#x3D; false;
+    this.subiendo &#x3D; true;
+
+    const newColegio &#x3D; {
+      id_colegio: form.value.NIT,
+      NIT: form.value.NIT,
+      nombre_colegio: form.value.nombre_colegio,
+      ciudad: form.value.ciudad,
+      direccion: form.value.direccion,
+      telefono: form.value.telefono,
+      tipo_colegio: form.value.tipo_colegio,
+      calendario: form.value.calendario,
+      rector: form.value.rector,
+      colegioActivo: 1
+    }
+    //console.log(newColegioL);
+    this.AuthAdminService.createColegio(newColegio).subscribe(res &#x3D;&gt; {
+      //console.log(res);
+      this.temp2 &#x3D; res;
+
+      if(this.temp2.Estado &#x3D;&#x3D; &quot;Error Crear Colegio&quot;){
+        this.correcto3 &#x3D; false;
+        this.error3 &#x3D; true;
+        this.subiendo &#x3D; false;
+      } else {
+        this.correcto3 &#x3D; true;
+        this.error3 &#x3D; false;
+        this.subiendo &#x3D; false;
+        this.getOptions();
+        this.resetForm(form);
+      }
+    });
+  }
+
+  /**
+  * Permite actualizar los nuevos datos ingresados en el formulario del colegio seleccionado
+  */
+  actualizarColegio(form: NgForm): void{
+    this.correcto &#x3D; false
+    this.error &#x3D; true;
+
+    if(this.colegioSelected){
+      const newInfoColegio &#x3D; {
+        id_colegio: this.AuthAdminService.selectedColegio.id_colegio,
+        NIT: form.value.NIT,
+        nombre_colegio: form.value.nombre_colegio,
+        ciudad: form.value.ciudad,
+        direccion: form.value.direccion,
+        telefono: form.value.telefono,
+        tipo_colegio: form.value.tipo_colegio,
+        calendario: form.value.calendario,
+        rector: form.value.rector
+      }
+      //console.log(newInfoColegio);
+      this.AuthAdminService.uploadSchool(newInfoColegio).subscribe(res &#x3D;&gt; {
+        //console.log(res);
+        this.correcto &#x3D; true;
+        this.error &#x3D; false;
+        this.getOptions();
+        this.resetForm(form);
+      });
+    }
+  }
+
+  /**
+  * Permite crear una nueva Materia a partir de los datos ingresados en el formulario
+  */
+  crearMateria(form: NgForm): void {
+    this.correcto1 &#x3D; false;
+    this.error1 &#x3D; false;
+    this.subiendo &#x3D; true;
+
+    this.AuthAdminService.allSubject().subscribe(res &#x3D;&gt; {
+      this.AuthAdminService.Materias &#x3D; res as MateriaI[];
+
+      //crear Cont
+      if (this.AuthAdminService.Materias.length &#x3D;&#x3D; 0) {
+        this.newCont &#x3D; 1;
+      }
+      else {
+        if (this.AuthAdminService.Materias.length) {
+          this.newCont &#x3D; 1;
+        }
+        for (let n &#x3D; 0; n &lt; this.AuthAdminService.Materias.length; n++) {
+          for (let i &#x3D; 0; i &lt; this.AuthAdminService.Materias.length; i++) {
+            if(this.AuthAdminService.Materias[i].id_colegio &#x3D;&#x3D; form.value.id_colegioM){
+              if (this.AuthAdminService.Materias.length) {
+                this.newCont &#x3D; 1;
+              }
+              if (n + 1 &#x3D;&#x3D; this.AuthAdminService.Materias[i].cont) {
+                this.newCont &#x3D; n + 2;
+                this.temp &#x3D; 0;
+                i &#x3D; this.AuthAdminService.Materias.length;
+              }
+              else {
+                this.newCont &#x3D; n + 1;
+                this.temp &#x3D; 1;
+              }
+            }
+          }
+          if (this.temp &#x3D;&#x3D; 1) {
+            n &#x3D; this.AuthAdminService.Materias.length + 1;
+          }
+        }
+      }
+
+      // ID Materia
+      var idGlobal &#x3D; &quot;&quot;+form.value.id_colegioM+this.newCont;
+      this.newID &#x3D; parseInt(idGlobal);
+
+      // Imagen
+      if(form.value.id_areaMateria &#x3D;&#x3D; 0 || form.value.id_areaMateria &gt; 4){
+        this.urlTemp &#x3D; &quot;http://localhost:3000/public/repositorio/materiaPorDefecto.jpg&quot;
+      }
+      if(form.value.id_areaMateria &#x3D;&#x3D; 1){
+        this.urlTemp &#x3D; &quot;http://localhost:3000/public/repositorio/lenguajeImagen.jpg&quot;
+      }
+      if(form.value.id_areaMateria &#x3D;&#x3D; 2){
+        this.urlTemp &#x3D; &quot;http://localhost:3000/public/repositorio/matematicasImagen.jpg&quot;
+      }
+      if(form.value.id_areaMateria &#x3D;&#x3D; 3){
+        this.urlTemp &#x3D; &quot;http://localhost:3000/public/repositorio/cienciasSocialesImagen.jpg&quot;
+      }
+      if(form.value.id_areaMateria &#x3D;&#x3D; 4){
+        this.urlTemp &#x3D; &quot;http://localhost:3000/public/repositorio/cienciasNaturalesImagen.jpg&quot;
+      }
+
+      const newMateria &#x3D; {
+        id_materia: this.newID,
+        cont: this.newCont,
+        nombre_materia: form.value.nombre_materia,
+        id_colegio: form.value.id_colegioM,
+        id_areaMateria: form.value.id_areaMateria,
+        gradoInicial: form.value.gradoInicial,
+        url_imagen: this.urlTemp
+      }
+      //console.log(&#x27;datos newMateria&#x27;, newMateria);
+    
+      this.AuthAdminService.createMateria(newMateria).subscribe(res &#x3D;&gt; {
+        //console.log(res);
+        this.temp2 &#x3D; res;
+
+        if(this.temp2.Estado &#x3D;&#x3D; &quot;Error Crear Materia&quot;){
+          this.correcto1 &#x3D; false;
+          this.error1 &#x3D; true;
+          this.subiendo &#x3D; false;
+        } else {
+          this.correcto1 &#x3D; true;
+          this.error1 &#x3D; false;
+          this.subiendo &#x3D; false;
+          this.resetForm(form);
+        }
+      });
+    });
+  }
+
+  /**
+  * Permite crear un nuevo Grado a partir de los datos ingresados en el formulario
+  */
+  CrearGrado(form: NgForm): void {
+    this.correcto2 &#x3D; false;
+    this.error2 &#x3D; false;
+    this.subiendo &#x3D; true;
+
+    const newGrado &#x3D; {
+      id_grado: form.value.id_grado,
+      nombre_grado: form.value.nombre_grado
+    }
+    //console.log(&#x27;datosGrado&#x27;, newGrado);
+
+    this.AuthAdminService.createGrade(newGrado).subscribe(res &#x3D;&gt; {
+      //console.log(res);
+      this.temp2 &#x3D; res;
+
+      if(this.temp2.Estado &#x3D;&#x3D; &quot;Error Crear Grado&quot;){
+        this.correcto2 &#x3D; false;
+        this.error2 &#x3D; true;
+        this.subiendo &#x3D; false;
+      } else {
+        this.correcto2 &#x3D; true;
+        this.error2 &#x3D; false;
+        this.subiendo &#x3D; false;
+        this.resetForm(form);
+      }
+    });
+  }
+
+  /**
+  * Permite eliminar la Materia seleccionada
+  */
+  deleteMateria(){
+    //console.log(&quot;id para eliminar:&quot;, this.materiaToSave.id_materia);
+    this.AuthAdminService.deleteMateria(this.materiaToSave).subscribe(res &#x3D;&gt;{
+      //console.log(res);
+      this.getOptions();
+      this.materiaToSave &#x3D; new MateriaI();
+    });
+    //window.location.reload();
+  }
+  /**
+  * Permite eliminar el Grado seleccionado
+  */
+  deleteGrado(){
+    //console.log(&quot;id para eliminar:&quot;, this.gradoToSave.id_competencia);
+    this.AuthAdminService.deleteGrade(this.gradoToSave).subscribe(res &#x3D;&gt;{
+      //console.log(res);
+      this.getOptions();
+      this.gradoToSave &#x3D; new GradoI();
+    });
+    //window.location.reload();
+  }
+
+  /**
+  * Permite almacenar la informacion de una Materia de forma temporal
+  */
+  saveDataMateria(materiahtml){
+    this.materiaToSave &#x3D; materiahtml;
+    //console.log(&#x27;docente guardada:&#x27;, this.materiaToSave);
+  }
+
+  /**
+  * Permite almacenar la informacion de una AreaMateria de forma temporal
+  */
+  saveDataGrado(gradohtml){
+    this.gradoToSave &#x3D; gradohtml;
+    //console.log(&#x27;estudiante guardada:&#x27;, this.gradoToSave);
+  }
+
+  /**
+  * Permite almacenar la informacion de un Colegio de forma temporal
+  */
+  saveDataColegio(colegiohtml){
+    this.colegioToSave &#x3D; colegiohtml;
+    //console.log(&#x27;estudiante guardada:&#x27;, this.gradoToSave);
+  }
+
+  /**
+  * Permite recargar la pagina actual
+  */
+  resetPage(){
+    window.location.reload();
+  }
+
+  /**
+  * Permite limpiar toda la informacion que se encuentra en el formulario
+  */
+  resetForm(form?: NgForm) {
+    if (form) {
+      form.reset();
+      this.newID &#x3D; 0;
+      this.temp &#x3D; 0;
+      this.AuthAdminService.selectedColegio &#x3D; new ColegioI();
+      this.colegioSelected &#x3D; false;
+      this.getOptions();
+    }
+  }
+
+  /**
+  * Permite comprobar que el administrador se encuentra logueado en el sistema al ingresar a la pagina
+  */
+  comprobacionLogin(){
+    if (this.AuthAdminService.getIdAdmin()){
+      return true;
+    } else {
+      this.router.navigate([&#x27;/login&#x27;]);
+      return false;
+    }
+  }
+
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;app-header-admin&gt;&lt;/app-header-admin&gt;
+
+&lt;!--Contenedor Contenido Pagina--&gt;
+&lt;div class&#x3D;&quot;mb-5 col-9 mx-auto&quot;&gt;
+
+    &lt;!--Titulo pagina--&gt;
+    &lt;div class&#x3D;&quot;container m-auto pb-2 bg-danger rounded-top&quot;&gt;
+        &lt;h1 style&#x3D;&quot;cursor:context-menu&quot; class&#x3D;&quot;mt-5 pt-4 text-center m &quot;&gt;Gestionar Colegio&lt;/h1&gt;
+    &lt;/div&gt;
+    
+    &lt;!--Contenedor Formularios--&gt;
+    &lt;div class&#x3D;&quot;container pt-1 bg-secondary rounded-bottom&quot;&gt;
+
+        &lt;!--Tabs--&gt;
+        &lt;div class&#x3D;&quot;row&quot;&gt;
+            &lt;div class&#x3D;&quot;col&quot;&gt;
+                &lt;div class&#x3D;&quot;mt-3&quot;&gt;
+                    &lt;div class&#x3D;&quot;card-header tab-card-header&quot;&gt;
+                        &lt;!--Opcion Tab--&gt;
+                        &lt;nav&gt;
+                            &lt;div class&#x3D;&quot;nav nav-tabs&quot; id&#x3D;&quot;nav-tab&quot; role&#x3D;&quot;tablist&quot;&gt;
+                                &lt;a class&#x3D;&quot;col nav-item nav-link text-center active font-weight-bold text-dark&quot; id&#x3D;&quot;nav-Pregunta1-tab&quot; data-toggle&#x3D;&quot;tab&quot;
+                                    href&#x3D;&quot;#nav-Pregunta1&quot; role&#x3D;&quot;tab&quot; aria-controls&#x3D;&quot;nav-Pregunta1&quot;
+                                    aria-selected&#x3D;&quot;true&quot;&gt;Colegios&lt;/a&gt;
+                                &lt;a class&#x3D;&quot;col nav-item nav-link text-center font-weight-bold text-dark&quot; id&#x3D;&quot;nav-Pregunta2-tab&quot; data-toggle&#x3D;&quot;tab&quot;
+                                    href&#x3D;&quot;#nav-Pregunta2&quot; role&#x3D;&quot;tab&quot; aria-controls&#x3D;&quot;nav-Pregunta2&quot;
+                                    aria-selected&#x3D;&quot;false&quot;&gt;Materias&lt;/a&gt;
+                                &lt;a class&#x3D;&quot;col nav-item nav-link text-center font-weight-bold text-dark&quot; id&#x3D;&quot;nav-Pregunta3-tab&quot; data-toggle&#x3D;&quot;tab&quot;
+                                    href&#x3D;&quot;#nav-Pregunta3&quot; role&#x3D;&quot;tab&quot; aria-controls&#x3D;&quot;nav-Pregunta3&quot;
+                                    aria-selected&#x3D;&quot;false&quot;&gt;Grados&lt;/a&gt;
+                            &lt;/div&gt;
+                        &lt;/nav&gt;
+        
+                        &lt;!--Tabs Resultados--&gt;
+                        &lt;div class&#x3D;&quot;tab-content&quot; id&#x3D;&quot;nav-tabContent&quot;&gt;
+                            &lt;br&gt;
+
+                            &lt;!--Tab 1--&gt;
+                            &lt;div class&#x3D;&quot;tab-pane fade show active&quot; id&#x3D;&quot;nav-Pregunta1&quot; role&#x3D;&quot;tabpanel&quot;
+                                aria-labelledby&#x3D;&quot;nav-Pregunta1-tab&quot;&gt;
+                                &lt;!--Gestion de Colegios--&gt;
+                                &lt;div&gt;
+                                    &lt;h3 style&#x3D;&quot;cursor:context-menu&quot; class&#x3D;&quot;py-3 text-center text-white&quot;&gt;Colegios&lt;/h3&gt;
+                                    &lt;div class&#x3D;&quot;contenedor mx-3 py-3&quot;&gt;
+                                        &lt;!--Buscar--&gt;
+                                        &lt;h5 class&#x3D;&quot;py-3 text-white&quot;&gt;Buscador:&lt;/h5&gt;
+                                        &lt;div class&#x3D;&quot;row&quot;&gt;
+                                            &lt;div class&#x3D;&quot;form-group col-5&quot;&gt;
+                                                &lt;label for&#x3D;&quot;inputNombreMateri&quot; class&#x3D;&quot;text-white&quot;&gt;Nombre Colegio&lt;/label&gt;
+                                                &lt;input type&#x3D;&quot;text&quot; class&#x3D;&quot;form-control&quot; id&#x3D;&quot;inputTextoBusquedaNombreColegio&quot;
+                                                    placeholder&#x3D;&quot;Nombre Colegio&quot; [(ngModel)]&#x3D;&quot;nombreColegio&quot;
+                                                    name&#x3D;&quot;nombreColegio&quot;&gt;
+                                            &lt;/div&gt;
+                                            &lt;div class&#x3D;&quot;form-group&quot;&gt;
+                                                &lt;label for&#x3D;&quot;inputNombreMateri&quot; class&#x3D;&quot;text-white&quot;&gt;NIT Colegio&lt;/label&gt;
+                                                &lt;input type&#x3D;&quot;number&quot; class&#x3D;&quot;form-control&quot; id&#x3D;&quot;inputTextoBusquedaNITColegio&quot;
+                                                    placeholder&#x3D;&quot;NIT Colegio&quot; [(ngModel)]&#x3D;&quot;NITColegio&quot; name&#x3D;&quot;NITColegio&quot;&gt;
+                                            &lt;/div&gt;
+                                        &lt;/div&gt;
+        
+                                        &lt;!--Resultados--&gt;
+                                        &lt;h5 class&#x3D;&quot;py-3 text-white&quot;&gt;Resultados:&lt;/h5&gt;
+                                        &lt;div class&#x3D;&quot;row mx-auto&quot;&gt;
+                                            &lt;table
+                                                class&#x3D;&quot;mx-auto text-white m-auto rounded table-striped table-wrapper-scroll-y my-custom-scrollbar&quot;
+                                                style&#x3D;&quot;height: 256px;&quot;&gt;
+                                                &lt;thead class&#x3D;&quot;bg-danger&quot;&gt;
+                                                    &lt;th class&#x3D;&quot;pl-3 pr-5 py-2 text-dark&quot;&gt;Nombre Colegio&lt;/th&gt;
+                                                    &lt;th class&#x3D;&quot;pl-3 pr-3 py-2 text-dark text-center&quot;&gt;NIT&lt;/th&gt;
+                                                    &lt;th class&#x3D;&quot;pl-3 pr-3 py-2 text-dark text-center&quot;&gt;Ciudad&lt;/th&gt;
+                                                    &lt;th class&#x3D;&quot;pl-3 pr-4 py-2 text-dark text-center&quot;&gt;Accion&lt;/th&gt;
+                                                &lt;/thead&gt;
+                                                &lt;tbody class&#x3D;&quot;bg-light&quot;&gt;
+                                                    &lt;tr mdbTableCol *ngFor&#x3D;&quot;let colegio of colegios | filterColegioAdmin: nombreColegio:NITColegio&quot;&gt;
+                                                        &lt;td class&#x3D;&quot;pl-3 pr-5 py-2 text-dark&quot;&gt;{{ colegio.nombre_colegio }}&lt;/td&gt;
+                                                        &lt;td class&#x3D;&quot;pl-3 pr-3 py-2 text-dark text-center&quot;&gt;{{ colegio.NIT }}&lt;/td&gt;
+                                                        &lt;td class&#x3D;&quot;pl-3 pr-3 py-2 text-dark text-center&quot;&gt;{{ colegio.ciudad }}
+                                                        &lt;/td&gt;
+                                                        &lt;td class&#x3D;&quot;pl-3 pr-4 py-2&quot;&gt;
+                                                            &lt;a class&#x3D;&quot;btn bg-warning py-0 px-1 text-dark&quot; data-toggle&#x3D;&quot;modal&quot;
+                                                                data-target&#x3D;&quot;#mimodalejemplo7&quot; (click)&#x3D;&quot;getColegioinForm(colegio)&quot;&gt;Actualizar&lt;/a&gt;
+                                                        &lt;/td&gt;
+                                                    &lt;/tr&gt;
+                                                &lt;/tbody&gt;
+                                            &lt;/table&gt;
+                                        &lt;/div&gt;
+                                    &lt;/div&gt;
+        
+                                    &lt;!--Informacion Colegio--&gt;
+                                    &lt;div class&#x3D;&quot;container&quot;&gt;
+                                        &lt;h5 class&#x3D;&quot;py-3 text-white text-center&quot;&gt;Crear o Actualizar Colegio:&lt;/h5&gt;
+                                        &lt;form #frmInfoColegio&#x3D;&quot;ngForm&quot;&gt;
+                                            &lt;div class&#x3D;&quot;col-6 mx-auto&quot;&gt;
+                                                &lt;div class&#x3D;&quot;form-group col&quot;&gt;
+                                                    &lt;div class&#x3D;&quot;form-group&quot;&gt;
+                                                        &lt;label for&#x3D;&quot;inputNombreColegio&quot; class&#x3D;&quot;text-white &quot;&gt;Nombre
+                                                            Colegio&lt;/label&gt;
+                                                        &lt;input type&#x3D;&quot;text&quot; name&#x3D;&quot;nombre_colegio&quot; class&#x3D;&quot;form-control col&quot;
+                                                            id&#x3D;&quot;inputNombreColegio&quot; placeholder&#x3D;&quot;Nombre Colegio&quot; required [(ngModel)]&#x3D;&quot;this.AuthAdminService.selectedColegio.nombre_colegio&quot;&gt;
+                                                    &lt;/div&gt;
+                                                    &lt;div class&#x3D;&quot;form-group&quot;&gt;
+                                                        &lt;label for&#x3D;&quot;inputNombreRector&quot; class&#x3D;&quot;text-white &quot;&gt;Nombre Rector&lt;/label&gt;
+                                                        &lt;input type&#x3D;&quot;text&quot; name&#x3D;&quot;rector&quot; class&#x3D;&quot;form-control col&quot;
+                                                            id&#x3D;&quot;inputNombreRector&quot; placeholder&#x3D;&quot;Nombre Rector&quot; required [(ngModel)]&#x3D;&quot;this.AuthAdminService.selectedColegio.rector&quot;&gt;
+                                                    &lt;/div&gt;
+                                                    &lt;div class&#x3D;&quot;form-group&quot;&gt;
+                                                        &lt;label for&#x3D;&quot;inputNIT&quot; class&#x3D;&quot;text-white &quot;&gt;NIT Colegio&lt;/label&gt;
+                                                        &lt;input type&#x3D;&quot;number&quot; name&#x3D;&quot;NIT&quot; class&#x3D;&quot;form-control col-7&quot; id&#x3D;&quot;inputNIT&quot;
+                                                            placeholder&#x3D;&quot;NIT Colegio&quot; required [(ngModel)]&#x3D;&quot;this.AuthAdminService.selectedColegio.NIT&quot;&gt;
+                                                    &lt;/div&gt;
+                                                    &lt;div class&#x3D;&quot;row&quot;&gt;
+                                                        &lt;div class&#x3D;&quot;form-group col&quot;&gt;
+                                                            &lt;label for&#x3D;&quot;inputCiudadColegio&quot; class&#x3D;&quot;text-white &quot;&gt;Ciudad&lt;/label&gt;
+                                                            &lt;input type&#x3D;&quot;text&quot; name&#x3D;&quot;ciudad&quot; class&#x3D;&quot;form-control col&quot;
+                                                                id&#x3D;&quot;inputCiudadColegio&quot; placeholder&#x3D;&quot;Ciudad Colegio&quot; required
+                                                                [(ngModel)]&#x3D;&quot;this.AuthAdminService.selectedColegio.ciudad&quot;&gt;
+                                                        &lt;/div&gt;
+                                                        &lt;div class&#x3D;&quot;form-group col&quot;&gt;
+                                                            &lt;label for&#x3D;&quot;inputTelefonoColegio&quot;
+                                                                class&#x3D;&quot;text-white &quot;&gt;Telefono&lt;/label&gt;
+                                                            &lt;input type&#x3D;&quot;text&quot; name&#x3D;&quot;telefono&quot; class&#x3D;&quot;form-control col&quot;
+                                                                id&#x3D;&quot;inputTelefonoColegio&quot; placeholder&#x3D;&quot;Telefono Colegio&quot;
+                                                                required
+                                                                [(ngModel)]&#x3D;&quot;this.AuthAdminService.selectedColegio.telefono&quot;&gt;
+                                                        &lt;/div&gt;
+                                                    &lt;/div&gt;
+                                                    &lt;div class&#x3D;&quot;form-group&quot;&gt;
+                                                        &lt;label for&#x3D;&quot;inputDireccionColegio&quot; class&#x3D;&quot;text-white &quot;&gt;Direccion&lt;/label&gt;
+                                                        &lt;input type&#x3D;&quot;text&quot; name&#x3D;&quot;direccion&quot; class&#x3D;&quot;form-control col&quot;
+                                                            id&#x3D;&quot;inputDireccionColegio&quot; placeholder&#x3D;&quot;Direccion Colegio&quot; required
+                                                            [(ngModel)]&#x3D;&quot;this.AuthAdminService.selectedColegio.direccion&quot;&gt;
+                                                    &lt;/div&gt;
+                                                    &lt;div class&#x3D;&quot;row&quot;&gt;
+                                                        &lt;div class&#x3D;&quot;form-group col-8&quot;&gt;
+                                                            &lt;label for&#x3D;&quot;inputTipoColegion&quot; class&#x3D;&quot;text-white &quot;&gt;Tipo
+                                                                Colegio&lt;/label&gt;
+                                                            &lt;input type&#x3D;&quot;text&quot; name&#x3D;&quot;tipo_colegio&quot; class&#x3D;&quot;form-control col&quot;
+                                                                id&#x3D;&quot;inputTipoColegion&quot; placeholder&#x3D;&quot;Tipo Colegio&quot; required
+                                                                [(ngModel)]&#x3D;&quot;this.AuthAdminService.selectedColegio.tipo_colegio&quot;&gt;
+                                                        &lt;/div&gt;
+                                                        &lt;div class&#x3D;&quot;form-group col&quot;&gt;
+                                                            &lt;label for&#x3D;&quot;inputCalendario&quot; class&#x3D;&quot;text-white &quot;&gt;Calendario&lt;/label&gt;
+                                                            &lt;input type&#x3D;&quot;text&quot; name&#x3D;&quot;calendario&quot; class&#x3D;&quot;form-control col&quot;
+                                                                id&#x3D;&quot;inputCalendario&quot; placeholder&#x3D;&quot;Calendario Colegio&quot; required
+                                                                [(ngModel)]&#x3D;&quot;this.AuthAdminService.selectedColegio.calendario&quot;&gt;
+                                                        &lt;/div&gt;
+                                                    &lt;/div&gt;
+                                                &lt;/div&gt;
+                                            &lt;/div&gt;
+                                            &lt;br&gt;
+        
+                                            &lt;div class&#x3D;&quot;row&quot;&gt;
+                                                &lt;!--Boton Crear Datos Colegio--&gt;
+                                                &lt;div class&#x3D;&quot;mr-2  ml-auto pb-4 justify-content-md-center no-gutters&quot;&gt;
+                                                    &lt;a class&#x3D;&quot;btn bg-danger px-5 py-4 font-weight-bold&quot; data-toggle&#x3D;&quot;modal&quot;
+                                                        data-target&#x3D;&quot;#mimodalejemplo6&quot;
+                                                        (click)&#x3D;&quot;crearColegio(frmInfoColegio)&quot;&gt;Crear&lt;/a&gt;
+                                                &lt;/div&gt;
+                                                &lt;!--Boton Actualizar Datos Colegio--&gt;
+                                                &lt;div class&#x3D;&quot;ml-2 mr-auto pb-4 justify-content-md-center no-gutters&quot;&gt;
+                                                    &lt;a class&#x3D;&quot;btn bg-danger px-4 py-4 font-weight-bold&quot; data-toggle&#x3D;&quot;modal&quot;
+                                                        data-target&#x3D;&quot;#mimodalejemplo&quot; (click)&#x3D;&quot;actualizarColegio(frmInfoColegio)&quot;&gt;Actualizar&lt;/a&gt;
+                                                &lt;/div&gt;
+                                            &lt;/div&gt;
+                                            &lt;div class&#x3D;&quot;bg-secondary row pb-4 justify-content-md-center no-gutters&quot;&gt;
+                                                &lt;a class&#x3D;&quot;btn bg-danger px-5 py-2 font-weight-bold&quot;
+                                                    (click)&#x3D;&quot;resetForm(frmInfoColegio)&quot;&gt;Limpiar&lt;/a&gt;
+                                            &lt;/div&gt;
+                                        &lt;/form&gt;
+                                        &lt;hr class&#x3D;&quot;style5&quot;&gt;
+                                    &lt;/div&gt;
+                                &lt;/div&gt;
+                            &lt;/div&gt;
+
+                            &lt;!--Tab 2--&gt;
+                            &lt;div class&#x3D;&quot;tab-pane fade&quot; id&#x3D;&quot;nav-Pregunta2&quot; role&#x3D;&quot;tabpanel&quot; aria-labelledby&#x3D;&quot;nav-Pregunta2-tab&quot;&gt;
+                                &lt;!--Gestion de Materias--&gt;
+                                &lt;div&gt;
+                                    &lt;h3 style&#x3D;&quot;cursor:context-menu&quot; class&#x3D;&quot;py-3 text-center text-white&quot;&gt;Materias&lt;/h3&gt;
+                                    &lt;div class&#x3D;&quot;contenedor mx-3 py-3&quot;&gt;
+                                        &lt;form #frmCrearMateria&#x3D;&quot;ngForm&quot;&gt;                                          
+
+                                            &lt;!--Crear Materia--&gt;
+                                            &lt;h5 class&#x3D;&quot;py-3 text-white&quot;&gt;Crear Materia:&lt;/h5&gt;
+                                            &lt;div class&#x3D;&quot;row&quot;&gt;
+                                                &lt;div class&#x3D;&quot;form-group col-5  pr-3&quot;&gt;
+                                                    &lt;label for&#x3D;&quot;inputNombreMateri&quot; class&#x3D;&quot;text-white&quot;&gt;Nombre Materia&lt;/label&gt;
+                                                    &lt;input type&#x3D;&quot;text&quot; name&#x3D;&quot;nombre_materia&quot; class&#x3D;&quot;form-control&quot; id&#x3D;&quot;inputNombreMateria&quot; placeholder&#x3D;&quot;Nombre Materia&quot; required
+                                                        [(ngModel)]&#x3D;&quot;nombre_materia&quot;&gt;
+                                                &lt;/div&gt;
+                                                &lt;div class&#x3D;&quot;form-group col&quot;&gt;
+                                                    &lt;label for&#x3D;&quot;inputAreaMateri&quot; class&#x3D;&quot;text-white&quot;&gt;Area&lt;/label&gt;
+                                                    &lt;select [(ngModel)]&#x3D;&quot;id_areaMateria&quot; name&#x3D;&quot;id_areaMateria&quot; id&#x3D;&quot;inputAreaMateria&quot; class&#x3D;&quot;form-control&quot; ngModel required&gt;
+                                                        &lt;option selected&gt;&lt;/option&gt;
+                                                        &lt;option *ngFor&#x3D;&quot;let area of areasMaterias&quot; [value]&#x3D;&quot;area.id_areaMateria&quot;&gt;{{area.nombre_areaMateria}}&lt;/option&gt;
+                                                    &lt;/select&gt;
+                                                &lt;/div&gt;
+                                                &lt;div class&#x3D;&quot;form-group col&quot;&gt;
+                                                    &lt;label for&#x3D;&quot;inputColegioM&quot; class&#x3D;&quot;text-white&quot;&gt;Colegio&lt;/label&gt;
+                                                    &lt;select [(ngModel)]&#x3D;&quot;id_colegioM&quot; name&#x3D;&quot;id_colegioM&quot; id&#x3D;&quot;inputColegioM&quot; class&#x3D;&quot;form-control&quot; ngModel required&gt;
+                                                        &lt;option selected&gt;&lt;/option&gt;
+                                                        &lt;option *ngFor&#x3D;&quot;let colegio of colegios&quot; [value]&#x3D;&quot;colegio.id_colegio&quot;&gt;{{colegio.nombre_colegio}}&lt;/option&gt;
+                                                    &lt;/select&gt;
+                                                &lt;/div&gt;
+                                            &lt;/div&gt;
+                                            
+                                            &lt;!--Boton Crear Materia--&gt;
+                                            &lt;div class&#x3D;&quot;bg-secondary row pb-4 pt-2 justify-content-md-center no-gutters&quot;&gt;
+                                                &lt;a class&#x3D;&quot;btn bg-danger px-5 py-2 font-weight-bold&quot; data-toggle&#x3D;&quot;modal&quot; data-target&#x3D;&quot;#mimodalejemplo2&quot;
+                                                    (click)&#x3D;&quot;crearMateria(frmCrearMateria)&quot;&gt;Crear Materia&lt;/a&gt;
+                                            &lt;/div&gt;
+        
+                                            &lt;br&gt;
+        
+                                            &lt;!--Borrar Materia--&gt;
+                                            &lt;h5 class&#x3D;&quot;py-3 text-white&quot;&gt;Borrar Materia:&lt;/h5&gt;
+                                            &lt;div class&#x3D;&quot;row mx-auto&quot;&gt;
+                                                &lt;table
+                                                    class&#x3D;&quot;mx-auto text-white m-auto rounded table-striped table-wrapper-scroll-y my-custom-scrollbar&quot;
+                                                    style&#x3D;&quot;height: 256px;&quot;&gt;
+                                                    &lt;thead class&#x3D;&quot;bg-danger&quot;&gt;
+                                                        &lt;th class&#x3D;&quot;pl-3 pr-5 py-2 text-dark&quot;&gt;Nombre Materia&lt;/th&gt;
+                                                        &lt;th class&#x3D;&quot;pl-3 pr-2 py-2 text-dark&quot;&gt;Area Materia&lt;/th&gt;
+                                                        &lt;th class&#x3D;&quot;pl-3 pr-4 py-2 text-dark&quot;&gt;Accion&lt;/th&gt;
+                                                    &lt;/thead&gt;
+                                                    &lt;tbody class&#x3D;&quot;bg-light&quot;&gt;
+                                                        &lt;tr mdbTableCol *ngFor&#x3D;&quot;let materia of materiasVisualizar&quot;&gt;
+                                                            &lt;td class&#x3D;&quot;pl-3 pr-5 py-2 text-dark&quot;&gt;{{ materia.nombre_materia }}
+                                                            &lt;/td&gt;
+                                                            &lt;td class&#x3D;&quot;pl-3 pr-2 py-2 text-dark&quot;&gt;{{ materia.areaMateria }}&lt;/td&gt;
+                                                            &lt;td class&#x3D;&quot;pl-3 pr-4 py-2&quot;&gt;
+                                                                &lt;a class&#x3D;&quot;btn bg-warning py-0 px-1 text-dark&quot;
+                                                                    data-toggle&#x3D;&quot;modal&quot; data-target&#x3D;&quot;#mimodalejemplo3&quot;
+                                                                    (click)&#x3D;&quot;saveDataMateria(materia)&quot;&gt;borrar&lt;/a&gt;
+                                                            &lt;/td&gt;
+                                                        &lt;/tr&gt;
+                                                    &lt;/tbody&gt;
+                                                &lt;/table&gt;
+                                            &lt;/div&gt;
+
+                                            &lt;!--Mirar Materias de Profesores--&gt;
+                                            &lt;br&gt;
+                                            &lt;br&gt;
+                                            &lt;div class&#x3D;&quot;pl-3 row&quot;&gt;
+                                                &lt;h5 class&#x3D;&quot;py-3 text-white&quot;&gt;Materias de Profesores: &lt;/h5&gt;
+                                                &lt;div class&#x3D;&quot;col mt-2 px-0 justify-content-md-center no-gutters&quot;&gt;
+                                                    &lt;a class&#x3D;&quot;btn bg-danger px-1 font-weight-bold mt-2 ml-3 py-0 px-3&quot; data-toggle&#x3D;&quot;modal&quot;
+                                                        data-target&#x3D;&quot;#mimodalejemplo8&quot; (click)&#x3D;&quot;getInformacionCompletaMateriasActivas()&quot;&gt;ver&lt;/a&gt;
+                                                &lt;/div&gt;
+                                            &lt;/div&gt;
+
+                                        &lt;/form&gt;
+                                        &lt;br&gt;
+                                        &lt;hr class&#x3D;&quot;style5&quot;&gt;
+                                    &lt;/div&gt;
+                                &lt;/div&gt;
+                            &lt;/div&gt;
+                            
+                            &lt;!--Tab 3--&gt;
+                            &lt;div class&#x3D;&quot;tab-pane fade&quot; id&#x3D;&quot;nav-Pregunta3&quot; role&#x3D;&quot;tabpanel&quot; aria-labelledby&#x3D;&quot;nav-Pregunta3-tab&quot;&gt;
+                                &lt;!--Gestion de Grados--&gt;
+                                &lt;div&gt;
+                                    &lt;h3 style&#x3D;&quot;cursor:context-menu&quot; class&#x3D;&quot;py-3 text-center text-white&quot;&gt;Grados&lt;/h3&gt;
+                                    &lt;div class&#x3D;&quot;contenedor mx-3 py-3&quot;&gt;
+                                        &lt;form #frmCrearGrados&#x3D;&quot;ngForm&quot;&gt;
+        
+                                            &lt;!--Crear Grado--&gt;
+                                            &lt;h5 class&#x3D;&quot;py-3 text-white&quot;&gt;Crear Grado:&lt;/h5&gt;
+                                            &lt;div class&#x3D;&quot;row&quot;&gt;
+                                                &lt;div class&#x3D;&quot;form-group col-5  pr-3&quot;&gt;
+                                                    &lt;label for&#x3D;&quot;inputNombreGrado&quot; class&#x3D;&quot;text-white&quot;&gt;Nombre Grado&lt;/label&gt;
+                                                    &lt;input type&#x3D;&quot;text&quot; name&#x3D;&quot;nombre_grado&quot; class&#x3D;&quot;form-control mt-2&quot;
+                                                        id&#x3D;&quot;inputNombreGrado&quot; placeholder&#x3D;&quot;Nombre Grado&quot; required
+                                                        [(ngModel)]&#x3D;&quot;nombre_grado&quot;&gt;
+                                                &lt;/div&gt;
+                                                &lt;div class&#x3D;&quot;form-group&quot;&gt;
+                                                    &lt;label for&#x3D;&quot;inputNumeroGrado&quot; class&#x3D;&quot;text-white&quot;&gt;Numero Grado&lt;/label&gt;
+                                                    &lt;input type&#x3D;&quot;text&quot; name&#x3D;&quot;id_grado&quot; class&#x3D;&quot;form-control mt-2&quot;
+                                                        style&#x3D;&quot;width: 115px;&quot; id&#x3D;&quot;inputNumeroGrado&quot; placeholder&#x3D;&quot;# Grado&quot;
+                                                        required [(ngModel)]&#x3D;&quot;id_grado&quot;&gt;
+                                                &lt;/div&gt;
+                                                &lt;!--Boton Crear Grado--&gt;
+                                                &lt;div class&#x3D;&quot;col px-0 justify-content-md-center no-gutters&quot;&gt;
+                                                    &lt;br&gt;
+                                                    &lt;a class&#x3D;&quot;btn bg-danger px-1 font-weight-bold mt-2 ml-3&quot; data-toggle&#x3D;&quot;modal&quot;
+                                                        data-target&#x3D;&quot;#mimodalejemplo4&quot; (click)&#x3D;&quot;CrearGrado(frmCrearGrados)&quot;&gt;Crear Grado&lt;/a&gt;
+                                                &lt;/div&gt;
+                                            &lt;/div&gt;
+        
+                                            &lt;br&gt;
+        
+                                            &lt;!--Borrar Grado--&gt;
+                                            &lt;h5 class&#x3D;&quot;py-3 text-white&quot;&gt;Borrar Grado:&lt;/h5&gt;
+                                            &lt;div class&#x3D;&quot;row mx-auto&quot;&gt;
+                                                &lt;table
+                                                    class&#x3D;&quot;mx-auto text-white m-auto rounded table-striped table-wrapper-scroll-y my-custom-scrollbar&quot;
+                                                    style&#x3D;&quot;height: 256px;&quot;&gt;
+                                                    &lt;thead class&#x3D;&quot;bg-danger&quot;&gt;
+                                                        &lt;th class&#x3D;&quot;pl-3 pr-5 py-2 text-dark&quot;&gt;Nombre Grado&lt;/th&gt;
+                                                        &lt;th class&#x3D;&quot;pl-3 pr-2 py-2 text-dark&quot;&gt;# Grado&lt;/th&gt;
+                                                        &lt;th class&#x3D;&quot;pl-3 pr-4 py-2 text-dark&quot;&gt;Accion&lt;/th&gt;
+                                                    &lt;/thead&gt;
+                                                    &lt;tbody class&#x3D;&quot;bg-light&quot;&gt;
+                                                        &lt;tr mdbTableCol *ngFor&#x3D;&quot;let grado of grados&quot;&gt;
+                                                            &lt;td class&#x3D;&quot;pl-3 pr-5 py-2 text-dark&quot;&gt;{{ grado.nombre_grado }}&lt;/td&gt;
+                                                            &lt;td class&#x3D;&quot;pl-3 pr-2 py-2 text-dark text-center&quot;&gt;{{ grado.id_grado }}&lt;/td&gt;
+                                                            &lt;td class&#x3D;&quot;pl-3 pr-4 py-2&quot;&gt;&lt;a class&#x3D;&quot;btn bg-warning py-0 px-1 text-dark&quot; data-toggle&#x3D;&quot;modal&quot; data-target&#x3D;&quot;#mimodalejemplo5&quot;
+                                                                    (click)&#x3D;&quot;saveDataGrado(grado)&quot;&gt;borrar&lt;/a&gt;
+                                                            &lt;/td&gt;
+                                                        &lt;/tr&gt;
+                                                    &lt;/tbody&gt;
+                                                &lt;/table&gt;
+                                            &lt;/div&gt;
+                                        &lt;/form&gt;
+                                        &lt;br&gt;
+                                        &lt;hr class&#x3D;&quot;style5&quot;&gt;
+                                    &lt;/div&gt;
+                                &lt;/div&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;   
+    &lt;/div&gt;
+
+    &lt;!-- Modal Confirmar Actualizacion Datos Colegio --&gt;
+    &lt;div class&#x3D;&quot;modal fade&quot; id&#x3D;&quot;mimodalejemplo&quot; tabindex&#x3D;&quot;-1&quot; role&#x3D;&quot;dialog&quot; aria-labelledby&#x3D;&quot;myModalLabel&quot;&gt;
+        &lt;div class&#x3D;&quot;modal-dialog&quot; role&#x3D;&quot;document&quot;&gt;
+            &lt;div class&#x3D;&quot;modal-content&quot;&gt;
+                &lt;div class&#x3D;&quot;modal-header bg-light&quot;&gt;
+                    &lt;h5 class&#x3D;&quot;modal-title&quot; id&#x3D;&quot;myModalLabel&quot;&gt;Mensaje&lt;/h5&gt;
+                    &lt;button class&#x3D;&quot;close&quot; data-dismiss&#x3D;&quot;modal&quot; aria-label&#x3D;&quot;Close&quot;&gt;
+                        &lt;span aria-hidden&#x3D;&quot;true&quot;&gt;&amp;times;&lt;/span&gt;
+                    &lt;/button&gt;
+                &lt;/div&gt;
+                &lt;div class&#x3D;&quot;modal-body text-info&quot; *ngIf&#x3D;&quot;correcto&quot;&gt;
+                    Se han Actualizado los datos del colegio.
+                &lt;/div&gt;
+                &lt;div class&#x3D;&quot;modal-body text-danger&quot; *ngIf&#x3D;&quot;error&quot;&gt;
+                    No se ha Seleccionado un Colegio para Actualizar.
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;!-- Modal Nueva Materia --&gt;
+    &lt;div class&#x3D;&quot;modal fade&quot; id&#x3D;&quot;mimodalejemplo2&quot; tabindex&#x3D;&quot;-1&quot; role&#x3D;&quot;dialog&quot; aria-labelledby&#x3D;&quot;myModalLabel2&quot;&gt;
+        &lt;div class&#x3D;&quot;modal-dialog&quot; role&#x3D;&quot;document&quot;&gt;
+            &lt;div class&#x3D;&quot;modal-content&quot;&gt;
+                &lt;div class&#x3D;&quot;modal-header bg-light&quot;&gt;
+                    &lt;h5 class&#x3D;&quot;modal-title&quot; id&#x3D;&quot;myModalLabel&quot;&gt;Mensaje&lt;/h5&gt;
+                    &lt;button class&#x3D;&quot;close&quot; data-dismiss&#x3D;&quot;modal&quot; aria-label&#x3D;&quot;Close&quot;&gt;
+                        &lt;span aria-hidden&#x3D;&quot;true&quot;&gt;&amp;times;&lt;/span&gt;
+                    &lt;/button&gt;
+                &lt;/div&gt;
+                &lt;div class&#x3D;&quot;modal-body&quot; *ngIf&#x3D;&quot;subiendo&quot;&gt;
+                    Creando una nueva Materia. Espere por favor.
+                &lt;/div&gt;
+                &lt;div class&#x3D;&quot;modal-body text-info&quot; *ngIf&#x3D;&quot;correcto1&quot;&gt;
+                    Se ha creado una nueva Materia.
+                &lt;/div&gt;
+                &lt;div class&#x3D;&quot;modal-body text-danger&quot; *ngIf&#x3D;&quot;error1&quot;&gt;
+                    La Materia no se ha podido crear. Revisa que has ingresado todos los datos requeridos.
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;!-- Modal Confirmacion Borrar Materia --&gt;
+    &lt;div class&#x3D;&quot;modal fade&quot; id&#x3D;&quot;mimodalejemplo3&quot; tabindex&#x3D;&quot;-1&quot; role&#x3D;&quot;dialog&quot; aria-labelledby&#x3D;&quot;myModalLabel3&quot;&gt;
+        &lt;div class&#x3D;&quot;modal-dialog&quot; role&#x3D;&quot;document&quot;&gt;
+            &lt;div class&#x3D;&quot;modal-content&quot;&gt;
+                &lt;div class&#x3D;&quot;modal-header bg-light&quot;&gt;
+                    &lt;h5 class&#x3D;&quot;modal-title&quot; id&#x3D;&quot;myModalLabel&quot;&gt;Confirmar Accion&lt;/h5&gt;
+                    &lt;button class&#x3D;&quot;close&quot; data-dismiss&#x3D;&quot;modal&quot; aria-label&#x3D;&quot;Close&quot;&gt;
+                        &lt;span aria-hidden&#x3D;&quot;true&quot;&gt;&amp;times;&lt;/span&gt;
+                    &lt;/button&gt;
+                &lt;/div&gt;
+                &lt;div class&#x3D;&quot;modal-body&quot;&gt;
+                    Para borrar la Materia presione aceptar, de lo contrario presione X
+                    para cancelar.
+                &lt;/div&gt;
+                &lt;div class&#x3D;&quot;modal-footer bg-light justify-content-md-center no-gutters py-1 bg-light&quot;&gt;
+                    &lt;button class&#x3D;&quot;btn btn-default bg-warning font-weight-bold&quot; data-dismiss&#x3D;&quot;modal&quot; (click)&#x3D;&quot;deleteMateria()&quot;&gt;Aceptar&lt;/button&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;!-- Modal Nuevo Grado --&gt;
+    &lt;div class&#x3D;&quot;modal fade&quot; id&#x3D;&quot;mimodalejemplo4&quot; tabindex&#x3D;&quot;-1&quot; role&#x3D;&quot;dialog&quot; aria-labelledby&#x3D;&quot;myModalLabel4&quot;&gt;
+        &lt;div class&#x3D;&quot;modal-dialog&quot; role&#x3D;&quot;document&quot;&gt;
+            &lt;div class&#x3D;&quot;modal-content&quot;&gt;
+                &lt;div class&#x3D;&quot;modal-header bg-light&quot;&gt;
+                    &lt;h5 class&#x3D;&quot;modal-title&quot; id&#x3D;&quot;myModalLabel&quot;&gt;Mensaje&lt;/h5&gt;
+                    &lt;button class&#x3D;&quot;close&quot; data-dismiss&#x3D;&quot;modal&quot; aria-label&#x3D;&quot;Close&quot;&gt;
+                        &lt;span aria-hidden&#x3D;&quot;true&quot;&gt;&amp;times;&lt;/span&gt;
+                    &lt;/button&gt;
+                &lt;/div&gt;
+                &lt;div class&#x3D;&quot;modal-body&quot; *ngIf&#x3D;&quot;subiendo&quot;&gt;
+                    Creando un nuevo Grado. Espere por favor.
+                &lt;/div&gt;
+                &lt;div class&#x3D;&quot;modal-body text-info&quot; *ngIf&#x3D;&quot;correcto2&quot;&gt;
+                    Se ha creado un nuevo Grado.
+                &lt;/div&gt;
+                &lt;div class&#x3D;&quot;modal-body text-danger&quot; *ngIf&#x3D;&quot;error2&quot;&gt;
+                    El Grado no se ha podido crear. Revisa que has ingresado todos los datos requeridos.
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;!-- Modal Confirmacion Borrar Grado --&gt;
+    &lt;div class&#x3D;&quot;modal fade&quot; id&#x3D;&quot;mimodalejemplo5&quot; tabindex&#x3D;&quot;-1&quot; role&#x3D;&quot;dialog&quot; aria-labelledby&#x3D;&quot;myModalLabel5&quot;&gt;
+        &lt;div class&#x3D;&quot;modal-dialog&quot; role&#x3D;&quot;document&quot;&gt;
+            &lt;div class&#x3D;&quot;modal-content&quot;&gt;
+                &lt;div class&#x3D;&quot;modal-header bg-light&quot;&gt;
+                    &lt;h5 class&#x3D;&quot;modal-title&quot; id&#x3D;&quot;myModalLabel&quot;&gt;Confirmar Accion&lt;/h5&gt;
+                    &lt;button class&#x3D;&quot;close&quot; data-dismiss&#x3D;&quot;modal&quot; aria-label&#x3D;&quot;Close&quot;&gt;
+                        &lt;span aria-hidden&#x3D;&quot;true&quot;&gt;&amp;times;&lt;/span&gt;
+                    &lt;/button&gt;
+                &lt;/div&gt;
+                &lt;div class&#x3D;&quot;modal-body&quot;&gt;
+                    Para borrar el Grado presione aceptar, de lo contrario presione X
+                    para cancelar.
+                &lt;/div&gt;
+                &lt;div class&#x3D;&quot;modal-footer justify-content-md-center no-gutters py-1 bg-light&quot;&gt;
+                    &lt;button class&#x3D;&quot;btn btn-default bg-warning font-weight-bold&quot; data-dismiss&#x3D;&quot;modal&quot; (click)&#x3D;&quot;deleteGrado()&quot;&gt;Aceptar&lt;/button&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;!-- Modal Nuevo Colegio --&gt;
+    &lt;div class&#x3D;&quot;modal fade&quot; id&#x3D;&quot;mimodalejemplo6&quot; tabindex&#x3D;&quot;-1&quot; role&#x3D;&quot;dialog&quot; aria-labelledby&#x3D;&quot;myModalLabel6&quot;&gt;
+        &lt;div class&#x3D;&quot;modal-dialog&quot; role&#x3D;&quot;document&quot;&gt;
+            &lt;div class&#x3D;&quot;modal-content&quot;&gt;
+                &lt;div class&#x3D;&quot;modal-header bg-light&quot;&gt;
+                    &lt;h5 class&#x3D;&quot;modal-title&quot; id&#x3D;&quot;myModalLabel&quot;&gt;Mensaje&lt;/h5&gt;
+                    &lt;button class&#x3D;&quot;close&quot; data-dismiss&#x3D;&quot;modal&quot; aria-label&#x3D;&quot;Close&quot;&gt;
+                        &lt;span aria-hidden&#x3D;&quot;true&quot;&gt;&amp;times;&lt;/span&gt;
+                    &lt;/button&gt;
+                &lt;/div&gt;
+                &lt;div class&#x3D;&quot;modal-body&quot; *ngIf&#x3D;&quot;subiendo&quot;&gt;
+                    Creando un nuevo Colegio. Espere por favor.
+                &lt;/div&gt;
+                &lt;div class&#x3D;&quot;modal-body text-info&quot; *ngIf&#x3D;&quot;correcto3&quot;&gt;
+                    Se ha creado un nuevo Colegio.
+                &lt;/div&gt;
+                &lt;div class&#x3D;&quot;modal-body text-danger&quot; *ngIf&#x3D;&quot;error3&quot;&gt;
+                    El Colegio no se ha podido crear. Revisa que has ingresado todos los datos requeridos.
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;!-- Modal Confirmacion Colegio Seleccionado --&gt;
+    &lt;div class&#x3D;&quot;modal fade&quot; id&#x3D;&quot;mimodalejemplo7&quot; tabindex&#x3D;&quot;-1&quot; role&#x3D;&quot;dialog&quot; aria-labelledby&#x3D;&quot;myModalLabel7&quot;&gt;
+        &lt;div class&#x3D;&quot;modal-dialog&quot; role&#x3D;&quot;document&quot;&gt;
+            &lt;div class&#x3D;&quot;modal-content&quot;&gt;
+                &lt;div class&#x3D;&quot;modal-header bg-light&quot;&gt;
+                    &lt;h5 class&#x3D;&quot;modal-title&quot; id&#x3D;&quot;myModalLabel&quot;&gt;Mensaje&lt;/h5&gt;
+                    &lt;button class&#x3D;&quot;close&quot; data-dismiss&#x3D;&quot;modal&quot; aria-label&#x3D;&quot;Close&quot;&gt;
+                        &lt;span aria-hidden&#x3D;&quot;true&quot;&gt;&amp;times;&lt;/span&gt;
+                    &lt;/button&gt;
+                &lt;/div&gt;
+                &lt;div class&#x3D;&quot;modal-body&quot;&gt;
+                    Ha sido seleccionado un Colegio. Los datos han sido cargados para revisar y modificar.
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;!-- Modal Materias Profesores --&gt;
+    &lt;div class&#x3D;&quot;modal fade&quot; id&#x3D;&quot;mimodalejemplo8&quot; tabindex&#x3D;&quot;-1&quot; role&#x3D;&quot;dialog&quot; aria-labelledby&#x3D;&quot;myModalLabel8&quot;&gt;
+        &lt;div class&#x3D;&quot;modal-dialog modal-lg&quot; role&#x3D;&quot;document&quot;&gt;
+            &lt;div class&#x3D;&quot;modal-content&quot;&gt;
+                &lt;div class&#x3D;&quot;modal-header bg-light&quot;&gt;
+                    &lt;h5 class&#x3D;&quot;modal-title&quot; id&#x3D;&quot;myModalLabel&quot;&gt;Materias Docentes&lt;/h5&gt;
+                    &lt;button class&#x3D;&quot;close&quot; data-dismiss&#x3D;&quot;modal&quot; aria-label&#x3D;&quot;Close&quot;&gt;
+                        &lt;span aria-hidden&#x3D;&quot;true&quot;&gt;&amp;times;&lt;/span&gt;
+                    &lt;/button&gt;
+                &lt;/div&gt;
+                &lt;div class&#x3D;&quot;modal-body bg-secondary&quot;&gt;
+                    &lt;div class&#x3D;&quot;contenedor mx-3 py-3&quot;&gt;
+                        &lt;!--Filtros--&gt;
+                        &lt;div class&#x3D;&quot;row&quot;&gt;
+                            &lt;div class&#x3D;&quot;form-group col&quot;&gt;
+                                &lt;label for&#x3D;&quot;inputMateriaMA&quot; class&#x3D;&quot;text-white&quot;&gt;Materia&lt;/label&gt;
+                                &lt;select [(ngModel)]&#x3D;&quot;materiaSelectedMA&quot; id&#x3D;&quot;inputMateriaMA&quot; name&#x3D;&quot;materiaSelectedMA&quot; class&#x3D;&quot;form-control&quot; ngModel required&gt;
+                                    &lt;option selected&gt;&lt;/option&gt;
+                                    &lt;option *ngFor&#x3D;&quot;let mater of materias&quot; [value]&#x3D;&quot;mater.id_materia&quot;&gt;{{mater.nombre_materia}}&lt;/option&gt;
+                                &lt;/select&gt;
+                            &lt;/div&gt;
+                            &lt;div class&#x3D;&quot;form-group col&quot;&gt;
+                                &lt;label for&#x3D;&quot;inputGradoMA&quot; class&#x3D;&quot;text-white&quot;&gt;Grado&lt;/label&gt;
+                                &lt;select [(ngModel)]&#x3D;&quot;gradoSelectedMA&quot; id&#x3D;&quot;inputGradoMA&quot; name&#x3D;&quot;gradoSelectedMA&quot; class&#x3D;&quot;form-control&quot; ngModel required&gt;
+                                    &lt;option selected&gt;&lt;/option&gt;
+                                    &lt;option *ngFor&#x3D;&quot;let grad of grados&quot; [value]&#x3D;&quot;grad.id_grado&quot;&gt;{{grad.nombre_grado}}&lt;/option&gt;
+                                &lt;/select&gt;
+                            &lt;/div&gt;
+                            &lt;div class&#x3D;&quot;form-group col&quot;&gt;
+                                &lt;label for&#x3D;&quot;inputDocenteMA&quot; class&#x3D;&quot;text-white&quot;&gt;Profesor&lt;/label&gt;
+                                &lt;select [(ngModel)]&#x3D;&quot;docenteSelectedMA&quot; id&#x3D;&quot;inputDocenteMA&quot; name&#x3D;&quot;docenteSelectedMA&quot; class&#x3D;&quot;form-control&quot; ngModel required&gt;
+                                    &lt;option selected&gt;&lt;/option&gt;
+                                    &lt;option *ngFor&#x3D;&quot;let docen of docentes&quot; [value]&#x3D;&quot;docen.id_docente&quot;&gt;
+                                        {{(docen.nombre_docente+&quot; &quot;+docen.apellido_docente)}}&lt;/option&gt;
+                                &lt;/select&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;div class&#x3D;&quot;form-group col-5 mx-auto&quot;&gt;
+                            &lt;label for&#x3D;&quot;inputColegioMA&quot; class&#x3D;&quot;text-white&quot;&gt;Colegio&lt;/label&gt;
+                            &lt;select [(ngModel)]&#x3D;&quot;colegioSelectedMA&quot; id&#x3D;&quot;inputColegioMA&quot; name&#x3D;&quot;colegioSelectedMA&quot; class&#x3D;&quot;form-control&quot; ngModel
+                                required&gt;
+                                &lt;option selected&gt;&lt;/option&gt;
+                                &lt;option *ngFor&#x3D;&quot;let colegio of colegios&quot; [value]&#x3D;&quot;colegio.id_colegio&quot;&gt;{{(colegio.nombre_colegio)}}&lt;/option&gt;
+                            &lt;/select&gt;
+                        &lt;/div&gt;
+                
+                        &lt;!--Resultados--&gt;
+                        &lt;h5 class&#x3D;&quot;py-3 text-white&quot;&gt;Resultados:&lt;/h5&gt;
+                        &lt;div class&#x3D;&quot;row mx-auto&quot;&gt;
+                            &lt;table class&#x3D;&quot;mx-auto text-white m-auto rounded table-striped table-wrapper-scroll-y my-custom-scrollbar&quot;
+                                style&#x3D;&quot;height: 256px;&quot;&gt;
+                                &lt;thead class&#x3D;&quot;bg-danger&quot;&gt;
+                                    &lt;th class&#x3D;&quot;pl-3 pr-5 py-2 text-dark&quot;&gt;Nombre Materia&lt;/th&gt;
+                                    &lt;th class&#x3D;&quot;pl-3 pr-3 py-2 text-dark text-center&quot;&gt;Materia Base&lt;/th&gt;
+                                    &lt;th class&#x3D;&quot;pl-3 pr-3 py-2 text-dark text-center&quot;&gt;grado&lt;/th&gt;
+                                    &lt;th class&#x3D;&quot;pl-3 pr-3 py-2 text-dark text-center&quot;&gt;Docente&lt;/th&gt;
+                                    &lt;th class&#x3D;&quot;pl-3 pr-4 py-2 text-dark text-center&quot;&gt;Colegio&lt;/th&gt;
+                                &lt;/thead&gt;
+                                &lt;tbody class&#x3D;&quot;bg-light&quot;&gt;
+                                    &lt;tr mdbTableCol *ngFor&#x3D;&quot;let materiaActiva of MateriaActivaInfo | filterMateriaactivaAdmin: materiaSelectedMA:gradoSelectedMA:docenteSelectedMA:colegioSelectedMA&quot;&gt;
+                                        &lt;td class&#x3D;&quot;pl-3 pr-5 py-2 text-dark&quot;&gt;{{ materiaActiva.nombre_materiaActiva }}&lt;/td&gt;
+                                        &lt;td class&#x3D;&quot;pl-3 pr-3 py-2 text-dark text-center&quot;&gt;{{ materiaActiva.nombre_materia }}&lt;/td&gt;
+                                        &lt;td class&#x3D;&quot;pl-3 pr-3 py-2 text-dark text-center&quot;&gt;{{ materiaActiva.id_grado }}&lt;/td&gt;
+                                        &lt;td class&#x3D;&quot;pl-3 pr-3 py-2 text-dark text-center&quot;&gt;{{ materiaActiva.docente }}&lt;/td&gt;
+                                        &lt;td class&#x3D;&quot;pl-3 pr-4 py-2 text-dark text-center&quot;&gt;{{ materiaActiva.colegio }}&lt;/td&gt;
+                                    &lt;/tr&gt;
+                                &lt;/tbody&gt;
+                            &lt;/table&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+&lt;/div&gt;
+
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-styleData">
+                <p class="comment">
+                    <code>./gestionar-colegio-admin.component.css</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss"></code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><app-header-admin></app-header-admin><!--Contenedor Contenido Pagina--><div class="mb-5 col-9 mx-auto">    <!--Titulo pagina-->    <div class="container m-auto pb-2 bg-danger rounded-top">        <h1 style="cursor:context-menu" class="mt-5 pt-4 text-center m ">Gestionar Colegio</h1>    </div>        <!--Contenedor Formularios-->    <div class="container pt-1 bg-secondary rounded-bottom">        <!--Tabs-->        <div class="row">            <div class="col">                <div class="mt-3">                    <div class="card-header tab-card-header">                        <!--Opcion Tab-->                        <nav>                            <div class="nav nav-tabs" id="nav-tab" role="tablist">                                <a class="col nav-item nav-link text-center active font-weight-bold text-dark" id="nav-Pregunta1-tab" data-toggle="tab"                                    href="#nav-Pregunta1" role="tab" aria-controls="nav-Pregunta1"                                    aria-selected="true">Colegios</a>                                <a class="col nav-item nav-link text-center font-weight-bold text-dark" id="nav-Pregunta2-tab" data-toggle="tab"                                    href="#nav-Pregunta2" role="tab" aria-controls="nav-Pregunta2"                                    aria-selected="false">Materias</a>                                <a class="col nav-item nav-link text-center font-weight-bold text-dark" id="nav-Pregunta3-tab" data-toggle="tab"                                    href="#nav-Pregunta3" role="tab" aria-controls="nav-Pregunta3"                                    aria-selected="false">Grados</a>                            </div>                        </nav>                                <!--Tabs Resultados-->                        <div class="tab-content" id="nav-tabContent">                            <br>                            <!--Tab 1-->                            <div class="tab-pane fade show active" id="nav-Pregunta1" role="tabpanel"                                aria-labelledby="nav-Pregunta1-tab">                                <!--Gestion de Colegios-->                                <div>                                    <h3 style="cursor:context-menu" class="py-3 text-center text-white">Colegios</h3>                                    <div class="contenedor mx-3 py-3">                                        <!--Buscar-->                                        <h5 class="py-3 text-white">Buscador:</h5>                                        <div class="row">                                            <div class="form-group col-5">                                                <label for="inputNombreMateri" class="text-white">Nombre Colegio</label>                                                <input type="text" class="form-control" id="inputTextoBusquedaNombreColegio"                                                    placeholder="Nombre Colegio" [(ngModel)]="nombreColegio"                                                    name="nombreColegio">                                            </div>                                            <div class="form-group">                                                <label for="inputNombreMateri" class="text-white">NIT Colegio</label>                                                <input type="number" class="form-control" id="inputTextoBusquedaNITColegio"                                                    placeholder="NIT Colegio" [(ngModel)]="NITColegio" name="NITColegio">                                            </div>                                        </div>                                                <!--Resultados-->                                        <h5 class="py-3 text-white">Resultados:</h5>                                        <div class="row mx-auto">                                            <table                                                class="mx-auto text-white m-auto rounded table-striped table-wrapper-scroll-y my-custom-scrollbar"                                                style="height: 256px;">                                                <thead class="bg-danger">                                                    <th class="pl-3 pr-5 py-2 text-dark">Nombre Colegio</th>                                                    <th class="pl-3 pr-3 py-2 text-dark text-center">NIT</th>                                                    <th class="pl-3 pr-3 py-2 text-dark text-center">Ciudad</th>                                                    <th class="pl-3 pr-4 py-2 text-dark text-center">Accion</th>                                                </thead>                                                <tbody class="bg-light">                                                    <tr mdbTableCol *ngFor="let colegio of colegios | filterColegioAdmin: nombreColegio:NITColegio">                                                        <td class="pl-3 pr-5 py-2 text-dark">{{ colegio.nombre_colegio }}</td>                                                        <td class="pl-3 pr-3 py-2 text-dark text-center">{{ colegio.NIT }}</td>                                                        <td class="pl-3 pr-3 py-2 text-dark text-center">{{ colegio.ciudad }}                                                        </td>                                                        <td class="pl-3 pr-4 py-2">                                                            <a class="btn bg-warning py-0 px-1 text-dark" data-toggle="modal"                                                                data-target="#mimodalejemplo7" (click)="getColegioinForm(colegio)">Actualizar</a>                                                        </td>                                                    </tr>                                                </tbody>                                            </table>                                        </div>                                    </div>                                            <!--Informacion Colegio-->                                    <div class="container">                                        <h5 class="py-3 text-white text-center">Crear o Actualizar Colegio:</h5>                                        <form #frmInfoColegio="ngForm">                                            <div class="col-6 mx-auto">                                                <div class="form-group col">                                                    <div class="form-group">                                                        <label for="inputNombreColegio" class="text-white ">Nombre                                                            Colegio</label>                                                        <input type="text" name="nombre_colegio" class="form-control col"                                                            id="inputNombreColegio" placeholder="Nombre Colegio" required [(ngModel)]="this.AuthAdminService.selectedColegio.nombre_colegio">                                                    </div>                                                    <div class="form-group">                                                        <label for="inputNombreRector" class="text-white ">Nombre Rector</label>                                                        <input type="text" name="rector" class="form-control col"                                                            id="inputNombreRector" placeholder="Nombre Rector" required [(ngModel)]="this.AuthAdminService.selectedColegio.rector">                                                    </div>                                                    <div class="form-group">                                                        <label for="inputNIT" class="text-white ">NIT Colegio</label>                                                        <input type="number" name="NIT" class="form-control col-7" id="inputNIT"                                                            placeholder="NIT Colegio" required [(ngModel)]="this.AuthAdminService.selectedColegio.NIT">                                                    </div>                                                    <div class="row">                                                        <div class="form-group col">                                                            <label for="inputCiudadColegio" class="text-white ">Ciudad</label>                                                            <input type="text" name="ciudad" class="form-control col"                                                                id="inputCiudadColegio" placeholder="Ciudad Colegio" required                                                                [(ngModel)]="this.AuthAdminService.selectedColegio.ciudad">                                                        </div>                                                        <div class="form-group col">                                                            <label for="inputTelefonoColegio"                                                                class="text-white ">Telefono</label>                                                            <input type="text" name="telefono" class="form-control col"                                                                id="inputTelefonoColegio" placeholder="Telefono Colegio"                                                                required                                                                [(ngModel)]="this.AuthAdminService.selectedColegio.telefono">                                                        </div>                                                    </div>                                                    <div class="form-group">                                                        <label for="inputDireccionColegio" class="text-white ">Direccion</label>                                                        <input type="text" name="direccion" class="form-control col"                                                            id="inputDireccionColegio" placeholder="Direccion Colegio" required                                                            [(ngModel)]="this.AuthAdminService.selectedColegio.direccion">                                                    </div>                                                    <div class="row">                                                        <div class="form-group col-8">                                                            <label for="inputTipoColegion" class="text-white ">Tipo                                                                Colegio</label>                                                            <input type="text" name="tipo_colegio" class="form-control col"                                                                id="inputTipoColegion" placeholder="Tipo Colegio" required                                                                [(ngModel)]="this.AuthAdminService.selectedColegio.tipo_colegio">                                                        </div>                                                        <div class="form-group col">                                                            <label for="inputCalendario" class="text-white ">Calendario</label>                                                            <input type="text" name="calendario" class="form-control col"                                                                id="inputCalendario" placeholder="Calendario Colegio" required                                                                [(ngModel)]="this.AuthAdminService.selectedColegio.calendario">                                                        </div>                                                    </div>                                                </div>                                            </div>                                            <br>                                                    <div class="row">                                                <!--Boton Crear Datos Colegio-->                                                <div class="mr-2  ml-auto pb-4 justify-content-md-center no-gutters">                                                    <a class="btn bg-danger px-5 py-4 font-weight-bold" data-toggle="modal"                                                        data-target="#mimodalejemplo6"                                                        (click)="crearColegio(frmInfoColegio)">Crear</a>                                                </div>                                                <!--Boton Actualizar Datos Colegio-->                                                <div class="ml-2 mr-auto pb-4 justify-content-md-center no-gutters">                                                    <a class="btn bg-danger px-4 py-4 font-weight-bold" data-toggle="modal"                                                        data-target="#mimodalejemplo" (click)="actualizarColegio(frmInfoColegio)">Actualizar</a>                                                </div>                                            </div>                                            <div class="bg-secondary row pb-4 justify-content-md-center no-gutters">                                                <a class="btn bg-danger px-5 py-2 font-weight-bold"                                                    (click)="resetForm(frmInfoColegio)">Limpiar</a>                                            </div>                                        </form>                                        <hr class="style5">                                    </div>                                </div>                            </div>                            <!--Tab 2-->                            <div class="tab-pane fade" id="nav-Pregunta2" role="tabpanel" aria-labelledby="nav-Pregunta2-tab">                                <!--Gestion de Materias-->                                <div>                                    <h3 style="cursor:context-menu" class="py-3 text-center text-white">Materias</h3>                                    <div class="contenedor mx-3 py-3">                                        <form #frmCrearMateria="ngForm">                                                                                      <!--Crear Materia-->                                            <h5 class="py-3 text-white">Crear Materia:</h5>                                            <div class="row">                                                <div class="form-group col-5  pr-3">                                                    <label for="inputNombreMateri" class="text-white">Nombre Materia</label>                                                    <input type="text" name="nombre_materia" class="form-control" id="inputNombreMateria" placeholder="Nombre Materia" required                                                        [(ngModel)]="nombre_materia">                                                </div>                                                <div class="form-group col">                                                    <label for="inputAreaMateri" class="text-white">Area</label>                                                    <select [(ngModel)]="id_areaMateria" name="id_areaMateria" id="inputAreaMateria" class="form-control" ngModel required>                                                        <option selected></option>                                                        <option *ngFor="let area of areasMaterias" [value]="area.id_areaMateria">{{area.nombre_areaMateria}}</option>                                                    </select>                                                </div>                                                <div class="form-group col">                                                    <label for="inputColegioM" class="text-white">Colegio</label>                                                    <select [(ngModel)]="id_colegioM" name="id_colegioM" id="inputColegioM" class="form-control" ngModel required>                                                        <option selected></option>                                                        <option *ngFor="let colegio of colegios" [value]="colegio.id_colegio">{{colegio.nombre_colegio}}</option>                                                    </select>                                                </div>                                            </div>                                                                                        <!--Boton Crear Materia-->                                            <div class="bg-secondary row pb-4 pt-2 justify-content-md-center no-gutters">                                                <a class="btn bg-danger px-5 py-2 font-weight-bold" data-toggle="modal" data-target="#mimodalejemplo2"                                                    (click)="crearMateria(frmCrearMateria)">Crear Materia</a>                                            </div>                                                    <br>                                                    <!--Borrar Materia-->                                            <h5 class="py-3 text-white">Borrar Materia:</h5>                                            <div class="row mx-auto">                                                <table                                                    class="mx-auto text-white m-auto rounded table-striped table-wrapper-scroll-y my-custom-scrollbar"                                                    style="height: 256px;">                                                    <thead class="bg-danger">                                                        <th class="pl-3 pr-5 py-2 text-dark">Nombre Materia</th>                                                        <th class="pl-3 pr-2 py-2 text-dark">Area Materia</th>                                                        <th class="pl-3 pr-4 py-2 text-dark">Accion</th>                                                    </thead>                                                    <tbody class="bg-light">                                                        <tr mdbTableCol *ngFor="let materia of materiasVisualizar">                                                            <td class="pl-3 pr-5 py-2 text-dark">{{ materia.nombre_materia }}                                                            </td>                                                            <td class="pl-3 pr-2 py-2 text-dark">{{ materia.areaMateria }}</td>                                                            <td class="pl-3 pr-4 py-2">                                                                <a class="btn bg-warning py-0 px-1 text-dark"                                                                    data-toggle="modal" data-target="#mimodalejemplo3"                                                                    (click)="saveDataMateria(materia)">borrar</a>                                                            </td>                                                        </tr>                                                    </tbody>                                                </table>                                            </div>                                            <!--Mirar Materias de Profesores-->                                            <br>                                            <br>                                            <div class="pl-3 row">                                                <h5 class="py-3 text-white">Materias de Profesores: </h5>                                                <div class="col mt-2 px-0 justify-content-md-center no-gutters">                                                    <a class="btn bg-danger px-1 font-weight-bold mt-2 ml-3 py-0 px-3" data-toggle="modal"                                                        data-target="#mimodalejemplo8" (click)="getInformacionCompletaMateriasActivas()">ver</a>                                                </div>                                            </div>                                        </form>                                        <br>                                        <hr class="style5">                                    </div>                                </div>                            </div>                                                        <!--Tab 3-->                            <div class="tab-pane fade" id="nav-Pregunta3" role="tabpanel" aria-labelledby="nav-Pregunta3-tab">                                <!--Gestion de Grados-->                                <div>                                    <h3 style="cursor:context-menu" class="py-3 text-center text-white">Grados</h3>                                    <div class="contenedor mx-3 py-3">                                        <form #frmCrearGrados="ngForm">                                                    <!--Crear Grado-->                                            <h5 class="py-3 text-white">Crear Grado:</h5>                                            <div class="row">                                                <div class="form-group col-5  pr-3">                                                    <label for="inputNombreGrado" class="text-white">Nombre Grado</label>                                                    <input type="text" name="nombre_grado" class="form-control mt-2"                                                        id="inputNombreGrado" placeholder="Nombre Grado" required                                                        [(ngModel)]="nombre_grado">                                                </div>                                                <div class="form-group">                                                    <label for="inputNumeroGrado" class="text-white">Numero Grado</label>                                                    <input type="text" name="id_grado" class="form-control mt-2"                                                        style="width: 115px;" id="inputNumeroGrado" placeholder="# Grado"                                                        required [(ngModel)]="id_grado">                                                </div>                                                <!--Boton Crear Grado-->                                                <div class="col px-0 justify-content-md-center no-gutters">                                                    <br>                                                    <a class="btn bg-danger px-1 font-weight-bold mt-2 ml-3" data-toggle="modal"                                                        data-target="#mimodalejemplo4" (click)="CrearGrado(frmCrearGrados)">Crear Grado</a>                                                </div>                                            </div>                                                    <br>                                                    <!--Borrar Grado-->                                            <h5 class="py-3 text-white">Borrar Grado:</h5>                                            <div class="row mx-auto">                                                <table                                                    class="mx-auto text-white m-auto rounded table-striped table-wrapper-scroll-y my-custom-scrollbar"                                                    style="height: 256px;">                                                    <thead class="bg-danger">                                                        <th class="pl-3 pr-5 py-2 text-dark">Nombre Grado</th>                                                        <th class="pl-3 pr-2 py-2 text-dark"># Grado</th>                                                        <th class="pl-3 pr-4 py-2 text-dark">Accion</th>                                                    </thead>                                                    <tbody class="bg-light">                                                        <tr mdbTableCol *ngFor="let grado of grados">                                                            <td class="pl-3 pr-5 py-2 text-dark">{{ grado.nombre_grado }}</td>                                                            <td class="pl-3 pr-2 py-2 text-dark text-center">{{ grado.id_grado }}</td>                                                            <td class="pl-3 pr-4 py-2"><a class="btn bg-warning py-0 px-1 text-dark" data-toggle="modal" data-target="#mimodalejemplo5"                                                                    (click)="saveDataGrado(grado)">borrar</a>                                                            </td>                                                        </tr>                                                    </tbody>                                                </table>                                            </div>                                        </form>                                        <br>                                        <hr class="style5">                                    </div>                                </div>                            </div>                        </div>                    </div>                </div>            </div>        </div>       </div>    <!-- Modal Confirmar Actualizacion Datos Colegio -->    <div class="modal fade" id="mimodalejemplo" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">        <div class="modal-dialog" role="document">            <div class="modal-content">                <div class="modal-header bg-light">                    <h5 class="modal-title" id="myModalLabel">Mensaje</h5>                    <button class="close" data-dismiss="modal" aria-label="Close">                        <span aria-hidden="true">&times;</span>                    </button>                </div>                <div class="modal-body text-info" *ngIf="correcto">                    Se han Actualizado los datos del colegio.                </div>                <div class="modal-body text-danger" *ngIf="error">                    No se ha Seleccionado un Colegio para Actualizar.                </div>            </div>        </div>    </div>    <!-- Modal Nueva Materia -->    <div class="modal fade" id="mimodalejemplo2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel2">        <div class="modal-dialog" role="document">            <div class="modal-content">                <div class="modal-header bg-light">                    <h5 class="modal-title" id="myModalLabel">Mensaje</h5>                    <button class="close" data-dismiss="modal" aria-label="Close">                        <span aria-hidden="true">&times;</span>                    </button>                </div>                <div class="modal-body" *ngIf="subiendo">                    Creando una nueva Materia. Espere por favor.                </div>                <div class="modal-body text-info" *ngIf="correcto1">                    Se ha creado una nueva Materia.                </div>                <div class="modal-body text-danger" *ngIf="error1">                    La Materia no se ha podido crear. Revisa que has ingresado todos los datos requeridos.                </div>            </div>        </div>    </div>    <!-- Modal Confirmacion Borrar Materia -->    <div class="modal fade" id="mimodalejemplo3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel3">        <div class="modal-dialog" role="document">            <div class="modal-content">                <div class="modal-header bg-light">                    <h5 class="modal-title" id="myModalLabel">Confirmar Accion</h5>                    <button class="close" data-dismiss="modal" aria-label="Close">                        <span aria-hidden="true">&times;</span>                    </button>                </div>                <div class="modal-body">                    Para borrar la Materia presione aceptar, de lo contrario presione X                    para cancelar.                </div>                <div class="modal-footer bg-light justify-content-md-center no-gutters py-1 bg-light">                    <button class="btn btn-default bg-warning font-weight-bold" data-dismiss="modal" (click)="deleteMateria()">Aceptar</button>                </div>            </div>        </div>    </div>    <!-- Modal Nuevo Grado -->    <div class="modal fade" id="mimodalejemplo4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel4">        <div class="modal-dialog" role="document">            <div class="modal-content">                <div class="modal-header bg-light">                    <h5 class="modal-title" id="myModalLabel">Mensaje</h5>                    <button class="close" data-dismiss="modal" aria-label="Close">                        <span aria-hidden="true">&times;</span>                    </button>                </div>                <div class="modal-body" *ngIf="subiendo">                    Creando un nuevo Grado. Espere por favor.                </div>                <div class="modal-body text-info" *ngIf="correcto2">                    Se ha creado un nuevo Grado.                </div>                <div class="modal-body text-danger" *ngIf="error2">                    El Grado no se ha podido crear. Revisa que has ingresado todos los datos requeridos.                </div>            </div>        </div>    </div>    <!-- Modal Confirmacion Borrar Grado -->    <div class="modal fade" id="mimodalejemplo5" tabindex="-1" role="dialog" aria-labelledby="myModalLabel5">        <div class="modal-dialog" role="document">            <div class="modal-content">                <div class="modal-header bg-light">                    <h5 class="modal-title" id="myModalLabel">Confirmar Accion</h5>                    <button class="close" data-dismiss="modal" aria-label="Close">                        <span aria-hidden="true">&times;</span>                    </button>                </div>                <div class="modal-body">                    Para borrar el Grado presione aceptar, de lo contrario presione X                    para cancelar.                </div>                <div class="modal-footer justify-content-md-center no-gutters py-1 bg-light">                    <button class="btn btn-default bg-warning font-weight-bold" data-dismiss="modal" (click)="deleteGrado()">Aceptar</button>                </div>            </div>        </div>    </div>    <!-- Modal Nuevo Colegio -->    <div class="modal fade" id="mimodalejemplo6" tabindex="-1" role="dialog" aria-labelledby="myModalLabel6">        <div class="modal-dialog" role="document">            <div class="modal-content">                <div class="modal-header bg-light">                    <h5 class="modal-title" id="myModalLabel">Mensaje</h5>                    <button class="close" data-dismiss="modal" aria-label="Close">                        <span aria-hidden="true">&times;</span>                    </button>                </div>                <div class="modal-body" *ngIf="subiendo">                    Creando un nuevo Colegio. Espere por favor.                </div>                <div class="modal-body text-info" *ngIf="correcto3">                    Se ha creado un nuevo Colegio.                </div>                <div class="modal-body text-danger" *ngIf="error3">                    El Colegio no se ha podido crear. Revisa que has ingresado todos los datos requeridos.                </div>            </div>        </div>    </div>    <!-- Modal Confirmacion Colegio Seleccionado -->    <div class="modal fade" id="mimodalejemplo7" tabindex="-1" role="dialog" aria-labelledby="myModalLabel7">        <div class="modal-dialog" role="document">            <div class="modal-content">                <div class="modal-header bg-light">                    <h5 class="modal-title" id="myModalLabel">Mensaje</h5>                    <button class="close" data-dismiss="modal" aria-label="Close">                        <span aria-hidden="true">&times;</span>                    </button>                </div>                <div class="modal-body">                    Ha sido seleccionado un Colegio. Los datos han sido cargados para revisar y modificar.                </div>            </div>        </div>    </div>    <!-- Modal Materias Profesores -->    <div class="modal fade" id="mimodalejemplo8" tabindex="-1" role="dialog" aria-labelledby="myModalLabel8">        <div class="modal-dialog modal-lg" role="document">            <div class="modal-content">                <div class="modal-header bg-light">                    <h5 class="modal-title" id="myModalLabel">Materias Docentes</h5>                    <button class="close" data-dismiss="modal" aria-label="Close">                        <span aria-hidden="true">&times;</span>                    </button>                </div>                <div class="modal-body bg-secondary">                    <div class="contenedor mx-3 py-3">                        <!--Filtros-->                        <div class="row">                            <div class="form-group col">                                <label for="inputMateriaMA" class="text-white">Materia</label>                                <select [(ngModel)]="materiaSelectedMA" id="inputMateriaMA" name="materiaSelectedMA" class="form-control" ngModel required>                                    <option selected></option>                                    <option *ngFor="let mater of materias" [value]="mater.id_materia">{{mater.nombre_materia}}</option>                                </select>                            </div>                            <div class="form-group col">                                <label for="inputGradoMA" class="text-white">Grado</label>                                <select [(ngModel)]="gradoSelectedMA" id="inputGradoMA" name="gradoSelectedMA" class="form-control" ngModel required>                                    <option selected></option>                                    <option *ngFor="let grad of grados" [value]="grad.id_grado">{{grad.nombre_grado}}</option>                                </select>                            </div>                            <div class="form-group col">                                <label for="inputDocenteMA" class="text-white">Profesor</label>                                <select [(ngModel)]="docenteSelectedMA" id="inputDocenteMA" name="docenteSelectedMA" class="form-control" ngModel required>                                    <option selected></option>                                    <option *ngFor="let docen of docentes" [value]="docen.id_docente">                                        {{(docen.nombre_docente+" "+docen.apellido_docente)}}</option>                                </select>                            </div>                        </div>                        <div class="form-group col-5 mx-auto">                            <label for="inputColegioMA" class="text-white">Colegio</label>                            <select [(ngModel)]="colegioSelectedMA" id="inputColegioMA" name="colegioSelectedMA" class="form-control" ngModel                                required>                                <option selected></option>                                <option *ngFor="let colegio of colegios" [value]="colegio.id_colegio">{{(colegio.nombre_colegio)}}</option>                            </select>                        </div>                                        <!--Resultados-->                        <h5 class="py-3 text-white">Resultados:</h5>                        <div class="row mx-auto">                            <table class="mx-auto text-white m-auto rounded table-striped table-wrapper-scroll-y my-custom-scrollbar"                                style="height: 256px;">                                <thead class="bg-danger">                                    <th class="pl-3 pr-5 py-2 text-dark">Nombre Materia</th>                                    <th class="pl-3 pr-3 py-2 text-dark text-center">Materia Base</th>                                    <th class="pl-3 pr-3 py-2 text-dark text-center">grado</th>                                    <th class="pl-3 pr-3 py-2 text-dark text-center">Docente</th>                                    <th class="pl-3 pr-4 py-2 text-dark text-center">Colegio</th>                                </thead>                                <tbody class="bg-light">                                    <tr mdbTableCol *ngFor="let materiaActiva of MateriaActivaInfo | filterMateriaactivaAdmin: materiaSelectedMA:gradoSelectedMA:docenteSelectedMA:colegioSelectedMA">                                        <td class="pl-3 pr-5 py-2 text-dark">{{ materiaActiva.nombre_materiaActiva }}</td>                                        <td class="pl-3 pr-3 py-2 text-dark text-center">{{ materiaActiva.nombre_materia }}</td>                                        <td class="pl-3 pr-3 py-2 text-dark text-center">{{ materiaActiva.id_grado }}</td>                                        <td class="pl-3 pr-3 py-2 text-dark text-center">{{ materiaActiva.docente }}</td>                                        <td class="pl-3 pr-4 py-2 text-dark text-center">{{ materiaActiva.colegio }}</td>                                    </tr>                                </tbody>                            </table>                        </div>                    </div>                </div>            </div>        </div>    </div></div></div>'
+    var COMPONENTS = [{'name': 'AdministrarDocenteComponent', 'selector': 'app-administrar-docente'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'BorrarActividadComponent', 'selector': 'app-borrar-actividad'},{'name': 'BorrarContenidoComponent', 'selector': 'app-borrar-contenido'},{'name': 'BusquedaComponent', 'selector': 'app-busqueda'},{'name': 'BusquedaVisitanteComponent', 'selector': 'app-busqueda-visitante'},{'name': 'CrearActividadComponent', 'selector': 'app-crear-actividad'},{'name': 'DudasComponent', 'selector': 'app-dudas'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'GestionarColegioAdminComponent', 'selector': 'app-gestionar-colegio-admin'},{'name': 'GestionarCompetenciasAdminComponent', 'selector': 'app-gestionar-competencias-admin'},{'name': 'GestionarUsuariosAdminComponent', 'selector': 'app-gestionar-usuarios-admin'},{'name': 'HeaderAdminComponent', 'selector': 'app-header-admin'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'HeaderVisitanteComponent', 'selector': 'app-header-visitante'},{'name': 'InfromacionDocenteComponent', 'selector': 'app-infromacion-docente'},{'name': 'InicioAdminComponent', 'selector': 'app-inicio-admin'},{'name': 'InicioProfesoresComponent', 'selector': 'app-inicio-profesores'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'MetricasComponent', 'selector': 'app-metricas'},{'name': 'ModificarActividadComponent', 'selector': 'app-modificar-actividad'},{'name': 'RegistroUsuarioComponent', 'selector': 'app-registro-usuario'},{'name': 'SubirContenidoComponent', 'selector': 'app-subir-contenido'}];
+    var DIRECTIVES = [];
+    var ACTUAL_COMPONENT = {'name': 'GestionarColegioAdminComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+                   
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'GestionarColegioAdminComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

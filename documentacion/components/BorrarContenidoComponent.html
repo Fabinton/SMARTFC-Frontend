@@ -1,0 +1,1257 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>fc documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/readthedocs.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">fc documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li>BorrarContenidoComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/components/borrar-contenido/borrar-contenido.component.ts</code>
+</p>
+
+    <p class="comment">
+        <h3>Description</h3>
+    </p>
+    <p class="comment">
+        <p>Contiene todos los metodos necesarios para la busqueda y eliminacion de contenidos en el sistema.</p>
+
+    </p>
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                    <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+    </p>
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>app-borrar-contenido</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./borrar-contenido.component.css</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./borrar-contenido.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#contenidos">contenidos</a>
+                            </li>
+                            <li>
+                                <a href="#contenidoToSave">contenidoToSave</a>
+                            </li>
+                            <li>
+                                <a href="#contenidoVisualizar">contenidoVisualizar</a>
+                            </li>
+                            <li>
+                                <a href="#correcto">correcto</a>
+                            </li>
+                            <li>
+                                <a href="#grado">grado</a>
+                            </li>
+                            <li>
+                                <a href="#gradoSelected">gradoSelected</a>
+                            </li>
+                            <li>
+                                <a href="#materia">materia</a>
+                            </li>
+                            <li>
+                                <a href="#materiaSelected">materiaSelected</a>
+                            </li>
+                            <li>
+                                <a href="#mensaje">mensaje</a>
+                            </li>
+                            <li>
+                                <a href="#tipoContenido">tipoContenido</a>
+                            </li>
+                            <li>
+                                <a href="#tipoContenidoSelected">tipoContenidoSelected</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#comprobacionLogin">comprobacionLogin</a>
+                            </li>
+                            <li>
+                                <a href="#deleteContenido">deleteContenido</a>
+                            </li>
+                            <li>
+                                <a href="#getContenidos">getContenidos</a>
+                            </li>
+                            <li>
+                                <a href="#getOptions">getOptions</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnInit">ngOnInit</a>
+                            </li>
+                            <li>
+                                <a href="#saveData">saveData</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(AuthDService: <a href="../injectables/AuthDService.html">AuthDService</a>, ContentREAService: <a href="../injectables/ContentREAService.html">ContentREAService</a>, router: <a href="https://angular.io/api/router/Router" target="_blank">Router</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="35" class="link-to-prism">src/app/components/borrar-contenido/borrar-contenido.component.ts:35</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>AuthDService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/AuthDService.html" target="_self" >AuthDService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>ContentREAService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/ContentREAService.html" target="_self" >ContentREAService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>router</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="https://angular.io/api/router/Router" target="_blank" >Router</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+
+
+    <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="comprobacionLogin"></a>
+                    <span class="name">
+                        <b>
+                            comprobacionLogin
+                        </b>
+                        <a href="#comprobacionLogin"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>comprobacionLogin()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="134"
+                            class="link-to-prism">src/app/components/borrar-contenido/borrar-contenido.component.ts:134</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Permite comprobar que el administrador se encuentra logueado en el sistema al ingresar a la pagina</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="deleteContenido"></a>
+                    <span class="name">
+                        <b>
+                            deleteContenido
+                        </b>
+                        <a href="#deleteContenido"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>deleteContenido()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="118"
+                            class="link-to-prism">src/app/components/borrar-contenido/borrar-contenido.component.ts:118</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Permite eliminar un ContenidoREA</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getContenidos"></a>
+                    <span class="name">
+                        <b>
+                            getContenidos
+                        </b>
+                        <a href="#getContenidos"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getContenidos()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="72"
+                            class="link-to-prism">src/app/components/borrar-contenido/borrar-contenido.component.ts:72</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Permite obtener la informacion y listado de todos los ContenidosREA</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getOptions"></a>
+                    <span class="name">
+                        <b>
+                            getOptions
+                        </b>
+                        <a href="#getOptions"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getOptions()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="55"
+                            class="link-to-prism">src/app/components/borrar-contenido/borrar-contenido.component.ts:55</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Permite obtener los datos de todos los options</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnInit"></a>
+                    <span class="name">
+                        <b>
+                            ngOnInit
+                        </b>
+                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnInit()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="41"
+                            class="link-to-prism">src/app/components/borrar-contenido/borrar-contenido.component.ts:41</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="saveData"></a>
+                    <span class="name">
+                        <b>
+                            saveData
+                        </b>
+                        <a href="#saveData"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>saveData(contenidoREAhtml)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="110"
+                            class="link-to-prism">src/app/components/borrar-contenido/borrar-contenido.component.ts:110</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Permite almacenar la informacion de un ContenidoREA de forma temporal</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>contenidoREAhtml</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section>
+    
+        <h3 id="inputs">
+            Properties
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="contenidos"></a>
+                        <span class="name">
+                            <b>
+                            contenidos</b>
+                            <a href="#contenidos"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="../classes/contenidoREAI.html" target="_self" >contenidoREAI[]</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="25" class="link-to-prism">src/app/components/borrar-contenido/borrar-contenido.component.ts:25</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="contenidoToSave"></a>
+                        <span class="name">
+                            <b>
+                            contenidoToSave</b>
+                            <a href="#contenidoToSave"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="../classes/contenidoREAI.html" target="_self" >contenidoREAI</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="24" class="link-to-prism">src/app/components/borrar-contenido/borrar-contenido.component.ts:24</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="contenidoVisualizar"></a>
+                        <span class="name">
+                            <b>
+                            contenidoVisualizar</b>
+                            <a href="#contenidoVisualizar"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="../interfaces/contenidoREAVisualizarI.html" target="_self" >contenidoREAVisualizarI[]</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="32" class="link-to-prism">src/app/components/borrar-contenido/borrar-contenido.component.ts:32</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="correcto"></a>
+                        <span class="name">
+                            <b>
+                            correcto</b>
+                            <a href="#correcto"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="34" class="link-to-prism">src/app/components/borrar-contenido/borrar-contenido.component.ts:34</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="grado"></a>
+                        <span class="name">
+                            <b>
+                            grado</b>
+                            <a href="#grado"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="../classes/GradoI.html" target="_self" >GradoI[]</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="27" class="link-to-prism">src/app/components/borrar-contenido/borrar-contenido.component.ts:27</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="gradoSelected"></a>
+                        <span class="name">
+                            <b>
+                            gradoSelected</b>
+                            <a href="#gradoSelected"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="30" class="link-to-prism">src/app/components/borrar-contenido/borrar-contenido.component.ts:30</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="materia"></a>
+                        <span class="name">
+                            <b>
+                            materia</b>
+                            <a href="#materia"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="../classes/MateriaI.html" target="_self" >MateriaI[]</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="26" class="link-to-prism">src/app/components/borrar-contenido/borrar-contenido.component.ts:26</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="materiaSelected"></a>
+                        <span class="name">
+                            <b>
+                            materiaSelected</b>
+                            <a href="#materiaSelected"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="29" class="link-to-prism">src/app/components/borrar-contenido/borrar-contenido.component.ts:29</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="mensaje"></a>
+                        <span class="name">
+                            <b>
+                            mensaje</b>
+                            <a href="#mensaje"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="35" class="link-to-prism">src/app/components/borrar-contenido/borrar-contenido.component.ts:35</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="tipoContenido"></a>
+                        <span class="name">
+                            <b>
+                            tipoContenido</b>
+                            <a href="#tipoContenido"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="../interfaces/TipoContenidoI.html" target="_self" >TipoContenidoI[]</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="28" class="link-to-prism">src/app/components/borrar-contenido/borrar-contenido.component.ts:28</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="tipoContenidoSelected"></a>
+                        <span class="name">
+                            <b>
+                            tipoContenidoSelected</b>
+                            <a href="#tipoContenidoSelected"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="31" class="link-to-prism">src/app/components/borrar-contenido/borrar-contenido.component.ts:31</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit } from &#x27;@angular/core&#x27;;
+import { Router } from &quot;@angular/router&quot;;
+import { ContentREAService } from &#x27;../../services/content-rea.service&#x27;;
+import { contenidoREAI } from &#x27;../../models/contenidoREA&#x27;;
+import { MateriaI } from &#x27;../../models/materia&#x27;;
+import { GradoI } from &#x27;../../models/grado&#x27;;
+import { TipoContenidoI } from &#x27;../../models/tipoContenido&#x27;;
+import { contenidoREAVisualizarI } from &#x27;../../models/contenidoREAVisualizar&#x27;;
+import { AuthDService } from &#x27;../../services/auth-d.service&#x27;;
+import { NgForm } from &#x27;@angular/forms&#x27;;
+
+/**
+  * Contiene todos los metodos necesarios para la busqueda y eliminacion de contenidos en el sistema.
+  */
+
+@Component({
+  selector: &#x27;app-borrar-contenido&#x27;,
+  templateUrl: &#x27;./borrar-contenido.component.html&#x27;,
+  styleUrls: [&#x27;./borrar-contenido.component.css&#x27;]
+})
+export class BorrarContenidoComponent implements OnInit {
+
+  //Elementos de Busqueda de Contenido
+  contenidoToSave:contenidoREAI;
+  contenidos:contenidoREAI[];
+  materia:MateriaI[];
+  grado:GradoI[];
+  tipoContenido:TipoContenidoI[];
+  materiaSelected:number;
+  gradoSelected:number;
+  tipoContenidoSelected:number;
+  contenidoVisualizar:contenidoREAVisualizarI[];
+
+  correcto:boolean;
+  mensaje:boolean;
+
+  constructor(private AuthDService: AuthDService, private ContentREAService: ContentREAService, private router: Router) { 
+    //this.getOptions();
+  }
+
+  ngOnInit() {
+    window.scrollTo(0, 0);
+    this.comprobacionLogin();
+
+    this.correcto &#x3D; false;
+    this.mensaje &#x3D; false;
+
+    this.getOptions();
+    this.getContenidos();
+  }
+
+  /**
+  * Permite obtener los datos de todos los options
+  */
+  getOptions(){
+    this.ContentREAService.allSubject().subscribe(res &#x3D;&gt;{
+      this.materia &#x3D; res as MateriaI[];
+      //console.log(&quot;1:&quot;,this.materia.length);
+    });
+    this.ContentREAService.allGrade().subscribe(res &#x3D;&gt;{
+      this.grado &#x3D; res as GradoI[];
+    });
+    this.ContentREAService.allType().subscribe(res &#x3D;&gt;{
+      this.tipoContenido &#x3D; res as TipoContenidoI[];
+      //console.log(&quot;2:&quot;,this.tipoContenido.length);
+    });
+  }
+
+  /**
+  * Permite obtener la informacion y listado de todos los ContenidosREA
+  */
+  getContenidos() {
+    this.ContentREAService.allSubject().subscribe(res &#x3D;&gt; {
+      this.materia &#x3D; res as MateriaI[];
+      //console.log(&quot;1:&quot;,this.materia.length);
+
+      this.ContentREAService.allType().subscribe(res &#x3D;&gt; {
+        this.tipoContenido &#x3D; res as TipoContenidoI[];
+        //console.log(&quot;2:&quot;,this.tipoContenido.length);
+
+        this.ContentREAService.allContent().subscribe(res &#x3D;&gt; {
+          //console.log(res);
+          this.ContentREAService.contenidosREA &#x3D; res as contenidoREAI[];
+          this.contenidoVisualizar &#x3D; res as contenidoREAVisualizarI[];
+          this.contenidoVisualizar.reverse();
+          //console.log(this.ContentREAService.contenidosREA.length);
+          //console.log(&quot;contenido visualizar:&quot;, this.contenidoVisualizar);
+
+          for (let i &#x3D; 0; i &lt; this.ContentREAService.contenidosREA.length; i++) {
+            for (let n &#x3D; 0; n &lt; this.tipoContenido.length; n++) {
+              if (this.ContentREAService.contenidosREA[i].tipo_CREA &#x3D;&#x3D; this.tipoContenido[n].id_tipoContenido) {
+                this.contenidoVisualizar[i].nombre_tipo_CREA &#x3D; this.tipoContenido[n].nombre_tipoContenido;
+              }
+            }
+            for (let m &#x3D; 0; m &lt; this.materia.length; m++) {
+              if (this.ContentREAService.contenidosREA[i].id_materia &#x3D;&#x3D; this.materia[m].id_materia) {
+                this.contenidoVisualizar[i].materia &#x3D; this.materia[m].nombre_materia;
+              }
+            }
+          }
+          //console.log(&quot;contenido visualizar final:&quot;, this.contenidoVisualizar)
+        });
+      });
+    });
+  }
+
+  /**
+  * Permite almacenar la informacion de un ContenidoREA de forma temporal
+  */
+  saveData(contenidoREAhtml){
+    this.contenidoToSave &#x3D; contenidoREAhtml;
+    //console.log(&quot;contenido guardado:&quot;, this.contenidoToSave);
+  }
+
+  /**
+  * Permite eliminar un ContenidoREA
+  */
+  deleteContenido(){
+    this.correcto &#x3D; false;
+    this.mensaje &#x3D; true;
+    //console.log(&quot;id para eliminar:&quot;, this.contenidoToSave.id_CREA);
+    this.ContentREAService.deleteContentREA(this.contenidoToSave).subscribe(res &#x3D;&gt;{
+      //console.log(res);
+      this.correcto &#x3D; true;
+      this.mensaje &#x3D; false;
+      this.getContenidos();
+    });
+    //window.location.reload();
+  }
+
+  /**
+  * Permite comprobar que el administrador se encuentra logueado en el sistema al ingresar a la pagina
+  */
+  comprobacionLogin(){
+    if (this.AuthDService.getIdDocente()){
+      return true;
+    } else {
+      this.router.navigate([&#x27;/login&#x27;]);
+      return false;
+    }
+  }
+
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;app-header&gt;&lt;/app-header&gt;
+
+&lt;!--Contenedor Contenido Pagina--&gt;
+&lt;div class&#x3D;&quot;mb-5 contenedor py-3&quot;&gt;
+
+    &lt;!--Titulo pagina--&gt;
+    &lt;div class&#x3D;&quot;container m-auto pb-2 bg-primary rounded-top&quot;&gt;
+        &lt;h1 style&#x3D;&quot;cursor:context-menu&quot; class&#x3D;&quot;mt-5 pt-4 text-center&quot;&gt;Borrar Contenido&lt;/h1&gt;
+    &lt;/div&gt;
+    &lt;!--Contenedor Formulario--&gt;
+    &lt;div class&#x3D;&quot;container container pt-1 bg-secondary rounded-bottom&quot;&gt;
+
+        &lt;!--Buscar Actividad--&gt;
+        &lt;div&gt;
+            &lt;div class&#x3D;&quot;contenedor py-3&quot;&gt;
+                &lt;form #frmBorrarContenido&#x3D;&quot;ngForm&quot; (ngSubmit)&#x3D;&quot;onBorrarContenido(frmBorrarContenido)&quot;&gt;
+                    &lt;!--Barra busqueda--&gt;
+                    &lt;div class&#x3D;&quot;form-group&quot;&gt;
+                        &lt;label for&#x3D;&quot;inputNombreActividad&quot; class&#x3D;&quot;text-white&quot;&gt;Busqueda de Contenido&lt;/label&gt;
+                        &lt;div class&#x3D;&quot;form-inline&quot;&gt;
+                            &lt;input type&#x3D;&quot;text&quot; class&#x3D;&quot;form-control col-md-8&quot; id&#x3D;&quot;inputTextoBusqueda&quot; placeholder&#x3D;&quot;Busqueda por nombre&quot; [(ngModel)]&#x3D;&quot;nombreCREASelected&quot; name&#x3D;&quot;inputBusquedaContenido&quot;&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;!--Filtros--&gt;
+                    &lt;label for&#x3D;&quot;inputState&quot; class&#x3D;&quot;text-white&quot;&gt;Filtros:&lt;/label&gt;
+                    &lt;div class&#x3D;&quot;form-row pb-3&quot;&gt;
+                        &lt;div class&#x3D;&quot;form-group col&quot;&gt;
+                            &lt;label for&#x3D;&quot;inputMateria&quot; class&#x3D;&quot;text-white&quot;&gt;Materia&lt;/label&gt;
+                            &lt;select [(ngModel)]&#x3D;&quot;materiaSelected&quot; id&#x3D;&quot;inputMateria&quot; name&#x3D;&quot;materia&quot; class&#x3D;&quot;form-control&quot; ngModel required&gt;
+                                &lt;option selected&gt;&lt;/option&gt;
+                                &lt;option *ngFor&#x3D;&quot;let mater of materia&quot; [value]&#x3D;&quot;mater.nombre_materia&quot;&gt;{{mater.nombre_materia}}&lt;/option&gt;
+                            &lt;/select&gt;
+                        &lt;/div&gt;
+                        &lt;div class&#x3D;&quot;form-group col&quot;&gt;
+                            &lt;label for&#x3D;&quot;inputGrado&quot; class&#x3D;&quot;text-white&quot;&gt;Grado&lt;/label&gt;
+                            &lt;select [(ngModel)]&#x3D;&quot;gradoSelected&quot; id&#x3D;&quot;inputGrado&quot; name&#x3D;&quot;grado&quot; class&#x3D;&quot;form-control&quot; ngModel required&gt;
+                                &lt;option selected&gt;&lt;/option&gt;
+                                &lt;option *ngFor&#x3D;&quot;let grad of grado&quot; [value]&#x3D;&quot;grad.id_grado&quot;&gt;{{grad.nombre_grado}}&lt;/option&gt;
+                            &lt;/select&gt;
+                        &lt;/div&gt;
+                        &lt;div class&#x3D;&quot;form-group col&quot;&gt;
+                            &lt;label for&#x3D;&quot;inputType&quot; class&#x3D;&quot;text-white&quot;&gt;Tipo de Contenido&lt;/label&gt;
+                            &lt;select [(ngModel)]&#x3D;&quot;tipoContenidoSelected&quot; id&#x3D;&quot;inputType&quot; name&#x3D;&quot;tipoContenido&quot; class&#x3D;&quot;form-control&quot; ngModel required&gt;
+                                &lt;option selected&gt;&lt;/option&gt;
+                                &lt;option *ngFor&#x3D;&quot;let tipCon of tipoContenido&quot; [value]&#x3D;&quot;tipCon.id_tipoContenido&quot;&gt;{{tipCon.nombre_tipoContenido}}&lt;/option&gt;
+                            &lt;/select&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;!--Tabla de Resultados--&gt;
+                    &lt;label for&#x3D;&quot;inputState&quot; class&#x3D;&quot;text-white&quot;&gt;Resultados:&lt;/label&gt;
+                    &lt;div class&#x3D;&quot;col container p-4 my bg-light rounded table-wrapper-scroll-y my-custom-scrollbar&quot;
+                        style&#x3D;&quot;width: 95%; height: 450px&quot;&gt;
+                        &lt;!--Resultado--&gt;
+                        &lt;div class&#x3D;&quot;row-1&quot; *ngFor&#x3D;&quot;let contenidoREA of contenidoVisualizar | filterContentDelete: nombreCREASelected:materiaSelected:gradoSelected:tipoContenidoSelected&quot;&gt;
+                            &lt;div class&#x3D;&quot;card mb-4 border-0&quot; style&#x3D;&quot;max-width: 1440px;&quot;&gt;
+                                &lt;div class&#x3D;&quot;card-footer p-2 bg-primary rounded-top&quot;&gt;
+                                    &lt;h5 class&#x3D;&quot;card-title m-1&quot;&gt;{{contenidoREA.nombre_CREA}}&lt;/h5&gt;
+                                &lt;/div&gt;
+                                &lt;div class&#x3D;&quot;row no-gutters border border-top-0 border-secondary&quot;&gt;
+                                    &lt;div class&#x3D;&quot;col&quot; style&#x3D;&quot;max-width: 840px;&quot;&gt;
+                                        &lt;div class&#x3D;&quot;card-body p-2&quot;&gt;
+                                            &lt;p class&#x3D;&quot;card-text &quot;&gt;Descripcion: {{contenidoREA.descripcion_CREA}}.&lt;/p&gt;
+                                            &lt;div&gt;
+                                                &lt;p class&#x3D;&quot;card-text&quot;&gt;&lt;small class&#x3D;&quot;text-muted&quot;&gt;Materia: {{contenidoREA.materia}}&lt;/small&gt;&lt;/p&gt;
+                                            &lt;/div&gt;
+                                            &lt;div&gt;
+                                                &lt;p class&#x3D;&quot;card-text&quot;&gt;&lt;small class&#x3D;&quot;text-muted&quot;&gt;Grado: {{contenidoREA.id_grado}}&lt;/small&gt;&lt;/p&gt;
+                                            &lt;/div&gt;
+                                            &lt;div&gt;
+                                                &lt;p class&#x3D;&quot;card-text&quot;&gt;&lt;small class&#x3D;&quot;text-muted&quot;&gt;Tipo de contenido: {{contenidoREA.nombre_tipo_CREA}}&lt;/small&gt;&lt;/p&gt;
+                                            &lt;/div&gt;
+                                        &lt;/div&gt;
+                                    &lt;/div&gt;
+                                &lt;/div&gt;
+                                &lt;!--Boton borrar Contenido--&gt;
+                                &lt;div class&#x3D;&quot;card-footer bg-secondary row justify-content-md-center no-gutters p-1&quot;&gt;
+                                    &lt;a class&#x3D;&quot;btn btn-primary&quot; data-toggle&#x3D;&quot;modal&quot; data-target&#x3D;&quot;#mimodalejemplo&quot; (click)&#x3D;&quot;saveData(contenidoREA)&quot;&gt;Borrar Contenido&lt;/a&gt;
+                                &lt;/div&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/form&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;hr class&#x3D;&quot;style2&quot;&gt;
+        &lt;br&gt;
+    &lt;/div&gt;
+
+    &lt;!--Modal Confirmar Eliminar Contenido--&gt;
+    &lt;div class&#x3D;&quot;modal fade&quot; id&#x3D;&quot;mimodalejemplo&quot; tabindex&#x3D;&quot;-1&quot; role&#x3D;&quot;dialog&quot; aria-labelledby&#x3D;&quot;myModalLabel&quot;&gt;
+        &lt;div class&#x3D;&quot;modal-dialog&quot; role&#x3D;&quot;document&quot;&gt;
+            &lt;div class&#x3D;&quot;modal-content&quot;&gt;
+                &lt;div class&#x3D;&quot;modal-header bg-light&quot;&gt;
+                    &lt;h5 class&#x3D;&quot;modal-title&quot; id&#x3D;&quot;myModalLabel&quot;&gt;Confirmar Acción&lt;/h5&gt;
+                    &lt;button class&#x3D;&quot;close&quot; data-dismiss&#x3D;&quot;modal&quot; aria-label&#x3D;&quot;Close&quot;&gt;
+                        &lt;span aria-hidden&#x3D;&quot;true&quot;&gt;&amp;times;&lt;/span&gt;
+                    &lt;/button&gt;
+                &lt;/div&gt;
+                &lt;div class&#x3D;&quot;modal-body&quot;&gt;
+                    Para borrar el Contenido presione Aceptar, de lo contrario presione X
+                    para cancelar.
+                &lt;/div&gt;
+                &lt;div class&#x3D;&quot;modal-footer justify-content-md-center no-gutters bg-light py-1&quot;&gt;
+                    &lt;a class&#x3D;&quot;btn btn-default bg-warning font-weight-bold&quot; data-dismiss&#x3D;&quot;modal&quot; data-toggle&#x3D;&quot;modal&quot; data-target&#x3D;&quot;#mimodalejemplo2&quot; (click)&#x3D;&quot;deleteContenido()&quot;&gt;Aceptar&lt;/a&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;!--Modal Contenido Eliminado--&gt;
+    &lt;div class&#x3D;&quot;modal fade&quot; id&#x3D;&quot;mimodalejemplo2&quot; tabindex&#x3D;&quot;-1&quot; role&#x3D;&quot;dialog&quot; aria-labelledby&#x3D;&quot;myModalLabel2&quot;&gt;
+        &lt;div class&#x3D;&quot;modal-dialog&quot; role&#x3D;&quot;document&quot;&gt;
+            &lt;div class&#x3D;&quot;modal-content&quot;&gt;
+                &lt;div class&#x3D;&quot;modal-header bg-light&quot;&gt;
+                    &lt;h5 class&#x3D;&quot;modal-title&quot; id&#x3D;&quot;myModalLabel&quot;&gt;Mensaje&lt;/h5&gt;
+                    &lt;button class&#x3D;&quot;close&quot; data-dismiss&#x3D;&quot;modal&quot; aria-label&#x3D;&quot;Close&quot;&gt;
+                        &lt;span aria-hidden&#x3D;&quot;true&quot;&gt;&amp;times;&lt;/span&gt;
+                    &lt;/button&gt;
+                &lt;/div&gt;
+                &lt;div class&#x3D;&quot;modal-body&quot;&gt;
+                    &lt;div class&#x3D;&quot;&quot; *ngIf&#x3D;&quot;mensaje&quot;&gt;Eliminando Contenido. Espere por favor.&lt;/div&gt;
+                    &lt;div class&#x3D;&quot;text-info&quot; *ngIf&#x3D;&quot;correcto&quot;&gt;El contenido ha sido Eliminado.&lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+&lt;/div&gt;
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-styleData">
+                <p class="comment">
+                    <code>./borrar-contenido.component.css</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss"></code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><app-header></app-header><!--Contenedor Contenido Pagina--><div class="mb-5 contenedor py-3">    <!--Titulo pagina-->    <div class="container m-auto pb-2 bg-primary rounded-top">        <h1 style="cursor:context-menu" class="mt-5 pt-4 text-center">Borrar Contenido</h1>    </div>    <!--Contenedor Formulario-->    <div class="container container pt-1 bg-secondary rounded-bottom">        <!--Buscar Actividad-->        <div>            <div class="contenedor py-3">                <form #frmBorrarContenido="ngForm" (ngSubmit)="onBorrarContenido(frmBorrarContenido)">                    <!--Barra busqueda-->                    <div class="form-group">                        <label for="inputNombreActividad" class="text-white">Busqueda de Contenido</label>                        <div class="form-inline">                            <input type="text" class="form-control col-md-8" id="inputTextoBusqueda" placeholder="Busqueda por nombre" [(ngModel)]="nombreCREASelected" name="inputBusquedaContenido">                        </div>                    </div>                    <!--Filtros-->                    <label for="inputState" class="text-white">Filtros:</label>                    <div class="form-row pb-3">                        <div class="form-group col">                            <label for="inputMateria" class="text-white">Materia</label>                            <select [(ngModel)]="materiaSelected" id="inputMateria" name="materia" class="form-control" ngModel required>                                <option selected></option>                                <option *ngFor="let mater of materia" [value]="mater.nombre_materia">{{mater.nombre_materia}}</option>                            </select>                        </div>                        <div class="form-group col">                            <label for="inputGrado" class="text-white">Grado</label>                            <select [(ngModel)]="gradoSelected" id="inputGrado" name="grado" class="form-control" ngModel required>                                <option selected></option>                                <option *ngFor="let grad of grado" [value]="grad.id_grado">{{grad.nombre_grado}}</option>                            </select>                        </div>                        <div class="form-group col">                            <label for="inputType" class="text-white">Tipo de Contenido</label>                            <select [(ngModel)]="tipoContenidoSelected" id="inputType" name="tipoContenido" class="form-control" ngModel required>                                <option selected></option>                                <option *ngFor="let tipCon of tipoContenido" [value]="tipCon.id_tipoContenido">{{tipCon.nombre_tipoContenido}}</option>                            </select>                        </div>                    </div>                    <!--Tabla de Resultados-->                    <label for="inputState" class="text-white">Resultados:</label>                    <div class="col container p-4 my bg-light rounded table-wrapper-scroll-y my-custom-scrollbar"                        style="width: 95%; height: 450px">                        <!--Resultado-->                        <div class="row-1" *ngFor="let contenidoREA of contenidoVisualizar | filterContentDelete: nombreCREASelected:materiaSelected:gradoSelected:tipoContenidoSelected">                            <div class="card mb-4 border-0" style="max-width: 1440px;">                                <div class="card-footer p-2 bg-primary rounded-top">                                    <h5 class="card-title m-1">{{contenidoREA.nombre_CREA}}</h5>                                </div>                                <div class="row no-gutters border border-top-0 border-secondary">                                    <div class="col" style="max-width: 840px;">                                        <div class="card-body p-2">                                            <p class="card-text ">Descripcion: {{contenidoREA.descripcion_CREA}}.</p>                                            <div>                                                <p class="card-text"><small class="text-muted">Materia: {{contenidoREA.materia}}</small></p>                                            </div>                                            <div>                                                <p class="card-text"><small class="text-muted">Grado: {{contenidoREA.id_grado}}</small></p>                                            </div>                                            <div>                                                <p class="card-text"><small class="text-muted">Tipo de contenido: {{contenidoREA.nombre_tipo_CREA}}</small></p>                                            </div>                                        </div>                                    </div>                                </div>                                <!--Boton borrar Contenido-->                                <div class="card-footer bg-secondary row justify-content-md-center no-gutters p-1">                                    <a class="btn btn-primary" data-toggle="modal" data-target="#mimodalejemplo" (click)="saveData(contenidoREA)">Borrar Contenido</a>                                </div>                            </div>                        </div>                    </div>                </form>            </div>        </div>        <hr class="style2">        <br>    </div>    <!--Modal Confirmar Eliminar Contenido-->    <div class="modal fade" id="mimodalejemplo" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">        <div class="modal-dialog" role="document">            <div class="modal-content">                <div class="modal-header bg-light">                    <h5 class="modal-title" id="myModalLabel">Confirmar Acción</h5>                    <button class="close" data-dismiss="modal" aria-label="Close">                        <span aria-hidden="true">&times;</span>                    </button>                </div>                <div class="modal-body">                    Para borrar el Contenido presione Aceptar, de lo contrario presione X                    para cancelar.                </div>                <div class="modal-footer justify-content-md-center no-gutters bg-light py-1">                    <a class="btn btn-default bg-warning font-weight-bold" data-dismiss="modal" data-toggle="modal" data-target="#mimodalejemplo2" (click)="deleteContenido()">Aceptar</a>                </div>            </div>        </div>    </div>    <!--Modal Contenido Eliminado-->    <div class="modal fade" id="mimodalejemplo2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel2">        <div class="modal-dialog" role="document">            <div class="modal-content">                <div class="modal-header bg-light">                    <h5 class="modal-title" id="myModalLabel">Mensaje</h5>                    <button class="close" data-dismiss="modal" aria-label="Close">                        <span aria-hidden="true">&times;</span>                    </button>                </div>                <div class="modal-body">                    <div class="" *ngIf="mensaje">Eliminando Contenido. Espere por favor.</div>                    <div class="text-info" *ngIf="correcto">El contenido ha sido Eliminado.</div>                </div>            </div>        </div>    </div></div></div>'
+    var COMPONENTS = [{'name': 'AdministrarDocenteComponent', 'selector': 'app-administrar-docente'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'BorrarActividadComponent', 'selector': 'app-borrar-actividad'},{'name': 'BorrarContenidoComponent', 'selector': 'app-borrar-contenido'},{'name': 'BusquedaComponent', 'selector': 'app-busqueda'},{'name': 'BusquedaVisitanteComponent', 'selector': 'app-busqueda-visitante'},{'name': 'CrearActividadComponent', 'selector': 'app-crear-actividad'},{'name': 'DudasComponent', 'selector': 'app-dudas'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'GestionarColegioAdminComponent', 'selector': 'app-gestionar-colegio-admin'},{'name': 'GestionarCompetenciasAdminComponent', 'selector': 'app-gestionar-competencias-admin'},{'name': 'GestionarUsuariosAdminComponent', 'selector': 'app-gestionar-usuarios-admin'},{'name': 'HeaderAdminComponent', 'selector': 'app-header-admin'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'HeaderVisitanteComponent', 'selector': 'app-header-visitante'},{'name': 'InfromacionDocenteComponent', 'selector': 'app-infromacion-docente'},{'name': 'InicioAdminComponent', 'selector': 'app-inicio-admin'},{'name': 'InicioProfesoresComponent', 'selector': 'app-inicio-profesores'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'MetricasComponent', 'selector': 'app-metricas'},{'name': 'ModificarActividadComponent', 'selector': 'app-modificar-actividad'},{'name': 'RegistroUsuarioComponent', 'selector': 'app-registro-usuario'},{'name': 'SubirContenidoComponent', 'selector': 'app-subir-contenido'}];
+    var DIRECTIVES = [];
+    var ACTUAL_COMPONENT = {'name': 'BorrarContenidoComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+                   
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'BorrarContenidoComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

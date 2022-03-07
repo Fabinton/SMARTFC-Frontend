@@ -1,0 +1,142 @@
+<app-header></app-header>
+
+<!--Contenedor Contenido Pagina-->
+<div class="mb-5 contenedor py-3">
+    
+    <!--Titulo pagina-->
+    <div class="container m-auto pb-2 bg-warning rounded-top">
+        <h1 style="cursor:context-menu" class="mt-5 pt-4 text-center">Borrar Actividad</h1>
+    </div>
+    <!--Contenedor Formulario-->
+    <div class="container container pt-1 bg-secondary rounded-bottom">
+
+        <!--Buscar Actividad-->
+        <div>
+            <div class="contenedor py-3">
+                <form #frmBorrarActividad="ngForm" (ngSubmit)="onBorrarActividad(frmBorrarActividad)">
+                    <div class="form-group">
+                        <!--Barra busqueda-->
+                        <br>
+                        <div class="form-inline">
+                            <input type="text" class="form-control col-md-8" id="inputTextoBusquedaActividad"
+                                placeholder="Busqueda por nombre de la Actividad" [(ngModel)]="nombreActividadSelected" name="inputBusquedaActividad">
+                        </div>
+                    </div>
+                    <label for="inputState" class="text-white">Filtros:</label>
+                    <div class="form-row pb-3">
+                        <!--Filtros-->
+                        <div class="form-group col-4">
+                            <label for="inputMateriaA" class="text-white">Materia</label>
+                            <select [(ngModel)]="materiaSelectedA" id="inputMateriaA" name="materiaA" class="form-control" ngModel required>
+                                <option selected></option>
+                                <option *ngFor="let mater of materia" [value]="mater.id_materia">{{mater.nombre_materia}}</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-4">
+                            <label for="inputGradoA" class="text-white">Grado</label>
+                            <select [(ngModel)]="gradoSelectedA" id="inputGradoA" name="gradoA" class="form-control" ngModel required>
+                                <option selected></option>
+                                <option *ngFor="let grad of grado" [value]="grad.id_grado">{{grad.nombre_grado}}</option>
+                            </select>
+                        </div>
+                    </div>
+                    <!--Filtro Competencia-->
+                    <div class="form-group col px-0">
+                        <label for="inputDocenteA" class="text-white">Buscador Competencia</label>
+                        <input type="text" class="form-control col-5" id="inputTextoBusquedaCompetencia" placeholder="Ingrese palabra clave" [(ngModel)]="nombreCompetenciaSelected" 
+                            name="inputBusquedaCompetencia">
+                    </div>
+                    <div class="form-row pb-3">
+                        <div class="form-group col">
+                            <label for="inputDocenteA" class="text-white">Competencia</label>
+                            <select [(ngModel)]="competenciaSelectedA" id="inputCompetenciaA" name="competenciaA" class="form-control" onfocus='if(this.options.length > 2){ this.size = 8; }' onblur='this.size=1;' onchange='this.size=1; this.blur();' ngModel required>
+                                <option class="col-auto px-0" selected></option>
+                                <option class="col-auto px-0" selected [value]=0>Sin Competencia</option>
+                                <option class="col-auto px-0" *ngFor="let compe of competencia | filterCompetencia: nombreCompetenciaSelected:materiaSelectedA:gradoSelectedA" [value]="compe.id_competencia">{{(compe.nombre_competencia)}}
+                                </option>
+                            </select>
+                            <!--el valor seleccionado es {{competenciaSelectedA}}-->
+                        </div>
+                    </div>
+                    <!--Tabla de Resultados-->
+                    <label for="inputState" class="text-white">Resultados:</label>
+                    <div class="col container p-4 my bg-light rounded table-wrapper-scroll-y my-custom-scrollbar" style="width: 95%; height: 450px"> 
+                        <!--Resultado-->
+                        <div class="row-1" *ngFor="let actividad of actividadVisualizar | filterActividadDelete: nombreActividadSelected:materiaSelectedA:gradoSelectedA:id_docenteAuth:competenciaSelectedA">
+                            <div class="card mb-4 border-0" style="max-width: 1440px;">
+                                <div class="card-footer p-2 bg-warning rounded-top">
+                                    <h5 class="card-title m-1">{{actividad.titulo_actividad}}</h5>
+                                </div>
+                                <div class="row no-gutters border border-top-0 border-secondary">
+                                    <div class="col" style="max-width: 840px;">
+                                        <div class="card-body p-2">
+                                            <p class="card-text ">Descripcion: {{actividad.descripcion_actividad}}.</p>
+                                            <div>
+                                                <p class="card-text"><small class="text-muted">Materia: {{actividad.materia}}</small></p>
+                                            </div>
+                                            <div>
+                                                <p class="card-text"><small class="text-muted">Grado: {{actividad.id_grado}}</small></p>
+                                            </div>
+                                            <div>
+                                                <p class="card-text"><small class="text-muted">Competencia: {{actividad.competencia}}</small></p>
+                                            </div>
+                                            <div>
+                                                <p class="card-text"><small class="text-muted">Profesor: {{actividad.docente}}</small></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--Boton borrar Actividad-->
+                                <div class="card-footer bg-secondary row justify-content-md-center no-gutters p-1">
+                                    <a class="btn bg-warning" data-toggle="modal" data-target="#mimodalejemplo" (click)="saveDataActivity(actividad)">Borrar Actividad</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <hr class="style1">   
+        <br>
+    </div>  
+    
+    <!-- Modal Confirmar Eliminar Actividad -->
+    <div class="modal fade" id="mimodalejemplo" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header bg-light">
+                    <h4 class="modal-title" id="myModalLabel">Confirmar Acción</h4>
+                    <button class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button> 
+                </div>
+                <div class="modal-body">
+                    Para borrar la Actividad presione Aceptar, de lo contrario presione X
+                    para cancelar.
+                </div>
+                <div class="modal-footer justify-content-md-center no-gutters bg-light py-1">
+                    <a class="btn btn-default bg-warning font-weight-bold" data-dismiss="modal" data-toggle="modal" data-target="#mimodalejemplo2" (click)="deleteActividad()">Aceptar</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Modal Actividad Eliminada-->
+    <div class="modal fade" id="mimodalejemplo2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel2">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header bg-light">
+                    <h5 class="modal-title" id="myModalLabel">Mensaje</h5>
+                    <button class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="" *ngIf="mensaje">Eliminando Actividad. Espere por favor.</div>
+                    <div class="text-info" *ngIf="correcto">La Actividad ha sido Eliminado.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

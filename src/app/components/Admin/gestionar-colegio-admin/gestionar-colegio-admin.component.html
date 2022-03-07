@@ -1,0 +1,551 @@
+<app-header-admin></app-header-admin>
+
+<!--Contenedor Contenido Pagina-->
+<div class="mb-5 col-9 mx-auto">
+
+    <!--Titulo pagina-->
+    <div class="container m-auto pb-2 bg-danger rounded-top">
+        <h1 style="cursor:context-menu" class="mt-5 pt-4 text-center m ">Gestionar Colegio</h1>
+    </div>
+    
+    <!--Contenedor Formularios-->
+    <div class="container pt-1 bg-secondary rounded-bottom">
+
+        <!--Tabs-->
+        <div class="row">
+            <div class="col">
+                <div class="mt-3">
+                    <div class="card-header tab-card-header">
+                        <!--Opcion Tab-->
+                        <nav>
+                            <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                                <a class="col nav-item nav-link text-center active font-weight-bold text-dark" id="nav-Pregunta1-tab" data-toggle="tab"
+                                    href="#nav-Pregunta1" role="tab" aria-controls="nav-Pregunta1"
+                                    aria-selected="true">Colegios</a>
+                                <a class="col nav-item nav-link text-center font-weight-bold text-dark" id="nav-Pregunta2-tab" data-toggle="tab"
+                                    href="#nav-Pregunta2" role="tab" aria-controls="nav-Pregunta2"
+                                    aria-selected="false">Materias</a>
+                                <a class="col nav-item nav-link text-center font-weight-bold text-dark" id="nav-Pregunta3-tab" data-toggle="tab"
+                                    href="#nav-Pregunta3" role="tab" aria-controls="nav-Pregunta3"
+                                    aria-selected="false">Grados</a>
+                            </div>
+                        </nav>
+        
+                        <!--Tabs Resultados-->
+                        <div class="tab-content" id="nav-tabContent">
+                            <br>
+
+                            <!--Tab 1-->
+                            <div class="tab-pane fade show active" id="nav-Pregunta1" role="tabpanel"
+                                aria-labelledby="nav-Pregunta1-tab">
+                                <!--Gestion de Colegios-->
+                                <div>
+                                    <h3 style="cursor:context-menu" class="py-3 text-center text-white">Colegios</h3>
+                                    <div class="contenedor mx-3 py-3">
+                                        <!--Buscar-->
+                                        <h5 class="py-3 text-white">Buscador:</h5>
+                                        <div class="row">
+                                            <div class="form-group col-5">
+                                                <label for="inputNombreMateri" class="text-white">Nombre Colegio</label>
+                                                <input type="text" class="form-control" id="inputTextoBusquedaNombreColegio"
+                                                    placeholder="Nombre Colegio" [(ngModel)]="nombreColegio"
+                                                    name="nombreColegio">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="inputNombreMateri" class="text-white">NIT Colegio</label>
+                                                <input type="number" class="form-control" id="inputTextoBusquedaNITColegio"
+                                                    placeholder="NIT Colegio" [(ngModel)]="NITColegio" name="NITColegio">
+                                            </div>
+                                        </div>
+        
+                                        <!--Resultados-->
+                                        <h5 class="py-3 text-white">Resultados:</h5>
+                                        <div class="row mx-auto">
+                                            <table
+                                                class="mx-auto text-white m-auto rounded table-striped table-wrapper-scroll-y my-custom-scrollbar"
+                                                style="height: 256px;">
+                                                <thead class="bg-danger">
+                                                    <th class="pl-3 pr-5 py-2 text-dark">Nombre Colegio</th>
+                                                    <th class="pl-3 pr-3 py-2 text-dark text-center">NIT</th>
+                                                    <th class="pl-3 pr-3 py-2 text-dark text-center">Ciudad</th>
+                                                    <th class="pl-3 pr-4 py-2 text-dark text-center">Accion</th>
+                                                </thead>
+                                                <tbody class="bg-light">
+                                                    <tr mdbTableCol *ngFor="let colegio of colegios | filterColegioAdmin: nombreColegio:NITColegio">
+                                                        <td class="pl-3 pr-5 py-2 text-dark">{{ colegio.nombre_colegio }}</td>
+                                                        <td class="pl-3 pr-3 py-2 text-dark text-center">{{ colegio.NIT }}</td>
+                                                        <td class="pl-3 pr-3 py-2 text-dark text-center">{{ colegio.ciudad }}
+                                                        </td>
+                                                        <td class="pl-3 pr-4 py-2">
+                                                            <a class="btn bg-warning py-0 px-1 text-dark" data-toggle="modal"
+                                                                data-target="#mimodalejemplo7" (click)="getColegioinForm(colegio)">Actualizar</a>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+        
+                                    <!--Informacion Colegio-->
+                                    <div class="container">
+                                        <h5 class="py-3 text-white text-center">Crear o Actualizar Colegio:</h5>
+                                        <form #frmInfoColegio="ngForm">
+                                            <div class="col-6 mx-auto">
+                                                <div class="form-group col">
+                                                    <div class="form-group">
+                                                        <label for="inputNombreColegio" class="text-white ">Nombre
+                                                            Colegio</label>
+                                                        <input type="text" name="nombre_colegio" class="form-control col"
+                                                            id="inputNombreColegio" placeholder="Nombre Colegio" required [(ngModel)]="this.AuthAdminService.selectedColegio.nombre_colegio">
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="inputNombreRector" class="text-white ">Nombre Rector</label>
+                                                        <input type="text" name="rector" class="form-control col"
+                                                            id="inputNombreRector" placeholder="Nombre Rector" required [(ngModel)]="this.AuthAdminService.selectedColegio.rector">
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="inputNIT" class="text-white ">NIT Colegio</label>
+                                                        <input type="number" name="NIT" class="form-control col-7" id="inputNIT"
+                                                            placeholder="NIT Colegio" required [(ngModel)]="this.AuthAdminService.selectedColegio.NIT">
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="form-group col">
+                                                            <label for="inputCiudadColegio" class="text-white ">Ciudad</label>
+                                                            <input type="text" name="ciudad" class="form-control col"
+                                                                id="inputCiudadColegio" placeholder="Ciudad Colegio" required
+                                                                [(ngModel)]="this.AuthAdminService.selectedColegio.ciudad">
+                                                        </div>
+                                                        <div class="form-group col">
+                                                            <label for="inputTelefonoColegio"
+                                                                class="text-white ">Telefono</label>
+                                                            <input type="text" name="telefono" class="form-control col"
+                                                                id="inputTelefonoColegio" placeholder="Telefono Colegio"
+                                                                required
+                                                                [(ngModel)]="this.AuthAdminService.selectedColegio.telefono">
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="inputDireccionColegio" class="text-white ">Direccion</label>
+                                                        <input type="text" name="direccion" class="form-control col"
+                                                            id="inputDireccionColegio" placeholder="Direccion Colegio" required
+                                                            [(ngModel)]="this.AuthAdminService.selectedColegio.direccion">
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="form-group col-8">
+                                                            <label for="inputTipoColegion" class="text-white ">Tipo
+                                                                Colegio</label>
+                                                            <input type="text" name="tipo_colegio" class="form-control col"
+                                                                id="inputTipoColegion" placeholder="Tipo Colegio" required
+                                                                [(ngModel)]="this.AuthAdminService.selectedColegio.tipo_colegio">
+                                                        </div>
+                                                        <div class="form-group col">
+                                                            <label for="inputCalendario" class="text-white ">Calendario</label>
+                                                            <input type="text" name="calendario" class="form-control col"
+                                                                id="inputCalendario" placeholder="Calendario Colegio" required
+                                                                [(ngModel)]="this.AuthAdminService.selectedColegio.calendario">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <br>
+        
+                                            <div class="row">
+                                                <!--Boton Crear Datos Colegio-->
+                                                <div class="mr-2  ml-auto pb-4 justify-content-md-center no-gutters">
+                                                    <a class="btn bg-danger px-5 py-4 font-weight-bold" data-toggle="modal"
+                                                        data-target="#mimodalejemplo6"
+                                                        (click)="crearColegio(frmInfoColegio)">Crear</a>
+                                                </div>
+                                                <!--Boton Actualizar Datos Colegio-->
+                                                <div class="ml-2 mr-auto pb-4 justify-content-md-center no-gutters">
+                                                    <a class="btn bg-danger px-4 py-4 font-weight-bold" data-toggle="modal"
+                                                        data-target="#mimodalejemplo" (click)="actualizarColegio(frmInfoColegio)">Actualizar</a>
+                                                </div>
+                                            </div>
+                                            <div class="bg-secondary row pb-4 justify-content-md-center no-gutters">
+                                                <a class="btn bg-danger px-5 py-2 font-weight-bold"
+                                                    (click)="resetForm(frmInfoColegio)">Limpiar</a>
+                                            </div>
+                                        </form>
+                                        <hr class="style5">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!--Tab 2-->
+                            <div class="tab-pane fade" id="nav-Pregunta2" role="tabpanel" aria-labelledby="nav-Pregunta2-tab">
+                                <!--Gestion de Materias-->
+                                <div>
+                                    <h3 style="cursor:context-menu" class="py-3 text-center text-white">Materias</h3>
+                                    <div class="contenedor mx-3 py-3">
+                                        <form #frmCrearMateria="ngForm">                                          
+
+                                            <!--Crear Materia-->
+                                            <h5 class="py-3 text-white">Crear Materia:</h5>
+                                            <div class="row">
+                                                <div class="form-group col-5  pr-3">
+                                                    <label for="inputNombreMateri" class="text-white">Nombre Materia</label>
+                                                    <input type="text" name="nombre_materia" class="form-control" id="inputNombreMateria" placeholder="Nombre Materia" required
+                                                        [(ngModel)]="nombre_materia">
+                                                </div>
+                                                <div class="form-group col">
+                                                    <label for="inputAreaMateri" class="text-white">Area</label>
+                                                    <select [(ngModel)]="id_areaMateria" name="id_areaMateria" id="inputAreaMateria" class="form-control" ngModel required>
+                                                        <option selected></option>
+                                                        <option *ngFor="let area of areasMaterias" [value]="area.id_areaMateria">{{area.nombre_areaMateria}}</option>
+                                                    </select>
+                                                </div>
+                                                <div class="form-group col">
+                                                    <label for="inputColegioM" class="text-white">Colegio</label>
+                                                    <select [(ngModel)]="id_colegioM" name="id_colegioM" id="inputColegioM" class="form-control" ngModel required>
+                                                        <option selected></option>
+                                                        <option *ngFor="let colegio of colegios" [value]="colegio.id_colegio">{{colegio.nombre_colegio}}</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            
+                                            <!--Boton Crear Materia-->
+                                            <div class="bg-secondary row pb-4 pt-2 justify-content-md-center no-gutters">
+                                                <a class="btn bg-danger px-5 py-2 font-weight-bold" data-toggle="modal" data-target="#mimodalejemplo2"
+                                                    (click)="crearMateria(frmCrearMateria)">Crear Materia</a>
+                                            </div>
+        
+                                            <br>
+        
+                                            <!--Borrar Materia-->
+                                            <h5 class="py-3 text-white">Borrar Materia:</h5>
+                                            <div class="row mx-auto">
+                                                <table
+                                                    class="mx-auto text-white m-auto rounded table-striped table-wrapper-scroll-y my-custom-scrollbar"
+                                                    style="height: 256px;">
+                                                    <thead class="bg-danger">
+                                                        <th class="pl-3 pr-5 py-2 text-dark">Nombre Materia</th>
+                                                        <th class="pl-3 pr-2 py-2 text-dark">Area Materia</th>
+                                                        <th class="pl-3 pr-4 py-2 text-dark">Accion</th>
+                                                    </thead>
+                                                    <tbody class="bg-light">
+                                                        <tr mdbTableCol *ngFor="let materia of materiasVisualizar">
+                                                            <td class="pl-3 pr-5 py-2 text-dark">{{ materia.nombre_materia }}
+                                                            </td>
+                                                            <td class="pl-3 pr-2 py-2 text-dark">{{ materia.areaMateria }}</td>
+                                                            <td class="pl-3 pr-4 py-2">
+                                                                <a class="btn bg-warning py-0 px-1 text-dark"
+                                                                    data-toggle="modal" data-target="#mimodalejemplo3"
+                                                                    (click)="saveDataMateria(materia)">borrar</a>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+
+                                            <!--Mirar Materias de Profesores-->
+                                            <br>
+                                            <br>
+                                            <div class="pl-3 row">
+                                                <h5 class="py-3 text-white">Materias de Profesores: </h5>
+                                                <div class="col mt-2 px-0 justify-content-md-center no-gutters">
+                                                    <a class="btn bg-danger px-1 font-weight-bold mt-2 ml-3 py-0 px-3" data-toggle="modal"
+                                                        data-target="#mimodalejemplo8" (click)="getInformacionCompletaMateriasActivas()">ver</a>
+                                                </div>
+                                            </div>
+
+                                        </form>
+                                        <br>
+                                        <hr class="style5">
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!--Tab 3-->
+                            <div class="tab-pane fade" id="nav-Pregunta3" role="tabpanel" aria-labelledby="nav-Pregunta3-tab">
+                                <!--Gestion de Grados-->
+                                <div>
+                                    <h3 style="cursor:context-menu" class="py-3 text-center text-white">Grados</h3>
+                                    <div class="contenedor mx-3 py-3">
+                                        <form #frmCrearGrados="ngForm">
+        
+                                            <!--Crear Grado-->
+                                            <h5 class="py-3 text-white">Crear Grado:</h5>
+                                            <div class="row">
+                                                <div class="form-group col-5  pr-3">
+                                                    <label for="inputNombreGrado" class="text-white">Nombre Grado</label>
+                                                    <input type="text" name="nombre_grado" class="form-control mt-2"
+                                                        id="inputNombreGrado" placeholder="Nombre Grado" required
+                                                        [(ngModel)]="nombre_grado">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="inputNumeroGrado" class="text-white">Numero Grado</label>
+                                                    <input type="text" name="id_grado" class="form-control mt-2"
+                                                        style="width: 115px;" id="inputNumeroGrado" placeholder="# Grado"
+                                                        required [(ngModel)]="id_grado">
+                                                </div>
+                                                <!--Boton Crear Grado-->
+                                                <div class="col px-0 justify-content-md-center no-gutters">
+                                                    <br>
+                                                    <a class="btn bg-danger px-1 font-weight-bold mt-2 ml-3" data-toggle="modal"
+                                                        data-target="#mimodalejemplo4" (click)="CrearGrado(frmCrearGrados)">Crear Grado</a>
+                                                </div>
+                                            </div>
+        
+                                            <br>
+        
+                                            <!--Borrar Grado-->
+                                            <h5 class="py-3 text-white">Borrar Grado:</h5>
+                                            <div class="row mx-auto">
+                                                <table
+                                                    class="mx-auto text-white m-auto rounded table-striped table-wrapper-scroll-y my-custom-scrollbar"
+                                                    style="height: 256px;">
+                                                    <thead class="bg-danger">
+                                                        <th class="pl-3 pr-5 py-2 text-dark">Nombre Grado</th>
+                                                        <th class="pl-3 pr-2 py-2 text-dark"># Grado</th>
+                                                        <th class="pl-3 pr-4 py-2 text-dark">Accion</th>
+                                                    </thead>
+                                                    <tbody class="bg-light">
+                                                        <tr mdbTableCol *ngFor="let grado of grados">
+                                                            <td class="pl-3 pr-5 py-2 text-dark">{{ grado.nombre_grado }}</td>
+                                                            <td class="pl-3 pr-2 py-2 text-dark text-center">{{ grado.id_grado }}</td>
+                                                            <td class="pl-3 pr-4 py-2"><a class="btn bg-warning py-0 px-1 text-dark" data-toggle="modal" data-target="#mimodalejemplo5"
+                                                                    (click)="saveDataGrado(grado)">borrar</a>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </form>
+                                        <br>
+                                        <hr class="style5">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>   
+    </div>
+
+    <!-- Modal Confirmar Actualizacion Datos Colegio -->
+    <div class="modal fade" id="mimodalejemplo" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header bg-light">
+                    <h5 class="modal-title" id="myModalLabel">Mensaje</h5>
+                    <button class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body text-info" *ngIf="correcto">
+                    Se han Actualizado los datos del colegio.
+                </div>
+                <div class="modal-body text-danger" *ngIf="error">
+                    No se ha Seleccionado un Colegio para Actualizar.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Nueva Materia -->
+    <div class="modal fade" id="mimodalejemplo2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel2">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header bg-light">
+                    <h5 class="modal-title" id="myModalLabel">Mensaje</h5>
+                    <button class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body" *ngIf="subiendo">
+                    Creando una nueva Materia. Espere por favor.
+                </div>
+                <div class="modal-body text-info" *ngIf="correcto1">
+                    Se ha creado una nueva Materia.
+                </div>
+                <div class="modal-body text-danger" *ngIf="error1">
+                    La Materia no se ha podido crear. Revisa que has ingresado todos los datos requeridos.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Confirmacion Borrar Materia -->
+    <div class="modal fade" id="mimodalejemplo3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel3">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header bg-light">
+                    <h5 class="modal-title" id="myModalLabel">Confirmar Accion</h5>
+                    <button class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    Para borrar la Materia presione aceptar, de lo contrario presione X
+                    para cancelar.
+                </div>
+                <div class="modal-footer bg-light justify-content-md-center no-gutters py-1 bg-light">
+                    <button class="btn btn-default bg-warning font-weight-bold" data-dismiss="modal" (click)="deleteMateria()">Aceptar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Nuevo Grado -->
+    <div class="modal fade" id="mimodalejemplo4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel4">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header bg-light">
+                    <h5 class="modal-title" id="myModalLabel">Mensaje</h5>
+                    <button class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body" *ngIf="subiendo">
+                    Creando un nuevo Grado. Espere por favor.
+                </div>
+                <div class="modal-body text-info" *ngIf="correcto2">
+                    Se ha creado un nuevo Grado.
+                </div>
+                <div class="modal-body text-danger" *ngIf="error2">
+                    El Grado no se ha podido crear. Revisa que has ingresado todos los datos requeridos.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Confirmacion Borrar Grado -->
+    <div class="modal fade" id="mimodalejemplo5" tabindex="-1" role="dialog" aria-labelledby="myModalLabel5">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header bg-light">
+                    <h5 class="modal-title" id="myModalLabel">Confirmar Accion</h5>
+                    <button class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    Para borrar el Grado presione aceptar, de lo contrario presione X
+                    para cancelar.
+                </div>
+                <div class="modal-footer justify-content-md-center no-gutters py-1 bg-light">
+                    <button class="btn btn-default bg-warning font-weight-bold" data-dismiss="modal" (click)="deleteGrado()">Aceptar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Nuevo Colegio -->
+    <div class="modal fade" id="mimodalejemplo6" tabindex="-1" role="dialog" aria-labelledby="myModalLabel6">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header bg-light">
+                    <h5 class="modal-title" id="myModalLabel">Mensaje</h5>
+                    <button class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body" *ngIf="subiendo">
+                    Creando un nuevo Colegio. Espere por favor.
+                </div>
+                <div class="modal-body text-info" *ngIf="correcto3">
+                    Se ha creado un nuevo Colegio.
+                </div>
+                <div class="modal-body text-danger" *ngIf="error3">
+                    El Colegio no se ha podido crear. Revisa que has ingresado todos los datos requeridos.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Confirmacion Colegio Seleccionado -->
+    <div class="modal fade" id="mimodalejemplo7" tabindex="-1" role="dialog" aria-labelledby="myModalLabel7">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header bg-light">
+                    <h5 class="modal-title" id="myModalLabel">Mensaje</h5>
+                    <button class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    Ha sido seleccionado un Colegio. Los datos han sido cargados para revisar y modificar.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Materias Profesores -->
+    <div class="modal fade" id="mimodalejemplo8" tabindex="-1" role="dialog" aria-labelledby="myModalLabel8">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header bg-light">
+                    <h5 class="modal-title" id="myModalLabel">Materias Docentes</h5>
+                    <button class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body bg-secondary">
+                    <div class="contenedor mx-3 py-3">
+                        <!--Filtros-->
+                        <div class="row">
+                            <div class="form-group col">
+                                <label for="inputMateriaMA" class="text-white">Materia</label>
+                                <select [(ngModel)]="materiaSelectedMA" id="inputMateriaMA" name="materiaSelectedMA" class="form-control" ngModel required>
+                                    <option selected></option>
+                                    <option *ngFor="let mater of materias" [value]="mater.id_materia">{{mater.nombre_materia}}</option>
+                                </select>
+                            </div>
+                            <div class="form-group col">
+                                <label for="inputGradoMA" class="text-white">Grado</label>
+                                <select [(ngModel)]="gradoSelectedMA" id="inputGradoMA" name="gradoSelectedMA" class="form-control" ngModel required>
+                                    <option selected></option>
+                                    <option *ngFor="let grad of grados" [value]="grad.id_grado">{{grad.nombre_grado}}</option>
+                                </select>
+                            </div>
+                            <div class="form-group col">
+                                <label for="inputDocenteMA" class="text-white">Profesor</label>
+                                <select [(ngModel)]="docenteSelectedMA" id="inputDocenteMA" name="docenteSelectedMA" class="form-control" ngModel required>
+                                    <option selected></option>
+                                    <option *ngFor="let docen of docentes" [value]="docen.id_docente">
+                                        {{(docen.nombre_docente+" "+docen.apellido_docente)}}</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group col-5 mx-auto">
+                            <label for="inputColegioMA" class="text-white">Colegio</label>
+                            <select [(ngModel)]="colegioSelectedMA" id="inputColegioMA" name="colegioSelectedMA" class="form-control" ngModel
+                                required>
+                                <option selected></option>
+                                <option *ngFor="let colegio of colegios" [value]="colegio.id_colegio">{{(colegio.nombre_colegio)}}</option>
+                            </select>
+                        </div>
+                
+                        <!--Resultados-->
+                        <h5 class="py-3 text-white">Resultados:</h5>
+                        <div class="row mx-auto">
+                            <table class="mx-auto text-white m-auto rounded table-striped table-wrapper-scroll-y my-custom-scrollbar"
+                                style="height: 256px;">
+                                <thead class="bg-danger">
+                                    <th class="pl-3 pr-5 py-2 text-dark">Nombre Materia</th>
+                                    <th class="pl-3 pr-3 py-2 text-dark text-center">Materia Base</th>
+                                    <th class="pl-3 pr-3 py-2 text-dark text-center">grado</th>
+                                    <th class="pl-3 pr-3 py-2 text-dark text-center">Docente</th>
+                                    <th class="pl-3 pr-4 py-2 text-dark text-center">Colegio</th>
+                                </thead>
+                                <tbody class="bg-light">
+                                    <tr mdbTableCol *ngFor="let materiaActiva of MateriaActivaInfo | filterMateriaactivaAdmin: materiaSelectedMA:gradoSelectedMA:docenteSelectedMA:colegioSelectedMA">
+                                        <td class="pl-3 pr-5 py-2 text-dark">{{ materiaActiva.nombre_materiaActiva }}</td>
+                                        <td class="pl-3 pr-3 py-2 text-dark text-center">{{ materiaActiva.nombre_materia }}</td>
+                                        <td class="pl-3 pr-3 py-2 text-dark text-center">{{ materiaActiva.id_grado }}</td>
+                                        <td class="pl-3 pr-3 py-2 text-dark text-center">{{ materiaActiva.docente }}</td>
+                                        <td class="pl-3 pr-4 py-2 text-dark text-center">{{ materiaActiva.colegio }}</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+

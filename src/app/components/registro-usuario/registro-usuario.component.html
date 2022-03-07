@@ -1,0 +1,125 @@
+<app-header-visitante></app-header-visitante>
+
+<!--Contenedor Contenido Pagina-->
+<div class="mb-5 col-9 mx-auto">
+
+    <!--Titulo pagina-->
+    <div class="container m-auto pb-2 bg-danger rounded-top">
+        <h1 style="cursor:context-menu" class="mt-5 pt-4 text-center m ">Registro de nuevo Profesor</h1>
+    </div>
+    <!--Contenedor Formulario-->
+    <div class="container pt-1 bg-secondary rounded-bottom">
+
+        <!--Informacion del contenido-->
+        <div>
+            <h3 style="cursor:context-menu" class="py-3 text-center text-white">Informacion</h3>
+            <div class="contenedor py-3">
+                <form #frmRegistroProfesor="ngForm">
+                
+                    <div class="col-5 mx-auto">
+                        <div class="form-group col">
+                            <div class="form-group ">
+                                <label for="inputNombreDocente" class="text-white ">Nombre del profesor</label>
+                                <input type="text" name="nombre_docente" class="form-control col" id="inputNombreDocente"
+                                    placeholder="Nombre" required [(ngModel)]="AuthDService.selectedDocente.nombre_docente">
+                            </div>
+                            <div class="form-group">
+                                <label for="inputApellidoDocente" class="text-white ">Apellidos del profesor</label>
+                                <input type="text" name="apellido_docente" class="form-control col" id="inputApellidoDocente"
+                                    placeholder="Apellidos" required [(ngModel)]="AuthDService.selectedDocente.apellido_docente">
+                            </div>
+                            <div class="form-group">
+                                <label for="inputColegio" class="text-white">Colegio</label>
+                                <select [(ngModel)]="id_colegio" name="id_colegio" id="inputColegio" class="form-control" ngModel required>
+                                    <!--<option selected [value]='0'>- Materia -</option>-->
+                                    <option *ngFor="let colegio of colegios" [value]="colegio.id_colegio">{{colegio.nombre_colegio}}</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="inputNombreUsuario" class="text-white ">Nombre Usuario</label>
+                                <input type="text" name="nombre_usuario" class="form-control col" id="inputNombreUsuario"
+                                    placeholder="Usuario" required [(ngModel)]="AuthDService.selectedDocente.nombre_usuario">
+                            </div>
+                            <div class="form-group">
+                                <label for="inputContrasena" class="text-white ">Contraseña</label>
+                                <input type="password" name="contrasena" class="form-control col" id="inputContrasena" placeholder="Contraseña"
+                                    required [(ngModel)]="AuthDService.selectedDocente.contrasena">
+                            </div>
+                            <div class="form-group">
+                                <label for="inputCorreoElectronico" class="text-white ">Correo Electronico</label>
+                                <input type="text" name="correo_electronico" class="form-control col" id="inputCorreoElectronico"
+                                    placeholder="Correo Electronico" required [(ngModel)]="AuthDService.selectedDocente.correo_electronico">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <br>
+                    <hr class="style5">
+                    
+                    <h3 style="cursor:context-menu" class="py-3 text-center text-white">Crear tu Primera Materia</h3>
+                    <br>
+                    <div class="form-group">
+                        <label for="inputNombreMateriaActiva" class="text-white ">Nombre de la Materia</label>
+                        <input type="text" name="nombre_materiaActiva" class="form-control col-md-8" id="inputNombreMateriaActiva" placeholder="Nombre Materia" required
+                            [(ngModel)]="ContentREAService.selectedContenidoREA.nombre_CREA">
+                    </div>
+                    <!-- Selectores -->
+                    <div class="form-row">
+                        <div class="form-group col">
+                            <label for="inputMateriaBase" class="text-white">Materia Base</label>
+                            <select [(ngModel)]="id_materia" name="id_materia" id="inputMateriaBase" class="form-control" ngModel required>
+                                <!--<option selected [value]='0'>- Materia -</option>-->
+                                <option *ngFor="let mater of materia" [value]="mater.id_materia">{{mater.nombre_materia}}</option>
+                            </select>
+                        </div>
+                        <div class="form-group col">
+                            <label for="inputGrado" class="text-white">Grado</label>
+                            <select [(ngModel)]="id_grado" name="id_grado" id="inputGrado" class="form-control" ngModel required>
+                                <option *ngFor="let grad of grado" [value]="grad.id_grado">{{grad.nombre_grado}}</option>
+                            </select>
+                        </div>
+                        <div class="form-group col">
+
+                        </div>
+                    </div>
+                    <br>
+                    <hr class="style5">
+                    <br>
+                    <!--Boton Crear Materia-->
+                    <div class="bg-secondary row pb-4 justify-content-md-center no-gutters">
+                        <button class="btn bg-danger px-5 py-4 font-weight-bold" data-toggle="modal" data-target="#mimodalejemplo" (click)="onCrearDocente(frmRegistroProfesor)">Crear Profesor</button>
+                    </div>
+                </form>
+                <hr class="style5">
+            </div>
+            
+        </div>
+    </div>
+
+    <!-- Modal routerLink="/subirContenido"-->
+    <div class="modal fade" id="mimodalejemplo" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header bg-light">
+                    <h5 class="modal-title" id="myModalLabel">Mensaje</h5>
+                    <button class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body text-danger" *ngIf="error1">
+                    El profesor no se ha podido registrar. El Usuario o Correo puenden estar en uso,
+                    o verifique haber ingresado todos los datos.
+                </div>
+                <div class="modal-body text-info" *ngIf="correcto">
+                    El profesor ha sido registrado.
+                </div>
+                <div class="modal-body" *ngIf="subiendo">
+                    Registrando el nuevo profesor. Espere por favor.
+                </div>
+                <div class="modal-footer justify-content-md-center no-gutters bg-light py-1" *ngIf="correcto">
+                    <a class="btn btn-default bg-warning font-weight-bold" data-dismiss="modal" (click)="goToLogin()">Terminar Registro</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

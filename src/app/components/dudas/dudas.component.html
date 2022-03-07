@@ -1,0 +1,665 @@
+<app-header></app-header>
+
+<!--Contenedor Contenido Pagina-->
+<div class="mb-5 contenedor py-3">
+
+    <!--Titulo pagina-->
+    <div class="container m-auto pb-2 bg-info rounded-top">
+        <h1 style="cursor:context-menu" class="mt-5 pt-4 text-center m ">Dudas</h1>
+    </div>
+    
+    <!--Contenedor Formularios-->
+    <div class="container pt-1 bg-secondary rounded-bottom">
+
+        <!--Tabs-->
+        <div class="row">
+            <div class="col">
+                <div class="mt-3">
+                    <div class="card-header tab-card-header">
+                        <!--Opcion Tab-->
+                        <nav>
+                            <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                                <a class="col nav-item nav-link text-center active font-weight-bold text-dark" id="nav-Pregunta1-tab" data-toggle="tab"
+                                    href="#nav-Pregunta1" role="tab" aria-controls="nav-Pregunta1" aria-selected="true">Sin Resolver</a>
+                                <a class="col nav-item nav-link text-center font-weight-bold text-dark" id="nav-Pregunta2-tab" data-toggle="tab"
+                                    href="#nav-Pregunta2" role="tab" aria-controls="nav-Pregunta2" aria-selected="false">Resueltas</a>
+                            </div>
+                        </nav>
+        
+                        <!--Tabs Resultados-->
+                        <div class="tab-content" id="nav-tabContent">
+                            <br>
+
+                            <!--Tab 1-->
+                            <div class="tab-pane fade show active" id="nav-Pregunta1" role="tabpanel" aria-labelledby="nav-Pregunta1-tab">
+                                <!--Dudas Sin Resolver-->
+                                <div>
+                                    <h3 style="cursor:context-menu" class="py-3 text-center text-white">Dudas Sin Resolver</h3>
+                            
+                                    <div class="contenedor mx-3 py-3">
+                                        <form #frmBuscarCompetencia="ngForm">
+                            
+                                            <!--Buscar-->
+                                            <h5 class="py-3 text-white">Filtros:</h5>
+                                            <div class="form-group">
+                                                <input type="text" class="form-control col-md-8" id="inputNombreActividadSinR" placeholder="Nombre Actividad" 
+                                                    [(ngModel)]="nombreActividadSelectedSinR" name="nombreActividadSelectedSinR">
+                                            </div>
+                                            <div class="form-group">
+                                                <input type="text" class="form-control col-md-6" id="inputNombreEstudianteSinR" placeholder="Nombre Estudiante" 
+                                                    [(ngModel)]="nombreEstudianteSelectedSinR" name="nombreEstudianteSelectedSinR">
+                                            </div>
+                                            <!-- Selectores -->
+                                            <div class="form-row">
+                                                <div class="form-group col-4">
+                                                    <label for="inputMateriaSinR" class="text-white">Materia</label>
+                                                    <select [(ngModel)]="materiaSinRSelected" name="materiaSinRSelected" id="inputMateriaSinR" class="form-control" ngModel required>
+                                                        <option selected></option>
+                                                        <option *ngFor="let materia of materias" [value]="materia.id_materia">{{materia.nombre_materia}}</option>
+                                                    </select>
+                                                </div>
+                                                <div class="form-group col-3">
+                                                    <label for="inputGradoSinR" class="text-white">Grado</label>
+                                                    <select [(ngModel)]="gradoSinRSelected" name="gradoSinRSelected" id="inputGradoSinR" class="form-control" ngModel required>
+                                                        <option selected></option>
+                                                        <option *ngFor="let grado of grados" [value]="grado.id_grado">{{grado.nombre_grado}}</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                            
+                                            <!--Resultados-->
+                                            <h5 class="py-3 text-white">Resultados:</h5>
+                                            <div class="col container p-4 my bg-light rounded table-wrapper-scroll-y my-custom-scrollbar"
+                                                style="width: 95%; height: 450px">
+                                                <!--Resultado-->
+                                                <div class="row-1" *ngFor="let duda of dudasVisualizar | filterDuda: nombreActividadSelectedSinR:materiaSinRSelected:gradoSinRSelected:id_docenteAuth:SinROption:nombreEstudianteSelectedSinR">
+                                                    <div class="card mb-4 border-0" style="max-width: 1440px;">
+                                                        <div class="row no-gutters border border-info">
+                                                            <div class="col" style="max-width: 840px;">
+                                                                <div class="card-body p-2">
+                                                                    <p class="card-text">Pregunta: {{duda.pregunta}}</p>
+                                                                    <div>
+                                                                        <p class="card-text"><small class="text-muted">Actividad: {{duda.nombre_actividad}}</small></p>
+                                                                    </div>
+                                                                    <div>
+                                                                        <p class="card-text"><small class="text-muted">Estudiante: {{duda.estudiante}}</small></p>
+                                                                    </div>
+                                                                    <div>
+                                                                        <p class="card-text"><small class="text-muted">Materia: {{duda.materia}}</small></p>
+                                                                    </div>
+                                                                    <div>
+                                                                        <p class="card-text"><small class="text-muted">Grado: {{duda.id_grado}}</small></p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <!--Boton Responder Duda-->
+                                                        <div class="card-footer bg-secondary row justify-content-md-center no-gutters p-1">
+                                                            <a class="btn bg-warning" data-toggle="modal" data-target="#mimodalejemplo3" (click)="saveDataDuda(duda)">Responder</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                        <br>
+                                        <hr class="style4">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!--Tab 2-->
+                            <div class="tab-pane fade" id="nav-Pregunta2" role="tabpanel" aria-labelledby="nav-Pregunta2-tab">
+                                <!--Dudas Resueltas-->
+                                <div>
+                                    <h3 style="cursor:context-menu" class="py-3 text-center text-white">Dudas Resueltas</h3>
+                            
+                                    <div class="contenedor mx-3 py-3">
+                                        <form #frmBuscarCompetencia="ngForm">
+                            
+                                            <!--Buscar-->
+                                            <h5 class="py-3 text-white">Filtros:</h5>
+                                            <div class="form-group">
+                                                <input type="text" class="form-control col-md-8" id="inputNombreActividadR" placeholder="Nombre Actividad" 
+                                                    [(ngModel)]="nombreActividadSelectedR" name="nombreActividadSelectedR">
+                                            </div>
+                                            <div class="form-group">
+                                                <input type="text" class="form-control col-md-6" id="inputNombreEstudianteR" placeholder="Nombre Estudiante" 
+                                                    [(ngModel)]="nombreEstudianteSelectedR" name="nombreEstudianteSelectedR">
+                                            </div>
+                                            <!-- Selectores -->
+                                            <div class="form-row">
+                                                <div class="form-group col-4">
+                                                    <label for="inputMateriaR" class="text-white">Materia</label>
+                                                    <select [(ngModel)]="materiaRSelected" name="materiaRSelected" id="inputMateriaR" class="form-control" ngModel required>
+                                                        <option selected></option>
+                                                        <option *ngFor="let materia of materias" [value]="materia.id_materia">{{materia.nombre_materia}}</option>
+                                                    </select>
+                                                </div>
+                                                <div class="form-group col-3">
+                                                    <label for="inputGradoR" class="text-white">Grado</label>
+                                                    <select [(ngModel)]="gradoRSelected" name="gradoRSelected" id="inputGradoR" class="form-control" ngModel required>
+                                                        <option selected></option>
+                                                        <option *ngFor="let grado of grados" [value]="grado.id_grado">{{grado.nombre_grado}}
+                                                        </option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                            
+                                            <!--Resultados-->
+                                            <h5 class="py-3 text-white">Resultados:</h5>
+                                            <div class="col container p-4 my bg-light rounded table-wrapper-scroll-y my-custom-scrollbar"
+                                                style="width: 95%; height: 450px">
+                                                <!--Resultado-->
+                                                <div class="row-1" *ngFor="let dudaR of dudasVisualizar | filterDuda: nombreActividadSelectedR:materiaRSelected:gradoRSelected:id_docenteAuth:ROption:nombreEstudianteSelectedR">
+                                                    <div class="card mb-4 border-0" style="max-width: 1440px;">
+                                                        <div class="row no-gutters border border-info">
+                                                            <div class="col-md-10" style="max-width: 840px;">
+                                                                <div class="card-body p-2">
+                                                                    <p class="card-text">Pregunta: {{dudaR.pregunta}}</p>
+                                                                    <p class="card-text">Respuesta: {{dudaR.respuesta}}</p>
+                                                                    <div>
+                                                                        <p class="card-text"><small class="text-muted">Actividad: {{dudaR.nombre_actividad}}</small></p>
+                                                                    </div>
+                                                                    <div>
+                                                                        <p class="card-text"><small class="text-muted">Estudiante: {{dudaR.estudiante}}</small></p>
+                                                                    </div>
+                                                                    <div>
+                                                                        <p class="card-text"><small class="text-muted">Materia: {{dudaR.materia}}</small></p>
+                                                                    </div>
+                                                                    <div>
+                                                                        <p class="card-text"><small class="text-muted">Grado: {{dudaR.id_grado}}</small></p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <!--Boton Ocultar Duda-->
+                                                        <div class="card-footer bg-secondary row justify-content-md-center no-gutters p-1">
+                                                            <a class="btn bg-warning" data-toggle="modal" data-target="#mimodalejemplo2" (click)="saveDataDuda(dudaR)">Ocultar</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                        <br>
+                                        <hr class="style4">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Confirmar Duda Ocultada -->
+    <div class="modal fade" id="mimodalejemplo4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel4">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header bg-light">
+                    <h4 class="modal-title" id="myModalLabel">Mensaje</h4>
+                    <button class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body text-info">
+                    Se ha Ocultado la Duda.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Confirmar Ocultar Duda -->
+    <div class="modal fade" id="mimodalejemplo2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel2">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header bg-light">
+                    <h4 class="modal-title" id="myModalLabel">Confirmar Accion</h4>
+                    <button class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    Para Ocultar la Duda presione aceptar, de lo contrario presione X
+                    para cancelar.
+                </div>
+                <div class="modal-footer justify-content-md-center no-gutters bg-light py-1">
+                    <button class="btn btn-default bg-warning font-weight-bold" data-dismiss="modal" data-toggle="modal" data-target="#mimodalejemplo4" (click)="ocultarDuda()">Aceptar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Responder Duda -->
+    <div class="modal fade" id="mimodalejemplo3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel3">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header bg-light">
+                    <h4 class="modal-title" id="myModalLabel">Duda Seleccionada</h4>
+                    <button class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form #frmRespuesta="ngForm">
+                        <div class="row no-gutters border border-info">
+                            <div class="col" style="max-width: 840px;">
+                                <div class="card-body p-2">
+                                    <p class="card-text">Pregunta: {{dudaToSave.pregunta}}</p>
+                                    <div>
+                                        <p class="card-text text-info" data-toggle="modal" style="cursor:pointer"
+                                            data-target="#mimodalejemplo" (click)="getActividadinModal()"><small
+                                                class="text-muted">Actividad: {{dudaToSave.nombre_actividad}}</small></p>
+                                    </div>
+                                    <div>
+                                        <p class="card-text"><small class="text-muted">Estudiante: {{dudaToSave.estudiante}}</small></p>
+                                    </div>
+                                    <div>
+                                        <p class="card-text"><small class="text-muted">Materia: {{dudaToSave.materia}}</small></p>
+                                    </div>
+                                    <div>
+                                        <p class="card-text"><small class="text-muted">Grado: {{dudaToSave.id_grado}}</small></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <h5 style="cursor:context-menu" class="text-center pt-3 pb-2">Respuesta:</h5>
+                            <textarea class="form-control" name="respuesta" id="inputRespuesta" rows="4" required
+                                [(ngModel)]="respuesta" placeholder="Escriba una respuesta ..."></textarea>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer justify-content-md-center no-gutters bg-light py-1">
+                    <button class="btn btn-default bg-warning font-weight-bold" data-dismiss="modal" (click)="responderPregunta(frmRespuesta)">Enviar Respuesta</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Actividad Seleccionada -->
+    <div class="modal fade col" id="mimodalejemplo" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content ">
+                <div class="modal-header bg-light">
+                    <h4 class="modal-title text-center my-0" id="myModalLabel">Actividad</h4>
+                    <button type="button" class="close " data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="">
+                        <div>
+                            <h3 style="cursor:context-menu" class="text-center bg-warning py-4">{{ActividadService.selectedActividad.titulo_actividad}}</h3>
+                        </div>
+                        <div class="row-1">
+                            <div class="card mb-4 border-0" style="max-width: 1440px;">
+                                <div class="row no-gutters">
+                                    <div class="col" style="max-width: 840px;">
+                                        <div class="card-body p-2">
+                                            <div>
+                                                <h5 class="">Descripcion: {{actividadVisualizar.descripcion_actividad}}</h5>
+                                            </div>
+                                            <div>
+                                                <p class="card-text"><small class="text-muted">Materia: {{actividadVisualizar.materia}}</small>
+                                                </p>
+                                            </div>
+                                            <div>
+                                                <p class="card-text"><small class="text-muted">Grado: {{actividadVisualizar.id_grado}}</small>
+                                                </p>
+                                            </div>
+                                            <div>
+                                                <p class="card-text"><small class="text-muted">Competencia: {{actividadVisualizar.competencia}}</small></p>
+                                            </div>
+                                            <div>
+                                                <p class="card-text"><small class="text-muted">Profesor: {{actividadVisualizar.docente}}</small>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <hr class="style1b">
+
+                        <!--Contenido Actividad-->
+                        <div>
+                            <h5 style="cursor:context-menu" class="">Contenido:</h5>
+                        </div>
+                        <div class="row-1">
+                            <div class="card mb-4 border-0" style="max-width: 1440px;">
+                                <div class="card-footer p-2 bg-primary rounded-top">
+                                    <h5 style="cursor:context-menu" class="card-title m-1">{{contenidoAct.nombre_CREA}}</h5>
+                                </div>
+                                <div class="row no-gutters">
+                                    <div class="col-md-10" style="max-width: 840px;">
+                                        <div class="card-body p-2">
+                                            <p class="card-text m-1">Descripcion: {{contenidoAct.descripcion_CREA}}</p>
+                                            <div>
+                                                <p class="card-text"><small class="text-muted">Materia: {{contenidoAct.materia}}</small></p>
+                                            </div>
+                                            <div>
+                                                <p class="card-text"><small class="text-muted">Grado: {{contenidoAct.id_grado}}</small></p>
+                                            </div>
+                                            <div>
+                                                <p class="card-text"><small class="text-muted">Tipo de contenido:
+                                                        {{contenidoAct.nombre_tipo_CREA}}</small></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--Boton ver Contenido-->
+                                <div class="card-footer bg-secondary row justify-content-md-center no-gutters p-1">
+                                    <a class="btn btn-primary" (click)="verContenidoActividad()">Ver</a>
+                                </div>
+                            </div>
+                        </div>
+                        <hr class="style1b">
+
+                        <!--Quiz del contenido-->
+                        <div>
+                            <h5 style="cursor:context-menu" class="">Quiz del contenido:</h5>
+                        </div>
+                        <div class="contenedor py-3">
+                            <div class="">
+                                <label>Descripcion: {{ActividadService.selectedActividad.descripcion_test}}</label>
+                            </div>
+                            <div class="container">
+                                <!--Tabs-->
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="card mt-3 tab-card">
+                                            <div class="card-header tab-card-header bg-light">
+                                                <!--Opcion Tab-->
+                                                <nav>
+                                                    <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                                                        <a class="col nav-item nav-link text-center active" id="nav-Pregunta1-tab" data-toggle="tab" href="#nav-Pregunta1" role="tab"
+                                                            aria-controls="nav-Pregunta1" aria-selected="true">Pregunta 1</a>
+                                                        <a class="col nav-item nav-link text-center" id="nav-Pregunta2-tab" data-toggle="tab" href="#nav-Pregunta2" role="tab"
+                                                            aria-controls="nav-Pregunta2" aria-selected="false">Pregunta 2</a>
+                                                        <a class="col nav-item nav-link text-center" id="nav-Pregunta3-tab" data-toggle="tab" href="#nav-Pregunta3" role="tab"
+                                                            aria-controls="nav-Pregunta3" aria-selected="false">Pregunta 3</a>
+                                                    </div>
+                                                </nav>
+
+                                                <!--Tabs Resultados-->
+                                                <div class="tab-content" id="nav-tabContent">
+                                                    <br>
+                                                    <!--Tab 1-->
+                                                    <div class="tab-pane fade show active" id="nav-Pregunta1" role="tabpanel" aria-labelledby="nav-Pregunta1-tab">
+                                                        <div class="form-group">
+                                                            <h5 class="py-1 text-center text-dark">Pregunta 1</h5>
+                                                            <div class="">
+                                                                <label class="">Pregunta: {{ActividadService.selectedActividad.Q1}}</label>
+                                                            </div>
+                                                        </div>
+                                                        <label class="text-dark">Posibles Respuestas:</label>
+                                                        <div class="form-group row">
+                                                            <div class="pl-5">
+                                                                <label class="">A) {{ActividadService.selectedActividad.A11}}</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group row">
+                                                            <div class="pl-5">
+                                                                <label class="">B) {{ActividadService.selectedActividad.A12}}</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group row">
+                                                            <div class="pl-5">
+                                                                <label class="">C) {{ActividadService.selectedActividad.A13}}</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group row">
+                                                            <div class="pl-5">
+                                                                <label class="">D) {{ActividadService.selectedActividad.A14}}</label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <!--Tab 2-->
+                                                    <div class="tab-pane fade" id="nav-Pregunta2" role="tabpanel" aria-labelledby="nav-Pregunta2-tab">
+                                                        <div class="form-group">
+                                                            <h5 class="py-1 text-center text-dark">Pregunta 2</h5>
+                                                            <div class="">
+                                                                <label class="">Pregunta: {{ActividadService.selectedActividad.Q2}}</label>
+                                                            </div>
+                                                        </div>
+                                                        <label class="text-dark">Posibles Respuestas:</label>
+                                                        <div class="form-group row">
+                                                            <div class="pl-5">
+                                                                <label class="">A) {{ActividadService.selectedActividad.A21}}</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group row">
+                                                            <div class="pl-5">
+                                                                <label class="">B) {{ActividadService.selectedActividad.A22}}</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group row">
+                                                            <div class="pl-5">
+                                                                <label class="">C) {{ActividadService.selectedActividad.A23}}</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group row">
+                                                            <div class="pl-5">
+                                                                <label class="">D) {{ActividadService.selectedActividad.A24}}</label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <!--Tab 3-->
+                                                    <div class="tab-pane fade" id="nav-Pregunta3" role="tabpanel" aria-labelledby="nav-Pregunta3-tab">
+                                                        <div class="form-group">
+                                                            <h5 class="py-1 text-center text-dark">Pregunta 3</h5>
+                                                            <div class="">
+                                                                <label class="">Pregunta: {{ActividadService.selectedActividad.Q3}}</label>
+                                                            </div>
+                                                        </div>
+                                                        <label class="text-dark">Posibles Respuestas:</label>
+                                                        <div class="form-group row">
+                                                            <div class="pl-5">
+                                                                <label class="">A) {{ActividadService.selectedActividad.A31}}</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group row">
+                                                            <div class="pl-5">
+                                                                <label class="">B) {{ActividadService.selectedActividad.A32}}</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group row">
+                                                            <div class="pl-5">
+                                                                <label class="">C) {{ActividadService.selectedActividad.A33}}</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group row">
+                                                            <div class="pl-5">
+                                                                <label class="">D) {{ActividadService.selectedActividad.A34}}</label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <hr class="style1b">
+
+                        <!--Taller Actividad-->
+                        <div>
+                            <h5 style="cursor:context-menu" class="">Taller:</h5>
+                        </div>
+                        <div class="row-1">
+                            <div class="card mb-4 border-0" style="max-width: 1440px;">
+                                <div class="card-footer p-2 bg-primary rounded-top">
+                                    <h5 class="card-title m-1">{{tallerAct.nombre_CREA}}</h5>
+                                </div>
+                                <div class="row no-gutters">
+                                    <div class="col-md-10" style="max-width: 840px;">
+                                        <div class="card-body p-2">
+                                            <p class="card-text ">Descripcion: {{tallerAct.descripcion_CREA}}</p>
+                                            <div>
+                                                <p class="card-text"><small class="text-muted">Materia: {{tallerAct.materia}}</small></p>
+                                            </div>
+                                            <div>
+                                                <p class="card-text"><small class="text-muted">Grado: {{tallerAct.id_grado}}</small></p>
+                                            </div>
+                                            <div>
+                                                <p class="card-text"><small class="text-muted">Tipo de contenido:
+                                                        {{tallerAct.nombre_tipo_CREA}}</small></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--Boton ver Taller-->
+                                <div class="card-footer bg-secondary row justify-content-md-center no-gutters p-1">
+                                    <a class="btn btn-primary" (click)="verTallerActividad()">Ver</a>
+                                </div>
+                            </div> 
+                        </div>
+                        <hr class="style1b">
+
+                        <!--Evaluacion del contenido-->
+                        <div>
+                            <h5 style="cursor:context-menu" class="">Evaluacion:</h5>
+                        </div>
+                        <div class="contenedor py-3">
+                            <div class="">
+                                <label>Descripcion: {{ActividadService.selectedActividad.descripcion_evaluacion}}</label>
+                            </div>
+                            <div class="container">
+                                <!--Tabs-->
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="card mt-3 tab-card">
+                                            <div class="card-header tab-card-header bg-light">
+                                                <!--Opcion Tab-->
+                                                <nav>
+                                                    <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                                                        <a class="col nav-item nav-link text-center active" id="nav-Pregunta1E-tab"
+                                                            data-toggle="tab" href="#nav-Pregunta1E" role="tab" aria-controls="nav-Pregunta1E"
+                                                            aria-selected="true">Pregunta 1</a>
+                                                        <a class="col nav-item nav-link text-center" id="nav-Pregunta2E-tab" data-toggle="tab"
+                                                            href="#nav-Pregunta2E" role="tab" aria-controls="nav-Pregunta2E"
+                                                            aria-selected="false">Pregunta 2</a>
+                                                        <a class="col nav-item nav-link text-center" id="nav-Pregunta3E-tab" data-toggle="tab"
+                                                            href="#nav-Pregunta3E" role="tab" aria-controls="nav-Pregunta3E"
+                                                            aria-selected="false">Pregunta 3</a>
+                                                    </div>
+                                                </nav>
+                        
+                                                <!--Tabs Resultados-->
+                                                <div class="tab-content" id="nav-tabContent">
+                                                    <br>
+                                                    <!--Tab 1-->
+                                                    <div class="tab-pane fade show active" id="nav-Pregunta1E" role="tabpanel" aria-labelledby="nav-Pregunta1E-tab">
+                                                        <div class="form-group">
+                                                            <h5 class="py-1 text-center text-dark">Pregunta 1</h5>
+                                                            <div class="">
+                                                                <label class="">Pregunta: {{ActividadService.selectedActividad.EQ1}}</label>
+                                                            </div>
+                                                        </div>
+                                                        <label class="text-dark">Posibles Respuestas:</label>
+                                                        <div class="form-group row">
+                                                            <div class="pl-5">
+                                                                <label class="">A) {{ActividadService.selectedActividad.EA11}}</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group row">
+                                                            <div class="pl-5">
+                                                                <label class="">B) {{ActividadService.selectedActividad.EA12}}</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group row">
+                                                            <div class="pl-5">
+                                                                <label class="">C) {{ActividadService.selectedActividad.EA13}}</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group row">
+                                                            <div class="pl-5">
+                                                                <label class="">D) {{ActividadService.selectedActividad.EA14}}</label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <!--Tab 2-->
+                                                    <div class="tab-pane fade" id="nav-Pregunta2E" role="tabpanel" aria-labelledby="nav-Pregunta2E-tab">
+                                                        <div class="form-group">
+                                                            <h5 class="py-1 text-center text-dark">Pregunta 2</h5>
+                                                            <div class="">
+                                                                <label class="">Pregunta: {{ActividadService.selectedActividad.EQ2}}</label>
+                                                            </div>
+                                                        </div>
+                                                        <label class="text-dark">Posibles Respuestas:</label>
+                                                        <div class="form-group row">
+                                                            <div class="pl-5">
+                                                                <label class="">A) {{ActividadService.selectedActividad.EA21}}</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group row">
+                                                            <div class="pl-5">
+                                                                <label class="">B) {{ActividadService.selectedActividad.EA22}}</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group row">
+                                                            <div class="pl-5">
+                                                                <label class="">C) {{ActividadService.selectedActividad.EA23}}</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group row">
+                                                            <div class="pl-5">
+                                                                <label class="">D) {{ActividadService.selectedActividad.EA24}}</label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <!--Tab 3-->
+                                                    <div class="tab-pane fade" id="nav-Pregunta3E" role="tabpanel" aria-labelledby="nav-Pregunta3E-tab">
+                                                        <div class="form-group">
+                                                            <h5 class="py-1 text-center text-dark">Pregunta 3</h5>
+                                                            <div class="">
+                                                                <label class="">Pregunta: {{ActividadService.selectedActividad.EQ3}}</label>
+                                                            </div>
+                                                        </div>
+                                                        <label class="text-dark">Posibles Respuestas:</label>
+                                                        <div class="form-group row">
+                                                            <div class="pl-5">
+                                                                <label class="">A) {{ActividadService.selectedActividad.EA31}}</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group row">
+                                                            <div class="pl-5">
+                                                                <label class="">B) {{ActividadService.selectedActividad.EA32}}</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group row">
+                                                            <div class="pl-5">
+                                                                <label class="">C) {{ActividadService.selectedActividad.EA33}}</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group row">
+                                                            <div class="pl-5">
+                                                                <label class="">D) {{ActividadService.selectedActividad.EA34}}</label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <hr class="style1b">
+
+                    </div>  
+                </div>
+                <div class="modal-footer justify-content-md-center no-gutters bg-light">
+                    <button type="button" class="btn btn-default bg-warning font-weight-bold" data-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

@@ -1,0 +1,337 @@
+<app-header-admin></app-header-admin>
+
+<!--Contenedor Contenido Pagina-->
+<div class="mb-5 col-9 mx-auto">
+
+    <!--Titulo pagina-->
+    <div class="container m-auto pb-2 bg-info rounded-top">
+        <h1 style="cursor:context-menu" class="mt-5 pt-4 text-center m ">Gestionar Competencias</h1>
+    </div>
+    
+    <!--Contenedor Formularios-->
+    <div class="container pt-1 bg-secondary rounded-bottom">
+
+        <!--Tabs-->
+        <div class="row">
+            <div class="col">
+                <div class="mt-3">
+                    <div class="card-header tab-card-header">
+                        <!--Opcion Tab-->
+                        <nav>
+                            <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                                <a class="col nav-item nav-link text-center active font-weight-bold text-dark" id="nav-Pregunta1-tab" data-toggle="tab"
+                                    href="#nav-Pregunta1" role="tab" aria-controls="nav-Pregunta1" aria-selected="true">Competencias</a>
+                                <a class="col nav-item nav-link text-center font-weight-bold text-dark" id="nav-Pregunta2-tab" data-toggle="tab"
+                                    href="#nav-Pregunta2" role="tab" aria-controls="nav-Pregunta2" aria-selected="false">Areas de materias</a>
+                            </div>
+                        </nav>
+        
+                        <!--Tabs Resultados-->
+                        <div class="tab-content" id="nav-tabContent">
+                            <br>
+
+                            <!--Tab 1-->
+                            <div class="tab-pane fade show active" id="nav-Pregunta1" role="tabpanel" aria-labelledby="nav-Pregunta1-tab">
+                                <!--Gestion de Competencias-->
+                                <div>
+                                    <h3 style="cursor:context-menu" class="py-3 text-center text-white">Competencias</h3>
+                            
+                                    <div class="contenedor mx-3 py-3">
+                                        <form #frmBuscarCompetencia="ngForm">
+                            
+                                            <!--Buscar-->
+                                            <h5 class="py-3 text-white">Buscador:</h5>
+                                            <div class="form-group">
+                                                <input type="text" class="form-control col-md-8" id="inputTextoBusquedaCompetencia" placeholder="Palabras Claves" 
+                                                    [(ngModel)]="nombreCompetenciaSelected" name="nombreCompetenciaSelected">
+                                            </div>
+                                            <!-- Selectores -->
+                                            <label for="inputState" class="text-white">Filtros:</label>
+                                            <div class="form-row">
+                                                <div class="form-group col-5">
+                                                    <label for="inputAreaMateri" class="text-white">Area</label>
+                                                    <select [(ngModel)]="areaMateriaSelected" name="areaMateriaSelected" id="inputAreaMateria" class="form-control" ngModel required>
+                                                        <option selected></option>
+                                                        <option *ngFor="let area of areasMaterias | slice:1; let i = index" [value]="area.id_areaMateria">{{area.nombre_areaMateria}}</option>
+                                                    </select>
+                                                </div>
+                                                <div class="form-group col-5">
+                                                    <label for="inputColegioBusqueda" class="text-white">Colegio</label>
+                                                    <select [(ngModel)]="colegioSelected" name="colegioSelected" id="inputColegioBusqueda" class="form-control" ngModel required>
+                                                        <option selected></option>
+                                                        <option *ngFor="let colegio of colegios" [value]="colegio.id_colegio">{{colegio.nombre_colegio}}</option>
+                                                    </select>
+                                                </div>
+                                                <div class="form-group col">
+                            
+                                                </div>
+                                            </div>
+                                            <div class="form-row">
+                                                <div class="form-group col">
+                                                    <label for="inputGrado" class="text-white">Grado Especifico</label>
+                                                    <select [(ngModel)]="gradoSelected" name="gradoSelected" id="inputgrado" class="form-control" ngModel required>
+                                                        <option selected></option>
+                                                        <option *ngFor="let grad of grados" [value]="grad.id_grado">{{grad.nombre_grado}}</option>
+                                                    </select>
+                                                </div>
+                                                <div class="form-group col">
+                                                    <label for="inputGradoInicialC" class="text-white">Grado Inicial</label>
+                                                    <select [(ngModel)]="gradoInicialC" name="gradoInicialC" id="inputgradoInicialC" class="form-control" ngModel required>
+                                                        <option selected></option>
+                                                        <option *ngFor="let grad of grados" [value]="grad.id_grado">{{grad.nombre_grado}}</option>
+                                                    </select>
+                                                </div>
+                                                <div class="form-group col">
+                                                    <label for="inputGradoFinalC" class="text-white">Grado Final</label>
+                                                    <select [(ngModel)]="gradoFinalC" name="gradoFinalC" id="inputGradoFinalC" class="form-control" ngModel required>
+                                                        <option selected></option>
+                                                        <option *ngFor="let grad of grados" [value]="grad.id_grado">{{grad.nombre_grado}}</option>
+                                                    </select>
+                                                </div>
+                                                <div class="form-group col">
+                            
+                                                </div>
+                                            </div>
+                            
+                                            <!--Resultados-->
+                                            <h5 class="py-3 text-white">Resultados:</h5>
+                                            <div class="col container p-4 my bg-light rounded table-wrapper-scroll-y my-custom-scrollbar"
+                                                style="width: 95%; height: 450px">
+                                                <!--Resultado-->
+                                                <div class="row-1" *ngFor="let compet of competenciasVisualizar | filterCompetenciaAdmin: nombreCompetenciaSelected:areaMateriaSelected:gradoSelected:gradoInicialC:gradoFinalC:colegioSelected">
+                                                    <div class="card mb-4 border-0" style="max-width: 1440px;">
+                                                        <div class="row no-gutters border border-secondary">
+                                                            <div class="col" style="max-width: 840px;">
+                                                                <div class="card-body p-2">
+                                                                    <p class="card-text ">Competencia: {{compet.nombre_competencia}}.</p>
+                                                                    <div>
+                                                                        <p class="card-text"><small class="text-muted">Area: {{compet.areaMateria}}</small></p>
+                                                                    </div>
+                                                                    <div>
+                                                                        <p class="card-text"><small class="text-muted">Grado Inicial: {{compet.gradoInicial}}</small></p>
+                                                                    </div>
+                                                                    <div>
+                                                                        <p class="card-text"><small class="text-muted">Grado Final: {{compet.gradoFinal}}</small></p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <!--Boton borrar Competencia-->
+                                                        <div class="card-footer bg-secondary row justify-content-md-center no-gutters p-1">
+                                                            <a class="btn bg-warning" data-toggle="modal" data-target="#mimodalejemplo3" (click)="saveDataCompetencia(compet)">Borrar Competencia</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                        <br>
+                                    </div>
+                            
+                                    <div class="contenedor py-3">
+                                        <form #frmCrearCompetencia="ngForm">
+                                            <h5 class="py-3 text-white text-center">Crear Competencias:</h5>
+                                            <div class="col-5 mx-auto">
+                                                <div class="form-group col">
+                                                    <div class="form-group">
+                                                        <label for="inputNombreCompetencia" class="text-white ">Competencia</label>
+                                                        <input type="text" name="nombre_competencia" class="form-control col" id="inputNombreUsuario" placeholder="Nombre / Descripcion" required
+                                                            [(ngModel)]="nombre_competencia">
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="inputColegioC" class="text-white">Colegio</label>
+                                                        <select [(ngModel)]="id_colegioC" name="id_colegioC" id="inputColegioC" class="form-control" ngModel required>
+                                                            <option selected></option>
+                                                            <option *ngFor="let colegio of colegios" [value]="colegio.id_colegio">{{colegio.nombre_colegio}}</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="inputAreaMateriN" class="text-white">Area</label>
+                                                        <select [(ngModel)]="id_areaMateria" name="id_areaMateria" id="inputAreaMateriaN" class="form-control" ngModel required>
+                                                            <option selected></option>
+                                                            <option *ngFor="let area of areasMaterias | slice:1; let i = index" [value]="area.id_areaMateria">{{area.nombre_areaMateria}}</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="form-group row">
+                                                        <div class="form-group col">
+                                                            <label for="inputGradoInicial" class="text-white">Grado Inicial</label>
+                                                            <select [(ngModel)]="gradoInicial" name="gradoInicial" id="inputgradoInicial" class="form-control" ngModel required>
+                                                                <option selected></option>
+                                                                <option *ngFor="let grad of grados" [value]="grad.id_grado">{{grad.nombre_grado}}</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="form-group col">
+                                                            <label for="inputGradoFinal" class="text-white">Grado Final</label>
+                                                            <select [(ngModel)]="gradoFinal" name="gradoFinal" id="inputGradoFinal" class="form-control" ngModel required>
+                                                                <option selected></option>
+                                                                <option *ngFor="let grad of grados" [value]="grad.id_grado">{{grad.nombre_grado}}</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <br>
+                            
+                                            <!--Boton Crear Competencia-->
+                                            <div class="bg-secondary row pb-4 justify-content-md-center no-gutters">
+                                                <a class="btn bg-info px-5 py-4 font-weight-bold" data-toggle="modal" data-target="#mimodalejemplo"
+                                                    (click)="crearCompetencia(frmCrearCompetencia)">Crear Competencia</a>
+                                            </div>
+                                        </form>
+                                        <hr class="style4">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!--Tab 2-->
+                            <div class="tab-pane fade" id="nav-Pregunta2" role="tabpanel" aria-labelledby="nav-Pregunta2-tab">
+                                <!--Gestion de AreaMateria-->
+                                <div>
+                                    <h3 style="cursor:context-menu" class="py-3 text-center text-white">Areas de Materias</h3>
+                                    <div class="contenedor mx-3 py-3">
+                                        <form #frmCrearAreaMateria="ngForm">
+                            
+                                            <!--Crear AreaMaterias-->
+                                            <h5 class="py-3 text-white">Crear Area:</h5>
+                                            <div class="row">
+                                                <div class="form-group col-5 pr-3">
+                                                        <label for="inputNombreMateriaActiva" class="text-white">Nombre del Area</label>
+                                                    <input type="text" name="nombre_areaMateria" class="form-control" id="inputNombreMateriaActiva" placeholder="Nombre Area de Materias" required 
+                                                        [(ngModel)]="nombre_areaMateria">
+                                                </div>
+                                                <div class="form-group col-4 pr-3 pl-0">
+                                                    <label for="inputColegioAM" class="text-white">Colegio</label>
+                                                    <select [(ngModel)]="id_colegioAM" name="id_colegioAM" id="inputColegioAM" class="form-control" ngModel required>
+                                                        <option selected></option>
+                                                        <option *ngFor="let colegio of colegios" [value]="colegio.id_colegio">{{colegio.nombre_colegio}}</option>
+                                                    </select>
+                                                </div>
+                                                <!--Boton Crear AreaMateria-->
+                                                <div class="bg-secondary col px-0 justify-content-md-center no-gutters pt-2">
+                                                    <br>
+                                                    <a class="btn bg-info px-1 font-weight-bold" data-toggle="modal" data-target="#mimodalejemplo4"
+                                                        (click)="CrearAreaMateria(frmCrearAreaMateria)">Crear Area</a>
+                                                </div>
+                                            </div>
+                            
+                                            <br>
+                            
+                                            <!--Borrar Area de Materias-->
+                                            <h5 class="py-3 text-white">Borrar Area:</h5>
+                                            <div class="row mx-auto">
+                                                <table class="mx-auto text-white m-auto rounded table-striped table-wrapper-scroll-y my-custom-scrollbar" style="height: 256px;">
+                                                    <thead class="bg-info">
+                                                        <th class="pl-3 pr-5 py-2 text-dark">Nombre Area</th>
+                                                        <th class="pl-5 pr-4 py-2 text-dark">Accion</th>
+                                                    </thead>
+                                                    <tbody class="bg-light">
+                                                        <tr mdbTableCol *ngFor="let areaMateria of areasMaterias | slice:1; let i = index">
+                                                            <td class="pl-3 pr-5 py-2 text-dark">{{ areaMateria.nombre_areaMateria }}</td>
+                                                            <td class="pl-5 pr-4 py-2">
+                                                                <a class="btn bg-warning py-0 px-1 text-dark" data-toggle="modal" data-target="#mimodalejemplo2"
+                                                                    (click)="saveDataAreaMateria(areaMateria)">borrar</a>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </form>
+                                        <br>
+                                        <hr class="style4">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Nueva Competencia -->
+    <div class="modal fade" id="mimodalejemplo" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header bg-light">
+                    <h5 style="cursor:context-menu" class="modal-title" id="myModalLabel">Mensaje</h5>
+                    <button class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body text-info" *ngIf="correcto1">
+                    Se ha creado una nueva Competencia.
+                </div>
+                <div class="modal-body text-danger" *ngIf="error1">
+                    La Competencia no se ha podido crear. Revisa que has ingresado todos los datos requeridos.
+                </div>
+                <div class="modal-body" *ngIf="subiendo">
+                    Creando Competencia. Espere por favor.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Nueva AreaMateria -->
+    <div class="modal fade" id="mimodalejemplo4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel4">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header bg-light">
+                    <h4 class="modal-title" id="myModalLabel">Mensaje</h4>
+                    <button class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body text-info" *ngIf="correcto2">
+                    Se ha creado una nueva Area.
+                </div>
+                <div class="modal-body text-danger" *ngIf="error2">
+                    El Area no se ha podido crear. Revisa que has ingresado todos los datos requeridos.
+                </div>
+                <div class="modal-body" *ngIf="subiendo">
+                    Creando Area. Espere por favor.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Confirmar Borrar AreaMateria -->
+    <div class="modal fade" id="mimodalejemplo2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel2">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header bg-light">
+                    <h4 class="modal-title" id="myModalLabel">Confirmar Accion</h4>
+                    <button class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    Para borrar el Area presione aceptar, de lo contrario presione X
+                    para cancelar.
+                </div>
+                <div class="modal-footer justify-content-md-center no-gutters bg-light py-1">
+                    <button class="btn btn-default bg-warning font-weight-bold" data-dismiss="modal" (click)="deleteAreaMateria()">Aceptar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Confirmar Borrar Competencia -->
+    <div class="modal fade" id="mimodalejemplo3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel3">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header bg-light">
+                    <h4 class="modal-title" id="myModalLabel">Confirmar Accion</h4>
+                    <button class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    Para borrar la Competencia presione aceptar, de lo contrario presione X
+                    para cancelar.
+                </div>
+                <div class="modal-footer justify-content-md-center no-gutters bg-light py-1">
+                    <button class="btn btn-default bg-warning font-weight-bold" data-dismiss="modal" (click)="deleteCompetencia()">Aceptar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

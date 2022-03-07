@@ -1,0 +1,276 @@
+<app-header></app-header>
+
+<!--Contenedor Contenido Pagina-->
+<div class="mb-5 col-9 mx-auto">
+
+    <!--Titulo pagina-->
+    <div class="container m-auto pb-2 bg-light rounded-top">
+        <h1 style="cursor:context-menu" class="mt-5 pt-4 text-center m ">Administrar Usuario</h1>
+    </div>
+    
+    <!--Contenedor Formularios-->
+    <div class="container pt-1 bg-secondary rounded-bottom">
+    
+        <!--Tabs-->
+        <div class="row">
+            <div class="col">
+                <div class="mt-3">
+                    <div class="card-header tab-card-header">
+                        <!--Opcion Tab-->
+                        <nav>
+                            <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                                <a class="col nav-item nav-link text-center active font-weight-bold text-dark" id="nav-Pregunta1-tab" data-toggle="tab"
+                                    href="#nav-Pregunta1" role="tab" aria-controls="nav-Pregunta1"
+                                    aria-selected="true">Información Personal</a>
+                                <a class="col nav-item nav-link text-center font-weight-bold text-dark" id="nav-Pregunta2-tab" data-toggle="tab"
+                                    href="#nav-Pregunta2" role="tab" aria-controls="nav-Pregunta2"
+                                    aria-selected="false">Información Login</a>
+                                <a class="col nav-item nav-link text-center font-weight-bold text-dark" id="nav-Pregunta3-tab" data-toggle="tab"
+                                    href="#nav-Pregunta3" role="tab" aria-controls="nav-Pregunta3"
+                                    aria-selected="false">Gestion de Materias</a>
+                            </div>
+                        </nav>
+        
+                        <!--Tabs Resultados-->
+                        <div class="tab-content" id="nav-tabContent">
+                            <br>
+
+                            <!--Tab 1-->
+                            <div class="tab-pane fade show active" id="nav-Pregunta1" role="tabpanel" aria-labelledby="nav-Pregunta1-tab">
+                                <!--Informacion Personal Docente-->
+                                <div>
+                                    <h3 style="cursor:context-menu" class="py-3 text-center text-white">Informacion Personal</h3>
+                                    <div class="contenedor py-3">
+                                        <form #frmInformacionPersonal="ngForm">
+                            
+                                            <div class="col-5 mx-auto">
+                                                <div class="form-group col">
+                                                    <div class="form-group ">
+                                                        <label for="inputNombreDocente" class="text-white ">Nombre del profesor</label>
+                                                        <input type="text" name="nombre_docente" class="form-control col" id="inputNombreDocente"
+                                                            placeholder="Nombre" required [(ngModel)]="AuthDService.selectedDocente.nombre_docente">
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="inputApellidoDocente" class="text-white ">Apellidos del profesor</label>
+                                                        <input type="text" name="apellido_docente" class="form-control col" id="inputApellidoDocente" placeholder="Apellidos" required
+                                                            [(ngModel)]="AuthDService.selectedDocente.apellido_docente">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <br>
+                            
+                                            <!--Boton Crear Contenido-->
+                                            <div class="bg-secondary row pb-4 justify-content-md-center no-gutters">
+                                                <a class="btn bg-info px-5 py-4 font-weight-bold" data-toggle="modal" data-target="#mimodalejemplo"
+                                                    (click)="actualizarInfoPersonalDocente(frmInformacionPersonal)">Actualizar Datos</a>
+                                            </div>
+                                        </form>
+                                        <hr class="style9">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!--Tab 2-->
+                            <div class="tab-pane fade" id="nav-Pregunta2" role="tabpanel" aria-labelledby="nav-Pregunta2-tab">
+                                <!--Informacion Login Docente-->
+                                <div>
+                                    <h3 style="cursor:context-menu" class="py-3 text-center text-white">Informacion Login</h3>
+                                    <div class="contenedor py-3">
+                                        <form #frmInformacionLogin="ngForm">
+                            
+                                            <div class="col-5 mx-auto">
+                                                <div class="form-group col">
+                                                    <div class="form-group">
+                                                        <label for="inputNombreUsuario" class="text-white ">Nombre Usuario</label>
+                                                        <input type="text" name="nombre_usuario" class="form-control col" id="inputNombreUsuario" placeholder="Usuario" required
+                                                            [(ngModel)]="AuthDService.selectedDocente.nombre_usuario">
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="inputCorreoElectronico" class="text-white ">Correo Electronico</label>
+                                                        <input type="text" name="correo_electronico" class="form-control col" id="inputCorreoElectronico" placeholder="Correo Electronico" required
+                                                            [(ngModel)]="AuthDService.selectedDocente.correo_electronico">
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="inputContrasena" class="text-white ">Contraseña</label>
+                                                        <input type="text" name="contrasena" class="form-control col" id="inputContrasena"
+                                                            placeholder="Contraseña" required [(ngModel)]="AuthDService.selectedDocente.contrasena">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <br>
+                            
+                                            <!--Boton Actualizar Login Docente-->
+                                            <div class="bg-secondary row pb-4 justify-content-md-center no-gutters">
+                                                <a class="btn bg-info px-5 py-4 font-weight-bold" data-toggle="modal" data-target="#mimodalejemplo"
+                                                    (click)="actualizarInfoLoginDocente(frmInformacionLogin)">Actualizar Datos</a>
+                                            </div>
+                                        </form>
+                                        <hr class="style9">
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!--Tab 3-->
+                            <div class="tab-pane fade" id="nav-Pregunta3" role="tabpanel" aria-labelledby="nav-Pregunta3-tab">
+                                <!--Gestion de Materias Activas-->
+                                <div>
+                                    <h3 style="cursor:context-menu" class="py-3 text-center text-white">Gestion de Materias</h3>
+                                    <div class="contenedor mx-3 py-3">
+                                        <form #frmCrearMateria="ngForm">
+                            
+                                            <!--Crear Materias-->
+                                            <h5 class="py-3 text-white">Crear Materias:</h5>
+                                            <div class="form-group">
+                                                <label for="inputNombreMateriaActiva" class="text-white ">Nombre de la Materia</label>
+                                                <input type="text" name="nombre_materiaActiva" class="form-control col-md-8" id="inputNombreMateriaActiva" placeholder="Nombre Materia" required 
+                                                    [(ngModel)]="ContentREAService.selectedContenidoREA.nombre_CREA">
+                                            </div>
+                                            <!-- Selectores -->
+                                            <div class="form-row">
+                                                <div class="form-group col">
+                                                    <label for="inputMateriaBase" class="text-white">Materia Base</label>
+                                                    <select [(ngModel)]="id_materia" name="id_materia" id="inputMateriaBase" class="form-control" ngModel required>
+                                                        <option *ngFor="let mater of materia" [value]="mater.id_materia">{{mater.nombre_materia}}
+                                                        </option>
+                                                    </select>
+                                                </div>
+                                                <div class="form-group col">
+                                                    <label for="inputGrado" class="text-white">Grado</label>
+                                                    <select [(ngModel)]="id_grado" name="id_grado" id="inputGrado" class="form-control" ngModel required>
+                                                        <option *ngFor="let grad of grado" [value]="grad.id_grado">{{grad.nombre_grado}}</option>
+                                                    </select>
+                                                </div>
+                                                <div class="form-group col">
+                            
+                                                </div>
+                                            </div>
+                                            <br>
+                                            <!--Boton Crear Materia-->
+                                            <div class="bg-secondary row pb-4 justify-content-md-center no-gutters">
+                                                <a class="btn bg-info px-5 py-4 font-weight-bold" data-toggle="modal" data-target="#mimodalejemplo3"
+                                                    (click)="CrearMateriaActiva(frmCrearMateria)">Crear Materia</a>
+                                            </div>
+                                            <br>
+                            
+                                            <!--Borrar Materias-->
+                                            <h5 class="py-3 text-white">Borrar Materias:</h5>
+                                            <div class="row mx-auto">
+                                                <table
+                                                    class="mx-auto text-white m-auto rounded table-striped table-wrapper-scroll-y my-custom-scrollbar"
+                                                    style="height: 256px;">
+                                                    <thead class="bg-info">
+                                                        <th class="pl-3 pr-4 py-2 text-dark">Nombre Materia</th>
+                                                        <th class="px-4 py-2 text-dark">Materia Base</th>
+                                                        <th class="px-4 py-2 text-dark">Grado</th>
+                                                        <th class="pl-3 pr-3 py-2 text-dark">Accion</th>
+                                                    </thead>
+                                                    <tbody class="bg-light">
+                                                        <tr mdbTableCol
+                                                            *ngFor="let materiaActiva of MateriaActivaInfo | filterTableMateriaDocente: idDocente">
+                                                            <td class="pl-3 pr-4 py-2 text-dark">{{ materiaActiva.nombre_materiaActiva }}</td>
+                                                            <td class="px-4 py-2 text-center text-dark">{{ materiaActiva.nombre_materia}}</td>
+                                                            <td class="px-4 py-2 text-center text-dark">{{ materiaActiva.id_grado }}</td>
+                                                            <td class="pl-3 pr-3 py-2">
+                                                                <a class="btn bg-warning py-0 px-1 text-dark" data-toggle="modal" data-target="#mimodalejemplo2" (click)="saveMateriaActivaData(materiaActiva)">
+                                                                    borrar
+                                                                </a>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </form>
+                                        <br>
+                                        <hr class="style9">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Modal Infromacion Actualizada-->
+    <div class="modal fade" id="mimodalejemplo" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header bg-light">
+                    <h5 class="modal-title" id="myModalLabel">Mensaje</h5>
+                    <button class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="" *ngIf="mensajeInfo">Actualizando Informacion.</div>
+                    <div class="text-info" *ngIf="correctoInfo">Se ha actualizado tu informacion.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Modal Confirmar Eliminar MateriaActiva-->
+    <div class="modal fade" id="mimodalejemplo2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel2">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header bg-light">
+                    <h5 class="modal-title" id="myModalLabel">Confirmar Acción</h5>
+                    <button class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    Para borrar la Materia presione Aceptar, de lo contrario presione X
+                    para cancelar.
+                </div>
+                <div class="modal-footer justify-content-md-center no-gutters bg-light py-1">
+                    <button class="btn btn-default bg-warning font-weight-bold" data-dismiss="modal" data-toggle="modal" data-target="#mimodalejemplo4"
+                        (click)="deleteMateriaActiva()">Aceptar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Modal MateriaActiva Eliminada-->
+    <div class="modal fade" id="mimodalejemplo4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel4">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header bg-light">
+                    <h5 class="modal-title" id="myModalLabel">Mensaje</h5>
+                    <button class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="" *ngIf="mensajeInfo">Eliminando Materia.</div>
+                    <div class="text-info" *ngIf="correctoInfo">La Materia ha sido Eliminada.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Modal Confirmar MateriaActiva Creada-->
+    <div class="modal fade" id="mimodalejemplo3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel3">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header bg-light">
+                    <h5 class="modal-title" id="myModalLabel">Mensaje</h5>
+                    <button class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body" *ngIf="mensaje">
+                    Creando Tu Materia.
+                </div>
+                <div class="modal-body text-info" *ngIf="correcto">
+                    Tu Materia ha sido creada.
+                </div>
+                <div class="modal-body text-danger" *ngIf="error">
+                    La Materia no se ha podido crear. Verifica que has ingresado todos los 
+                    datos requeridos.
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

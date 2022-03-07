@@ -1,0 +1,68 @@
+<header>
+<div class="container py-4 m-0">
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top pt-4 pb-3">
+            <div class="container">
+                <img src="assets/img/logoC.png" class="" alt="Logo" style="cursor: pointer" routerLink="/inicioProfesores">
+                <button class="navbar-toggler navbar-toggler-right " type="button" data-toggle="collapse"
+                    data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link bg-danger px-4 text-dark text-center font-weight-bold rounded" routerLink="/busqueda">Busqueda</a>
+                        </li>
+                        <li class="nav-item px-1">
+                            <a class="nav-link bg-success px-4 text-dark text-center font-weight-bold rounded" routerLink="/metricas">Metricas</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link bg-info px-4 text-dark text-center font-weight-bold rounded" routerLink="/dudas">Dudas</a>
+                        </li>
+                        <li class="nav-item dropdown px-1">
+                            <a class="nav-link py-2 mb-1 bg-warning text-center text-dark font-weight-bold rounded dropdown-toggle"
+                                id="navbarGestionarActividad" href="#" data-toggle="dropdown" aria-haspopup="true"
+                                aria-expanded="false" data-target="#navbarDropdownActividad">
+                                Gestionar Actividad
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right bg-warning text-dark" id="navbarDropdownActividad"
+                                aria-labelledby="navbarDropdownActividad">
+                                <a class="dropdown-item text-center" routerLink="/crearActividad">Crear Actividad</a>
+                                <a class="dropdown-item text-center" routerLink="/modificarActividad">Modificar Actividad</a>
+                                <a class="dropdown-item text-center" routerLink="/borrarActividad">Borrar Actividad</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link py-2 mb-1 bg-primary text-center text-dark font-weight-bold rounded dropdown-toggle"
+                                href="#" id="navbarMateria" data-toggle="dropdown" aria-haspopup="true"
+                                aria-expanded="false" data-target="#navbarDropdownContenido">
+                                Gestionar Contenido
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right bg-primary text-dark" id="navbarDropdownContenido"
+                                aria-labelledby="navbarDropdownContenido">
+                                <a class="dropdown-item text-center" routerLink="/subirContenido">Subir Contenido</a>
+                                <a class="dropdown-item text-center" routerLink="/borrarContenido">Borrar Contenido</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown pl-1">
+                            <a class="nav-link px-4 py-2 mb-1 text-center bg-light text-dark font-weight-bold rounded dropdown-toggle"
+                                href="#" id="navbarDropdownBlog" data-toggle="dropdown" aria-haspopup="true"
+                                aria-expanded="false" data-target="#navbarDropdownPerfil">
+                                Perfil
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right bg-secondary text-dark" id="navbarDropdownPerfil"
+                                aria-labelledby="navbarDropdownPerfil">
+                                <a class="dropdown-item text-center" routerLink="/InformacionProfesor">Informacion usuario</a>
+                                <a class="dropdown-item text-center" routerLink="/AdministrarProfesor">Administrar usuario</a>
+                                <a class="dropdown-item btn text-center" style="cursor: pointer" (click)="logOut()">Cerrar sesión</a>
+                                <a class="dropdown-item text-center" style="cursor: pointer" (click)="verManual()">Ayuda</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+</div>
+</header>

@@ -1,0 +1,97 @@
+<app-header></app-header>
+
+<!--Contenedor Contenido Pagina-->
+<div class="mb-5 contenedor py-3">
+
+    <!--Titulo pagina-->
+    <div class="container m-auto pb-2 bg-primary rounded-top">
+        <h1 class="mt-5 pt-4 text-center m ">Subir Contenido</h1>
+    </div>
+    <!--Contenedor Formulario-->
+    <div class="container container bg-secondary pt-1  rounded-bottom">
+
+        <!--Informacion del contenido-->
+        <div>
+            <h3 class="py-3 text-center text-white">Informacion del contenido</h3>
+            <div class="contenedor py-3">
+                <form #frmSubirContenido="ngForm">
+                    <!-- Texto -->
+                    <div class="form-group">
+                        <label for="inputNombreContenido" class="text-white ">Nombre del contenido</label>
+                        <input type="text" name="nombre_CREA" class="form-control col-md-8" id="inputNombreContenido" placeholder="Nombre Contenido" required #nombreCREA="ngModel" [(ngModel)]="ContentREAService.selectedContenidoREA.nombre_CREA">
+                    </div>
+                    <div class="form-group">
+                        <label for="inputDescripcionContenido" class="text-white">Descripcion del contenido</label>
+                        <textarea class="form-control" name="descripcion_CREA" id="inputDescripcionContenido"
+                            rows="4" required #descripcionCREA="ngModel" [(ngModel)]="ContentREAService.selectedContenidoREA.descripcion_CREA" placeholder="Descripcion ..."></textarea>
+                    </div>
+                    <!-- Selectores -->
+                    <div class="form-row">
+                        <div class="form-group col">
+                            <label for="inputMateria" class="text-white">Materia</label>
+                            <select [(ngModel)]="materiaSelected" name="materia" id="inputMateria" class="form-control" ngModel required>
+                                <!--<option selected [value]='0'>- Materia -</option>-->
+                                <option *ngFor="let mater of materia" [value]="mater.id_materia">{{mater.nombre_materia}}</option>
+                            </select>
+                        </div>
+                        <div class="form-group col">
+                            <label for="inputGrado" class="text-white">Grado</label>
+                            <select [(ngModel)]="gradoSelected" name="grado" id="inputGrado" class="form-control" ngModel required>
+                                <option *ngFor="let grad of grado" [value]="grad.id_grado">{{grad.nombre_grado}}</option>
+                            </select>
+                        </div>
+                        <div class="form-group col">
+                            <label for="inputType" class="text-white">Tipo de Contenido</label>
+                            <select [(ngModel)]="tipoContenidoSelected" name="tipoContenido" id="inputType" class="form-control" ngModel required>
+                                <option *ngFor="let tipCon of tipoContenido" [value]="tipCon.id_tipoContenido">{{tipCon.nombre_tipoContenido}}</option>
+                            </select>
+                        </div>
+                    </div>
+                    <br>
+                    <label for="inputMateria" class="text-white">Seleccionar Contenido</label>
+                    <div class="input-group">
+                        <div class="custom-file col-md-8">
+                            <input type="file" class="custom-file-input" id="inputGroupFileContenido" aria-describedby="inputGroupFileAddon01" (change)="onFileChange($event)">
+                            <label class="custom-file-label" for="inputGroupFile01">{{nombreContenido}}</label>
+                        </div>
+                    </div>
+                    <br>
+                    <hr class="style2">
+                    <br>
+                    <!--Boton Crear Contenido-->
+                    <div class="row pb-4 justify-content-md-center no-gutters">
+                        <a class="btn bg-primary px-5 py-4 font-weight-bold" data-toggle="modal" data-target="#mimodalejemplo" (click)="onSubirContenido(frmSubirContenido)">Subir Contenido</a>
+                    </div>
+                </form>
+                <hr class="style2">
+            </div>
+        </div>
+    </div>
+
+    <!--Modal Subir Contenido-->
+    <div class="modal fade" id="mimodalejemplo" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header bg-light">
+                    <h5 class="modal-title" id="myModalLabel">Mensaje</h5>
+                    <button class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body text-info" *ngIf="correcto">
+                    El contenido ha sido subido y su informacion guardada en el servidor.
+                </div>
+                <div class="modal-body text-danger" *ngIf="error">
+                    El contenido no se ha podido subir. Verifica que has ingresado todos los 
+                    datos requeridos.
+                </div>
+                <div class="modal-body text-danger" *ngIf="error2">
+                    El contenido no se ha podido subir. Verifica que has seleccionado el contenido a subir.
+                </div>
+                <div class="modal-body" *ngIf="subiendo">
+                    Subiendo el contenido. Espere por favor.
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

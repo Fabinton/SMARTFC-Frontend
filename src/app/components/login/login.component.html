@@ -1,0 +1,108 @@
+<div class="container">
+    <div class="container h-100">
+        <div class="d-flex justify-content-center pt-5">
+            <div class="container user_card" style="height: 490px;">
+                <div class="d-flex justify-content-center mb-5">
+                    <div class="brand_logo_container">
+                        <img src="assets/img/login2.png"
+                            class="brand_logo" alt="Logo">
+                    </div>
+                </div>
+                <div class="justify-content-center form_container mt-5 py-4">
+                    <form #frmLogin="ngForm" >
+                        <div class="input-group mb-2">
+                            <input type="text" name="correo_electronico" class="form-control input_user col-10 mx-auto" value="" placeholder="Correo Electronico" ngModel required>
+                        </div>
+                        <div class="input-group mb-2">
+                            <input type="password" name="contrasena" class="form-control input_pass col-10 mx-auto" value="" placeholder="Contraseña" ngModel required>
+                        </div>
+                    </form>
+                    <div class="" style="height: 10px;">
+                            <div class="text-danger text-center" *ngIf="error1">El correo o la contraseña son incorrectos</div>
+                            <div class="text-danger text-center" *ngIf="error2">El usuario o la contraseña son incorrectos</div>
+                            <div class="text-danger text-center" *ngIf="error3">Error Servidor</div>
+                    </div>
+                </div>
+                <div class="d-flex justify-content-center mt-2 login_container">
+                    <a name="button" style="cursor: pointer" class="btn bg-primary col text-white" (click)="onLoginDocente(frmLogin)">Ingresar</a>
+                </div>
+                <div class="d-flex justify-content-center mt-1 login_container">
+                    <a name="button" class="btn bg-danger col text-white" routerLink="/registroProfesor">Registrarse</a>
+                </div>
+                <div class="d-flex justify-content-center mt-1 login_container">
+                    <a name="button" style="cursor: pointer" class="btn bg-warning col text-white" (click)="onLoginVisitante()">Visitante</a>
+                </div>
+                <div class="d-flex justify-content-center mt-1 login_container">
+                    <a name="button" style="cursor: pointer" class="btn bg-secondary col text-white" (click)="onLoginAdmin(frmLogin)">Administrador</a>
+                </div>
+                <div class="mt-4 mx-0">
+                    <!--<div class="d-flex justify-content-center links">
+                        <a href="#">Olvidastes tu contraseña?</a>
+                    </div>-->
+                    <div class="row align-items-center justify-content-between">
+                        <div class="col-2"><span class="text-white" style="cursor: pointer" data-toggle="modal" data-target="#mimodalejemplo">Servidor:</span>
+                            <span class="text-info pl-1" *ngIf="correctoIP">Conectado</span>
+                            <span class="text-danger pl-1" *ngIf="errorIP">Desconectado</span>
+                        </div>
+                        <img src="assets/img/downloadApp1.png" class="" width=45% height=45% class="rounded float-right pr-1" alt="Logo" style="cursor: pointer" (click)="downloadApp()">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Modal Ingresar IPServidor-->
+    <div class="modal fade" id="mimodalejemplo" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header bg-light">
+                    <h5 class="modal-title" id="myModalLabel">Configuracion IP del Servidor</h5>
+                    <button class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <form #frmIPS="ngForm">
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <label for="inputIPServer" class="">Ingresa la IP del Servidor:</label>
+                            <input type="text" name="IPServer" class="form-control col-md-5" id="inputIPServer"
+                                placeholder="IP Servidor" required [(ngModel)]="IPServer">
+                        </div>
+                        <a><small class="text-muted">Nota:
+                        </small></a><br>
+                        <a><small class="text-muted">- Si no sabe la iderección IP del servidor, consulta con el Administrador encargado 
+                                para que te la proporcione.
+                        </small></a><br>
+                        <a><small class="text-muted">- Si no logras conectarte, consulta con el Administrador si el servidor se encuentra 
+                                en funcionamiento.
+                        </small></a>
+                    </div>
+                </form>
+                <div class="modal-footer justify-content-md-center no-gutters bg-light py-1">
+                    <a class="btn btn-default bg-warning font-weight-bold" data-dismiss="modal" data-toggle="modal" data-target="#mimodalejemplo2" (click)="actualizarIPServer(frmIPS)">Ingresar IP</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Confirmar IP Ingresado y Funcionando -->
+    <div class="modal fade" id="mimodalejemplo2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel2">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header bg-light">
+                    <h5 class="modal-title" id="myModalLabel">Mensaje</h5>
+                    <button class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body text-info" *ngIf="correctoIP">
+                    IP Correcta. Se ha conectado con el servidor.
+                </div>
+                <div class="modal-body text-danger" *ngIf="errorIP">
+                    No ha sido posible conectarse con el servidor. Verifica que la IP introducida es correcta.
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

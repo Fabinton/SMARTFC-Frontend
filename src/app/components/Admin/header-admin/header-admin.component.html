@@ -1,0 +1,92 @@
+<header>
+    <div class="container py-4">
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top pt-4 pb-3">
+                <div class="container">
+                    <img src="assets/img/logoC.png" class="" alt="Logo" style="cursor: pointer" routerLink="/inicioAdmin">
+                    <button class="navbar-toggler navbar-toggler-right " type="button" data-toggle="collapse"
+                        data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarResponsive">
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item px-1">
+                                <a class="nav-link bg-danger text-dark text-center font-weight-bold rounded" routerLink="/gestionarColegioAdmin">Gestionar Colegio</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link bg-success text-dark text-center font-weight-bold rounded" routerLink="/gestionarUsuariosAdmin">Gestionar Usuarios</a>
+                            </li>
+                            <li class="nav-item px-1">
+                                <a class="nav-link bg-info text-dark text-center font-weight-bold rounded" routerLink="/gestionarCompetenciasAdmin">Gestionar Competencias</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link px-4 py-2 mb-1 text-center bg-light text-dark font-weight-bold rounded dropdown-toggle"
+                                    href="#" id="navbarDropdownBlog" data-toggle="dropdown" aria-haspopup="true"
+                                    aria-expanded="false" data-target="#navbarDropdownPerfil">
+                                    Perfil
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-right bg-secondary text-dark" id="navbarDropdownPerfil" aria-labelledby="navbarDropdownPerfil">
+                                    <a class="dropdown-item btn text-center" style="cursor: pointer" data-toggle="modal" data-target="#mimodalejemplo10">Cambiar Contraseña</a>
+                                    <a class="dropdown-item btn text-center" routerLink (click)="logOut()">Cerrar sesión</a>
+                                    <a class="dropdown-item text-center" style="cursor: pointer" (click)="verManual()">Ayuda</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+    <!--Modal Cambiar Contraseña-->
+    <div class="modal fade" id="mimodalejemplo10" tabindex="-1" role="dialog" aria-labelledby="myModalLabel10">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header bg-light">
+                    <h5 class="modal-title" id="myModalLabel">Cambiar Contraseña del Administrador</h5>
+                    <button class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <form #frmContrasena="ngForm">
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <label for="inputContrasena" class="">Ingresa la nueva contraseña:</label>
+                            <input type="text" name="contrasena" class="form-control col-md-5" id="inputContrasena"
+                                placeholder="Nueva Contraseña" required [(ngModel)]="contrasena">
+                        </div>
+                        <a><small class="text-muted">Nota: </small></a><br>
+                        <a><small class="text-muted">- Si la contraseña que tienes ahora es la de por defecto, te recomendamos cambiarla 
+                                para mayor seguridad.
+                        </small></a><br>
+                    </div>
+                </form>
+                <div class="modal-footer justify-content-md-center no-gutters bg-light py-1">
+                    <a class="btn btn-default bg-warning font-weight-bold" data-dismiss="modal" data-toggle="modal" data-target="#mimodalejemplo11" (click)="actualizarContrasena(frmContrasena)">Cambiar Contraseña</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Confirmar Cambio Contraseña -->
+    <div class="modal fade" id="mimodalejemplo11" tabindex="-1" role="dialog" aria-labelledby="myModalLabel11">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header bg-light">
+                    <h5 class="modal-title" id="myModalLabel">Mensaje</h5>
+                    <button class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body text-info" *ngIf="cambioCorrecto">
+                    Se ha actualizado la contraseña.
+                </div>
+                <div class="modal-body text-danger" *ngIf="cambiando">
+                    Actualizando la contraseña. Espere por favor.
+                </div>
+            </div>
+        </div>
+    </div>
+
+</header>

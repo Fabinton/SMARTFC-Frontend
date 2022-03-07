@@ -1,0 +1,73 @@
+<app-header></app-header>
+
+<!--Contenedor Contenido Pagina-->
+<div class="mb-5 col-9 mx-auto">
+
+    <!--Titulo pagina-->
+    <div class="container m-auto pb-2 bg-light rounded-top">
+        <h1 style="cursor:context-menu" class="mt-5 pt-4 text-center m ">Información Profesor</h1>
+    </div>
+    <!--Contenedor Formulario-->
+    <div class="container pt-1 bg-secondary rounded-bottom">
+
+        <!--Informacion del docente-->
+        <div class="container mx-auto">
+            <br>
+            <div class="col-10">
+                <div class="row">
+                    <div class="col-4">
+                        <h5 class="text-white">Nombre Docente:</h5>
+                    </div>
+                    <div class="col-auto"><span class="text-white align-middle">{{DocenteInfo.nombre_docente+' '+DocenteInfo.apellido_docente}}</span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-4">
+                        <h5 class="text-white">Colegio:</h5>
+                    </div>
+                    <div class="col-auto"><span class="text-white align-middle">{{ColegioInfo.nombre_colegio}}</span></div>
+                </div>
+                <div class="row">
+                    <div class="col-4">
+                        <h5 class="text-white">Nombre Usuario:</h5>
+                    </div>
+                    <div class="col-auto"><span class="text-white align-middle">{{DocenteInfo.nombre_usuario}}</span></div>
+                </div>
+                <div class="row">
+                    <div class="col-4">
+                        <h5 class="text-white">Correo Electronico:</h5>
+                    </div>
+                    <div class="col-auto"><span class="text-white align-middle">{{DocenteInfo.correo_electronico}}</span></div>
+                </div>
+            </div>
+            
+
+            <br>
+            <hr class="style9">
+
+            <h3 style="cursor:context-menu" class="py-3 text-center text-white">Materias creadas</h3>
+            <br>
+                <div class="row mx-auto">
+                    <table class="mx-auto text-white m-auto rounded table-striped table-wrapper-scroll-y my-custom-scrollbar" style="height: 256px;">
+                        <thead class="bg-info">
+                            <th class=" pl-4 pr-0 py-2 text-dark">Nombre Materia</th>
+                            <th class=" px-5 py-2 text-dark">Materia Base</th>
+                            <th class=" pl-0 pr-4 py-2 text-dark">Grado</th>
+                        </thead>
+                        <tbody class="bg-light">
+                            <tr mdbTableCol *ngFor="let materiaActiva of MateriaActivaInfo | filterTableMateriaDocente: idDocente">
+                                <td class=" pl-4 pr-0 py-1 text-dark">{{ materiaActiva.nombre_materiaActiva }}</td>
+                                <td class=" px-5 py-1 text-dark text-center">{{ materiaActiva.nombre_materia }}</td>
+                                <td class=" pl-0 pr-4 py-1 text-dark text-center">{{ materiaActiva.id_grado }}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            <br>
+            <hr class="style9">
+            <br>
+        </div>
+        
+    </div>
+
+</div>

@@ -1,0 +1,2294 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>fc documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/readthedocs.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">fc documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li>GestionarUsuariosAdminComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/components/Admin/gestionar-usuarios-admin/gestionar-usuarios-admin.component.ts</code>
+</p>
+
+    <p class="comment">
+        <h3>Description</h3>
+    </p>
+    <p class="comment">
+        <p>Contiene todos los metodos necesarios para administrar la informacion de los usuarios registrados en el sistema. </p>
+
+    </p>
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                    <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+    </p>
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>app-gestionar-usuarios-admin</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./gestionar-usuarios-admin.component.css</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./gestionar-usuarios-admin.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#colegio">colegio</a>
+                            </li>
+                            <li>
+                                <a href="#colegios">colegios</a>
+                            </li>
+                            <li>
+                                <a href="#cursos">cursos</a>
+                            </li>
+                            <li>
+                                <a href="#docentes">docentes</a>
+                            </li>
+                            <li>
+                                <a href="#docenteToSave">docenteToSave</a>
+                            </li>
+                            <li>
+                                <a href="#docenteVisualizar">docenteVisualizar</a>
+                            </li>
+                            <li>
+                                <a href="#error1">error1</a>
+                            </li>
+                            <li>
+                                <a href="#error2">error2</a>
+                            </li>
+                            <li>
+                                <a href="#estudantes">estudantes</a>
+                            </li>
+                            <li>
+                                <a href="#estudianteSelected">estudianteSelected</a>
+                            </li>
+                            <li>
+                                <a href="#estudiantesVisualizar">estudiantesVisualizar</a>
+                            </li>
+                            <li>
+                                <a href="#estudianteToSave">estudianteToSave</a>
+                            </li>
+                            <li>
+                                <a href="#grados">grados</a>
+                            </li>
+                            <li>
+                                <a href="#MateriaActiva">MateriaActiva</a>
+                            </li>
+                            <li>
+                                <a href="#profesorSelected">profesorSelected</a>
+                            </li>
+                            <li>
+                                <a href="#temp">temp</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#actualizarDocente">actualizarDocente</a>
+                            </li>
+                            <li>
+                                <a href="#actualizarEstudiante">actualizarEstudiante</a>
+                            </li>
+                            <li>
+                                <a href="#comprobacionLogin">comprobacionLogin</a>
+                            </li>
+                            <li>
+                                <a href="#deleteDocente">deleteDocente</a>
+                            </li>
+                            <li>
+                                <a href="#deleteEstudiante">deleteEstudiante</a>
+                            </li>
+                            <li>
+                                <a href="#getDocenteinForm">getDocenteinForm</a>
+                            </li>
+                            <li>
+                                <a href="#getEstudianteinForm">getEstudianteinForm</a>
+                            </li>
+                            <li>
+                                <a href="#getOptions">getOptions</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnInit">ngOnInit</a>
+                            </li>
+                            <li>
+                                <a href="#resetForm">resetForm</a>
+                            </li>
+                            <li>
+                                <a href="#resetPage">resetPage</a>
+                            </li>
+                            <li>
+                                <a href="#saveDataDocente">saveDataDocente</a>
+                            </li>
+                            <li>
+                                <a href="#saveDataEstudiante">saveDataEstudiante</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(router: <a href="https://angular.io/api/router/Router" target="_blank">Router</a>, AuthAdminService: <a href="../injectables/AuthAdminService.html">AuthAdminService</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="40" class="link-to-prism">src/app/components/Admin/gestionar-usuarios-admin/gestionar-usuarios-admin.component.ts:40</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>router</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="https://angular.io/api/router/Router" target="_blank" >Router</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>AuthAdminService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/AuthAdminService.html" target="_self" >AuthAdminService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+
+
+    <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="actualizarDocente"></a>
+                    <span class="name">
+                        <b>
+                            actualizarDocente
+                        </b>
+                        <a href="#actualizarDocente"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>actualizarDocente(form: <a href="https://angular.io/api/forms/NgForm" target="_blank">NgForm</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="130"
+                            class="link-to-prism">src/app/components/Admin/gestionar-usuarios-admin/gestionar-usuarios-admin.component.ts:130</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Permite actualizar los datos del Docente</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>form</td>
+                                    <td>
+                                                <code><a href="https://angular.io/api/forms/NgForm" target="_blank" >NgForm</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="actualizarEstudiante"></a>
+                    <span class="name">
+                        <b>
+                            actualizarEstudiante
+                        </b>
+                        <a href="#actualizarEstudiante"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>actualizarEstudiante(form: <a href="https://angular.io/api/forms/NgForm" target="_blank">NgForm</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="155"
+                            class="link-to-prism">src/app/components/Admin/gestionar-usuarios-admin/gestionar-usuarios-admin.component.ts:155</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Permite actualizar los datos del Estudiante</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>form</td>
+                                    <td>
+                                                <code><a href="https://angular.io/api/forms/NgForm" target="_blank" >NgForm</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="comprobacionLogin"></a>
+                    <span class="name">
+                        <b>
+                            comprobacionLogin
+                        </b>
+                        <a href="#comprobacionLogin"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>comprobacionLogin()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="259"
+                            class="link-to-prism">src/app/components/Admin/gestionar-usuarios-admin/gestionar-usuarios-admin.component.ts:259</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Permite comprobar que el administrador se encuentra logueado en el sistema al ingresar a la pagina</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="deleteDocente"></a>
+                    <span class="name">
+                        <b>
+                            deleteDocente
+                        </b>
+                        <a href="#deleteDocente"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>deleteDocente()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="183"
+                            class="link-to-prism">src/app/components/Admin/gestionar-usuarios-admin/gestionar-usuarios-admin.component.ts:183</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Permite eliminar un Docente</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="deleteEstudiante"></a>
+                    <span class="name">
+                        <b>
+                            deleteEstudiante
+                        </b>
+                        <a href="#deleteEstudiante"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>deleteEstudiante()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="207"
+                            class="link-to-prism">src/app/components/Admin/gestionar-usuarios-admin/gestionar-usuarios-admin.component.ts:207</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Permite eliminar un Estudiante</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getDocenteinForm"></a>
+                    <span class="name">
+                        <b>
+                            getDocenteinForm
+                        </b>
+                        <a href="#getDocenteinForm"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getDocenteinForm(docentehtml)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="112"
+                            class="link-to-prism">src/app/components/Admin/gestionar-usuarios-admin/gestionar-usuarios-admin.component.ts:112</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Permite imprimir los datos del Docente en el formulario</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>docentehtml</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getEstudianteinForm"></a>
+                    <span class="name">
+                        <b>
+                            getEstudianteinForm
+                        </b>
+                        <a href="#getEstudianteinForm"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getEstudianteinForm(estudiantehtml)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="121"
+                            class="link-to-prism">src/app/components/Admin/gestionar-usuarios-admin/gestionar-usuarios-admin.component.ts:121</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Permite imprimir los detos del estudiante en el formulario</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>estudiantehtml</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getOptions"></a>
+                    <span class="name">
+                        <b>
+                            getOptions
+                        </b>
+                        <a href="#getOptions"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getOptions()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="67"
+                            class="link-to-prism">src/app/components/Admin/gestionar-usuarios-admin/gestionar-usuarios-admin.component.ts:67</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Permite obtener los datos de todos los options</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnInit"></a>
+                    <span class="name">
+                        <b>
+                            ngOnInit
+                        </b>
+                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnInit()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="44"
+                            class="link-to-prism">src/app/components/Admin/gestionar-usuarios-admin/gestionar-usuarios-admin.component.ts:44</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="resetForm"></a>
+                    <span class="name">
+                        <b>
+                            resetForm
+                        </b>
+                        <a href="#resetForm"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>resetForm(form?: <a href="https://angular.io/api/forms/NgForm" target="_blank">NgForm</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="243"
+                            class="link-to-prism">src/app/components/Admin/gestionar-usuarios-admin/gestionar-usuarios-admin.component.ts:243</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Permite limpiar la informacion que se encuentra en el formulario</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>form</td>
+                                    <td>
+                                                <code><a href="https://angular.io/api/forms/NgForm" target="_blank" >NgForm</a></code>
+                                    </td>
+
+                                    <td>
+                                        Yes
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="resetPage"></a>
+                    <span class="name">
+                        <b>
+                            resetPage
+                        </b>
+                        <a href="#resetPage"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>resetPage()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="236"
+                            class="link-to-prism">src/app/components/Admin/gestionar-usuarios-admin/gestionar-usuarios-admin.component.ts:236</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Permite recargar la pagina actual</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="saveDataDocente"></a>
+                    <span class="name">
+                        <b>
+                            saveDataDocente
+                        </b>
+                        <a href="#saveDataDocente"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>saveDataDocente(docentehtml)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="220"
+                            class="link-to-prism">src/app/components/Admin/gestionar-usuarios-admin/gestionar-usuarios-admin.component.ts:220</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Permite almacenar la informacion de un Docente de forma temporal</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>docentehtml</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="saveDataEstudiante"></a>
+                    <span class="name">
+                        <b>
+                            saveDataEstudiante
+                        </b>
+                        <a href="#saveDataEstudiante"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>saveDataEstudiante(estudiantehtml)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="228"
+                            class="link-to-prism">src/app/components/Admin/gestionar-usuarios-admin/gestionar-usuarios-admin.component.ts:228</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Permite almacenar la infromacion de un Estudiante de forma temporal</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>estudiantehtml</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section>
+    
+        <h3 id="inputs">
+            Properties
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="colegio"></a>
+                        <span class="name">
+                            <b>
+                            colegio</b>
+                            <a href="#colegio"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="../classes/ColegioI.html" target="_self" >ColegioI</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="24" class="link-to-prism">src/app/components/Admin/gestionar-usuarios-admin/gestionar-usuarios-admin.component.ts:24</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="colegios"></a>
+                        <span class="name">
+                            <b>
+                            colegios</b>
+                            <a href="#colegios"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="../classes/ColegioI.html" target="_self" >ColegioI[]</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="26" class="link-to-prism">src/app/components/Admin/gestionar-usuarios-admin/gestionar-usuarios-admin.component.ts:26</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="cursos"></a>
+                        <span class="name">
+                            <b>
+                            cursos</b>
+                            <a href="#cursos"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="32" class="link-to-prism">src/app/components/Admin/gestionar-usuarios-admin/gestionar-usuarios-admin.component.ts:32</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="docentes"></a>
+                        <span class="name">
+                            <b>
+                            docentes</b>
+                            <a href="#docentes"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="../classes/DocenteI.html" target="_self" >DocenteI[]</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="25" class="link-to-prism">src/app/components/Admin/gestionar-usuarios-admin/gestionar-usuarios-admin.component.ts:25</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="docenteToSave"></a>
+                        <span class="name">
+                            <b>
+                            docenteToSave</b>
+                            <a href="#docenteToSave"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="../classes/DocenteI.html" target="_self" >DocenteI</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="31" class="link-to-prism">src/app/components/Admin/gestionar-usuarios-admin/gestionar-usuarios-admin.component.ts:31</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="docenteVisualizar"></a>
+                        <span class="name">
+                            <b>
+                            docenteVisualizar</b>
+                            <a href="#docenteVisualizar"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="../interfaces/DocenteVisualizarI.html" target="_self" >DocenteVisualizarI[]</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="34" class="link-to-prism">src/app/components/Admin/gestionar-usuarios-admin/gestionar-usuarios-admin.component.ts:34</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="error1"></a>
+                        <span class="name">
+                            <b>
+                            error1</b>
+                            <a href="#error1"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="38" class="link-to-prism">src/app/components/Admin/gestionar-usuarios-admin/gestionar-usuarios-admin.component.ts:38</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="error2"></a>
+                        <span class="name">
+                            <b>
+                            error2</b>
+                            <a href="#error2"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="39" class="link-to-prism">src/app/components/Admin/gestionar-usuarios-admin/gestionar-usuarios-admin.component.ts:39</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="estudantes"></a>
+                        <span class="name">
+                            <b>
+                            estudantes</b>
+                            <a href="#estudantes"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="../classes/EstuadianteI.html" target="_self" >EstuadianteI[]</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="27" class="link-to-prism">src/app/components/Admin/gestionar-usuarios-admin/gestionar-usuarios-admin.component.ts:27</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="estudianteSelected"></a>
+                        <span class="name">
+                            <b>
+                            estudianteSelected</b>
+                            <a href="#estudianteSelected"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="37" class="link-to-prism">src/app/components/Admin/gestionar-usuarios-admin/gestionar-usuarios-admin.component.ts:37</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="estudiantesVisualizar"></a>
+                        <span class="name">
+                            <b>
+                            estudiantesVisualizar</b>
+                            <a href="#estudiantesVisualizar"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="../interfaces/EstuadianteVisualizarI.html" target="_self" >EstuadianteVisualizarI[]</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="33" class="link-to-prism">src/app/components/Admin/gestionar-usuarios-admin/gestionar-usuarios-admin.component.ts:33</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="estudianteToSave"></a>
+                        <span class="name">
+                            <b>
+                            estudianteToSave</b>
+                            <a href="#estudianteToSave"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="../classes/EstuadianteI.html" target="_self" >EstuadianteI</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="30" class="link-to-prism">src/app/components/Admin/gestionar-usuarios-admin/gestionar-usuarios-admin.component.ts:30</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="grados"></a>
+                        <span class="name">
+                            <b>
+                            grados</b>
+                            <a href="#grados"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="../classes/GradoI.html" target="_self" >GradoI[]</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="29" class="link-to-prism">src/app/components/Admin/gestionar-usuarios-admin/gestionar-usuarios-admin.component.ts:29</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="MateriaActiva"></a>
+                        <span class="name">
+                            <b>
+                            MateriaActiva</b>
+                            <a href="#MateriaActiva"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="../classes/MateriaActivaI.html" target="_self" >MateriaActivaI[]</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="28" class="link-to-prism">src/app/components/Admin/gestionar-usuarios-admin/gestionar-usuarios-admin.component.ts:28</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="profesorSelected"></a>
+                        <span class="name">
+                            <b>
+                            profesorSelected</b>
+                            <a href="#profesorSelected"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="36" class="link-to-prism">src/app/components/Admin/gestionar-usuarios-admin/gestionar-usuarios-admin.component.ts:36</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="temp"></a>
+                        <span class="name">
+                            <b>
+                            temp</b>
+                            <a href="#temp"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="40" class="link-to-prism">src/app/components/Admin/gestionar-usuarios-admin/gestionar-usuarios-admin.component.ts:40</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit } from &#x27;@angular/core&#x27;;
+import { Router } from &quot;@angular/router&quot;;
+import { NgForm } from &#x27;@angular/forms&#x27;; 
+import { AuthAdminService } from &#x27;../../../services/auth-admin.service&#x27;;
+import { DocenteI } from &#x27;../../../models/docente&#x27;;
+import { EstuadianteI } from &#x27;../../../models/estudiante&#x27;;
+import { ColegioI } from &#x27;../../../models/colegio&#x27;;
+import { GradoI } from &#x27;../../../models/grado&#x27;;
+import { EstuadianteVisualizarI } from &#x27;../../../models/estudianteVisualizar&#x27;;
+import { DocenteVisualizarI } from &#x27;../../../models/docenteVisualizar&#x27;;
+import { MateriaActivaI } from &#x27;../../../models/materiaActiva&#x27;;
+
+/**
+  * Contiene todos los metodos necesarios para administrar la informacion de los usuarios registrados en el sistema. 
+  */
+
+@Component({
+  selector: &#x27;app-gestionar-usuarios-admin&#x27;,
+  templateUrl: &#x27;./gestionar-usuarios-admin.component.html&#x27;,
+  styleUrls: [&#x27;./gestionar-usuarios-admin.component.css&#x27;]
+})
+export class GestionarUsuariosAdminComponent implements OnInit {
+
+  colegio:ColegioI;
+  docentes:DocenteI[];
+  colegios:ColegioI[];
+  estudantes:EstuadianteI[];
+  MateriaActiva:MateriaActivaI[];
+  grados:GradoI[];
+  estudianteToSave:EstuadianteI;
+  docenteToSave:DocenteI;
+  cursos:any;
+  estudiantesVisualizar:EstuadianteVisualizarI[];
+  docenteVisualizar:DocenteVisualizarI[];
+
+  profesorSelected:boolean;
+  estudianteSelected:boolean;
+  error1:boolean;
+  error2:boolean;
+  temp:any;
+
+  constructor(private router: Router, private AuthAdminService: AuthAdminService) { }
+
+  ngOnInit() {
+    window.scrollTo(0, 0);
+    this.comprobacionLogin();
+
+    this.error1 &#x3D; false;
+    this.error2 &#x3D; false;
+    this.profesorSelected &#x3D; false;
+    this.estudianteSelected &#x3D; false;
+
+    this.AuthAdminService.selectedDocente &#x3D; new DocenteI();
+    this.AuthAdminService.selectedEstudiante &#x3D; new EstuadianteI();
+    this.docenteToSave &#x3D; new DocenteI();
+    this.estudianteToSave &#x3D; new EstuadianteI();
+
+    this.cursos &#x3D; [ {id_curso:1,nombre_curso:&quot;A&quot;}, {id_curso:2,nombre_curso:&quot;B&quot;}, 
+                    {id_curso:3,nombre_curso:&quot;C&quot;}, {id_curso:4,nombre_curso:&quot;D&quot;} ];
+
+    this.getOptions();
+  }
+
+  /**
+  * Permite obtener los datos de todos los options
+  */
+  getOptions(){
+    this.AuthAdminService.allGrade().subscribe(res &#x3D;&gt; {
+      this.grados &#x3D; res as GradoI[];
+    });
+    this.AuthAdminService.loadAllColegios().subscribe(res &#x3D;&gt; {
+      this.colegios &#x3D; res as ColegioI[];
+
+      this.AuthAdminService.loadAllEstudiantes().subscribe(res &#x3D;&gt; {
+        this.estudantes &#x3D; res as EstuadianteI[];
+        this.estudiantesVisualizar &#x3D; res as EstuadianteVisualizarI[];
+  
+        for(let n&#x3D;0; n &lt; this.estudantes.length; n++){
+          for(let i&#x3D;0; i &lt; this.cursos.length; i++){
+            if(this.estudantes[n].curso_estudiante &#x3D;&#x3D; this.cursos[i].id_curso){
+              this.estudiantesVisualizar[n].curso &#x3D; this.cursos[i].nombre_curso;
+            }
+          }
+          for(let i&#x3D;0; i &lt; this.colegios.length; i++){
+            if(this.estudantes[n].id_colegio &#x3D;&#x3D; this.colegios[i].id_colegio){
+              this.estudiantesVisualizar[n].colegio &#x3D; this.colegios[i].nombre_colegio;
+            }
+          }
+        }
+        //console.log(&quot;estudiantes visualizar:&quot;, this.estudiantesVisualizar);
+
+        this.AuthAdminService.loadAllDocentes().subscribe(res &#x3D;&gt; {
+          this.docentes &#x3D; res as DocenteI[];
+          this.docenteVisualizar &#x3D; res as DocenteVisualizarI[];
+
+          for(let n&#x3D;0; n &lt; this.docentes.length; n++){
+            for(let i&#x3D;0; i &lt; this.colegios.length; i++){
+              if(this.docentes[n].id_colegio &#x3D;&#x3D; this.colegios[i].id_colegio){
+                this.docenteVisualizar[n].colegio &#x3D; this.colegios[i].nombre_colegio;
+              }
+            }
+          }
+          //console.log(&quot;docentes visualizar:&quot;, this.docenteVisualizar);
+        });
+      });
+    });
+  }
+
+  /**
+  * Permite imprimir los datos del Docente en el formulario
+  */
+  getDocenteinForm(docentehtml){
+    this.AuthAdminService.selectedDocente &#x3D; docentehtml;
+    //console.log(&#x27;info docente&#x27;, this.AuthAdminService.selectedDocente);
+    this.profesorSelected &#x3D; true;
+  }
+
+  /**
+  * Permite imprimir los detos del estudiante en el formulario
+  */
+  getEstudianteinForm(estudiantehtml){
+    this.AuthAdminService.selectedEstudiante &#x3D; estudiantehtml;
+    //console.log(&#x27;info docente&#x27;, this.AuthAdminService.selectedEstudiante);
+    this.estudianteSelected &#x3D; true;
+  }
+
+  /**
+  * Permite actualizar los datos del Docente
+  */
+  actualizarDocente(form: NgForm): void{
+    this.error1 &#x3D; true;
+
+    if(this.profesorSelected){
+      this.error1 &#x3D; false;
+      const infoDocente &#x3D; {
+        id_docente: this.AuthAdminService.selectedDocente.id_docente,
+        nombre_docente: form.value.nombre_docente,
+        apellido_docente: form.value.apellido_docente,
+        nombre_usuario: form.value.nombre_usuario,
+        correo_electronico: form.value.correo_electronico,
+        contrasena: form.value.contrasena
+      }
+  
+      this.AuthAdminService.uploadDocente(infoDocente).subscribe(res &#x3D;&gt; {
+        //console.log(res);
+        this.getOptions();
+        this.resetForm(form);
+      });
+    }
+  }
+
+  /**
+  * Permite actualizar los datos del Estudiante
+  */
+  actualizarEstudiante(form: NgForm): void{
+    this.error2 &#x3D; true;
+
+    if(this.estudianteSelected){
+      this.error2 &#x3D; false;
+      const infoEstudiante &#x3D; {
+        id_estudiante: this.AuthAdminService.selectedEstudiante.id_estudiante,
+        nombre_estudiante: form.value.nombre_estudiante,
+        apellido_estudiante: form.value.apellido_estudiante,
+        grado_estudiante: form.value.grado_estudiante,
+        curso_estudiante: form.value.curso_estudiante,
+        nombre_usuario: form.value.nombre_usuario,
+        contrasena: form.value.contrasena,
+        correo_electronico: form.value.correo_electronico
+      }
+      console.log();
+  
+      this.AuthAdminService.uploadEstudiante(infoEstudiante).subscribe(res &#x3D;&gt; {
+        //console.log(res);
+        this.getOptions();
+        this.resetForm(form);
+      });
+    }
+  }
+
+  /**
+  * Permite eliminar un Docente
+  */
+  deleteDocente(){
+    //console.log(&quot;id para eliminar:&quot;, this.docenteToSave.id_docente);
+    this.AuthAdminService.deleteDocente(this.docenteToSave).subscribe(res &#x3D;&gt;{
+      //console.log(res);
+      this.AuthAdminService.loadAllSubjectActives().subscribe(res &#x3D;&gt; {
+        this.MateriaActiva &#x3D; res as MateriaActivaI[];
+
+        for(let a&#x3D;0; a &lt; this.MateriaActiva.length; a++){
+          if(this.MateriaActiva[a].id_docente &#x3D;&#x3D; this.docenteToSave.id_docente){
+            this.AuthAdminService.deleteSubjectActive(this.MateriaActiva[a]).subscribe(res &#x3D;&gt; {
+              //console.log(res);
+            });
+          }
+        }
+        this.getOptions();
+        this.docenteToSave &#x3D; new DocenteI();
+      });
+    });
+    //window.location.reload();
+  }
+
+  /**
+  * Permite eliminar un Estudiante
+  */
+  deleteEstudiante(){
+    //console.log(&quot;id para eliminar:&quot;, this.competenciaToSave.id_competencia);
+    this.AuthAdminService.deleteEstudiante(this.estudianteToSave).subscribe(res &#x3D;&gt;{
+      //console.log(res);
+      this.getOptions();
+      this.estudianteToSave &#x3D; new EstuadianteI();
+    });
+    //window.location.reload();
+  }
+
+  /**
+  * Permite almacenar la informacion de un Docente de forma temporal
+  */
+  saveDataDocente(docentehtml){
+    this.docenteToSave &#x3D; docentehtml as DocenteI;
+    //console.log(&#x27;docente guardada:&#x27;, this.docenteToSave);
+  }
+
+  /**
+  * Permite almacenar la infromacion de un Estudiante de forma temporal
+  */
+  saveDataEstudiante(estudiantehtml){
+    this.estudianteToSave &#x3D; estudiantehtml;
+    //console.log(&#x27;estudiante guardada:&#x27;, this.estudianteToSave);
+  }
+
+  /**
+  * Permite recargar la pagina actual
+  */
+  resetPage(){
+    window.location.reload();
+  }
+
+  /**
+  * Permite limpiar la informacion que se encuentra en el formulario
+  */
+  resetForm(form?: NgForm) {
+    if (form) {
+      form.reset();
+      this.getOptions();
+      this.AuthAdminService.selectedDocente &#x3D; new DocenteI();
+      this.AuthAdminService.selectedEstudiante &#x3D; new EstuadianteI();
+      this.docenteToSave &#x3D; new DocenteI();
+      this.estudianteToSave &#x3D; new EstuadianteI();
+      this.profesorSelected &#x3D; false;
+      this.estudianteSelected &#x3D; false;
+    }
+  }
+
+  /**
+  * Permite comprobar que el administrador se encuentra logueado en el sistema al ingresar a la pagina
+  */
+  comprobacionLogin(){
+    if (this.AuthAdminService.getIdAdmin()){
+      return true;
+    } else {
+      this.router.navigate([&#x27;/login&#x27;]);
+      return false;
+    }
+  }
+
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;app-header-admin&gt;&lt;/app-header-admin&gt;
+
+&lt;!--Contenedor Contenido Pagina--&gt;
+&lt;div class&#x3D;&quot;mb-5 col-9 mx-auto&quot;&gt;
+
+    &lt;!--Titulo pagina--&gt;
+    &lt;div class&#x3D;&quot;container m-auto pb-2 bg-success rounded-top&quot;&gt;
+        &lt;h1 class&#x3D;&quot;mt-5 pt-4 text-center m &quot;&gt;Gestionar Usuarios&lt;/h1&gt;
+    &lt;/div&gt;
+    
+    &lt;!--Contenedor Formularios--&gt;
+    &lt;div class&#x3D;&quot;container pt-1 bg-secondary rounded-bottom&quot;&gt;
+    
+        &lt;!--Tabs--&gt;
+        &lt;div class&#x3D;&quot;row&quot;&gt;
+            &lt;div class&#x3D;&quot;col&quot;&gt;
+                &lt;div class&#x3D;&quot;mt-3&quot;&gt;
+                    &lt;div class&#x3D;&quot;card-header tab-card-header&quot;&gt;
+                        &lt;!--Opcion Tab--&gt;
+                        &lt;nav&gt;
+                            &lt;div class&#x3D;&quot;nav nav-tabs&quot; id&#x3D;&quot;nav-tab&quot; role&#x3D;&quot;tablist&quot;&gt;
+                                &lt;a class&#x3D;&quot;col nav-item nav-link text-center active font-weight-bold text-dark&quot; id&#x3D;&quot;nav-Pregunta1-tab&quot; data-toggle&#x3D;&quot;tab&quot;
+                                    href&#x3D;&quot;#nav-Pregunta1&quot; role&#x3D;&quot;tab&quot; aria-controls&#x3D;&quot;nav-Pregunta1&quot; aria-selected&#x3D;&quot;true&quot;&gt;Docentes&lt;/a&gt;
+                                &lt;a class&#x3D;&quot;col nav-item nav-link text-center font-weight-bold text-dark&quot; id&#x3D;&quot;nav-Pregunta2-tab&quot; data-toggle&#x3D;&quot;tab&quot;
+                                    href&#x3D;&quot;#nav-Pregunta2&quot; role&#x3D;&quot;tab&quot; aria-controls&#x3D;&quot;nav-Pregunta2&quot; aria-selected&#x3D;&quot;false&quot;&gt;Estudiantes&lt;/a&gt;
+                            &lt;/div&gt;
+                        &lt;/nav&gt;
+        
+                        &lt;!--Tabs Resultados--&gt;
+                        &lt;div class&#x3D;&quot;tab-content&quot; id&#x3D;&quot;nav-tabContent&quot;&gt;
+                            &lt;br&gt;
+
+                            &lt;!--Tab 1--&gt;
+                            &lt;div class&#x3D;&quot;tab-pane fade show active&quot; id&#x3D;&quot;nav-Pregunta1&quot; role&#x3D;&quot;tabpanel&quot; aria-labelledby&#x3D;&quot;nav-Pregunta1-tab&quot;&gt;
+                                &lt;!--Gestion de Competencias--&gt;
+                                &lt;div&gt;
+                                    &lt;h3 class&#x3D;&quot;py-3 text-center text-white&quot;&gt;Docentes&lt;/h3&gt;
+                            
+                                    &lt;div class&#x3D;&quot;contenedor mx-3 py-3&quot;&gt;
+                                        &lt;form #frmBuscarDocente&#x3D;&quot;ngForm&quot;&gt;
+                            
+                                            &lt;!--Buscar--&gt;
+                                            &lt;h5 class&#x3D;&quot;py-3 text-white&quot;&gt;Buscador:&lt;/h5&gt;
+                                            &lt;div class&#x3D;&quot;form-group&quot;&gt;
+                                                &lt;input type&#x3D;&quot;text&quot; class&#x3D;&quot;form-control col-md-8&quot; id&#x3D;&quot;inputTextoBusquedaDocente&quot; placeholder&#x3D;&quot;Nombre / Apellido / Usuario / Correo&quot; [(ngModel)]&#x3D;&quot;palabraClaveDSelected&quot;
+                                                    name&#x3D;&quot;palabraClaveDSelected&quot;&gt;
+                                            &lt;/div&gt;
+                                            &lt;div class&#x3D;&quot;row&quot;&gt;
+                                                &lt;div class&#x3D;&quot;form-group col-4&quot;&gt;
+                                                    &lt;label for&#x3D;&quot;inputColegioD&quot; class&#x3D;&quot;text-white&quot;&gt;Colegio&lt;/label&gt;
+                                                    &lt;select [(ngModel)]&#x3D;&quot;colegioDSelected&quot; name&#x3D;&quot;colegioDSelected&quot; id&#x3D;&quot;inputColegioD&quot; class&#x3D;&quot;form-control&quot; ngModel required&gt;
+                                                        &lt;option selected&gt;&lt;/option&gt;
+                                                        &lt;option *ngFor&#x3D;&quot;let colegio of colegios&quot; [value]&#x3D;&quot;colegio.id_colegio&quot;&gt;{{colegio.nombre_colegio}}&lt;/option&gt;
+                                                    &lt;/select&gt;
+                                                &lt;/div&gt;
+                                            &lt;/div&gt;
+                            
+                                            &lt;!--Resultados--&gt;
+                                            &lt;h5 class&#x3D;&quot;py-3 text-white&quot;&gt;Resultados:&lt;/h5&gt;
+                                            &lt;div class&#x3D;&quot;col container p-4 my bg-light rounded table-wrapper-scroll-y my-custom-scrollbar bg-light&quot; style&#x3D;&quot;width: 95%; height: 450px&quot;&gt;
+                                                &lt;!--Resultado--&gt;
+                                                &lt;div class&#x3D;&quot;row-1&quot; *ngFor&#x3D;&quot;let docente of docenteVisualizar | filterDocenteAdmin: palabraClaveDSelected:colegioDSelected&quot;&gt;
+                                                    &lt;div class&#x3D;&quot;card mb-4 border-0&quot; style&#x3D;&quot;max-width: 1440px;&quot;&gt;
+                                                        &lt;div class&#x3D;&quot;row no-gutters border border-secondary&quot;&gt;
+                                                            &lt;div class&#x3D;&quot;col&quot; style&#x3D;&quot;max-width: 840px;&quot;&gt;
+                                                                &lt;div class&#x3D;&quot;card-body p-2&quot;&gt;
+                                                                    &lt;p class&#x3D;&quot;card-text &quot;&gt;Nombre Docente: {{docente.nombre_docente}} {{docente.apellido_docente}}&lt;/p&gt;
+                                                                    &lt;div&gt;
+                                                                        &lt;p class&#x3D;&quot;card-text&quot;&gt;&lt;small class&#x3D;&quot;text-muted&quot;&gt;Colegio: {{docente.colegio}}&lt;/small&gt;&lt;/p&gt;
+                                                                    &lt;/div&gt;
+                                                                    &lt;div&gt;
+                                                                        &lt;p class&#x3D;&quot;card-text&quot;&gt;&lt;small class&#x3D;&quot;text-muted&quot;&gt;Nombre Usuario: {{docente.nombre_usuario}}&lt;/small&gt;&lt;/p&gt;
+                                                                    &lt;/div&gt;
+                                                                    &lt;div&gt;
+                                                                        &lt;p class&#x3D;&quot;card-text&quot;&gt;&lt;small class&#x3D;&quot;text-muted&quot;&gt;Correo Electronico: {{docente.correo_electronico}}&lt;/small&gt;&lt;/p&gt;
+                                                                    &lt;/div&gt;
+                                                                &lt;/div&gt;
+                                                            &lt;/div&gt;
+                                                        &lt;/div&gt;
+                                                        &lt;!--Boton Editar y Borrar--&gt;
+                                                        &lt;div class&#x3D;&quot;card-footer bg-secondary row justify-content-md-center no-gutters p-1&quot;&gt;
+                                                            &lt;div&gt;
+                                                                &lt;a class&#x3D;&quot;btn bg-warning mr-2&quot; data-toggle&#x3D;&quot;modal&quot; data-target&#x3D;&quot;#mimodalejemplo5&quot;
+                                                                    (click)&#x3D;&quot;getDocenteinForm(docente)&quot;&gt;Editar&lt;/a&gt;
+                                                            &lt;/div&gt;
+                                                            &lt;div&gt;
+                                                                &lt;a class&#x3D;&quot;btn bg-warning ml-2&quot; data-toggle&#x3D;&quot;modal&quot; data-target&#x3D;&quot;#mimodalejemplo2&quot;
+                                                                    (click)&#x3D;&quot;saveDataDocente(docente)&quot;&gt;Borrar&lt;/a&gt;
+                                                            &lt;/div&gt;
+                                                        &lt;/div&gt;
+                                                    &lt;/div&gt;
+                                                &lt;/div&gt;
+                                            &lt;/div&gt;
+                                        &lt;/form&gt;
+                                        &lt;br&gt;
+                                    &lt;/div&gt;
+                            
+                                    &lt;div class&#x3D;&quot;contenedor py-3&quot;&gt;
+                                        &lt;form #frmInfoDocente&#x3D;&quot;ngForm&quot;&gt;
+                                            &lt;h5 class&#x3D;&quot;py-3 text-white text-center&quot;&gt;Actualizar Información:&lt;/h5&gt;
+                                            &lt;div class&#x3D;&quot;col-5 mx-auto&quot;&gt;
+                                                &lt;div class&#x3D;&quot;form-group col&quot;&gt;
+                                                    &lt;div class&#x3D;&quot;form-group&quot;&gt;
+                                                        &lt;label for&#x3D;&quot;inputNombreDocente&quot; class&#x3D;&quot;text-white &quot;&gt;Nombre Profesor&lt;/label&gt;
+                                                        &lt;input type&#x3D;&quot;text&quot; name&#x3D;&quot;nombre_docente&quot; class&#x3D;&quot;form-control col&quot; id&#x3D;&quot;inputNombreDocente&quot; placeholder&#x3D;&quot;Nombre&quot; required
+                                                            [(ngModel)]&#x3D;&quot;this.AuthAdminService.selectedDocente.nombre_docente&quot;&gt;
+                                                    &lt;/div&gt;
+                                                    &lt;div class&#x3D;&quot;form-group&quot;&gt;
+                                                        &lt;label for&#x3D;&quot;inputApellidoProfesor&quot; class&#x3D;&quot;text-white &quot;&gt;Apellido Profesor&lt;/label&gt;
+                                                        &lt;input type&#x3D;&quot;text&quot; name&#x3D;&quot;apellido_docente&quot; class&#x3D;&quot;form-control col&quot; id&#x3D;&quot;inputApellidoProfesor&quot; placeholder&#x3D;&quot;Apellido&quot; required
+                                                            [(ngModel)]&#x3D;&quot;this.AuthAdminService.selectedDocente.apellido_docente&quot;&gt;
+                                                    &lt;/div&gt;
+                                                    &lt;div class&#x3D;&quot;form-group&quot;&gt;
+                                                        &lt;label for&#x3D;&quot;inputCorreo&quot; class&#x3D;&quot;text-white &quot;&gt;Correo Electronico&lt;/label&gt;
+                                                        &lt;input type&#x3D;&quot;text&quot; name&#x3D;&quot;correo_electronico&quot; class&#x3D;&quot;form-control col&quot; id&#x3D;&quot;inputCorreo&quot; placeholder&#x3D;&quot;Correo Electronico&quot; required
+                                                            [(ngModel)]&#x3D;&quot;this.AuthAdminService.selectedDocente.correo_electronico&quot;&gt;
+                                                    &lt;/div&gt;
+                                                    &lt;div class&#x3D;&quot;form-group&quot;&gt;
+                                                        &lt;label for&#x3D;&quot;inputNombreUsuario&quot; class&#x3D;&quot;text-white &quot;&gt;Nombre Usuario&lt;/label&gt;
+                                                        &lt;input type&#x3D;&quot;text&quot; name&#x3D;&quot;nombre_usuario&quot; class&#x3D;&quot;form-control col&quot; id&#x3D;&quot;inputNombreUsuario&quot; placeholder&#x3D;&quot;Usuario&quot; required
+                                                            [(ngModel)]&#x3D;&quot;this.AuthAdminService.selectedDocente.nombre_usuario&quot;&gt;
+                                                    &lt;/div&gt;
+                                                    &lt;div class&#x3D;&quot;form-group&quot;&gt;
+                                                        &lt;label for&#x3D;&quot;inputContrasenaD&quot; class&#x3D;&quot;text-white &quot;&gt;Contraseña&lt;/label&gt;
+                                                        &lt;input type&#x3D;&quot;text&quot; name&#x3D;&quot;contrasena&quot; class&#x3D;&quot;form-control col&quot; id&#x3D;&quot;inputContrasenaD&quot; placeholder&#x3D;&quot;Contraseña&quot; required
+                                                            [(ngModel)]&#x3D;&quot;this.AuthAdminService.selectedDocente.contrasena&quot;&gt;
+                                                    &lt;/div&gt;
+                                                &lt;/div&gt;
+                                            &lt;/div&gt;
+                                            &lt;br&gt;
+                            
+                                            &lt;!--Boton Actualizar Docente--&gt;
+                                            &lt;div class&#x3D;&quot;row&quot;&gt;
+                                                &lt;div class&#x3D;&quot;mr-2 ml-auto pb-4 justify-content-md-center no-gutters&quot;&gt;
+                                                    &lt;a class&#x3D;&quot;btn bg-success px-5 py-4 font-weight-bold&quot; data-toggle&#x3D;&quot;modal&quot; data-target&#x3D;&quot;#mimodalejemplo&quot; 
+                                                        (click)&#x3D;&quot;actualizarDocente(frmInfoDocente)&quot;&gt;Actualizar&lt;/a&gt;
+                                                &lt;/div&gt;
+                                                &lt;div class&#x3D;&quot;ml-2 mr-auto pb-4 justify-content-md-center no-gutters&quot;&gt;
+                                                    &lt;a class&#x3D;&quot;btn bg-success px-5 py-4 font-weight-bold&quot;
+                                                        (click)&#x3D;&quot;resetForm(frmInfoDocente)&quot;&gt;Limpiar&lt;/a&gt;
+                                                &lt;/div&gt;
+                                            &lt;/div&gt;
+                                        &lt;/form&gt;
+                                        &lt;hr class&#x3D;&quot;style8&quot;&gt;
+                                    &lt;/div&gt;
+                                &lt;/div&gt;
+                            &lt;/div&gt;
+
+                            &lt;!--Tab 2--&gt;
+                            &lt;div class&#x3D;&quot;tab-pane fade&quot; id&#x3D;&quot;nav-Pregunta2&quot; role&#x3D;&quot;tabpanel&quot; aria-labelledby&#x3D;&quot;nav-Pregunta2-tab&quot;&gt;
+                                &lt;!--Gestion de Estudiantes--&gt;
+                                &lt;div&gt;
+                                    &lt;h3 class&#x3D;&quot;py-3 text-center text-white&quot;&gt;Estudiantes&lt;/h3&gt;
+                                    &lt;div class&#x3D;&quot;contenedor mx-3 py-3&quot;&gt;
+                                        &lt;form #frmBuscarEstudiante&#x3D;&quot;ngForm&quot;&gt;
+                            
+                                            &lt;!--Buscar Estudiante--&gt;
+                                            &lt;h5 class&#x3D;&quot;py-3 text-white&quot;&gt;Buscador:&lt;/h5&gt;
+                                            &lt;div class&#x3D;&quot;form-group&quot;&gt;
+                                                &lt;input type&#x3D;&quot;text&quot; class&#x3D;&quot;form-control col-md-8&quot; id&#x3D;&quot;inputTextoBusquedaEstudiante&quot; placeholder&#x3D;&quot;Nombre / Apellido / Usuario / Correo&quot; [(ngModel)]&#x3D;&quot;palabraClaveESelected&quot;
+                                                    name&#x3D;&quot;palabraClaveESelected&quot;&gt;
+                                            &lt;/div&gt;
+                                            &lt;div class&#x3D;&quot;row&quot;&gt;
+                                                &lt;div class&#x3D;&quot;form-group col&quot;&gt;
+                                                    &lt;label for&#x3D;&quot;inputGrado&quot; class&#x3D;&quot;text-white&quot;&gt;Grado&lt;/label&gt;
+                                                    &lt;select [(ngModel)]&#x3D;&quot;gradoSelected&quot; name&#x3D;&quot;gradoSelected&quot; id&#x3D;&quot;inputgrado&quot; class&#x3D;&quot;form-control&quot; ngModel required&gt;
+                                                        &lt;option selected&gt;&lt;/option&gt;
+                                                        &lt;option *ngFor&#x3D;&quot;let grad of grados&quot; [value]&#x3D;&quot;grad.id_grado&quot;&gt;{{grad.nombre_grado}}&lt;/option&gt;
+                                                    &lt;/select&gt;
+                                                &lt;/div&gt;
+                                                &lt;div class&#x3D;&quot;form-group col&quot;&gt;
+                                                    &lt;label for&#x3D;&quot;inputCurso&quot; class&#x3D;&quot;text-white&quot;&gt;Curso&lt;/label&gt;
+                                                    &lt;select [(ngModel)]&#x3D;&quot;cursoSelected&quot; name&#x3D;&quot;cursoSelected&quot; id&#x3D;&quot;inputCurso&quot; class&#x3D;&quot;form-control&quot; ngModel required&gt;
+                                                        &lt;option selected&gt;&lt;/option&gt;
+                                                        &lt;option *ngFor&#x3D;&quot;let curso of cursos&quot; [value]&#x3D;&quot;curso.id_curso&quot;&gt;{{curso.nombre_curso}}&lt;/option&gt;
+                                                    &lt;/select&gt;
+                                                &lt;/div&gt;
+                                                &lt;div class&#x3D;&quot;form-group col&quot;&gt;
+                                                    &lt;label for&#x3D;&quot;inputColegioE&quot; class&#x3D;&quot;text-white&quot;&gt;Colegio&lt;/label&gt;
+                                                    &lt;select [(ngModel)]&#x3D;&quot;colegioESelected&quot; name&#x3D;&quot;colegioESelected&quot; id&#x3D;&quot;inputColegioE&quot; class&#x3D;&quot;form-control&quot; ngModel required&gt;
+                                                        &lt;option selected&gt;&lt;/option&gt;
+                                                        &lt;option *ngFor&#x3D;&quot;let colegio of colegios&quot; [value]&#x3D;&quot;colegio.id_colegio&quot;&gt;{{colegio.nombre_colegio}}&lt;/option&gt;
+                                                    &lt;/select&gt;
+                                                &lt;/div&gt;
+                                            &lt;/div&gt;
+                            
+                                            &lt;!--Resultados--&gt;
+                                            &lt;h5 class&#x3D;&quot;py-3 text-white&quot;&gt;Resultados:&lt;/h5&gt;
+                                            &lt;div class&#x3D;&quot;col container p-4 my bg-light rounded table-wrapper-scroll-y my-custom-scrollbar&quot;
+                                                style&#x3D;&quot;width: 95%; height: 450px&quot;&gt;
+                                                &lt;!--Resultado--&gt;
+                                                &lt;div class&#x3D;&quot;row-1&quot; *ngFor&#x3D;&quot;let estudiante of estudiantesVisualizar | filterEstudiantesAdmin: palabraClaveESelected:gradoSelected:cursoSelected:colegioESelected&quot;&gt;
+                                                    &lt;div class&#x3D;&quot;card mb-4 border-0&quot; style&#x3D;&quot;max-width: 1440px;&quot;&gt;
+                                                        &lt;div class&#x3D;&quot;row no-gutters border border-secondary&quot;&gt;
+                                                            &lt;div class&#x3D;&quot;col&quot; style&#x3D;&quot;max-width: 840px;&quot;&gt;
+                                                                &lt;div class&#x3D;&quot;card-body p-2&quot;&gt;
+                                                                    &lt;p class&#x3D;&quot;card-text &quot;&gt;Nombre Estudiante: {{estudiante.nombre_estudiante}} {{estudiante.apellido_estudiante}}&lt;/p&gt;
+                                                                    &lt;div&gt;
+                                                                        &lt;p class&#x3D;&quot;card-text&quot;&gt;&lt;small class&#x3D;&quot;text-muted&quot;&gt;Grado: {{estudiante.grado_estudiante}}&lt;/small&gt;&lt;/p&gt;
+                                                                    &lt;/div&gt;
+                                                                    &lt;div&gt;
+                                                                        &lt;p class&#x3D;&quot;card-text&quot;&gt;&lt;small class&#x3D;&quot;text-muted&quot;&gt;Curso: {{estudiante.curso}}&lt;/small&gt;&lt;/p&gt;
+                                                                    &lt;/div&gt;
+                                                                    &lt;div&gt;
+                                                                        &lt;p class&#x3D;&quot;card-text&quot;&gt;&lt;small class&#x3D;&quot;text-muted&quot;&gt;Colegio: {{estudiante.colegio}}&lt;/small&gt;&lt;/p&gt;
+                                                                    &lt;/div&gt;
+                                                                    &lt;div&gt;
+                                                                        &lt;p class&#x3D;&quot;card-text&quot;&gt;&lt;small class&#x3D;&quot;text-muted&quot;&gt;Nombre Usuario: {{estudiante.nombre_usuario}}&lt;/small&gt;&lt;/p&gt;
+                                                                    &lt;/div&gt;
+                                                                    &lt;div&gt;
+                                                                        &lt;p class&#x3D;&quot;card-text&quot;&gt;&lt;small class&#x3D;&quot;text-muted&quot;&gt;Correo Electronico: {{estudiante.correo_electronico}}&lt;/small&gt;&lt;/p&gt;
+                                                                    &lt;/div&gt;
+                                                                &lt;/div&gt;
+                                                            &lt;/div&gt;
+                                                        &lt;/div&gt;
+                                                        &lt;!--Boton Editar y Borrar--&gt;
+                                                        &lt;div class&#x3D;&quot;card-footer bg-secondary row justify-content-md-center no-gutters p-1&quot;&gt;
+                                                            &lt;a class&#x3D;&quot;btn bg-warning mr-2&quot; data-toggle&#x3D;&quot;modal&quot; data-target&#x3D;&quot;#mimodalejemplo6&quot;
+                                                                (click)&#x3D;&quot;getEstudianteinForm(estudiante)&quot;&gt;Editar&lt;/a&gt;
+                                                            &lt;a class&#x3D;&quot;btn bg-warning ml-2&quot; data-toggle&#x3D;&quot;modal&quot; data-target&#x3D;&quot;#mimodalejemplo3&quot;
+                                                                (click)&#x3D;&quot;saveDataEstudiante(estudiante)&quot;&gt;Borrar&lt;/a&gt;
+                                                        &lt;/div&gt;
+                                                    &lt;/div&gt;
+                                                &lt;/div&gt;
+                                            &lt;/div&gt;
+                                        &lt;/form&gt;
+                                        &lt;br&gt;
+                                    &lt;/div&gt;
+                            
+                                    &lt;div class&#x3D;&quot;contenedor py-3&quot;&gt;
+                                        &lt;form #frmInfoEstudiante&#x3D;&quot;ngForm&quot;&gt;
+                                            &lt;h5 class&#x3D;&quot;py-3 text-white text-center&quot;&gt;Actualizar Información:&lt;/h5&gt;
+                                            &lt;div class&#x3D;&quot;col-5 mx-auto&quot;&gt;
+                                                &lt;div class&#x3D;&quot;form-group col&quot;&gt;
+                                                    &lt;div class&#x3D;&quot;form-group&quot;&gt;
+                                                        &lt;label for&#x3D;&quot;inputNombreEstudiante&quot; class&#x3D;&quot;text-white &quot;&gt;Nombre Estudiante&lt;/label&gt;
+                                                        &lt;input type&#x3D;&quot;text&quot; name&#x3D;&quot;nombre_estudiante&quot; class&#x3D;&quot;form-control col&quot; id&#x3D;&quot;inputNombreEstudiante&quot; placeholder&#x3D;&quot;Nombre&quot; required
+                                                            [(ngModel)]&#x3D;&quot;this.AuthAdminService.selectedEstudiante.nombre_estudiante&quot;&gt;
+                                                    &lt;/div&gt;
+                                                    &lt;div class&#x3D;&quot;form-group&quot;&gt;
+                                                        &lt;label for&#x3D;&quot;inputApellidoEstudiante&quot; class&#x3D;&quot;text-white &quot;&gt;Apellido Estudiante&lt;/label&gt;
+                                                        &lt;input type&#x3D;&quot;text&quot; name&#x3D;&quot;apellido_estudiante&quot; class&#x3D;&quot;form-control col&quot; id&#x3D;&quot;inputApellidoEstudiante&quot; placeholder&#x3D;&quot;Apellido&quot; required
+                                                            [(ngModel)]&#x3D;&quot;this.AuthAdminService.selectedEstudiante.apellido_estudiante&quot;&gt;
+                                                    &lt;/div&gt;
+                                                    &lt;div class&#x3D;&quot;row&quot;&gt;
+                                                        &lt;div class&#x3D;&quot;form-group col&quot;&gt;
+                                                            &lt;label for&#x3D;&quot;inputGradoEstudiante&quot; class&#x3D;&quot;text-white&quot;&gt;Grado&lt;/label&gt;
+                                                            &lt;select [(ngModel)]&#x3D;&quot;this.AuthAdminService.selectedEstudiante.grado_estudiante&quot; name&#x3D;&quot;grado_estudiante&quot; id&#x3D;&quot;inputGradoEstudiante&quot; class&#x3D;&quot;form-control&quot; ngModel required&gt;
+                                                                &lt;option selected&gt;&lt;/option&gt;
+                                                                &lt;option *ngFor&#x3D;&quot;let grad of grados&quot; [value]&#x3D;&quot;grad.id_grado&quot;&gt;{{grad.nombre_grado}}
+                                                                &lt;/option&gt;
+                                                            &lt;/select&gt;
+                                                        &lt;/div&gt;
+                                                        &lt;div class&#x3D;&quot;form-group col&quot;&gt;
+                                                            &lt;label for&#x3D;&quot;inputCursoEstudiante&quot; class&#x3D;&quot;text-white&quot;&gt;Curso&lt;/label&gt;
+                                                            &lt;select [(ngModel)]&#x3D;&quot;this.AuthAdminService.selectedEstudiante.curso_estudiante&quot; name&#x3D;&quot;curso_estudiante&quot; id&#x3D;&quot;inputCursoEstudiante&quot; class&#x3D;&quot;form-control&quot; ngModel required&gt;
+                                                                &lt;option selected&gt;&lt;/option&gt;
+                                                                &lt;option *ngFor&#x3D;&quot;let curso of cursos&quot; [value]&#x3D;&quot;curso.id_curso&quot;&gt;{{curso.nombre_curso}}
+                                                                &lt;/option&gt;
+                                                            &lt;/select&gt;
+                                                        &lt;/div&gt;
+                                                    &lt;/div&gt;
+                                                    &lt;div class&#x3D;&quot;form-group&quot;&gt;
+                                                        &lt;label for&#x3D;&quot;inputCorreoEstudiante&quot; class&#x3D;&quot;text-white &quot;&gt;Correo Electronico&lt;/label&gt;
+                                                        &lt;input type&#x3D;&quot;text&quot; name&#x3D;&quot;correo_electronico&quot; class&#x3D;&quot;form-control col&quot; id&#x3D;&quot;inputCorreoEstudiante&quot; placeholder&#x3D;&quot;Correo Electronico&quot; required
+                                                            [(ngModel)]&#x3D;&quot;this.AuthAdminService.selectedEstudiante.correo_electronico&quot;&gt;
+                                                    &lt;/div&gt;
+                                                    &lt;div class&#x3D;&quot;form-group&quot;&gt;
+                                                        &lt;label for&#x3D;&quot;inputNombreUsuarioEstudiante&quot; class&#x3D;&quot;text-white &quot;&gt;Nombre Usuario&lt;/label&gt;
+                                                        &lt;input type&#x3D;&quot;text&quot; name&#x3D;&quot;nombre_usuario&quot; class&#x3D;&quot;form-control col&quot; id&#x3D;&quot;inputNombreUsuarioEstudiante&quot; placeholder&#x3D;&quot;Usuario&quot; required
+                                                            [(ngModel)]&#x3D;&quot;this.AuthAdminService.selectedEstudiante.nombre_usuario&quot;&gt;
+                                                    &lt;/div&gt;
+                                                    &lt;div class&#x3D;&quot;form-group&quot;&gt;
+                                                        &lt;label for&#x3D;&quot;inputContrasenaEstudiante&quot; class&#x3D;&quot;text-white &quot;&gt;Contraseña&lt;/label&gt;
+                                                        &lt;input type&#x3D;&quot;text&quot; name&#x3D;&quot;contrasena&quot; class&#x3D;&quot;form-control col&quot; id&#x3D;&quot;inputContrasenaEstudiante&quot; placeholder&#x3D;&quot;Contraseña&quot; required
+                                                            [(ngModel)]&#x3D;&quot;this.AuthAdminService.selectedEstudiante.contrasena&quot;&gt;
+                                                    &lt;/div&gt;
+                                                &lt;/div&gt;
+                                            &lt;/div&gt;
+                                            &lt;br&gt;
+                            
+                                            &lt;!--Boton Actualizar Estudiante--&gt;
+                                            &lt;div class&#x3D;&quot;row&quot;&gt;
+                                                &lt;div class&#x3D;&quot;mr-2 ml-auto pb-4 justify-content-md-center no-gutters&quot;&gt;
+                                                    &lt;a class&#x3D;&quot;btn bg-success px-5 py-4 font-weight-bold&quot; data-toggle&#x3D;&quot;modal&quot; data-target&#x3D;&quot;#mimodalejemplo4&quot;
+                                                        (click)&#x3D;&quot;actualizarEstudiante(frmInfoEstudiante)&quot;&gt;Actualizar&lt;/a&gt;
+                                                &lt;/div&gt;
+                                                &lt;div class&#x3D;&quot;ml-2 mr-auto pb-4 justify-content-md-center no-gutters&quot;&gt;
+                                                    &lt;a class&#x3D;&quot;btn bg-success px-5 py-4 font-weight-bold&quot;
+                                                        (click)&#x3D;&quot;resetForm(frmInfoEstudiante)&quot;&gt;Limpiar&lt;/a&gt;
+                                                &lt;/div&gt;
+                                            &lt;/div&gt;
+                                        &lt;/form&gt;
+                                        &lt;hr class&#x3D;&quot;style8&quot;&gt;
+                                    &lt;/div&gt;
+                                &lt;/div&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;!-- Modal Datos Docente Actualizados --&gt;
+    &lt;div class&#x3D;&quot;modal fade&quot; id&#x3D;&quot;mimodalejemplo&quot; tabindex&#x3D;&quot;-1&quot; role&#x3D;&quot;dialog&quot; aria-labelledby&#x3D;&quot;myModalLabel&quot;&gt;
+        &lt;div class&#x3D;&quot;modal-dialog&quot; role&#x3D;&quot;document&quot;&gt;
+            &lt;div class&#x3D;&quot;modal-content&quot;&gt;
+                &lt;div class&#x3D;&quot;modal-header bg-light&quot;&gt;
+                    &lt;h5 class&#x3D;&quot;modal-title&quot; id&#x3D;&quot;myModalLabel&quot;&gt;Mensaje&lt;/h5&gt;
+                    &lt;button class&#x3D;&quot;close&quot; data-dismiss&#x3D;&quot;modal&quot; aria-label&#x3D;&quot;Close&quot;&gt;
+                        &lt;span aria-hidden&#x3D;&quot;true&quot;&gt;&amp;times;&lt;/span&gt;
+                    &lt;/button&gt;
+                &lt;/div&gt;
+                &lt;div class&#x3D;&quot;modal-body text-info&quot; *ngIf&#x3D;&quot;error1 &#x3D;&#x3D; false&quot;&gt;
+                    Se han Actualizado los datos del Docente.
+                &lt;/div&gt;
+                &lt;div class&#x3D;&quot;modal-body text-danger&quot; *ngIf&#x3D;&quot;error1 &#x3D;&#x3D; true&quot;&gt;
+                    No ha seleccionado un Docente para Actualizar.
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;!-- Modal Datos Estudiante Actualizados --&gt;
+    &lt;div class&#x3D;&quot;modal fade&quot; id&#x3D;&quot;mimodalejemplo4&quot; tabindex&#x3D;&quot;-1&quot; role&#x3D;&quot;dialog&quot; aria-labelledby&#x3D;&quot;myModalLabel4&quot;&gt;
+        &lt;div class&#x3D;&quot;modal-dialog&quot; role&#x3D;&quot;document&quot;&gt;
+            &lt;div class&#x3D;&quot;modal-content&quot;&gt;
+                &lt;div class&#x3D;&quot;modal-header bg-light&quot;&gt;
+                    &lt;h5 class&#x3D;&quot;modal-title&quot; id&#x3D;&quot;myModalLabel&quot;&gt;Mensaje&lt;/h5&gt;
+                    &lt;button class&#x3D;&quot;close&quot; data-dismiss&#x3D;&quot;modal&quot; aria-label&#x3D;&quot;Close&quot;&gt;
+                        &lt;span aria-hidden&#x3D;&quot;true&quot;&gt;&amp;times;&lt;/span&gt;
+                    &lt;/button&gt;
+                &lt;/div&gt;
+                &lt;div class&#x3D;&quot;modal-body text-info&quot; *ngIf&#x3D;&quot;error2 &#x3D;&#x3D; false&quot;&gt;
+                    Se han Actualizado los datos del Estudiante.
+                &lt;/div&gt;
+                &lt;div class&#x3D;&quot;modal-body text-danger&quot; *ngIf&#x3D;&quot;error2 &#x3D;&#x3D; true&quot;&gt;
+                    No ha seleccionado un Estudiante para Actualizar.
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;!-- Modal Confirmar Borrar Docente --&gt;
+    &lt;div class&#x3D;&quot;modal fade&quot; id&#x3D;&quot;mimodalejemplo2&quot; tabindex&#x3D;&quot;-1&quot; role&#x3D;&quot;dialog&quot; aria-labelledby&#x3D;&quot;myModalLabel2&quot;&gt;
+        &lt;div class&#x3D;&quot;modal-dialog&quot; role&#x3D;&quot;document&quot;&gt;
+            &lt;div class&#x3D;&quot;modal-content&quot;&gt;
+                &lt;div class&#x3D;&quot;modal-header bg-light&quot;&gt;
+                    &lt;h5 class&#x3D;&quot;modal-title&quot; id&#x3D;&quot;myModalLabel&quot;&gt;Confirmar Accion&lt;/h5&gt;
+                    &lt;button class&#x3D;&quot;close&quot; data-dismiss&#x3D;&quot;modal&quot; aria-label&#x3D;&quot;Close&quot;&gt;
+                        &lt;span aria-hidden&#x3D;&quot;true&quot;&gt;&amp;times;&lt;/span&gt;
+                    &lt;/button&gt;
+                &lt;/div&gt;
+                &lt;div class&#x3D;&quot;modal-body&quot;&gt;
+                    Para borrar al Docente presione aceptar, de lo contrario presione X
+                    para cancelar.
+                &lt;/div&gt;
+                &lt;div class&#x3D;&quot;modal-footer justify-content-md-center no-gutters py-1 bg-light&quot;&gt;
+                    &lt;button class&#x3D;&quot;btn btn-default bg-warning font-weight-bold&quot; data-dismiss&#x3D;&quot;modal&quot; (click)&#x3D;&quot;deleteDocente()&quot;&gt;Aceptar&lt;/button&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;!-- Modal Comfirmar Borrar Estudiante --&gt;
+    &lt;div class&#x3D;&quot;modal fade&quot; id&#x3D;&quot;mimodalejemplo3&quot; tabindex&#x3D;&quot;-1&quot; role&#x3D;&quot;dialog&quot; aria-labelledby&#x3D;&quot;myModalLabel3&quot;&gt;
+        &lt;div class&#x3D;&quot;modal-dialog&quot; role&#x3D;&quot;document&quot;&gt;
+            &lt;div class&#x3D;&quot;modal-content&quot;&gt;
+                &lt;div class&#x3D;&quot;modal-header bg-light&quot;&gt;
+                    &lt;h5 class&#x3D;&quot;modal-title&quot; id&#x3D;&quot;myModalLabel&quot;&gt;Confirmar Acción&lt;/h5&gt;
+                    &lt;button class&#x3D;&quot;close&quot; data-dismiss&#x3D;&quot;modal&quot; aria-label&#x3D;&quot;Close&quot;&gt;
+                        &lt;span aria-hidden&#x3D;&quot;true&quot;&gt;&amp;times;&lt;/span&gt;
+                    &lt;/button&gt;
+                &lt;/div&gt;
+                &lt;div class&#x3D;&quot;modal-body&quot;&gt;
+                    Para borrar al Estudiante presione aceptar, de lo contrario presione X
+                    para cancelar.
+                &lt;/div&gt;
+                &lt;div class&#x3D;&quot;modal-footer justify-content-md-center no-gutters py-1 bg-light&quot;&gt;
+                    &lt;button class&#x3D;&quot;btn btn-default bg-warning font-weight-bold&quot; data-dismiss&#x3D;&quot;modal&quot; (click)&#x3D;&quot;deleteEstudiante()&quot;&gt;Aceptar&lt;/button&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;!-- Modal Confirmacion Docente Seleccionado --&gt;
+    &lt;div class&#x3D;&quot;modal fade&quot; id&#x3D;&quot;mimodalejemplo5&quot; tabindex&#x3D;&quot;-1&quot; role&#x3D;&quot;dialog&quot; aria-labelledby&#x3D;&quot;myModalLabel5&quot;&gt;
+        &lt;div class&#x3D;&quot;modal-dialog&quot; role&#x3D;&quot;document&quot;&gt;
+            &lt;div class&#x3D;&quot;modal-content&quot;&gt;
+                &lt;div class&#x3D;&quot;modal-header bg-light&quot;&gt;
+                    &lt;h5 class&#x3D;&quot;modal-title&quot; id&#x3D;&quot;myModalLabel&quot;&gt;Mensaje&lt;/h5&gt;
+                    &lt;button class&#x3D;&quot;close&quot; data-dismiss&#x3D;&quot;modal&quot; aria-label&#x3D;&quot;Close&quot;&gt;
+                        &lt;span aria-hidden&#x3D;&quot;true&quot;&gt;&amp;times;&lt;/span&gt;
+                    &lt;/button&gt;
+                &lt;/div&gt;
+                &lt;div class&#x3D;&quot;modal-body&quot;&gt;
+                    Ha sido seleccionado un Docente. Los datos han sido cargados para revisar y modificar.
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;!-- Modal Confirmacion Estudiante Seleccionado --&gt;
+    &lt;div class&#x3D;&quot;modal fade&quot; id&#x3D;&quot;mimodalejemplo6&quot; tabindex&#x3D;&quot;-1&quot; role&#x3D;&quot;dialog&quot; aria-labelledby&#x3D;&quot;myModalLabel6&quot;&gt;
+        &lt;div class&#x3D;&quot;modal-dialog&quot; role&#x3D;&quot;document&quot;&gt;
+            &lt;div class&#x3D;&quot;modal-content&quot;&gt;
+                &lt;div class&#x3D;&quot;modal-header bg-light&quot;&gt;
+                    &lt;h5 class&#x3D;&quot;modal-title&quot; id&#x3D;&quot;myModalLabel&quot;&gt;Mensaje&lt;/h5&gt;
+                    &lt;button class&#x3D;&quot;close&quot; data-dismiss&#x3D;&quot;modal&quot; aria-label&#x3D;&quot;Close&quot;&gt;
+                        &lt;span aria-hidden&#x3D;&quot;true&quot;&gt;&amp;times;&lt;/span&gt;
+                    &lt;/button&gt;
+                &lt;/div&gt;
+                &lt;div class&#x3D;&quot;modal-body&quot;&gt;
+                    Ha sido seleccionado un Estudiante. Los datos han sido cargados para revisar y modificar.
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-styleData">
+                <p class="comment">
+                    <code>./gestionar-usuarios-admin.component.css</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss"></code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><app-header-admin></app-header-admin><!--Contenedor Contenido Pagina--><div class="mb-5 col-9 mx-auto">    <!--Titulo pagina-->    <div class="container m-auto pb-2 bg-success rounded-top">        <h1 class="mt-5 pt-4 text-center m ">Gestionar Usuarios</h1>    </div>        <!--Contenedor Formularios-->    <div class="container pt-1 bg-secondary rounded-bottom">            <!--Tabs-->        <div class="row">            <div class="col">                <div class="mt-3">                    <div class="card-header tab-card-header">                        <!--Opcion Tab-->                        <nav>                            <div class="nav nav-tabs" id="nav-tab" role="tablist">                                <a class="col nav-item nav-link text-center active font-weight-bold text-dark" id="nav-Pregunta1-tab" data-toggle="tab"                                    href="#nav-Pregunta1" role="tab" aria-controls="nav-Pregunta1" aria-selected="true">Docentes</a>                                <a class="col nav-item nav-link text-center font-weight-bold text-dark" id="nav-Pregunta2-tab" data-toggle="tab"                                    href="#nav-Pregunta2" role="tab" aria-controls="nav-Pregunta2" aria-selected="false">Estudiantes</a>                            </div>                        </nav>                                <!--Tabs Resultados-->                        <div class="tab-content" id="nav-tabContent">                            <br>                            <!--Tab 1-->                            <div class="tab-pane fade show active" id="nav-Pregunta1" role="tabpanel" aria-labelledby="nav-Pregunta1-tab">                                <!--Gestion de Competencias-->                                <div>                                    <h3 class="py-3 text-center text-white">Docentes</h3>                                                                <div class="contenedor mx-3 py-3">                                        <form #frmBuscarDocente="ngForm">                                                                        <!--Buscar-->                                            <h5 class="py-3 text-white">Buscador:</h5>                                            <div class="form-group">                                                <input type="text" class="form-control col-md-8" id="inputTextoBusquedaDocente" placeholder="Nombre / Apellido / Usuario / Correo" [(ngModel)]="palabraClaveDSelected"                                                    name="palabraClaveDSelected">                                            </div>                                            <div class="row">                                                <div class="form-group col-4">                                                    <label for="inputColegioD" class="text-white">Colegio</label>                                                    <select [(ngModel)]="colegioDSelected" name="colegioDSelected" id="inputColegioD" class="form-control" ngModel required>                                                        <option selected></option>                                                        <option *ngFor="let colegio of colegios" [value]="colegio.id_colegio">{{colegio.nombre_colegio}}</option>                                                    </select>                                                </div>                                            </div>                                                                        <!--Resultados-->                                            <h5 class="py-3 text-white">Resultados:</h5>                                            <div class="col container p-4 my bg-light rounded table-wrapper-scroll-y my-custom-scrollbar bg-light" style="width: 95%; height: 450px">                                                <!--Resultado-->                                                <div class="row-1" *ngFor="let docente of docenteVisualizar | filterDocenteAdmin: palabraClaveDSelected:colegioDSelected">                                                    <div class="card mb-4 border-0" style="max-width: 1440px;">                                                        <div class="row no-gutters border border-secondary">                                                            <div class="col" style="max-width: 840px;">                                                                <div class="card-body p-2">                                                                    <p class="card-text ">Nombre Docente: {{docente.nombre_docente}} {{docente.apellido_docente}}</p>                                                                    <div>                                                                        <p class="card-text"><small class="text-muted">Colegio: {{docente.colegio}}</small></p>                                                                    </div>                                                                    <div>                                                                        <p class="card-text"><small class="text-muted">Nombre Usuario: {{docente.nombre_usuario}}</small></p>                                                                    </div>                                                                    <div>                                                                        <p class="card-text"><small class="text-muted">Correo Electronico: {{docente.correo_electronico}}</small></p>                                                                    </div>                                                                </div>                                                            </div>                                                        </div>                                                        <!--Boton Editar y Borrar-->                                                        <div class="card-footer bg-secondary row justify-content-md-center no-gutters p-1">                                                            <div>                                                                <a class="btn bg-warning mr-2" data-toggle="modal" data-target="#mimodalejemplo5"                                                                    (click)="getDocenteinForm(docente)">Editar</a>                                                            </div>                                                            <div>                                                                <a class="btn bg-warning ml-2" data-toggle="modal" data-target="#mimodalejemplo2"                                                                    (click)="saveDataDocente(docente)">Borrar</a>                                                            </div>                                                        </div>                                                    </div>                                                </div>                                            </div>                                        </form>                                        <br>                                    </div>                                                                <div class="contenedor py-3">                                        <form #frmInfoDocente="ngForm">                                            <h5 class="py-3 text-white text-center">Actualizar Información:</h5>                                            <div class="col-5 mx-auto">                                                <div class="form-group col">                                                    <div class="form-group">                                                        <label for="inputNombreDocente" class="text-white ">Nombre Profesor</label>                                                        <input type="text" name="nombre_docente" class="form-control col" id="inputNombreDocente" placeholder="Nombre" required                                                            [(ngModel)]="this.AuthAdminService.selectedDocente.nombre_docente">                                                    </div>                                                    <div class="form-group">                                                        <label for="inputApellidoProfesor" class="text-white ">Apellido Profesor</label>                                                        <input type="text" name="apellido_docente" class="form-control col" id="inputApellidoProfesor" placeholder="Apellido" required                                                            [(ngModel)]="this.AuthAdminService.selectedDocente.apellido_docente">                                                    </div>                                                    <div class="form-group">                                                        <label for="inputCorreo" class="text-white ">Correo Electronico</label>                                                        <input type="text" name="correo_electronico" class="form-control col" id="inputCorreo" placeholder="Correo Electronico" required                                                            [(ngModel)]="this.AuthAdminService.selectedDocente.correo_electronico">                                                    </div>                                                    <div class="form-group">                                                        <label for="inputNombreUsuario" class="text-white ">Nombre Usuario</label>                                                        <input type="text" name="nombre_usuario" class="form-control col" id="inputNombreUsuario" placeholder="Usuario" required                                                            [(ngModel)]="this.AuthAdminService.selectedDocente.nombre_usuario">                                                    </div>                                                    <div class="form-group">                                                        <label for="inputContrasenaD" class="text-white ">Contraseña</label>                                                        <input type="text" name="contrasena" class="form-control col" id="inputContrasenaD" placeholder="Contraseña" required                                                            [(ngModel)]="this.AuthAdminService.selectedDocente.contrasena">                                                    </div>                                                </div>                                            </div>                                            <br>                                                                        <!--Boton Actualizar Docente-->                                            <div class="row">                                                <div class="mr-2 ml-auto pb-4 justify-content-md-center no-gutters">                                                    <a class="btn bg-success px-5 py-4 font-weight-bold" data-toggle="modal" data-target="#mimodalejemplo"                                                         (click)="actualizarDocente(frmInfoDocente)">Actualizar</a>                                                </div>                                                <div class="ml-2 mr-auto pb-4 justify-content-md-center no-gutters">                                                    <a class="btn bg-success px-5 py-4 font-weight-bold"                                                        (click)="resetForm(frmInfoDocente)">Limpiar</a>                                                </div>                                            </div>                                        </form>                                        <hr class="style8">                                    </div>                                </div>                            </div>                            <!--Tab 2-->                            <div class="tab-pane fade" id="nav-Pregunta2" role="tabpanel" aria-labelledby="nav-Pregunta2-tab">                                <!--Gestion de Estudiantes-->                                <div>                                    <h3 class="py-3 text-center text-white">Estudiantes</h3>                                    <div class="contenedor mx-3 py-3">                                        <form #frmBuscarEstudiante="ngForm">                                                                        <!--Buscar Estudiante-->                                            <h5 class="py-3 text-white">Buscador:</h5>                                            <div class="form-group">                                                <input type="text" class="form-control col-md-8" id="inputTextoBusquedaEstudiante" placeholder="Nombre / Apellido / Usuario / Correo" [(ngModel)]="palabraClaveESelected"                                                    name="palabraClaveESelected">                                            </div>                                            <div class="row">                                                <div class="form-group col">                                                    <label for="inputGrado" class="text-white">Grado</label>                                                    <select [(ngModel)]="gradoSelected" name="gradoSelected" id="inputgrado" class="form-control" ngModel required>                                                        <option selected></option>                                                        <option *ngFor="let grad of grados" [value]="grad.id_grado">{{grad.nombre_grado}}</option>                                                    </select>                                                </div>                                                <div class="form-group col">                                                    <label for="inputCurso" class="text-white">Curso</label>                                                    <select [(ngModel)]="cursoSelected" name="cursoSelected" id="inputCurso" class="form-control" ngModel required>                                                        <option selected></option>                                                        <option *ngFor="let curso of cursos" [value]="curso.id_curso">{{curso.nombre_curso}}</option>                                                    </select>                                                </div>                                                <div class="form-group col">                                                    <label for="inputColegioE" class="text-white">Colegio</label>                                                    <select [(ngModel)]="colegioESelected" name="colegioESelected" id="inputColegioE" class="form-control" ngModel required>                                                        <option selected></option>                                                        <option *ngFor="let colegio of colegios" [value]="colegio.id_colegio">{{colegio.nombre_colegio}}</option>                                                    </select>                                                </div>                                            </div>                                                                        <!--Resultados-->                                            <h5 class="py-3 text-white">Resultados:</h5>                                            <div class="col container p-4 my bg-light rounded table-wrapper-scroll-y my-custom-scrollbar"                                                style="width: 95%; height: 450px">                                                <!--Resultado-->                                                <div class="row-1" *ngFor="let estudiante of estudiantesVisualizar | filterEstudiantesAdmin: palabraClaveESelected:gradoSelected:cursoSelected:colegioESelected">                                                    <div class="card mb-4 border-0" style="max-width: 1440px;">                                                        <div class="row no-gutters border border-secondary">                                                            <div class="col" style="max-width: 840px;">                                                                <div class="card-body p-2">                                                                    <p class="card-text ">Nombre Estudiante: {{estudiante.nombre_estudiante}} {{estudiante.apellido_estudiante}}</p>                                                                    <div>                                                                        <p class="card-text"><small class="text-muted">Grado: {{estudiante.grado_estudiante}}</small></p>                                                                    </div>                                                                    <div>                                                                        <p class="card-text"><small class="text-muted">Curso: {{estudiante.curso}}</small></p>                                                                    </div>                                                                    <div>                                                                        <p class="card-text"><small class="text-muted">Colegio: {{estudiante.colegio}}</small></p>                                                                    </div>                                                                    <div>                                                                        <p class="card-text"><small class="text-muted">Nombre Usuario: {{estudiante.nombre_usuario}}</small></p>                                                                    </div>                                                                    <div>                                                                        <p class="card-text"><small class="text-muted">Correo Electronico: {{estudiante.correo_electronico}}</small></p>                                                                    </div>                                                                </div>                                                            </div>                                                        </div>                                                        <!--Boton Editar y Borrar-->                                                        <div class="card-footer bg-secondary row justify-content-md-center no-gutters p-1">                                                            <a class="btn bg-warning mr-2" data-toggle="modal" data-target="#mimodalejemplo6"                                                                (click)="getEstudianteinForm(estudiante)">Editar</a>                                                            <a class="btn bg-warning ml-2" data-toggle="modal" data-target="#mimodalejemplo3"                                                                (click)="saveDataEstudiante(estudiante)">Borrar</a>                                                        </div>                                                    </div>                                                </div>                                            </div>                                        </form>                                        <br>                                    </div>                                                                <div class="contenedor py-3">                                        <form #frmInfoEstudiante="ngForm">                                            <h5 class="py-3 text-white text-center">Actualizar Información:</h5>                                            <div class="col-5 mx-auto">                                                <div class="form-group col">                                                    <div class="form-group">                                                        <label for="inputNombreEstudiante" class="text-white ">Nombre Estudiante</label>                                                        <input type="text" name="nombre_estudiante" class="form-control col" id="inputNombreEstudiante" placeholder="Nombre" required                                                            [(ngModel)]="this.AuthAdminService.selectedEstudiante.nombre_estudiante">                                                    </div>                                                    <div class="form-group">                                                        <label for="inputApellidoEstudiante" class="text-white ">Apellido Estudiante</label>                                                        <input type="text" name="apellido_estudiante" class="form-control col" id="inputApellidoEstudiante" placeholder="Apellido" required                                                            [(ngModel)]="this.AuthAdminService.selectedEstudiante.apellido_estudiante">                                                    </div>                                                    <div class="row">                                                        <div class="form-group col">                                                            <label for="inputGradoEstudiante" class="text-white">Grado</label>                                                            <select [(ngModel)]="this.AuthAdminService.selectedEstudiante.grado_estudiante" name="grado_estudiante" id="inputGradoEstudiante" class="form-control" ngModel required>                                                                <option selected></option>                                                                <option *ngFor="let grad of grados" [value]="grad.id_grado">{{grad.nombre_grado}}                                                                </option>                                                            </select>                                                        </div>                                                        <div class="form-group col">                                                            <label for="inputCursoEstudiante" class="text-white">Curso</label>                                                            <select [(ngModel)]="this.AuthAdminService.selectedEstudiante.curso_estudiante" name="curso_estudiante" id="inputCursoEstudiante" class="form-control" ngModel required>                                                                <option selected></option>                                                                <option *ngFor="let curso of cursos" [value]="curso.id_curso">{{curso.nombre_curso}}                                                                </option>                                                            </select>                                                        </div>                                                    </div>                                                    <div class="form-group">                                                        <label for="inputCorreoEstudiante" class="text-white ">Correo Electronico</label>                                                        <input type="text" name="correo_electronico" class="form-control col" id="inputCorreoEstudiante" placeholder="Correo Electronico" required                                                            [(ngModel)]="this.AuthAdminService.selectedEstudiante.correo_electronico">                                                    </div>                                                    <div class="form-group">                                                        <label for="inputNombreUsuarioEstudiante" class="text-white ">Nombre Usuario</label>                                                        <input type="text" name="nombre_usuario" class="form-control col" id="inputNombreUsuarioEstudiante" placeholder="Usuario" required                                                            [(ngModel)]="this.AuthAdminService.selectedEstudiante.nombre_usuario">                                                    </div>                                                    <div class="form-group">                                                        <label for="inputContrasenaEstudiante" class="text-white ">Contraseña</label>                                                        <input type="text" name="contrasena" class="form-control col" id="inputContrasenaEstudiante" placeholder="Contraseña" required                                                            [(ngModel)]="this.AuthAdminService.selectedEstudiante.contrasena">                                                    </div>                                                </div>                                            </div>                                            <br>                                                                        <!--Boton Actualizar Estudiante-->                                            <div class="row">                                                <div class="mr-2 ml-auto pb-4 justify-content-md-center no-gutters">                                                    <a class="btn bg-success px-5 py-4 font-weight-bold" data-toggle="modal" data-target="#mimodalejemplo4"                                                        (click)="actualizarEstudiante(frmInfoEstudiante)">Actualizar</a>                                                </div>                                                <div class="ml-2 mr-auto pb-4 justify-content-md-center no-gutters">                                                    <a class="btn bg-success px-5 py-4 font-weight-bold"                                                        (click)="resetForm(frmInfoEstudiante)">Limpiar</a>                                                </div>                                            </div>                                        </form>                                        <hr class="style8">                                    </div>                                </div>                            </div>                        </div>                    </div>                </div>            </div>        </div>    </div>    <!-- Modal Datos Docente Actualizados -->    <div class="modal fade" id="mimodalejemplo" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">        <div class="modal-dialog" role="document">            <div class="modal-content">                <div class="modal-header bg-light">                    <h5 class="modal-title" id="myModalLabel">Mensaje</h5>                    <button class="close" data-dismiss="modal" aria-label="Close">                        <span aria-hidden="true">&times;</span>                    </button>                </div>                <div class="modal-body text-info" *ngIf="error1 == false">                    Se han Actualizado los datos del Docente.                </div>                <div class="modal-body text-danger" *ngIf="error1 == true">                    No ha seleccionado un Docente para Actualizar.                </div>            </div>        </div>    </div>    <!-- Modal Datos Estudiante Actualizados -->    <div class="modal fade" id="mimodalejemplo4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel4">        <div class="modal-dialog" role="document">            <div class="modal-content">                <div class="modal-header bg-light">                    <h5 class="modal-title" id="myModalLabel">Mensaje</h5>                    <button class="close" data-dismiss="modal" aria-label="Close">                        <span aria-hidden="true">&times;</span>                    </button>                </div>                <div class="modal-body text-info" *ngIf="error2 == false">                    Se han Actualizado los datos del Estudiante.                </div>                <div class="modal-body text-danger" *ngIf="error2 == true">                    No ha seleccionado un Estudiante para Actualizar.                </div>            </div>        </div>    </div>    <!-- Modal Confirmar Borrar Docente -->    <div class="modal fade" id="mimodalejemplo2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel2">        <div class="modal-dialog" role="document">            <div class="modal-content">                <div class="modal-header bg-light">                    <h5 class="modal-title" id="myModalLabel">Confirmar Accion</h5>                    <button class="close" data-dismiss="modal" aria-label="Close">                        <span aria-hidden="true">&times;</span>                    </button>                </div>                <div class="modal-body">                    Para borrar al Docente presione aceptar, de lo contrario presione X                    para cancelar.                </div>                <div class="modal-footer justify-content-md-center no-gutters py-1 bg-light">                    <button class="btn btn-default bg-warning font-weight-bold" data-dismiss="modal" (click)="deleteDocente()">Aceptar</button>                </div>            </div>        </div>    </div>    <!-- Modal Comfirmar Borrar Estudiante -->    <div class="modal fade" id="mimodalejemplo3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel3">        <div class="modal-dialog" role="document">            <div class="modal-content">                <div class="modal-header bg-light">                    <h5 class="modal-title" id="myModalLabel">Confirmar Acción</h5>                    <button class="close" data-dismiss="modal" aria-label="Close">                        <span aria-hidden="true">&times;</span>                    </button>                </div>                <div class="modal-body">                    Para borrar al Estudiante presione aceptar, de lo contrario presione X                    para cancelar.                </div>                <div class="modal-footer justify-content-md-center no-gutters py-1 bg-light">                    <button class="btn btn-default bg-warning font-weight-bold" data-dismiss="modal" (click)="deleteEstudiante()">Aceptar</button>                </div>            </div>        </div>    </div>    <!-- Modal Confirmacion Docente Seleccionado -->    <div class="modal fade" id="mimodalejemplo5" tabindex="-1" role="dialog" aria-labelledby="myModalLabel5">        <div class="modal-dialog" role="document">            <div class="modal-content">                <div class="modal-header bg-light">                    <h5 class="modal-title" id="myModalLabel">Mensaje</h5>                    <button class="close" data-dismiss="modal" aria-label="Close">                        <span aria-hidden="true">&times;</span>                    </button>                </div>                <div class="modal-body">                    Ha sido seleccionado un Docente. Los datos han sido cargados para revisar y modificar.                </div>            </div>        </div>    </div>    <!-- Modal Confirmacion Estudiante Seleccionado -->    <div class="modal fade" id="mimodalejemplo6" tabindex="-1" role="dialog" aria-labelledby="myModalLabel6">        <div class="modal-dialog" role="document">            <div class="modal-content">                <div class="modal-header bg-light">                    <h5 class="modal-title" id="myModalLabel">Mensaje</h5>                    <button class="close" data-dismiss="modal" aria-label="Close">                        <span aria-hidden="true">&times;</span>                    </button>                </div>                <div class="modal-body">                    Ha sido seleccionado un Estudiante. Los datos han sido cargados para revisar y modificar.                </div>            </div>        </div>    </div></div></div>'
+    var COMPONENTS = [{'name': 'AdministrarDocenteComponent', 'selector': 'app-administrar-docente'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'BorrarActividadComponent', 'selector': 'app-borrar-actividad'},{'name': 'BorrarContenidoComponent', 'selector': 'app-borrar-contenido'},{'name': 'BusquedaComponent', 'selector': 'app-busqueda'},{'name': 'BusquedaVisitanteComponent', 'selector': 'app-busqueda-visitante'},{'name': 'CrearActividadComponent', 'selector': 'app-crear-actividad'},{'name': 'DudasComponent', 'selector': 'app-dudas'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'GestionarColegioAdminComponent', 'selector': 'app-gestionar-colegio-admin'},{'name': 'GestionarCompetenciasAdminComponent', 'selector': 'app-gestionar-competencias-admin'},{'name': 'GestionarUsuariosAdminComponent', 'selector': 'app-gestionar-usuarios-admin'},{'name': 'HeaderAdminComponent', 'selector': 'app-header-admin'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'HeaderVisitanteComponent', 'selector': 'app-header-visitante'},{'name': 'InfromacionDocenteComponent', 'selector': 'app-infromacion-docente'},{'name': 'InicioAdminComponent', 'selector': 'app-inicio-admin'},{'name': 'InicioProfesoresComponent', 'selector': 'app-inicio-profesores'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'MetricasComponent', 'selector': 'app-metricas'},{'name': 'ModificarActividadComponent', 'selector': 'app-modificar-actividad'},{'name': 'RegistroUsuarioComponent', 'selector': 'app-registro-usuario'},{'name': 'SubirContenidoComponent', 'selector': 'app-subir-contenido'}];
+    var DIRECTIVES = [];
+    var ACTUAL_COMPONENT = {'name': 'GestionarUsuariosAdminComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+                   
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'GestionarUsuariosAdminComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

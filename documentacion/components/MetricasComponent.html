@@ -1,0 +1,2963 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>fc documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/readthedocs.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">fc documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li>MetricasComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/components/metricas/metricas.component.ts</code>
+</p>
+
+    <p class="comment">
+        <h3>Description</h3>
+    </p>
+    <p class="comment">
+        <p>Contiene todos los metodos necesarios para el analisis de eventos y presentacion de metricas de actvidades y estudiantes.</p>
+
+    </p>
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                    <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+    </p>
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>app-metricas</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./metricas.component.css</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./metricas.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#actividades">actividades</a>
+                            </li>
+                            <li>
+                                <a href="#actividadToSave">actividadToSave</a>
+                            </li>
+                            <li>
+                                <a href="#actividadVisualizar">actividadVisualizar</a>
+                            </li>
+                            <li>
+                                <a href="#bar100">bar100</a>
+                            </li>
+                            <li>
+                                <a href="#bar20">bar20</a>
+                            </li>
+                            <li>
+                                <a href="#bar40">bar40</a>
+                            </li>
+                            <li>
+                                <a href="#bar60">bar60</a>
+                            </li>
+                            <li>
+                                <a href="#bar80">bar80</a>
+                            </li>
+                            <li>
+                                <a href="#competencias">competencias</a>
+                            </li>
+                            <li>
+                                <a href="#contContenido">contContenido</a>
+                            </li>
+                            <li>
+                                <a href="#contEvaluacion">contEvaluacion</a>
+                            </li>
+                            <li>
+                                <a href="#contInicio">contInicio</a>
+                            </li>
+                            <li>
+                                <a href="#contNotaEvaluacion">contNotaEvaluacion</a>
+                            </li>
+                            <li>
+                                <a href="#contNotaFinal">contNotaFinal</a>
+                            </li>
+                            <li>
+                                <a href="#contNotaQuiz">contNotaQuiz</a>
+                            </li>
+                            <li>
+                                <a href="#contQuiz">contQuiz</a>
+                            </li>
+                            <li>
+                                <a href="#contTaller">contTaller</a>
+                            </li>
+                            <li>
+                                <a href="#divisorCont">divisorCont</a>
+                            </li>
+                            <li>
+                                <a href="#estuadianteVisualizar">estuadianteVisualizar</a>
+                            </li>
+                            <li>
+                                <a href="#estudiantes">estudiantes</a>
+                            </li>
+                            <li>
+                                <a href="#eventos">eventos</a>
+                            </li>
+                            <li>
+                                <a href="#grados">grados</a>
+                            </li>
+                            <li>
+                                <a href="#id_docenteAuth">id_docenteAuth</a>
+                            </li>
+                            <li>
+                                <a href="#materias">materias</a>
+                            </li>
+                            <li>
+                                <a href="#metrica">metrica</a>
+                            </li>
+                            <li>
+                                <a href="#metricas">metricas</a>
+                            </li>
+                            <li>
+                                <a href="#metricasActividad">metricasActividad</a>
+                            </li>
+                            <li>
+                                <a href="#metricasVisualizar">metricasVisualizar</a>
+                            </li>
+                            <li>
+                                <a href="#metricaToSave">metricaToSave</a>
+                            </li>
+                            <li>
+                                <a href="#metricaVisualizarToSave">metricaVisualizarToSave</a>
+                            </li>
+                            <li>
+                                <a href="#nombre_docenteAuth">nombre_docenteAuth</a>
+                            </li>
+                            <li>
+                                <a href="#notaA1">notaA1</a>
+                            </li>
+                            <li>
+                                <a href="#notaA2">notaA2</a>
+                            </li>
+                            <li>
+                                <a href="#notaA3">notaA3</a>
+                            </li>
+                            <li>
+                                <a href="#notaEA1">notaEA1</a>
+                            </li>
+                            <li>
+                                <a href="#notaEA2">notaEA2</a>
+                            </li>
+                            <li>
+                                <a href="#notaEA3">notaEA3</a>
+                            </li>
+                            <li>
+                                <a href="#options">options</a>
+                            </li>
+                            <li>
+                                <a href="#tipoContenidos">tipoContenidos</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#comprobacionLogin">comprobacionLogin</a>
+                            </li>
+                            <li>
+                                <a href="#getActividades">getActividades</a>
+                            </li>
+                            <li>
+                                <a href="#getActividadinModal">getActividadinModal</a>
+                            </li>
+                            <li>
+                                <a href="#getAvanceEstudianteModal">getAvanceEstudianteModal</a>
+                            </li>
+                            <li>
+                                <a href="#getOptions">getOptions</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnInit">ngOnInit</a>
+                            </li>
+                            <li>
+                                <a href="#reiniciarActividad">reiniciarActividad</a>
+                            </li>
+                            <li>
+                                <a href="#resetPage">resetPage</a>
+                            </li>
+                            <li>
+                                <a href="#saveDataActivity">saveDataActivity</a>
+                            </li>
+                            <li>
+                                <a href="#saveDataMetrica">saveDataMetrica</a>
+                            </li>
+                            <li>
+                                <a href="#saveDataMetricaVisualizar">saveDataMetricaVisualizar</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(AuthDService: <a href="../injectables/AuthDService.html">AuthDService</a>, ActividadService: <a href="../injectables/ActividadService.html">ActividadService</a>, router: <a href="https://angular.io/api/router/Router" target="_blank">Router</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="59" class="link-to-prism">src/app/components/metricas/metricas.component.ts:59</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>AuthDService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/AuthDService.html" target="_self" >AuthDService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>ActividadService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/ActividadService.html" target="_self" >ActividadService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>router</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="https://angular.io/api/router/Router" target="_blank" >Router</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+
+
+    <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="comprobacionLogin"></a>
+                    <span class="name">
+                        <b>
+                            comprobacionLogin
+                        </b>
+                        <a href="#comprobacionLogin"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>comprobacionLogin()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="401"
+                            class="link-to-prism">src/app/components/metricas/metricas.component.ts:401</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Permite comprobar que el administrador se encuentra logueado en el sistema al ingresar a la pagina</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getActividades"></a>
+                    <span class="name">
+                        <b>
+                            getActividades
+                        </b>
+                        <a href="#getActividades"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getActividades()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="117"
+                            class="link-to-prism">src/app/components/metricas/metricas.component.ts:117</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Permite obtener la informacion y listado de todas las Actividades</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getActividadinModal"></a>
+                    <span class="name">
+                        <b>
+                            getActividadinModal
+                        </b>
+                        <a href="#getActividadinModal"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getActividadinModal(actividad: <a href="../classes/ActividadI.html">ActividadI</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="187"
+                            class="link-to-prism">src/app/components/metricas/metricas.component.ts:187</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Permite imprimir la informacion de las metricas de la Actividad en el modal</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>actividad</td>
+                                    <td>
+                                                <code><a href="../classes/ActividadI.html" target="_self" >ActividadI</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getAvanceEstudianteModal"></a>
+                    <span class="name">
+                        <b>
+                            getAvanceEstudianteModal
+                        </b>
+                        <a href="#getAvanceEstudianteModal"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getAvanceEstudianteModal(metricaEstudiante)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="150"
+                            class="link-to-prism">src/app/components/metricas/metricas.component.ts:150</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Permite establecer el avance del estudiante en la actividad</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>metricaEstudiante</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getOptions"></a>
+                    <span class="name">
+                        <b>
+                            getOptions
+                        </b>
+                        <a href="#getOptions"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getOptions()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="102"
+                            class="link-to-prism">src/app/components/metricas/metricas.component.ts:102</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Permite obtener los datos de todos los options</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnInit"></a>
+                    <span class="name">
+                        <b>
+                            ngOnInit
+                        </b>
+                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnInit()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="63"
+                            class="link-to-prism">src/app/components/metricas/metricas.component.ts:63</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="reiniciarActividad"></a>
+                    <span class="name">
+                        <b>
+                            reiniciarActividad
+                        </b>
+                        <a href="#reiniciarActividad"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>reiniciarActividad()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="346"
+                            class="link-to-prism">src/app/components/metricas/metricas.component.ts:346</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Permite modificar el estado de los ultimos eventos para que no sean tomados encuenta para las metricas</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="resetPage"></a>
+                    <span class="name">
+                        <b>
+                            resetPage
+                        </b>
+                        <a href="#resetPage"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>resetPage()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="394"
+                            class="link-to-prism">src/app/components/metricas/metricas.component.ts:394</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Permite recargar la pagina actual</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="saveDataActivity"></a>
+                    <span class="name">
+                        <b>
+                            saveDataActivity
+                        </b>
+                        <a href="#saveDataActivity"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>saveDataActivity(actividadhtml)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="369"
+                            class="link-to-prism">src/app/components/metricas/metricas.component.ts:369</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Permite almacenar la informacion de una Actividad de forma temporal</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>actividadhtml</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="saveDataMetrica"></a>
+                    <span class="name">
+                        <b>
+                            saveDataMetrica
+                        </b>
+                        <a href="#saveDataMetrica"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>saveDataMetrica(metricahtml)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="377"
+                            class="link-to-prism">src/app/components/metricas/metricas.component.ts:377</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Permite almacenar la informacion de una Metrica de forma temporal</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>metricahtml</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="saveDataMetricaVisualizar"></a>
+                    <span class="name">
+                        <b>
+                            saveDataMetricaVisualizar
+                        </b>
+                        <a href="#saveDataMetricaVisualizar"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>saveDataMetricaVisualizar(metricavisualizarhtml)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="386"
+                            class="link-to-prism">src/app/components/metricas/metricas.component.ts:386</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Permite almacenar la informacion de una metricaVisualizar de forma temporal</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>metricavisualizarhtml</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section>
+    
+        <h3 id="inputs">
+            Properties
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="actividades"></a>
+                        <span class="name">
+                            <b>
+                            actividades</b>
+                            <a href="#actividades"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="../classes/ActividadI.html" target="_self" >ActividadI[]</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="29" class="link-to-prism">src/app/components/metricas/metricas.component.ts:29</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="actividadToSave"></a>
+                        <span class="name">
+                            <b>
+                            actividadToSave</b>
+                            <a href="#actividadToSave"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="../classes/ActividadI.html" target="_self" >ActividadI</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="41" class="link-to-prism">src/app/components/metricas/metricas.component.ts:41</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="actividadVisualizar"></a>
+                        <span class="name">
+                            <b>
+                            actividadVisualizar</b>
+                            <a href="#actividadVisualizar"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="../interfaces/ActividadVisualizaI.html" target="_self" >ActividadVisualizaI[]</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="39" class="link-to-prism">src/app/components/metricas/metricas.component.ts:39</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="bar100"></a>
+                        <span class="name">
+                            <b>
+                            bar100</b>
+                            <a href="#bar100"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="59" class="link-to-prism">src/app/components/metricas/metricas.component.ts:59</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="bar20"></a>
+                        <span class="name">
+                            <b>
+                            bar20</b>
+                            <a href="#bar20"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="59" class="link-to-prism">src/app/components/metricas/metricas.component.ts:59</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="bar40"></a>
+                        <span class="name">
+                            <b>
+                            bar40</b>
+                            <a href="#bar40"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="59" class="link-to-prism">src/app/components/metricas/metricas.component.ts:59</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="bar60"></a>
+                        <span class="name">
+                            <b>
+                            bar60</b>
+                            <a href="#bar60"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="59" class="link-to-prism">src/app/components/metricas/metricas.component.ts:59</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="bar80"></a>
+                        <span class="name">
+                            <b>
+                            bar80</b>
+                            <a href="#bar80"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="59" class="link-to-prism">src/app/components/metricas/metricas.component.ts:59</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="competencias"></a>
+                        <span class="name">
+                            <b>
+                            competencias</b>
+                            <a href="#competencias"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="../classes/CompetenciaI.html" target="_self" >CompetenciaI[]</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="37" class="link-to-prism">src/app/components/metricas/metricas.component.ts:37</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="contContenido"></a>
+                        <span class="name">
+                            <b>
+                            contContenido</b>
+                            <a href="#contContenido"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="50" class="link-to-prism">src/app/components/metricas/metricas.component.ts:50</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="contEvaluacion"></a>
+                        <span class="name">
+                            <b>
+                            contEvaluacion</b>
+                            <a href="#contEvaluacion"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="53" class="link-to-prism">src/app/components/metricas/metricas.component.ts:53</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="contInicio"></a>
+                        <span class="name">
+                            <b>
+                            contInicio</b>
+                            <a href="#contInicio"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="49" class="link-to-prism">src/app/components/metricas/metricas.component.ts:49</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="contNotaEvaluacion"></a>
+                        <span class="name">
+                            <b>
+                            contNotaEvaluacion</b>
+                            <a href="#contNotaEvaluacion"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="55" class="link-to-prism">src/app/components/metricas/metricas.component.ts:55</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="contNotaFinal"></a>
+                        <span class="name">
+                            <b>
+                            contNotaFinal</b>
+                            <a href="#contNotaFinal"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="56" class="link-to-prism">src/app/components/metricas/metricas.component.ts:56</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="contNotaQuiz"></a>
+                        <span class="name">
+                            <b>
+                            contNotaQuiz</b>
+                            <a href="#contNotaQuiz"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="54" class="link-to-prism">src/app/components/metricas/metricas.component.ts:54</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="contQuiz"></a>
+                        <span class="name">
+                            <b>
+                            contQuiz</b>
+                            <a href="#contQuiz"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="51" class="link-to-prism">src/app/components/metricas/metricas.component.ts:51</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="contTaller"></a>
+                        <span class="name">
+                            <b>
+                            contTaller</b>
+                            <a href="#contTaller"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="52" class="link-to-prism">src/app/components/metricas/metricas.component.ts:52</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="divisorCont"></a>
+                        <span class="name">
+                            <b>
+                            divisorCont</b>
+                            <a href="#divisorCont"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="57" class="link-to-prism">src/app/components/metricas/metricas.component.ts:57</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="estuadianteVisualizar"></a>
+                        <span class="name">
+                            <b>
+                            estuadianteVisualizar</b>
+                            <a href="#estuadianteVisualizar"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="../interfaces/EstuadianteVisualizarI.html" target="_self" >EstuadianteVisualizarI[]</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="40" class="link-to-prism">src/app/components/metricas/metricas.component.ts:40</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="estudiantes"></a>
+                        <span class="name">
+                            <b>
+                            estudiantes</b>
+                            <a href="#estudiantes"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="../classes/EstuadianteI.html" target="_self" >EstuadianteI[]</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="30" class="link-to-prism">src/app/components/metricas/metricas.component.ts:30</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="eventos"></a>
+                        <span class="name">
+                            <b>
+                            eventos</b>
+                            <a href="#eventos"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="../interfaces/EventoI.html" target="_self" >EventoI[]</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="33" class="link-to-prism">src/app/components/metricas/metricas.component.ts:33</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="grados"></a>
+                        <span class="name">
+                            <b>
+                            grados</b>
+                            <a href="#grados"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="../classes/GradoI.html" target="_self" >GradoI[]</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="32" class="link-to-prism">src/app/components/metricas/metricas.component.ts:32</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="id_docenteAuth"></a>
+                        <span class="name">
+                            <b>
+                            id_docenteAuth</b>
+                            <a href="#id_docenteAuth"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="47" class="link-to-prism">src/app/components/metricas/metricas.component.ts:47</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="materias"></a>
+                        <span class="name">
+                            <b>
+                            materias</b>
+                            <a href="#materias"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="../classes/MateriaI.html" target="_self" >MateriaI[]</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="31" class="link-to-prism">src/app/components/metricas/metricas.component.ts:31</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="metrica"></a>
+                        <span class="name">
+                            <b>
+                            metrica</b>
+                            <a href="#metrica"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="../classes/MetricaI.html" target="_self" >MetricaI</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="35" class="link-to-prism">src/app/components/metricas/metricas.component.ts:35</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="metricas"></a>
+                        <span class="name">
+                            <b>
+                            metricas</b>
+                            <a href="#metricas"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="../classes/MetricaI.html" target="_self" >MetricaI[]</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="34" class="link-to-prism">src/app/components/metricas/metricas.component.ts:34</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="metricasActividad"></a>
+                        <span class="name">
+                            <b>
+                            metricasActividad</b>
+                            <a href="#metricasActividad"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="../classes/MetricaActividadI.html" target="_self" >MetricaActividadI</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="44" class="link-to-prism">src/app/components/metricas/metricas.component.ts:44</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="metricasVisualizar"></a>
+                        <span class="name">
+                            <b>
+                            metricasVisualizar</b>
+                            <a href="#metricasVisualizar"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="../classes/MetricaVisualizarI.html" target="_self" >MetricaVisualizarI[]</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="36" class="link-to-prism">src/app/components/metricas/metricas.component.ts:36</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="metricaToSave"></a>
+                        <span class="name">
+                            <b>
+                            metricaToSave</b>
+                            <a href="#metricaToSave"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="../classes/MetricaI.html" target="_self" >MetricaI</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="42" class="link-to-prism">src/app/components/metricas/metricas.component.ts:42</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="metricaVisualizarToSave"></a>
+                        <span class="name">
+                            <b>
+                            metricaVisualizarToSave</b>
+                            <a href="#metricaVisualizarToSave"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="../classes/MetricaVisualizarI.html" target="_self" >MetricaVisualizarI</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="43" class="link-to-prism">src/app/components/metricas/metricas.component.ts:43</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="nombre_docenteAuth"></a>
+                        <span class="name">
+                            <b>
+                            nombre_docenteAuth</b>
+                            <a href="#nombre_docenteAuth"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="48" class="link-to-prism">src/app/components/metricas/metricas.component.ts:48</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="notaA1"></a>
+                        <span class="name">
+                            <b>
+                            notaA1</b>
+                            <a href="#notaA1"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="58" class="link-to-prism">src/app/components/metricas/metricas.component.ts:58</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="notaA2"></a>
+                        <span class="name">
+                            <b>
+                            notaA2</b>
+                            <a href="#notaA2"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="58" class="link-to-prism">src/app/components/metricas/metricas.component.ts:58</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="notaA3"></a>
+                        <span class="name">
+                            <b>
+                            notaA3</b>
+                            <a href="#notaA3"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="58" class="link-to-prism">src/app/components/metricas/metricas.component.ts:58</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="notaEA1"></a>
+                        <span class="name">
+                            <b>
+                            notaEA1</b>
+                            <a href="#notaEA1"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="58" class="link-to-prism">src/app/components/metricas/metricas.component.ts:58</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="notaEA2"></a>
+                        <span class="name">
+                            <b>
+                            notaEA2</b>
+                            <a href="#notaEA2"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="58" class="link-to-prism">src/app/components/metricas/metricas.component.ts:58</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="notaEA3"></a>
+                        <span class="name">
+                            <b>
+                            notaEA3</b>
+                            <a href="#notaEA3"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="58" class="link-to-prism">src/app/components/metricas/metricas.component.ts:58</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="options"></a>
+                        <span class="name">
+                            <b>
+                            options</b>
+                            <a href="#options"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="45" class="link-to-prism">src/app/components/metricas/metricas.component.ts:45</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="tipoContenidos"></a>
+                        <span class="name">
+                            <b>
+                            tipoContenidos</b>
+                            <a href="#tipoContenidos"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="../interfaces/TipoContenidoI.html" target="_self" >TipoContenidoI[]</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="38" class="link-to-prism">src/app/components/metricas/metricas.component.ts:38</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { AuthDService } from &#x27;../../services/auth-d.service&#x27;;
+import { ActividadService } from &#x27;../../services/actividad.service&#x27;;
+import { ActividadI } from &#x27;../../models/actividad&#x27;;
+import { ActividadVisualizaI } from &#x27;../../models/actividadVisualizar&#x27;;
+import { EstuadianteI } from &#x27;../../models/estudiante&#x27;;
+import { EstuadianteVisualizarI } from &#x27;../../models/estudianteVisualizar&#x27;;
+import { CompetenciaI } from &#x27;../../models/competencia&#x27;;
+import { MateriaI } from &#x27;../../models/materia&#x27;;
+import { TipoContenidoI } from &#x27;../../models/tipoContenido&#x27;;
+import { GradoI } from &#x27;../../models/grado&#x27;;
+import { EventoI } from &#x27;../../models/evento&#x27;;
+import { MetricaI } from &#x27;../../models/metrica&#x27;;
+import { MetricaVisualizarI } from &#x27;../../models/metricaVisualizar&#x27;;
+import { MetricaActividadI } from &#x27;../../models/metricaActividad&#x27;;
+import { Router } from &#x27;@angular/router&#x27;;
+import { Component, OnInit } from &#x27;@angular/core&#x27;;
+
+/**
+* Contiene todos los metodos necesarios para el analisis de eventos y presentacion de metricas de actvidades y estudiantes.
+*/
+
+@Component({
+  selector: &#x27;app-metricas&#x27;,
+  templateUrl: &#x27;./metricas.component.html&#x27;,
+  styleUrls: [&#x27;./metricas.component.css&#x27;]
+})
+export class MetricasComponent implements OnInit {
+
+  actividades:ActividadI[];
+  estudiantes:EstuadianteI[];
+  materias:MateriaI[];
+  grados:GradoI[];
+  eventos:EventoI[];
+  metricas:MetricaI[];
+  metrica:MetricaI;
+  metricasVisualizar:MetricaVisualizarI[];
+  competencias:CompetenciaI[];
+  tipoContenidos:TipoContenidoI[];
+  actividadVisualizar:ActividadVisualizaI[];
+  estuadianteVisualizar:EstuadianteVisualizarI[];
+  actividadToSave:ActividadI;
+  metricaToSave:MetricaI;
+  metricaVisualizarToSave:MetricaVisualizarI;
+  metricasActividad:MetricaActividadI;
+  options:any;
+
+  id_docenteAuth:number;
+  nombre_docenteAuth:string;
+  contInicio:number;
+  contContenido:number;
+  contQuiz:number;
+  contTaller:number;
+  contEvaluacion:number;
+  contNotaQuiz:number;
+  contNotaEvaluacion:number;
+  contNotaFinal:number;
+  divisorCont:number;
+  notaA1:number; notaA2:number; notaA3:number; notaEA1:number; notaEA2:number; notaEA3:number;
+  bar20:boolean; bar40:boolean; bar60:boolean; bar80:boolean; bar100:boolean; 
+
+  constructor(private AuthDService: AuthDService, private ActividadService: ActividadService, private router: Router) { }
+
+  ngOnInit() {
+    window.scrollTo(0, 0);
+    this.comprobacionLogin();
+    this.id_docenteAuth &#x3D; this.AuthDService.getIdDocente();
+    this.nombre_docenteAuth &#x3D; this.AuthDService.getnombreApellidoDocente();
+
+    this.bar20 &#x3D; false;
+    this.bar40 &#x3D; false;
+    this.bar60 &#x3D; false;
+    this.bar80 &#x3D; false;
+    this.bar100 &#x3D; false;
+
+    this.contInicio &#x3D; 0;
+    this.contContenido &#x3D; 0;
+    this.contQuiz &#x3D; 0;
+    this.contTaller &#x3D; 0;
+    this.contEvaluacion &#x3D; 0;
+    this.contNotaQuiz &#x3D; 0;
+    this.contNotaEvaluacion &#x3D; 0;
+    this.contNotaFinal &#x3D; 0;
+
+    
+    this.metricasActividad &#x3D; {id_metrica:0, id_actividad:0, nota_quiz:0, nota_evaluacion:0, 
+                              nota_final:0, inicio:0, contenido:0, quiz:0, taller:0, evaluacion:0};
+    this.options &#x3D; [
+      {valor:1, opcion:&quot;SI vieron el Contenido&quot;},     {valor:5, opcion:&quot;NO vieron el Contenido&quot;},
+      {valor:2, opcion:&quot;SI hicieron el Quiz&quot;},        {valor:6, opcion:&quot;NO hicieron el Quiz&quot;},
+      {valor:3, opcion:&quot;SI hicieron el Taller&quot;},      {valor:7, opcion:&quot;NO hicieron el Taller&quot;},
+      {valor:4, opcion:&quot;SI hicieron la Evaluacion&quot;},  {valor:8, opcion:&quot;NO hicieron la Evaluacion&quot;}
+    ];
+    this.metricaVisualizarToSave &#x3D; new MetricaVisualizarI;
+
+    this.getOptions();
+    this.getActividades();
+  }
+
+  /**
+  * Permite obtener los datos de todos los options
+  */
+  getOptions(){
+    this.AuthDService.allSubject().subscribe(res &#x3D;&gt;{
+      this.materias &#x3D; res as MateriaI[];
+    });
+    this.AuthDService.allGrade().subscribe(res &#x3D;&gt;{
+      this.grados &#x3D; res as GradoI[];
+    });
+    this.ActividadService.allCompetencias().subscribe(res &#x3D;&gt;{
+      this.competencias &#x3D; res as CompetenciaI[];
+    });
+  }
+
+  /**
+  * Permite obtener la informacion y listado de todas las Actividades
+  */
+  getActividades() {
+    this.ActividadService.allCompetencias().subscribe(res &#x3D;&gt; {
+      this.competencias &#x3D; res as CompetenciaI[];
+
+      this.ActividadService.allActivities().subscribe(res &#x3D;&gt; {
+        //console.log(res);
+        this.ActividadService.actividades &#x3D; res as ActividadI[];
+        this.actividadVisualizar &#x3D; res as ActividadVisualizaI[];
+        //console.log(this.ActividadService.actividades.length);
+
+        for (let i &#x3D; 0; i &lt; this.ActividadService.actividades.length; i++) {
+          if (this.ActividadService.actividades[i].id_docente &#x3D;&#x3D; this.id_docenteAuth) {
+            for (let n &#x3D; 0; n &lt; this.competencias.length; n++) {
+              if (this.ActividadService.actividades[i].id_competencia &#x3D;&#x3D; this.competencias[n].id_competencia) {
+                this.actividadVisualizar[i].competencia &#x3D; this.competencias[n].nombre_competencia;
+              }
+            }
+            for (let p &#x3D; 0; p &lt; this.materias.length; p++) {
+              if (this.ActividadService.actividades[i].id_materia &#x3D;&#x3D; this.materias[p].id_materia) {
+                this.actividadVisualizar[i].materia &#x3D; this.materias[p].nombre_materia;
+              }
+            }
+            this.actividadVisualizar[i].docente &#x3D; this.nombre_docenteAuth;
+          }
+        }
+        //console.log(&quot;actividades visualizar:&quot;, this.actividadVisualizar)
+      });
+    });
+  }
+
+  /**
+  * Permite establecer el avance del estudiante en la actividad
+  */
+  getAvanceEstudianteModal(metricaEstudiante){
+    this.saveDataMetricaVisualizar(metricaEstudiante);
+
+    this.bar20 &#x3D; false;
+    this.bar40 &#x3D; false;
+    this.bar60 &#x3D; false;
+    this.bar80 &#x3D; false;
+    this.bar100 &#x3D; false;
+
+    if(metricaEstudiante.check_inicio &#x3D;&#x3D; 1){
+      if(metricaEstudiante.check_contenido &#x3D;&#x3D; 1){
+        if(metricaEstudiante.check_quiz &#x3D;&#x3D; 1){
+          if(metricaEstudiante.check_taller &#x3D;&#x3D; 1){
+            if(metricaEstudiante.check_evaluacion &#x3D;&#x3D; 1){
+              this.bar100 &#x3D; true;
+            }
+            else{
+              this.bar80 &#x3D; true;
+            }
+          }
+          else{
+            this.bar60 &#x3D; true;
+          }
+        }
+        else{
+          this.bar40 &#x3D; true;
+        }
+      }
+      else{
+        this.bar20 &#x3D; true;
+      }
+    }
+  }
+
+  /**
+  * Permite imprimir la informacion de las metricas de la Actividad en el modal
+  */
+  getActividadinModal(actividad: ActividadI) {
+    this.ActividadService.selectedActividad &#x3D; actividad;
+    this.saveDataActivity(actividad);
+    this.metricasActividad &#x3D; new MetricaActividadI; 
+
+    this.metricas &#x3D; new Array;
+    this.metricasVisualizar &#x3D; new Array;
+
+    this.contInicio &#x3D; 0;
+    this.contContenido &#x3D; 0;
+    this.contQuiz &#x3D; 0;
+    this.contTaller &#x3D; 0;
+    this.contEvaluacion &#x3D; 0;
+    this.contNotaQuiz &#x3D; 0;
+    this.contNotaEvaluacion &#x3D; 0;
+    this.contNotaFinal &#x3D; 0;
+    this.divisorCont &#x3D; 0;
+
+    this.metricasActividad.id_metrica &#x3D; this.actividadToSave.id_actividad;
+    this.metricasActividad.id_actividad &#x3D; this.actividadToSave.id_actividad;
+
+    this.AuthDService.loadAllEstudiantes().subscribe(res &#x3D;&gt; {
+      this.estudiantes &#x3D; res as EstuadianteI[];
+
+      this.AuthDService.loadAllEvento().subscribe(res &#x3D;&gt;{
+        this.eventos &#x3D; res as EventoI[];
+        
+        if(this.eventos.length){
+          for(let n&#x3D;0; n &lt; this.eventos.length; n++){
+
+            if(this.eventos[n].oculto !&#x3D; 1){
+              if(this.eventos[n].id_actividad &#x3D;&#x3D; this.actividadToSave.id_actividad){
+                this.divisorCont &#x3D; this.divisorCont + 1;
+  
+                var check_evaluacionTemp &#x3D; 0;
+  
+                //Consultar si el estudiante hizo la evaluacion
+                if(this.eventos[n].check_Ea1 &amp;&amp; 0 &lt; this.eventos[n].check_Ea1){
+                  check_evaluacionTemp &#x3D; 1;
+                }
+                else{
+                  check_evaluacionTemp &#x3D; 0;
+                }
+                
+                //contadores
+                this.contInicio &#x3D; this.contInicio + this.eventos[n].check_inicio;
+                this.contContenido &#x3D; this.contContenido + this.eventos[n].check_video;
+                this.contQuiz &#x3D; this.contQuiz + this.eventos[n].check_answer;
+                this.contTaller &#x3D; this.contTaller + this.eventos[n].check_download;
+                if(this.eventos[n].check_Ea1 &amp;&amp; 0 &lt; this.eventos[n].check_Ea1){
+                  this.contEvaluacion &#x3D; this.contEvaluacion + 1; 
+                }
+  
+                this.notaA1 &#x3D; 0; this.notaA2 &#x3D; 0; this.notaA3 &#x3D; 0; this.notaEA1 &#x3D; 0; this.notaEA2 &#x3D; 0; this.notaEA3 &#x3D; 0;
+    
+                //Evaluar respuestas del evento
+                if(this.eventos[n].check_a1 &#x3D;&#x3D; this.actividadToSave.CA1){
+                  this.notaA1 &#x3D; 5;
+                }
+                if(this.eventos[n].check_a2 &#x3D;&#x3D; this.actividadToSave.CA2){
+                  this.notaA2 &#x3D; 5;
+                }
+                if(this.eventos[n].check_a3 &#x3D;&#x3D; this.actividadToSave.CA3){
+                  this.notaA3 &#x3D; 5;
+                }
+                if(this.eventos[n].check_Ea1 &#x3D;&#x3D; this.actividadToSave.ECA1){
+                  this.notaEA1 &#x3D; 5;
+                }
+                if(this.eventos[n].check_Ea2 &#x3D;&#x3D; this.actividadToSave.ECA2){
+                  this.notaEA2 &#x3D; 5;
+                }
+                if(this.eventos[n].check_Ea3 &#x3D;&#x3D; this.actividadToSave.ECA3){
+                  this.notaEA3 &#x3D; 5;
+                }
+    
+                var nota_quizTemp &#x3D; parseFloat(((this.notaA1 + this.notaA2 + this.notaA3)/3).toFixed(2));
+                var nota_evaluacionTemp &#x3D; parseFloat(((this.notaEA1 + this.notaEA2 + this.notaEA3)/3).toFixed(2));
+                var nota_finalTemp &#x3D; parseFloat(((nota_quizTemp + nota_evaluacionTemp)/2).toFixed(2)); 
+    
+                this.contNotaQuiz &#x3D; this.contNotaQuiz + nota_quizTemp;
+                this.contNotaEvaluacion &#x3D; this.contNotaEvaluacion + nota_evaluacionTemp;
+                this.contNotaFinal &#x3D; this.contNotaFinal + nota_finalTemp;
+  
+                //pasar datos del evento a metricas
+                this.metricas.push({id_metrica:this.eventos[n].id_evento, id_evento:this.eventos[n].id_evento, 
+                    id_actividad:this.actividadToSave.id_actividad, id_estudiante:this.eventos[n].id_estudiante, 
+                    check_inicio:this.eventos[n].check_inicio, check_contenido: this.eventos[n].check_video,count_contenido: this.eventos[n].count_video,
+                    check_quiz:this.eventos[n].check_answer, check_evaluacion:check_evaluacionTemp, check_taller: this.eventos[n].check_download,
+                    nota_quiz:nota_quizTemp, nota_evaluacion:nota_evaluacionTemp, nota_final:nota_finalTemp});
+              }
+            }
+          }
+
+          if(this.divisorCont &#x3D;&#x3D; 0){
+            this.divisorCont &#x3D; 1;
+          }
+  
+          //Ingresar datos de los contadores a la Metricas de la Actividade
+          this.metricasActividad.nota_quiz &#x3D; parseFloat((this.contNotaQuiz/this.divisorCont).toFixed(2));
+          this.metricasActividad.nota_evaluacion &#x3D; parseFloat((this.contNotaEvaluacion/this.divisorCont).toFixed(2));
+          this.metricasActividad.nota_final &#x3D; parseFloat((this.contNotaFinal/this.divisorCont).toFixed(2));
+          this.metricasActividad.inicio &#x3D; this.contInicio;
+          this.metricasActividad.contenido &#x3D; this.contContenido;
+          this.metricasActividad.quiz &#x3D; this.contQuiz;
+          this.metricasActividad.taller &#x3D; this.contTaller;
+          this.metricasActividad.evaluacion &#x3D; this.contEvaluacion;
+  
+          //console.log(&#x27;metricasActividad&#x27;, this.metricasActividad);
+          //console.log(&#x27;metricas&#x27;, this.metricas);
+
+          //Creacion Metricas para Visualizar
+          for(let y&#x3D;0; y &lt; this.metricas.length; y++){
+
+            var nombre_estudianteTemp &#x3D; &quot;&quot;;
+            for (let m&#x3D;0; m &lt; this.estudiantes.length; m++) {
+              if (this.metricas[y].id_estudiante &#x3D;&#x3D; this.estudiantes[m].id_estudiante) {
+                nombre_estudianteTemp &#x3D; this.estudiantes[m].nombre_estudiante + &quot; &quot; + this.estudiantes[m].apellido_estudiante;
+              }
+            }
+
+            var accionInicio &#x3D; &quot;No&quot;;
+            var accionContenido &#x3D; &quot;No&quot;;
+            var accionTaller &#x3D; &quot;No&quot;;
+            var accionQuiz &#x3D; &quot;No&quot;;
+            var accionEvaluacion &#x3D; &quot;No&quot;
+
+            if (this.metricas[y].check_inicio &#x3D;&#x3D; 1) {
+              accionInicio &#x3D; &quot;Si&quot;;
+            }
+            if (this.metricas[y].check_contenido &#x3D;&#x3D; 1) {
+              accionContenido &#x3D; &quot;Si&quot;;
+            }
+            if (this.metricas[y].check_quiz &#x3D;&#x3D; 1) {
+              accionQuiz &#x3D; &quot;Si&quot;;
+            }
+            if (this.metricas[y].check_taller &#x3D;&#x3D; 1) {
+              accionTaller &#x3D; &quot;Si&quot;;
+            }
+            if (this.metricas[y].check_evaluacion &#x3D;&#x3D; 1) {
+              accionEvaluacion &#x3D; &quot;Si&quot;;
+            }
+
+            this.metricasVisualizar.push({id_metrica:this.metricas[y].id_evento, id_evento:this.metricas[y].id_evento, 
+                id_actividad:this.metricas[y].id_actividad, id_estudiante:this.metricas[y].id_estudiante, 
+                check_inicio:this.metricas[y].check_inicio, check_contenido: this.metricas[y].check_contenido, count_contenido:this.metricas[y].count_contenido,
+                check_quiz:this.metricas[y].check_quiz, check_evaluacion:this.metricas[y].check_evaluacion, check_taller: this.metricas[y].check_taller,
+                nota_quiz:this.metricas[y].nota_quiz, nota_evaluacion:this.metricas[y].nota_evaluacion, nota_final:this.metricas[y].nota_final, actividad: this.actividadToSave.titulo_actividad,
+                estudiante:nombre_estudianteTemp, inicio:accionInicio, contenido:accionContenido, quiz:accionQuiz, taller:accionTaller, evaluacion:accionEvaluacion});
+          
+          }
+          //console.log(&#x27;metricasVisualizar&#x27;, this.metricasVisualizar);
+        }
+      });
+    });
+  }
+
+  /**
+  * Permite modificar el estado de los ultimos eventos para que no sean tomados encuenta para las metricas
+  */
+  reiniciarActividad(){
+    this.AuthDService.loadAllEvento().subscribe(res &#x3D;&gt; {
+      this.eventos &#x3D; res as EventoI[];
+      if (this.eventos.length) {
+        for (let w &#x3D; 0; w &lt; this.eventos.length; w++) {
+          if (this.eventos[w].id_actividad &#x3D;&#x3D; this.actividadToSave.id_actividad) {
+            const infoEvento &#x3D; {
+              id_evento: this.eventos[w].id_evento,
+              oculto: 1
+            }
+            this.AuthDService.uploadEstadoEvento(infoEvento).subscribe(res &#x3D;&gt;{
+              //console.log(&#x27;respuesta&#x27;,res);
+            });
+          }
+        }
+        //this.resetPage();
+      }
+    });
+  }
+
+  /**
+  * Permite almacenar la informacion de una Actividad de forma temporal
+  */
+  saveDataActivity(actividadhtml){
+    this.actividadToSave &#x3D; actividadhtml;
+    //console.log(&quot;actividad guardada:&quot;, this.actividadToSave);
+  }
+
+  /**
+  * Permite almacenar la informacion de una Metrica de forma temporal
+  */
+  saveDataMetrica(metricahtml){
+    this.metricaToSave &#x3D; metricahtml;
+    //console.log(&quot;actividad guardada:&quot;, this.actividadToSave);
+  }
+
+  /**
+  * Permite almacenar la informacion de una metricaVisualizar de forma temporal
+  */
+  //Almacenar info temporal de una Actividad
+  saveDataMetricaVisualizar(metricavisualizarhtml){
+    this.metricaVisualizarToSave &#x3D; metricavisualizarhtml;
+    //console.log(&quot;actividad guardada:&quot;, this.actividadToSave);
+  }
+
+  /**
+  * Permite recargar la pagina actual
+  */
+  resetPage(){
+    window.location.reload();
+  }
+
+  /**
+  * Permite comprobar que el administrador se encuentra logueado en el sistema al ingresar a la pagina
+  */
+  comprobacionLogin(){
+    if (this.AuthDService.getIdDocente()){
+      return true;
+    } else {
+      this.router.navigate([&#x27;/login&#x27;]);
+      return false;
+    }
+  }
+
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;app-header&gt;&lt;/app-header&gt;
+
+&lt;!--Contenedor Contenido Pagina--&gt;
+&lt;div class&#x3D;&quot;mb-5 container py-3&quot;&gt;
+
+    &lt;!-- Metricas --&gt;
+    &lt;div class&#x3D;&quot;container m-auto pb-2 bg-success rounded-top&quot;&gt;
+        &lt;h1 style&#x3D;&quot;cursor:context-menu&quot; class&#x3D;&quot;mt-5 pt-4 text-center&quot;&gt;Metricas&lt;/h1&gt;
+    &lt;/div&gt;
+    &lt;!--Contenedor busqueda--&gt;
+    &lt;div class&#x3D;&quot;container pt-1 bg-secondary rounded-bottom&quot;&gt;
+        &lt;div&gt;
+            &lt;div class&#x3D;&quot;contenedor py-3&quot;&gt;
+                &lt;form&gt;
+                    &lt;div class&#x3D;&quot;tab-pane fade show active&quot; id&#x3D;&quot;nav-Pregunta1ACT&quot; role&#x3D;&quot;tabpanel&quot; aria-labelledby&#x3D;&quot;nav-Pregunta1ACT-tab&quot;&gt;
+                        &lt;div class&#x3D;&quot;form-group&quot;&gt;
+                            &lt;h4 style&#x3D;&quot;cursor:context-menu&quot; class&#x3D;&quot;pb-1 pt-3 text-center text-white font-weight-bold&quot;&gt;Buscar Actividades&lt;/h4&gt;
+                            &lt;!--Buscar Actividad--&gt;
+                            &lt;div&gt;
+                                &lt;div class&#x3D;&quot;contenedor py-3&quot;&gt;
+                                    &lt;form #frmBuscarActividad&#x3D;&quot;ngForm&quot; (ngSubmit)&#x3D;&quot;saveDataActividad(frmBuscarActvidad)&quot;&gt;
+                                        &lt;div class&#x3D;&quot;form-group&quot;&gt;
+                                            &lt;!--Barra busqueda--&gt;
+                                            &lt;br&gt;
+                                            &lt;div class&#x3D;&quot;form-inline&quot;&gt;
+                                                &lt;input type&#x3D;&quot;text&quot; class&#x3D;&quot;form-control col-md-8&quot; id&#x3D;&quot;inputTextoBusquedaActividad&quot;
+                                                    placeholder&#x3D;&quot;Busqueda por nombre de la Actividad&quot; [(ngModel)]&#x3D;&quot;nombreActividadSelected&quot;
+                                                    name&#x3D;&quot;nombreActividadSelected&quot;&gt;
+                                            &lt;/div&gt;
+                                        &lt;/div&gt;
+                                        &lt;label for&#x3D;&quot;inputState&quot; class&#x3D;&quot;text-white&quot;&gt;Filtros:&lt;/label&gt;
+                                        &lt;div class&#x3D;&quot;form-row pb-3&quot;&gt;
+                                            &lt;!--Filtros--&gt;
+                                            &lt;div class&#x3D;&quot;form-group col-3&quot;&gt;
+                                                &lt;label for&#x3D;&quot;inputMateriaA&quot; class&#x3D;&quot;text-white&quot;&gt;Materia&lt;/label&gt;
+                                                &lt;select [(ngModel)]&#x3D;&quot;materiaSelectedA&quot; id&#x3D;&quot;inputMateriaA&quot; name&#x3D;&quot;materiaA&quot;
+                                                    class&#x3D;&quot;form-control&quot; ngModel required&gt;
+                                                    &lt;option selected&gt;&lt;/option&gt;
+                                                    &lt;option *ngFor&#x3D;&quot;let mater of materias&quot; [value]&#x3D;&quot;mater.id_materia&quot;&gt;
+                                                        {{mater.nombre_materia}}&lt;/option&gt;
+                                                &lt;/select&gt;
+                                            &lt;/div&gt;
+                                            &lt;div class&#x3D;&quot;form-group col-3&quot;&gt;
+                                                &lt;label for&#x3D;&quot;inputGradoA&quot; class&#x3D;&quot;text-white&quot;&gt;Grado&lt;/label&gt;
+                                                &lt;select [(ngModel)]&#x3D;&quot;gradoSelectedA&quot; id&#x3D;&quot;inputGradoA&quot; name&#x3D;&quot;gradoA&quot; class&#x3D;&quot;form-control&quot;
+                                                    ngModel required&gt;
+                                                    &lt;option selected&gt;&lt;/option&gt;
+                                                    &lt;option *ngFor&#x3D;&quot;let grad of grados&quot; [value]&#x3D;&quot;grad.id_grado&quot;&gt;{{grad.nombre_grado}}
+                                                    &lt;/option&gt;
+                                                &lt;/select&gt;
+                                            &lt;/div&gt;
+                                        &lt;/div&gt;
+                                        &lt;!--Filtro Competencia--&gt;
+                                        &lt;div class&#x3D;&quot;form-group col px-0&quot;&gt;
+                                            &lt;label for&#x3D;&quot;inputDocenteA&quot; class&#x3D;&quot;text-white&quot;&gt;Buscador Competencia&lt;/label&gt;
+                                            &lt;input type&#x3D;&quot;text&quot; class&#x3D;&quot;form-control col-5&quot; id&#x3D;&quot;inputTextoBusquedaCompetencia&quot; placeholder&#x3D;&quot;Ingrese palabra clave&quot; [(ngModel)]&#x3D;&quot;nombreCompetenciaSelected&quot;
+                                                name&#x3D;&quot;inputBusquedaCompetencia&quot;&gt;
+                                        &lt;/div&gt;
+                                        &lt;div class&#x3D;&quot;form-row pb-3&quot;&gt;
+                                            &lt;div class&#x3D;&quot;form-group col&quot;&gt;
+                                                &lt;label for&#x3D;&quot;inputDocenteA&quot; class&#x3D;&quot;text-white&quot;&gt;Competencia&lt;/label&gt;
+                                                &lt;select [(ngModel)]&#x3D;&quot;competenciaSelectedA&quot; id&#x3D;&quot;inputCompetenciaA&quot; name&#x3D;&quot;competenciaA&quot; class&#x3D;&quot;form-control&quot; onfocus&#x3D;&#x27;if(this.options.length &gt; 2){ this.size &#x3D; 8; }&#x27; onblur&#x3D;&#x27;this.size&#x3D;1;&#x27; onchange&#x3D;&#x27;this.size&#x3D;1; this.blur();&#x27;ngModel required&gt;
+                                                    &lt;option class&#x3D;&quot;col-auto px-0&quot; selected&gt;&lt;/option&gt;
+                                                    &lt;option class&#x3D;&quot;col-auto px-0&quot; selected [value]&#x3D;0&gt;Sin Competencia&lt;/option&gt;
+                                                    &lt;option class&#x3D;&quot;col-auto px-0&quot; *ngFor&#x3D;&quot;let compe of competencias | filterCompetencia: nombreCompetenciaSelected:materiaSelectedA:gradoSelectedA&quot;
+                                                        [value]&#x3D;&quot;compe.id_competencia&quot;&gt;{{(compe.nombre_competencia)}}
+                                                    &lt;/option&gt;
+                                                &lt;/select&gt;
+                                                &lt;!--el valor seleccionado es {{competenciaSelectedA}}--&gt;
+                                            &lt;/div&gt;
+                                        &lt;/div&gt;
+                                        &lt;!--Tabla de Resultados--&gt;
+                                        &lt;label for&#x3D;&quot;inputState&quot; class&#x3D;&quot;text-white&quot;&gt;Resultados:&lt;/label&gt;
+                                        &lt;div class&#x3D;&quot;col container p-4 my bg-light rounded table-wrapper-scroll-y my-custom-scrollbar&quot;
+                                            style&#x3D;&quot;width: 95%; height: 450px&quot;&gt;
+                                            &lt;!--Resultado--&gt;
+                                            &lt;div class&#x3D;&quot;row-1&quot;
+                                                *ngFor&#x3D;&quot;let actividad of actividadVisualizar | filterActividad: nombreActividadSelected:materiaSelectedA:gradoSelectedA:id_docenteAuth:competenciaSelectedA&quot;&gt;
+                                                &lt;div class&#x3D;&quot;card mb-4 border-0&quot; style&#x3D;&quot;max-width: 1440px;&quot;&gt;
+                                                    &lt;div class&#x3D;&quot;card-footer p-2 bg-warning rounded-top&quot;&gt;
+                                                        &lt;h5 class&#x3D;&quot;card-title m-1&quot;&gt;{{actividad.titulo_actividad}}&lt;/h5&gt;
+                                                    &lt;/div&gt;
+                                                    &lt;div class&#x3D;&quot;row no-gutters border border-top-0 border-secondary&quot;&gt;
+                                                        &lt;div class&#x3D;&quot;col&quot; style&#x3D;&quot;max-width: 840px;&quot;&gt;
+                                                            &lt;div class&#x3D;&quot;card-body p-2&quot;&gt;
+                                                                &lt;p class&#x3D;&quot;card-text &quot;&gt;Descripcion: {{actividad.descripcion_actividad}}.&lt;/p&gt;
+                                                                &lt;div&gt;
+                                                                    &lt;p class&#x3D;&quot;card-text&quot;&gt;&lt;small class&#x3D;&quot;text-muted&quot;&gt;Materia: {{actividad.materia}}&lt;/small&gt;&lt;/p&gt;
+                                                                &lt;/div&gt;
+                                                                &lt;div&gt;
+                                                                    &lt;p class&#x3D;&quot;card-text&quot;&gt;&lt;small class&#x3D;&quot;text-muted&quot;&gt;Grado: {{actividad.id_grado}}&lt;/small&gt;&lt;/p&gt;
+                                                                &lt;/div&gt;
+                                                                &lt;div&gt;
+                                                                    &lt;p class&#x3D;&quot;card-text&quot;&gt;&lt;small class&#x3D;&quot;text-muted&quot;&gt;Competencia: {{actividad.competencia}}&lt;/small&gt;&lt;/p&gt;
+                                                                &lt;/div&gt;
+                                                                &lt;div&gt;
+                                                                    &lt;p class&#x3D;&quot;card-text&quot;&gt;&lt;small class&#x3D;&quot;text-muted&quot;&gt;Profesor: {{actividad.docente}}&lt;/small&gt;&lt;/p&gt;
+                                                                &lt;/div&gt;
+                                                            &lt;/div&gt;
+                                                        &lt;/div&gt;
+                                                    &lt;/div&gt;
+                                                    &lt;!--Boton ver Metricas Actividad--&gt;
+                                                    &lt;div class&#x3D;&quot;card-footer bg-secondary row justify-content-md-center no-gutters p-1&quot;&gt;
+                                                        &lt;a class&#x3D;&quot;btn bg-success font-weight-bold&quot; data-toggle&#x3D;&quot;modal&quot; data-target&#x3D;&quot;#mimodalejemplo&quot; (click)&#x3D;&quot;getActividadinModal(actividad)&quot;&gt;Ver Metricas&lt;/a&gt;
+                                                    &lt;/div&gt;
+                                                &lt;/div&gt;
+                                            &lt;/div&gt;
+                                        &lt;/div&gt;
+                                    &lt;/form&gt;
+                                &lt;/div&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/form&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;hr class&#x3D;&quot;style10&quot;&gt;
+        &lt;br&gt;
+    &lt;/div&gt;
+
+    &lt;!-- Modal Actividad Seleccionada --&gt;
+    &lt;div class&#x3D;&quot;modal fade col&quot; id&#x3D;&quot;mimodalejemplo&quot; tabindex&#x3D;&quot;-1&quot; role&#x3D;&quot;dialog&quot; aria-labelledby&#x3D;&quot;myModalLabel&quot; style&#x3D;&quot;overflow-y: scroll;&quot;&gt;
+        &lt;div class&#x3D;&quot;modal-dialog modal-lg&quot; role&#x3D;&quot;document&quot;&gt;
+            &lt;div class&#x3D;&quot;modal-content &quot;&gt;
+                &lt;div class&#x3D;&quot;modal-header bg-light&quot;&gt;
+                    &lt;h4 class&#x3D;&quot;modal-title text-center my-0&quot; id&#x3D;&quot;myModalLabel&quot;&gt;Actividad Seleccionada&lt;/h4&gt;
+                    &lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;close &quot; data-dismiss&#x3D;&quot;modal&quot; aria-label&#x3D;&quot;Close&quot;&gt;
+                        &lt;span aria-hidden&#x3D;&quot;true&quot;&gt;&amp;times;&lt;/span&gt;
+                    &lt;/button&gt;
+                &lt;/div&gt;
+                &lt;div class&#x3D;&quot;modal-body bg-light&quot;&gt;
+                    &lt;div class&#x3D;&quot;&quot;&gt;
+                        &lt;div&gt;
+                            &lt;h3 style&#x3D;&quot;cursor:context-menu&quot; class&#x3D;&quot;text-center bg-warning py-4&quot;&gt;{{ActividadService.selectedActividad.titulo_actividad}}&lt;/h3&gt;
+                        &lt;/div&gt;
+                        &lt;div class&#x3D;&quot;row-1&quot;&gt;
+                            &lt;div class&#x3D;&quot;card mb-4 border-0&quot; style&#x3D;&quot;max-width: 1440px;&quot;&gt;
+                                &lt;div class&#x3D;&quot;row no-gutters&quot;&gt;
+                                    &lt;div class&#x3D;&quot;col-md-10&quot; style&#x3D;&quot;max-width: 840px;&quot;&gt;
+                                        &lt;div class&#x3D;&quot;card-body p-2&quot;&gt;
+                                            &lt;div&gt;
+                                                &lt;h5 class&#x3D;&quot;&quot;&gt;Descripcion: {{ActividadService.selectedActividad.descripcion_actividad}}&lt;/h5&gt;
+                                            &lt;/div&gt;
+                                            &lt;div&gt;
+                                                &lt;p class&#x3D;&quot;card-text&quot;&gt;&lt;small class&#x3D;&quot;text-muted&quot;&gt;Materia: {{ActividadService.selectedActividad.materia}}&lt;/small&gt;
+                                                &lt;/p&gt;
+                                            &lt;/div&gt;
+                                            &lt;div&gt;
+                                                &lt;p class&#x3D;&quot;card-text&quot;&gt;&lt;small class&#x3D;&quot;text-muted&quot;&gt;Grado: {{ActividadService.selectedActividad.id_grado}}&lt;/small&gt;
+                                                &lt;/p&gt;
+                                            &lt;/div&gt;
+                                            &lt;div&gt;
+                                                &lt;p class&#x3D;&quot;card-text&quot;&gt;&lt;small class&#x3D;&quot;text-muted&quot;&gt;Competencia: {{ActividadService.selectedActividad.competencia}}&lt;/small&gt;&lt;/p&gt;
+                                            &lt;/div&gt;
+                                            &lt;div&gt;
+                                                &lt;p class&#x3D;&quot;card-text&quot;&gt;&lt;small class&#x3D;&quot;text-muted&quot;&gt;Profesor: {{ActividadService.selectedActividad.docente}}&lt;/small&gt;
+                                                &lt;/p&gt;
+                                            &lt;/div&gt;
+                                        &lt;/div&gt;
+                                    &lt;/div&gt;
+                                &lt;/div&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;hr class&#x3D;&quot;style10&quot;&gt;
+
+                        &lt;!--Metricas Globales Actividad--&gt;
+                        &lt;div&gt;
+                            &lt;h5 style&#x3D;&quot;cursor:context-menu&quot; class&#x3D;&quot;&quot;&gt;Metricas Actividad:&lt;/h5&gt;
+                        &lt;/div&gt;
+                        &lt;p class&#x3D;&quot;card-text mb-1 ml-2&quot;&gt;Estudiantes participando en la Actividad: {{metricasActividad.inicio}} &lt;/p&gt;
+                        &lt;div class&#x3D;&quot;row-1&quot;&gt;
+                            &lt;div class&#x3D;&quot;card mb-4 border-0&quot; style&#x3D;&quot;max-width: 1440px;&quot;&gt;
+                                &lt;div class&#x3D;&quot;row no-gutters &quot;&gt;
+                                    &lt;div class&#x3D;&quot;col&quot; style&#x3D;&quot;max-width: 840px;&quot;&gt;
+                                        &lt;div class&#x3D;&quot;card-body p-2&quot;&gt;
+                                            &lt;p class&#x3D;&quot;card-text mb-1 ml-2&quot;&gt;Acciones&lt;/p&gt;
+                                            &lt;div&gt;
+                                                &lt;a class&#x3D;&quot;card-text&quot;&gt;&lt;small class&#x3D;&quot;text-muted&quot;&gt;Estudiantes que vieron el Contenido: &lt;/small&gt;&lt;/a&gt;
+                                                &lt;a&gt; {{metricasActividad.contenido}}&lt;/a&gt;
+                                            &lt;/div&gt;
+                                            &lt;div&gt;
+                                                &lt;a class&#x3D;&quot;card-text&quot;&gt;&lt;small class&#x3D;&quot;text-muted&quot;&gt;Estudiantes que hicieron el Quiz: &lt;/small&gt;&lt;/a&gt;
+                                                &lt;a&gt; {{metricasActividad.quiz}}&lt;/a&gt;
+                                            &lt;/div&gt;
+                                            &lt;div&gt;
+                                                &lt;a class&#x3D;&quot;card-text&quot;&gt;&lt;small class&#x3D;&quot;text-muted&quot;&gt;Estudiantes que hicieron el Taller: &lt;/small&gt;&lt;/a&gt;
+                                                &lt;a&gt; {{metricasActividad.taller}}&lt;/a&gt;
+                                            &lt;/div&gt;
+                                            &lt;div&gt;
+                                                &lt;a class&#x3D;&quot;card-text&quot;&gt;&lt;small class&#x3D;&quot;text-muted&quot;&gt;Estudiantes que hicieron la Evaluación: &lt;/small&gt;&lt;/a&gt;
+                                                &lt;a&gt; {{metricasActividad.evaluacion}}&lt;/a&gt;
+                                            &lt;/div&gt;
+                                        &lt;/div&gt;
+                                    &lt;/div&gt;
+                                    &lt;div class&#x3D;&quot;col my-auto&quot; style&#x3D;&quot;max-width: 840px;&quot;&gt;
+                                        &lt;div class&#x3D;&quot;card-body p-2&quot;&gt;
+                                            &lt;p class&#x3D;&quot;card-text mb-1 ml-2&quot;&gt;Notas&lt;/p&gt;
+                                            &lt;div&gt;
+                                                &lt;a class&#x3D;&quot;card-text&quot;&gt;&lt;small class&#x3D;&quot;text-muted&quot;&gt;Promedio Nota Quiz de todos los estudiantes: &lt;/small&gt;&lt;/a&gt;
+                                                &lt;a&gt; {{metricasActividad.nota_quiz}}&lt;/a&gt;
+                                            &lt;/div&gt;
+                                            &lt;div&gt;
+                                                &lt;a class&#x3D;&quot;card-text&quot;&gt;&lt;small class&#x3D;&quot;text-muted&quot;&gt;Promedio Nota Evaluacion de todos los estudiantes: &lt;/small&gt;&lt;/a&gt;
+                                                &lt;a&gt; {{metricasActividad.nota_evaluacion}}&lt;/a&gt;
+                                            &lt;/div&gt;
+                                            &lt;div&gt;
+                                                &lt;a class&#x3D;&quot;card-text&quot;&gt;&lt;small class&#x3D;&quot;text-muted&quot;&gt;Promedio Nota Final de todos los estudiantes: &lt;/small&gt;&lt;/a&gt;
+                                                &lt;a&gt; {{metricasActividad.nota_final}}&lt;/a&gt;
+                                            &lt;/div&gt;
+                                        &lt;/div&gt;
+                                    &lt;/div&gt;
+                                &lt;/div&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;hr class&#x3D;&quot;style10&quot;&gt;
+
+                        &lt;!--Estudiantes con Metricas--&gt;
+                        &lt;div&gt;
+                            &lt;h5 style&#x3D;&quot;cursor:context-menu&quot; class&#x3D;&quot;&quot;&gt;Estudiantes:&lt;/h5&gt;
+                        &lt;/div&gt;
+                        &lt;!--Buscar Esdtudiante--&gt;
+                        &lt;label class&#x3D;&quot;pt-2&quot;&gt;Buscador:&lt;/label&gt;
+                        &lt;div class&#x3D;&quot;form-group&quot;&gt;
+                            &lt;input type&#x3D;&quot;text&quot; class&#x3D;&quot;form-control col-md-8&quot; id&#x3D;&quot;inputTextoBusquedaEstudiante&quot; placeholder&#x3D;&quot;Nombre / Apellido&quot; [(ngModel)]&#x3D;&quot;palabraClaveESelected&quot;
+                                name&#x3D;&quot;palabraClaveESelected&quot;&gt;
+                        &lt;/div&gt;
+                        &lt;div class&#x3D;&quot;form-group col-4&quot;&gt;
+                            &lt;label for&#x3D;&quot;inputOption&quot; class&#x3D;&quot;&quot;&gt;Estudiantes que:&lt;/label&gt;
+                            &lt;select [(ngModel)]&#x3D;&quot;optionSelected&quot; id&#x3D;&quot;inputOption&quot; name&#x3D;&quot;optionSelected&quot; class&#x3D;&quot;form-control&quot; ngModel required&gt;
+                                &lt;option selected&gt;&lt;/option&gt;
+                                &lt;option *ngFor&#x3D;&quot;let option of options&quot; style&#x3D;&quot;overflow-y: scroll;&quot; [value]&#x3D;&quot;option.valor&quot;&gt;{{option.opcion}}&lt;/option&gt;
+                            &lt;/select&gt;
+                        &lt;/div&gt;
+
+                        &lt;!--Resultado Estudiantes--&gt;
+                        &lt;div class&#x3D;&quot;pt-4 row mx-auto&quot;&gt;
+                            &lt;table class&#x3D;&quot;mx-auto text-white m-auto rounded table-secondary table-striped table-wrapper-scroll-y my-custom-scrollbar&quot;
+                                style&#x3D;&quot;height: 256px;&quot;&gt;
+                                &lt;thead class&#x3D;&quot;bg-secondary&quot;&gt;
+                                    &lt;th class&#x3D;&quot;pl-3 pr-5 py-2 text-white&quot;&gt;Nombre Estudiante&lt;/th&gt;
+                                    &lt;th class&#x3D;&quot;pl-4 pr-4 py-2 text-white text-center&quot;&gt;Accion&lt;/th&gt;
+                                &lt;/thead&gt;
+                                &lt;tbody class&#x3D;&quot;bg-light&quot;&gt;
+                                    &lt;tr mdbTableCol *ngFor&#x3D;&quot;let metrica of metricasVisualizar | filterEstudianteMetricas: palabraClaveESelected:optionSelected&quot;&gt;
+                                        &lt;td class&#x3D;&quot;pl-3 pr-5 py-2 text-dark&quot;&gt;{{ metrica.estudiante }}&lt;/td&gt;
+                                        &lt;td class&#x3D;&quot;pl-4 pr-4 py-2&quot;&gt; 
+                                            &lt;a class&#x3D;&quot;btn bg-success py-0 px-1 text-dark font-weight-bold&quot; data-toggle&#x3D;&quot;modal&quot; data-target&#x3D;&quot;#mimodalejemplo2&quot; (click)&#x3D;&quot;getAvanceEstudianteModal(metrica)&quot;&gt;ver Metricas&lt;/a&gt;
+                                        &lt;/td&gt;
+                                    &lt;/tr&gt;
+                                &lt;/tbody&gt;
+                            &lt;/table&gt;
+                        &lt;/div&gt;
+                        &lt;hr class&#x3D;&quot;style10&quot;&gt;
+
+                        &lt;!--Opcion de Reinicio de Actividad--&gt;
+                        &lt;div&gt;
+                            &lt;h5 style&#x3D;&quot;cursor:context-menu&quot; class&#x3D;&quot;&quot;&gt;Reinicio de Actividad:&lt;/h5&gt;
+                        &lt;/div&gt;
+                        &lt;label class&#x3D;&quot;pt-2&quot;&gt;Al reiniciar la actividad, los datos actuales de los estudiantes que se han almacenado
+                            ya no seran tomados encuentas en esta Actividad para generar sus Metricas. Las nuevas Metricas de la
+                            actividad seran generadas con los nuevos datos que se obtengan en adelante de los actuales estudiantes
+                            o de los nuevos estudiantes.
+                        &lt;/label&gt;
+                        &lt;!--Boton Reiniciar Actividad--&gt;
+                        &lt;div class&#x3D;&quot;row pt-3 justify-content-md-center no-gutters bg-light&quot;&gt;
+                            &lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;btn btn-default bg-warning font-weight-bold&quot; data-dismiss&#x3D;&quot;modal&quot; data-toggle&#x3D;&quot;modal&quot; data-target&#x3D;&quot;#mimodalejemplo3&quot;&gt;Reiniciar Actividad&lt;/button&gt;
+                        &lt;/div&gt;
+                        &lt;hr class&#x3D;&quot;style10&quot;&gt;
+
+                    &lt;/div&gt;  
+                &lt;/div&gt;
+                &lt;div class&#x3D;&quot;modal-footer justify-content-md-center no-gutters bg-light&quot;&gt;
+                    &lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;btn btn-default bg-warning font-weight-bold&quot; data-dismiss&#x3D;&quot;modal&quot;&gt;Cerrar&lt;/button&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;!-- Modal Metricas Estudiante --&gt;
+    &lt;div class&#x3D;&quot;modal fade&quot; id&#x3D;&quot;mimodalejemplo2&quot; tabindex&#x3D;&quot;-1&quot; role&#x3D;&quot;dialog&quot; aria-labelledby&#x3D;&quot;myModalLabel2&quot;&gt;
+        &lt;div class&#x3D;&quot;modal-dialog modal-lg&quot; role&#x3D;&quot;document&quot;&gt;
+            &lt;div class&#x3D;&quot;modal-content&quot;&gt;
+                &lt;div class&#x3D;&quot;modal-header bg-light&quot;&gt;
+                    &lt;h4 class&#x3D;&quot;modal-title&quot; id&#x3D;&quot;myModalLabel&quot;&gt;Metricas Estudiante&lt;/h4&gt;
+                    &lt;button class&#x3D;&quot;close&quot; data-dismiss&#x3D;&quot;modal&quot; aria-label&#x3D;&quot;Close&quot;&gt;
+                        &lt;span aria-hidden&#x3D;&quot;true&quot;&gt;&amp;times;&lt;/span&gt;
+                    &lt;/button&gt;
+                &lt;/div&gt;
+                &lt;div class&#x3D;&quot;modal-body bg-light&quot;&gt;
+                    &lt;!--Metricas Globales Actividad--&gt;
+                    &lt;div class&#x3D;&quot;pb-2&quot;&gt;
+                        &lt;h5 style&#x3D;&quot;cursor:context-menu&quot; class&#x3D;&quot;&quot;&gt;Estudiante: {{ metricaVisualizarToSave.estudiante }}&lt;/h5&gt;
+                    &lt;/div&gt;
+                    &lt;div class&#x3D;&quot;pb-1 row&quot;&gt;
+                        &lt;h6 style&#x3D;&quot;cursor:context-menu&quot; class&#x3D;&quot;col-3&quot;&gt;Progreso Actividad: &lt;/h6&gt;
+                    &lt;/div&gt;
+                    &lt;div class&#x3D;&quot;progress&quot;&gt;
+                            &lt;div *ngIf&#x3D;&quot;bar20&quot; class&#x3D;&quot;progress-bar progress-bar-striped bg-success progress-bar-animated &quot; role&#x3D;&quot;progressbar&quot; aria-valuenow&#x3D;&quot;20&quot; aria-valuemin&#x3D;&quot;0&quot; aria-valuemax&#x3D;&quot;100&quot; style&#x3D;&quot;width:20%&quot;&gt;
+                                20%
+                            &lt;/div&gt;
+                            &lt;div *ngIf&#x3D;&quot;bar40&quot; class&#x3D;&quot;progress-bar progress-bar-striped bg-success progress-bar-animated &quot; role&#x3D;&quot;progressbar&quot; aria-valuenow&#x3D;&quot;40&quot; aria-valuemin&#x3D;&quot;0&quot; aria-valuemax&#x3D;&quot;100&quot; style&#x3D;&quot;width:40%&quot;&gt;
+                                40%
+                            &lt;/div&gt;
+                            &lt;div *ngIf&#x3D;&quot;bar60&quot; class&#x3D;&quot;progress-bar progress-bar-striped bg-success progress-bar-animated &quot; role&#x3D;&quot;progressbar&quot; aria-valuenow&#x3D;&quot;60&quot; aria-valuemin&#x3D;&quot;0&quot; aria-valuemax&#x3D;&quot;100&quot; style&#x3D;&quot;width:60%&quot;&gt;
+                                60%
+                            &lt;/div&gt;
+                            &lt;div *ngIf&#x3D;&quot;bar80&quot; class&#x3D;&quot;progress-bar progress-bar-striped bg-success progress-bar-animated &quot; role&#x3D;&quot;progressbar&quot; aria-valuenow&#x3D;&quot;80&quot; aria-valuemin&#x3D;&quot;0&quot; aria-valuemax&#x3D;&quot;100&quot; style&#x3D;&quot;width:80%&quot;&gt;
+                                80%
+                            &lt;/div&gt;
+                            &lt;div *ngIf&#x3D;&quot;bar100&quot; class&#x3D;&quot;progress-bar progress-bar-striped bg-success progress-bar-animated &quot; role&#x3D;&quot;progressbar&quot; aria-valuenow&#x3D;&quot;100&quot; aria-valuemin&#x3D;&quot;0&quot; aria-valuemax&#x3D;&quot;100&quot; style&#x3D;&quot;width:100%&quot;&gt;
+                                100%
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;div class&#x3D;&quot;row-1&quot;&gt;
+                        &lt;div class&#x3D;&quot;card mb-4 border-0&quot; style&#x3D;&quot;max-width: 1440px;&quot;&gt;
+                            &lt;div class&#x3D;&quot;row no-gutters &quot;&gt;
+                                &lt;div class&#x3D;&quot;col&quot; style&#x3D;&quot;max-width: 840px;&quot;&gt;
+                                    &lt;div class&#x3D;&quot;card-body p-2&quot;&gt;
+                                        &lt;p class&#x3D;&quot;card-text mb-1 ml-2&quot;&gt;Acciones&lt;/p&gt;
+                                        &lt;div&gt;
+                                            &lt;a class&#x3D;&quot;card-text&quot;&gt;&lt;small class&#x3D;&quot;text-muted&quot;&gt;El estudiante inico la Actividad: &lt;/small&gt;&lt;/a&gt;
+                                            &lt;a&gt; {{metricaVisualizarToSave.inicio}}&lt;/a&gt;
+                                        &lt;/div&gt;
+                                        &lt;div&gt;
+                                            &lt;a class&#x3D;&quot;card-text&quot;&gt;&lt;small class&#x3D;&quot;text-muted&quot;&gt;El estudiante vio el Contenido: &lt;/small&gt;&lt;/a&gt;
+                                            &lt;a&gt; {{metricaVisualizarToSave.contenido}}&lt;/a&gt;
+                                        &lt;/div&gt;
+                                        &lt;div&gt;
+                                            &lt;a class&#x3D;&quot;card-text&quot;&gt;&lt;small class&#x3D;&quot;text-muted&quot;&gt;Numero de veces que vio el contenido: &lt;/small&gt;&lt;/a&gt;
+                                            &lt;a&gt; {{metricaVisualizarToSave.count_contenido}}&lt;/a&gt;
+                                        &lt;/div&gt;
+                                        &lt;div&gt;
+                                            &lt;a class&#x3D;&quot;card-text&quot;&gt;&lt;small class&#x3D;&quot;text-muted&quot;&gt;El estudiante hizo el Quiz: &lt;/small&gt;&lt;/a&gt;
+                                            &lt;a&gt; {{metricaVisualizarToSave.quiz}}&lt;/a&gt;
+                                        &lt;/div&gt;
+                                        &lt;div&gt;
+                                            &lt;a class&#x3D;&quot;card-text&quot;&gt;&lt;small class&#x3D;&quot;text-muted&quot;&gt;El estudiante hizo el Taller:
+                                                &lt;/small&gt;&lt;/a&gt;
+                                            &lt;a&gt; {{metricaVisualizarToSave.taller}}&lt;/a&gt;
+                                        &lt;/div&gt;
+                                        &lt;div&gt;
+                                            &lt;a class&#x3D;&quot;card-text&quot;&gt;&lt;small class&#x3D;&quot;text-muted&quot;&gt;El estudiante hizo la Evaluación: &lt;/small&gt;&lt;/a&gt;
+                                            &lt;a&gt; {{metricaVisualizarToSave.evaluacion}}&lt;/a&gt;
+                                        &lt;/div&gt;
+                                    &lt;/div&gt;
+                                &lt;/div&gt;
+                                &lt;div class&#x3D;&quot;col my-auto&quot; style&#x3D;&quot;max-width: 840px;&quot;&gt;
+                                    &lt;div class&#x3D;&quot;card-body p-2&quot;&gt;
+                                        &lt;p class&#x3D;&quot;card-text mb-1 ml-2&quot;&gt;Notas&lt;/p&gt;
+                                        &lt;div&gt;
+                                            &lt;a class&#x3D;&quot;card-text&quot;&gt;&lt;small class&#x3D;&quot;text-muted&quot;&gt;Nota Quiz del estudiante: &lt;/small&gt;&lt;/a&gt;
+                                            &lt;a&gt; {{metricaVisualizarToSave.nota_quiz}}&lt;/a&gt;
+                                        &lt;/div&gt;
+                                        &lt;div&gt;
+                                            &lt;a class&#x3D;&quot;card-text&quot;&gt;&lt;small class&#x3D;&quot;text-muted&quot;&gt;Nota Evaluacion del estudiante: &lt;/small&gt;&lt;/a&gt;
+                                            &lt;a&gt; {{metricaVisualizarToSave.nota_evaluacion}}&lt;/a&gt;
+                                        &lt;/div&gt;
+                                        &lt;div&gt;
+                                            &lt;a class&#x3D;&quot;card-text&quot;&gt;&lt;small class&#x3D;&quot;text-muted&quot;&gt;Nota Final del estudiante: &lt;/small&gt;&lt;/a&gt;
+                                            &lt;a&gt; {{metricaVisualizarToSave.nota_final}}&lt;/a&gt;
+                                        &lt;/div&gt;
+                                    &lt;/div&gt;
+                                &lt;/div&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;!--Modal Confirmar Reiniciar Actividad --&gt;
+    &lt;div class&#x3D;&quot;modal fade&quot; id&#x3D;&quot;mimodalejemplo3&quot; tabindex&#x3D;&quot;-1&quot; role&#x3D;&quot;dialog&quot; aria-labelledby&#x3D;&quot;myModalLabel3&quot;&gt;
+        &lt;div class&#x3D;&quot;modal-dialog&quot; role&#x3D;&quot;document&quot;&gt;
+            &lt;div class&#x3D;&quot;modal-content&quot;&gt;
+                &lt;div class&#x3D;&quot;modal-header bg-light&quot;&gt;
+                    &lt;h5 class&#x3D;&quot;modal-title&quot; id&#x3D;&quot;myModalLabel&quot;&gt;Confirmar Acción&lt;/h5&gt;
+                    &lt;button class&#x3D;&quot;close&quot; data-dismiss&#x3D;&quot;modal&quot; aria-label&#x3D;&quot;Close&quot;&gt;
+                        &lt;span aria-hidden&#x3D;&quot;true&quot;&gt;&amp;times;&lt;/span&gt;
+                    &lt;/button&gt;
+                &lt;/div&gt;
+                &lt;div class&#x3D;&quot;modal-body&quot;&gt;
+                    Para reiniciar la Actividad presione Aceptar, de lo contrario presione X
+                    para cancelar.
+                &lt;/div&gt;
+                &lt;div class&#x3D;&quot;modal-footer justify-content-md-center no-gutters bg-light py-1&quot;&gt;
+                    &lt;button class&#x3D;&quot;btn btn-default bg-warning font-weight-bold&quot; data-dismiss&#x3D;&quot;modal&quot;
+                        (click)&#x3D;&quot;reiniciarActividad()&quot;&gt;Aceptar&lt;/button&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+&lt;/div&gt;
+
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-styleData">
+                <p class="comment">
+                    <code>./metricas.component.css</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss"></code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><app-header></app-header><!--Contenedor Contenido Pagina--><div class="mb-5 container py-3">    <!-- Metricas -->    <div class="container m-auto pb-2 bg-success rounded-top">        <h1 style="cursor:context-menu" class="mt-5 pt-4 text-center">Metricas</h1>    </div>    <!--Contenedor busqueda-->    <div class="container pt-1 bg-secondary rounded-bottom">        <div>            <div class="contenedor py-3">                <form>                    <div class="tab-pane fade show active" id="nav-Pregunta1ACT" role="tabpanel" aria-labelledby="nav-Pregunta1ACT-tab">                        <div class="form-group">                            <h4 style="cursor:context-menu" class="pb-1 pt-3 text-center text-white font-weight-bold">Buscar Actividades</h4>                            <!--Buscar Actividad-->                            <div>                                <div class="contenedor py-3">                                    <form #frmBuscarActividad="ngForm" (ngSubmit)="saveDataActividad(frmBuscarActvidad)">                                        <div class="form-group">                                            <!--Barra busqueda-->                                            <br>                                            <div class="form-inline">                                                <input type="text" class="form-control col-md-8" id="inputTextoBusquedaActividad"                                                    placeholder="Busqueda por nombre de la Actividad" [(ngModel)]="nombreActividadSelected"                                                    name="nombreActividadSelected">                                            </div>                                        </div>                                        <label for="inputState" class="text-white">Filtros:</label>                                        <div class="form-row pb-3">                                            <!--Filtros-->                                            <div class="form-group col-3">                                                <label for="inputMateriaA" class="text-white">Materia</label>                                                <select [(ngModel)]="materiaSelectedA" id="inputMateriaA" name="materiaA"                                                    class="form-control" ngModel required>                                                    <option selected></option>                                                    <option *ngFor="let mater of materias" [value]="mater.id_materia">                                                        {{mater.nombre_materia}}</option>                                                </select>                                            </div>                                            <div class="form-group col-3">                                                <label for="inputGradoA" class="text-white">Grado</label>                                                <select [(ngModel)]="gradoSelectedA" id="inputGradoA" name="gradoA" class="form-control"                                                    ngModel required>                                                    <option selected></option>                                                    <option *ngFor="let grad of grados" [value]="grad.id_grado">{{grad.nombre_grado}}                                                    </option>                                                </select>                                            </div>                                        </div>                                        <!--Filtro Competencia-->                                        <div class="form-group col px-0">                                            <label for="inputDocenteA" class="text-white">Buscador Competencia</label>                                            <input type="text" class="form-control col-5" id="inputTextoBusquedaCompetencia" placeholder="Ingrese palabra clave" [(ngModel)]="nombreCompetenciaSelected"                                                name="inputBusquedaCompetencia">                                        </div>                                        <div class="form-row pb-3">                                            <div class="form-group col">                                                <label for="inputDocenteA" class="text-white">Competencia</label>                                                <select [(ngModel)]="competenciaSelectedA" id="inputCompetenciaA" name="competenciaA" class="form-control" onfocus=\'if(this.options.length > 2){ this.size = 8; }\' onblur=\'this.size=1;\' onchange=\'this.size=1; this.blur();\'ngModel required>                                                    <option class="col-auto px-0" selected></option>                                                    <option class="col-auto px-0" selected [value]=0>Sin Competencia</option>                                                    <option class="col-auto px-0" *ngFor="let compe of competencias | filterCompetencia: nombreCompetenciaSelected:materiaSelectedA:gradoSelectedA"                                                        [value]="compe.id_competencia">{{(compe.nombre_competencia)}}                                                    </option>                                                </select>                                                <!--el valor seleccionado es {{competenciaSelectedA}}-->                                            </div>                                        </div>                                        <!--Tabla de Resultados-->                                        <label for="inputState" class="text-white">Resultados:</label>                                        <div class="col container p-4 my bg-light rounded table-wrapper-scroll-y my-custom-scrollbar"                                            style="width: 95%; height: 450px">                                            <!--Resultado-->                                            <div class="row-1"                                                *ngFor="let actividad of actividadVisualizar | filterActividad: nombreActividadSelected:materiaSelectedA:gradoSelectedA:id_docenteAuth:competenciaSelectedA">                                                <div class="card mb-4 border-0" style="max-width: 1440px;">                                                    <div class="card-footer p-2 bg-warning rounded-top">                                                        <h5 class="card-title m-1">{{actividad.titulo_actividad}}</h5>                                                    </div>                                                    <div class="row no-gutters border border-top-0 border-secondary">                                                        <div class="col" style="max-width: 840px;">                                                            <div class="card-body p-2">                                                                <p class="card-text ">Descripcion: {{actividad.descripcion_actividad}}.</p>                                                                <div>                                                                    <p class="card-text"><small class="text-muted">Materia: {{actividad.materia}}</small></p>                                                                </div>                                                                <div>                                                                    <p class="card-text"><small class="text-muted">Grado: {{actividad.id_grado}}</small></p>                                                                </div>                                                                <div>                                                                    <p class="card-text"><small class="text-muted">Competencia: {{actividad.competencia}}</small></p>                                                                </div>                                                                <div>                                                                    <p class="card-text"><small class="text-muted">Profesor: {{actividad.docente}}</small></p>                                                                </div>                                                            </div>                                                        </div>                                                    </div>                                                    <!--Boton ver Metricas Actividad-->                                                    <div class="card-footer bg-secondary row justify-content-md-center no-gutters p-1">                                                        <a class="btn bg-success font-weight-bold" data-toggle="modal" data-target="#mimodalejemplo" (click)="getActividadinModal(actividad)">Ver Metricas</a>                                                    </div>                                                </div>                                            </div>                                        </div>                                    </form>                                </div>                            </div>                        </div>                    </div>                </form>            </div>        </div>        <hr class="style10">        <br>    </div>    <!-- Modal Actividad Seleccionada -->    <div class="modal fade col" id="mimodalejemplo" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" style="overflow-y: scroll;">        <div class="modal-dialog modal-lg" role="document">            <div class="modal-content ">                <div class="modal-header bg-light">                    <h4 class="modal-title text-center my-0" id="myModalLabel">Actividad Seleccionada</h4>                    <button type="button" class="close " data-dismiss="modal" aria-label="Close">                        <span aria-hidden="true">&times;</span>                    </button>                </div>                <div class="modal-body bg-light">                    <div class="">                        <div>                            <h3 style="cursor:context-menu" class="text-center bg-warning py-4">{{ActividadService.selectedActividad.titulo_actividad}}</h3>                        </div>                        <div class="row-1">                            <div class="card mb-4 border-0" style="max-width: 1440px;">                                <div class="row no-gutters">                                    <div class="col-md-10" style="max-width: 840px;">                                        <div class="card-body p-2">                                            <div>                                                <h5 class="">Descripcion: {{ActividadService.selectedActividad.descripcion_actividad}}</h5>                                            </div>                                            <div>                                                <p class="card-text"><small class="text-muted">Materia: {{ActividadService.selectedActividad.materia}}</small>                                                </p>                                            </div>                                            <div>                                                <p class="card-text"><small class="text-muted">Grado: {{ActividadService.selectedActividad.id_grado}}</small>                                                </p>                                            </div>                                            <div>                                                <p class="card-text"><small class="text-muted">Competencia: {{ActividadService.selectedActividad.competencia}}</small></p>                                            </div>                                            <div>                                                <p class="card-text"><small class="text-muted">Profesor: {{ActividadService.selectedActividad.docente}}</small>                                                </p>                                            </div>                                        </div>                                    </div>                                </div>                            </div>                        </div>                        <hr class="style10">                        <!--Metricas Globales Actividad-->                        <div>                            <h5 style="cursor:context-menu" class="">Metricas Actividad:</h5>                        </div>                        <p class="card-text mb-1 ml-2">Estudiantes participando en la Actividad: {{metricasActividad.inicio}} </p>                        <div class="row-1">                            <div class="card mb-4 border-0" style="max-width: 1440px;">                                <div class="row no-gutters ">                                    <div class="col" style="max-width: 840px;">                                        <div class="card-body p-2">                                            <p class="card-text mb-1 ml-2">Acciones</p>                                            <div>                                                <a class="card-text"><small class="text-muted">Estudiantes que vieron el Contenido: </small></a>                                                <a> {{metricasActividad.contenido}}</a>                                            </div>                                            <div>                                                <a class="card-text"><small class="text-muted">Estudiantes que hicieron el Quiz: </small></a>                                                <a> {{metricasActividad.quiz}}</a>                                            </div>                                            <div>                                                <a class="card-text"><small class="text-muted">Estudiantes que hicieron el Taller: </small></a>                                                <a> {{metricasActividad.taller}}</a>                                            </div>                                            <div>                                                <a class="card-text"><small class="text-muted">Estudiantes que hicieron la Evaluación: </small></a>                                                <a> {{metricasActividad.evaluacion}}</a>                                            </div>                                        </div>                                    </div>                                    <div class="col my-auto" style="max-width: 840px;">                                        <div class="card-body p-2">                                            <p class="card-text mb-1 ml-2">Notas</p>                                            <div>                                                <a class="card-text"><small class="text-muted">Promedio Nota Quiz de todos los estudiantes: </small></a>                                                <a> {{metricasActividad.nota_quiz}}</a>                                            </div>                                            <div>                                                <a class="card-text"><small class="text-muted">Promedio Nota Evaluacion de todos los estudiantes: </small></a>                                                <a> {{metricasActividad.nota_evaluacion}}</a>                                            </div>                                            <div>                                                <a class="card-text"><small class="text-muted">Promedio Nota Final de todos los estudiantes: </small></a>                                                <a> {{metricasActividad.nota_final}}</a>                                            </div>                                        </div>                                    </div>                                </div>                            </div>                        </div>                        <hr class="style10">                        <!--Estudiantes con Metricas-->                        <div>                            <h5 style="cursor:context-menu" class="">Estudiantes:</h5>                        </div>                        <!--Buscar Esdtudiante-->                        <label class="pt-2">Buscador:</label>                        <div class="form-group">                            <input type="text" class="form-control col-md-8" id="inputTextoBusquedaEstudiante" placeholder="Nombre / Apellido" [(ngModel)]="palabraClaveESelected"                                name="palabraClaveESelected">                        </div>                        <div class="form-group col-4">                            <label for="inputOption" class="">Estudiantes que:</label>                            <select [(ngModel)]="optionSelected" id="inputOption" name="optionSelected" class="form-control" ngModel required>                                <option selected></option>                                <option *ngFor="let option of options" style="overflow-y: scroll;" [value]="option.valor">{{option.opcion}}</option>                            </select>                        </div>                        <!--Resultado Estudiantes-->                        <div class="pt-4 row mx-auto">                            <table class="mx-auto text-white m-auto rounded table-secondary table-striped table-wrapper-scroll-y my-custom-scrollbar"                                style="height: 256px;">                                <thead class="bg-secondary">                                    <th class="pl-3 pr-5 py-2 text-white">Nombre Estudiante</th>                                    <th class="pl-4 pr-4 py-2 text-white text-center">Accion</th>                                </thead>                                <tbody class="bg-light">                                    <tr mdbTableCol *ngFor="let metrica of metricasVisualizar | filterEstudianteMetricas: palabraClaveESelected:optionSelected">                                        <td class="pl-3 pr-5 py-2 text-dark">{{ metrica.estudiante }}</td>                                        <td class="pl-4 pr-4 py-2">                                             <a class="btn bg-success py-0 px-1 text-dark font-weight-bold" data-toggle="modal" data-target="#mimodalejemplo2" (click)="getAvanceEstudianteModal(metrica)">ver Metricas</a>                                        </td>                                    </tr>                                </tbody>                            </table>                        </div>                        <hr class="style10">                        <!--Opcion de Reinicio de Actividad-->                        <div>                            <h5 style="cursor:context-menu" class="">Reinicio de Actividad:</h5>                        </div>                        <label class="pt-2">Al reiniciar la actividad, los datos actuales de los estudiantes que se han almacenado                            ya no seran tomados encuentas en esta Actividad para generar sus Metricas. Las nuevas Metricas de la                            actividad seran generadas con los nuevos datos que se obtengan en adelante de los actuales estudiantes                            o de los nuevos estudiantes.                        </label>                        <!--Boton Reiniciar Actividad-->                        <div class="row pt-3 justify-content-md-center no-gutters bg-light">                            <button type="button" class="btn btn-default bg-warning font-weight-bold" data-dismiss="modal" data-toggle="modal" data-target="#mimodalejemplo3">Reiniciar Actividad</button>                        </div>                        <hr class="style10">                    </div>                  </div>                <div class="modal-footer justify-content-md-center no-gutters bg-light">                    <button type="button" class="btn btn-default bg-warning font-weight-bold" data-dismiss="modal">Cerrar</button>                </div>            </div>        </div>    </div>    <!-- Modal Metricas Estudiante -->    <div class="modal fade" id="mimodalejemplo2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel2">        <div class="modal-dialog modal-lg" role="document">            <div class="modal-content">                <div class="modal-header bg-light">                    <h4 class="modal-title" id="myModalLabel">Metricas Estudiante</h4>                    <button class="close" data-dismiss="modal" aria-label="Close">                        <span aria-hidden="true">&times;</span>                    </button>                </div>                <div class="modal-body bg-light">                    <!--Metricas Globales Actividad-->                    <div class="pb-2">                        <h5 style="cursor:context-menu" class="">Estudiante: {{ metricaVisualizarToSave.estudiante }}</h5>                    </div>                    <div class="pb-1 row">                        <h6 style="cursor:context-menu" class="col-3">Progreso Actividad: </h6>                    </div>                    <div class="progress">                            <div *ngIf="bar20" class="progress-bar progress-bar-striped bg-success progress-bar-animated " role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width:20%">                                20%                            </div>                            <div *ngIf="bar40" class="progress-bar progress-bar-striped bg-success progress-bar-animated " role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:40%">                                40%                            </div>                            <div *ngIf="bar60" class="progress-bar progress-bar-striped bg-success progress-bar-animated " role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width:60%">                                60%                            </div>                            <div *ngIf="bar80" class="progress-bar progress-bar-striped bg-success progress-bar-animated " role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width:80%">                                80%                            </div>                            <div *ngIf="bar100" class="progress-bar progress-bar-striped bg-success progress-bar-animated " role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width:100%">                                100%                            </div>                        </div>                    <div class="row-1">                        <div class="card mb-4 border-0" style="max-width: 1440px;">                            <div class="row no-gutters ">                                <div class="col" style="max-width: 840px;">                                    <div class="card-body p-2">                                        <p class="card-text mb-1 ml-2">Acciones</p>                                        <div>                                            <a class="card-text"><small class="text-muted">El estudiante inico la Actividad: </small></a>                                            <a> {{metricaVisualizarToSave.inicio}}</a>                                        </div>                                        <div>                                            <a class="card-text"><small class="text-muted">El estudiante vio el Contenido: </small></a>                                            <a> {{metricaVisualizarToSave.contenido}}</a>                                        </div>                                        <div>                                            <a class="card-text"><small class="text-muted">Numero de veces que vio el contenido: </small></a>                                            <a> {{metricaVisualizarToSave.count_contenido}}</a>                                        </div>                                        <div>                                            <a class="card-text"><small class="text-muted">El estudiante hizo el Quiz: </small></a>                                            <a> {{metricaVisualizarToSave.quiz}}</a>                                        </div>                                        <div>                                            <a class="card-text"><small class="text-muted">El estudiante hizo el Taller:                                                </small></a>                                            <a> {{metricaVisualizarToSave.taller}}</a>                                        </div>                                        <div>                                            <a class="card-text"><small class="text-muted">El estudiante hizo la Evaluación: </small></a>                                            <a> {{metricaVisualizarToSave.evaluacion}}</a>                                        </div>                                    </div>                                </div>                                <div class="col my-auto" style="max-width: 840px;">                                    <div class="card-body p-2">                                        <p class="card-text mb-1 ml-2">Notas</p>                                        <div>                                            <a class="card-text"><small class="text-muted">Nota Quiz del estudiante: </small></a>                                            <a> {{metricaVisualizarToSave.nota_quiz}}</a>                                        </div>                                        <div>                                            <a class="card-text"><small class="text-muted">Nota Evaluacion del estudiante: </small></a>                                            <a> {{metricaVisualizarToSave.nota_evaluacion}}</a>                                        </div>                                        <div>                                            <a class="card-text"><small class="text-muted">Nota Final del estudiante: </small></a>                                            <a> {{metricaVisualizarToSave.nota_final}}</a>                                        </div>                                    </div>                                </div>                            </div>                        </div>                    </div>                </div>            </div>        </div>    </div>    <!--Modal Confirmar Reiniciar Actividad -->    <div class="modal fade" id="mimodalejemplo3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel3">        <div class="modal-dialog" role="document">            <div class="modal-content">                <div class="modal-header bg-light">                    <h5 class="modal-title" id="myModalLabel">Confirmar Acción</h5>                    <button class="close" data-dismiss="modal" aria-label="Close">                        <span aria-hidden="true">&times;</span>                    </button>                </div>                <div class="modal-body">                    Para reiniciar la Actividad presione Aceptar, de lo contrario presione X                    para cancelar.                </div>                <div class="modal-footer justify-content-md-center no-gutters bg-light py-1">                    <button class="btn btn-default bg-warning font-weight-bold" data-dismiss="modal"                        (click)="reiniciarActividad()">Aceptar</button>                </div>            </div>        </div>    </div></div></div>'
+    var COMPONENTS = [{'name': 'AdministrarDocenteComponent', 'selector': 'app-administrar-docente'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'BorrarActividadComponent', 'selector': 'app-borrar-actividad'},{'name': 'BorrarContenidoComponent', 'selector': 'app-borrar-contenido'},{'name': 'BusquedaComponent', 'selector': 'app-busqueda'},{'name': 'BusquedaVisitanteComponent', 'selector': 'app-busqueda-visitante'},{'name': 'CrearActividadComponent', 'selector': 'app-crear-actividad'},{'name': 'DudasComponent', 'selector': 'app-dudas'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'GestionarColegioAdminComponent', 'selector': 'app-gestionar-colegio-admin'},{'name': 'GestionarCompetenciasAdminComponent', 'selector': 'app-gestionar-competencias-admin'},{'name': 'GestionarUsuariosAdminComponent', 'selector': 'app-gestionar-usuarios-admin'},{'name': 'HeaderAdminComponent', 'selector': 'app-header-admin'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'HeaderVisitanteComponent', 'selector': 'app-header-visitante'},{'name': 'InfromacionDocenteComponent', 'selector': 'app-infromacion-docente'},{'name': 'InicioAdminComponent', 'selector': 'app-inicio-admin'},{'name': 'InicioProfesoresComponent', 'selector': 'app-inicio-profesores'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'MetricasComponent', 'selector': 'app-metricas'},{'name': 'ModificarActividadComponent', 'selector': 'app-modificar-actividad'},{'name': 'RegistroUsuarioComponent', 'selector': 'app-registro-usuario'},{'name': 'SubirContenidoComponent', 'selector': 'app-subir-contenido'}];
+    var DIRECTIVES = [];
+    var ACTUAL_COMPONENT = {'name': 'MetricasComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+                   
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'MetricasComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

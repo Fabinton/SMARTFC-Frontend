@@ -1,0 +1,711 @@
+<app-header></app-header>
+
+<!--Contenedor Contenido Pagina-->
+<div class="mb-5 contenedor py-3">
+    
+    <!--Titulo pagina-->
+    <div class="container m-auto pb-2 bg-warning rounded-top">
+        <h1 style="cursor:context-menu" class="mt-5 pt-4 text-center m ">Crear Actividade</h1>
+    </div>
+    <!--Contenedor Formulario-->
+    <div class="container container bg-secondary pt-1  rounded-bottom">
+        
+        <!--Actividad-->
+        <div>
+            <h3 style="cursor:context-menu" class="py-3 text-center text-white">Informacion de la Actividad</h3>
+            <div class="contenedor py-3">
+                <form #frmCrearActividad="ngForm">
+                    <div class="form-group">
+                        <label for="inputNombreActividad" class="text-white ">Nombre de la Actividad</label>
+                        <input type="text" name="nombre_actividad" class="form-control col-md-8" id="inputNombreActividad" placeholder="Nombre Actividad" required [(ngModel)]="nombre_actividad">
+                    </div>
+                    <div class="form-group">
+                        <label for="inputDescripcionActividad" class="text-white">Descripcion de la Actividad</label>
+                        <textarea class="form-control" name="descripcion_actividad" id="inputDescripcionActividad" 
+                            rows="4" required [(ngModel)]="descripcion_actividad" placeholder="Descripcion ..."></textarea>
+                    </div>
+                    <!-- Selectores -->
+                    <div class="form-row">
+                        <div class="form-group col-md-4">
+                            <label for="inputMateriaActividad" class="text-white">Materia</label>
+                            <select [(ngModel)]="materiaSelectedA" name="materiaSelectedA" id="inputMateriaActividad" class="form-control" ngModel required>
+                                <!--<option selected [value]='0'>- Materia -</option>-->
+                                <option *ngFor="let mater of materia" [value]="mater.id_materia">{{mater.nombre_materia}}</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label for="inputGradoActivdad" class="text-white">Grado</label>
+                            <select [(ngModel)]="gradoSelectedA" name="gradoSelectedA" id="inputGradoActivdad" class="form-control" ngModel required>
+                                <option *ngFor="let grad of grado" [value]="grad.id_grado">{{grad.nombre_grado}}</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label for="inputMiMateriaActivdad" class="text-white">Mis Materias</label>
+                            <select [(ngModel)]="miMateriaSelectedA" name="miMateriaSelectedA" id="inputMiMateriaActivdad" class="form-control" ngModel required>
+                                <option *ngFor="let ma of materiaActiva | filterMiMaterias: materiaSelectedA:gradoSelectedA:id_docenteAuth" 
+                                    [value]="ma.id_materiaActiva">{{ma.nombre_materiaActiva}}
+                                </option>
+                            </select>
+                        </div>
+                    </div>
+                    <!--Filtro Competencia-->
+                    <div class="form-group col px-0">
+                        <label for="inputDocenteA" class="text-white">Buscador Competencia</label>
+                        <input type="text" class="form-control col-5" id="inputTextoBusquedaCompetencia" placeholder="Ingrese palabra clave" [(ngModel)]="nombreCompetenciaSelected"
+                            name="inputBusquedaCompetencia">
+                    </div>
+                    <div class="form-row pb-3">
+                        <div class="form-group col">
+                            <label for="inputDocenteA" class="text-white">Competencia</label>
+                            <select [(ngModel)]="competenciaSelectedA" id="inputCompetenciaA" name="competenciaA" class="form-control" onfocus='if(this.options.length > 2){ this.size = 8; }' onblur='this.size=1;' onchange='this.size=1; this.blur();'ngModel required>
+                                <option class="col-auto px-0" selected></option>
+                                <option class="col-auto px-0" selected [value]=0>Sin Competencia</option>
+                                <option class="col-auto px-0" *ngFor="let compe of competencia | filterCompetencia: nombreCompetenciaSelected:materiaSelectedA:gradoSelectedA"
+                                    [value]="compe.id_competencia">{{(compe.nombre_competencia)}}
+                                </option>
+                            </select>
+                            <!--el valor seleccionado es {{competenciaSelectedA}}-->
+                        </div>
+                    </div>
+                    <hr class="style1">
+                    
+                    <!--Contenido de la Actividad-->
+                    <div>
+                        <h3 style="cursor:context-menu" class="py-3 text-center text-white">Contenido de la Actividad</h3>
+                        <div class="contenedor py-3">
+                            <form #frmBuscarContenido="ngForm">
+                                <div class="form-group">
+                                    <!--Barra busqueda-->
+                                    <label for="inputNombreActividad" class="text-white">Busqueda de Contenido</label>
+                                    <div class="form-inline">
+                                        <input type="text" class="form-control col-md-8" id="inputTextoBusqueda" placeholder="Busqueda por nombre" [(ngModel)]="nombreCREASelectedC"
+                                            name="inputBusquedaContenido">
+                                    </div>
+                                </div>
+                                <!--Filtros-->
+                                <label for="inputState" class="text-white">Filtros:</label>
+                                <div class="form-row pb-3">
+                                    <div class="form-group col">
+                                        <label for="inputMateria" class="text-white">Materia</label>
+                                        <select [(ngModel)]="materiaSelectedC" id="inputMateria" name="materia" class="form-control" ngModel
+                                            required>
+                                            <option selected></option>
+                                            <option *ngFor="let mater of materia" [value]="mater.nombre_materia">{{mater.nombre_materia}}
+                                            </option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group col">
+                                        <label for="inputGrado" class="text-white">Grado</label>
+                                        <select [(ngModel)]="gradoSelectedC" id="inputGrado" name="grado" class="form-control" ngModel
+                                            required>
+                                            <option selected></option>
+                                            <option *ngFor="let grad of grado" [value]="grad.id_grado">{{grad.nombre_grado}}</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group col">
+                                        <label for="inputDocente" class="text-white">Profesor</label>
+                                        <select [(ngModel)]="docenteSelectedC" id="inputDocente" name="Docente" class="form-control" ngModel required>
+                                            <option selected></option>
+                                            <option *ngFor="let docen of docente" [value]="docen.id_docente">{{(docen.nombre_docente+" "+docen.apellido_docente)}}</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group col">
+                                        <label for="inputType" class="text-white">Tipo de Contenido</label>
+                                        <select [(ngModel)]="tipoContenidoSelectedC" id="inputType" name="tipoContenido"
+                                            class="form-control" ngModel required>
+                                            <option selected></option>
+                                            <option *ngFor="let tipCon of tipoContenido" [value]="tipCon.id_tipoContenido">
+                                                {{tipCon.nombre_tipoContenido}}
+                                            </option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <!--Tabla de Resultados-->
+                                <label for="inputState" class="text-white">Resultados:</label>
+                                <div class="col container p-4 my bg-light rounded table-wrapper-scroll-y my-custom-scrollbar"
+                                    style="width: 95%; height: 450px">
+                                    <!--Resultado-->
+                                    <div class="row-1"
+                                        *ngFor="let contenidoREA of contenidoVisualizar | filterContent: nombreCREASelectedC:materiaSelectedC:gradoSelectedC:docenteSelectedC:tipoContenidoSelectedC:ID_TipoContenido_Taller">
+                                        <div class="card mb-4 border-0" style="max-width: 1440px;">
+                                            <div class="card-footer p-2 bg-primary rounded-top">
+                                                <h5 class="card-title m-1">{{contenidoREA.nombre_CREA}}</h5>
+                                            </div>
+                                            <div class="row no-gutters border border-top-0 border-secondary">
+                                                <div class="col-md-10" style="max-width: 840px;">
+                                                    <div class="card-body p-2">
+                                                        <p class="card-text ">Descripcion: {{contenidoREA.descripcion_CREA}}.</p>
+                                                        <div>
+                                                            <p class="card-text"><small class="text-muted">Materia: {{contenidoREA.materia}}</small></p>
+                                                        </div>
+                                                        <div>
+                                                            <p class="card-text"><small class="text-muted">Grado: {{contenidoREA.id_grado}}</small></p>
+                                                        </div>
+                                                        <div>
+                                                            <p class="card-text"><small class="text-muted">Tipo de contenido: {{contenidoREA.nombre_tipo_CREA}}</small></p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!--Boton Adjuntar Contenido-->
+                                            <div class="card-footer bg-secondary row justify-content-md-center no-gutters p-1">
+                                                <a class="btn btn-primary" data-toggle="modal" data-target="#mimodalejemplo2" (click)="saveDataContent(contenidoREA)">Adjuntar</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <hr class="style1">
+                    
+                    <!--Creacion del Quiz-->
+                    <div>
+                        <h3 style="cursor:context-menu" class="py-3 text-center text-white">Quiz del Contenido</h3>
+                        <div class="contenedor py-3">
+                            <div class="form-group">
+                                <label for="inputDescripcionQuiz" class="text-white">Descripcion del Quiz</label>
+                                <textarea class="form-control" name="descripcion_quiz" id="inputDescripcionQuiz" rows="4" required
+                                    [(ngModel)]="descripcion_quiz" placeholder="Descripcion ..."></textarea>
+                            </div>
+                            <div class="container">
+                                <!--Tabs-->
+                                <div>
+                                    <label for="tituloPreguntasQuiz" class="text-white">Preguntas del Quiz</label>
+                                </div>
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="card mt-3 tab-card">
+                                            <div class="card-header tab-card-header">
+                                                <!--Opcion Tab-->
+                                                <ul class="nav nav-tabs card-header-tabs" id="myTab" role="tablist">
+                                                    <li class="nav-item col">
+                                                        <a class="nav-link text-center" id="one-tab" data-toggle="tab" href="#pregunta1"
+                                                            role="tab" aria-controls="pregunta1" aria-selected="true">Pregunta 1</a>
+                                                    </li>
+                                                    <li class="nav-item col">
+                                                        <a class="nav-link text-center" id="two-tab" data-toggle="tab" href="#pregunta2"
+                                                            role="tab" aria-controls="pregunta2" aria-selected="false">Pregunta 2</a>
+                                                    </li>
+                                                    <li class="nav-item col">
+                                                        <a class="nav-link text-center" id="three-tab" data-toggle="tab" href="#pregunta3"
+                                                            role="tab" aria-controls="pregunta3" aria-selected="false">Pregunta 3</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="tab-content" id="myTabContent">
+                                                <!--Pregunta 1 Tabs-->
+                                                <div class="tab-pane fade show active p-3" id="pregunta1" role="tabpanel"
+                                                    aria-labelledby="one-tab">
+                                                    <div class="form-group">
+                                                        <h5 class="py-1 text-center text-dark">Pregunta 1</h5>
+                                                        <label for="inputPregunta1" class="text-dark">Escribir pregunta</label>
+                                                        <textarea class="form-control" name="preguntaQ1" id="inputPregunta1" rows="3"
+                                                            required [(ngModel)]="preguntaQ1" placeholder="Pregunta ..."></textarea>
+                                                    </div>
+                                                    <label for="tituloCuatroRespuestas" class="text-dark">Escribir las cuatro posibles
+                                                        respuestas</label>
+                                                    <div class="form-group row">
+                                                        <label for="inputRespuesta1A" class="col-sm-2 col-form-label">Respuesta A)</label>
+                                                        <div class="col-sm-10">
+                                                            <textarea class="form-control" name="respuesta11" id="inputRespuesta1A" rows="1"
+                                                                required [(ngModel)]="respuesta11" placeholder="respuesta ..."></textarea>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group row">
+                                                        <label for="inputRespuesta1B" class="col-sm-2 col-form-label">Respuesta B)</label>
+                                                        <div class="col-sm-10">
+                                                            <textarea class="form-control" name="respuesta12" id="inputRespuesta1B" rows="1"
+                                                                required [(ngModel)]="respuesta12" placeholder="respuesta ..."></textarea>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group row">
+                                                        <label for="inputRespuesta1C" class="col-sm-2 col-form-label">Respuesta C)</label>
+                                                        <div class="col-sm-10">
+                                                            <textarea class="form-control" name="respuesta13" id="inputRespuesta1C" rows="1"
+                                                                required [(ngModel)]="respuesta13" placeholder="respuesta ..."></textarea>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group row">
+                                                        <label for="inputRespuesta1D" class="col-sm-2 col-form-label">Respuesta D)</label>
+                                                        <div class="col-sm-10">
+                                                            <textarea class="form-control" name="respuesta14" id="inputRespuesta1D" rows="1"
+                                                                required [(ngModel)]="respuesta14" placeholder="respuesta ..."></textarea>
+                                                        </div>
+                                                    </div>
+                                                    <label for="inputSelectPreguntaCorrecta" class="text-dark">Seleccione la respuesta
+                                                        correcta</label>
+                                                    <div class="form-grup row-1">
+                                                        <div class="form-group col-2">
+                                                            <select [(ngModel)]="respuestaCorrectaTSelected1" name="respuestaCorrectaTSelected1"
+                                                                id="inputRespuestaCorrecta1" class="form-control" ngModel required>
+                                                                <option [value]=1>A</option>
+                                                                <option [value]=2>B</option>
+                                                                <option [value]=3>C</option>
+                                                                <option [value]=4>D</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <!--el valor seleccionado es {{respuestaCorrectaSelected1}}-->
+                                                </div>
+                                                <!--Pregunta 2 Tabs-->
+                                                <div class="tab-pane fade p-3" id="pregunta2" role="tabpanel" aria-labelledby="two-tab">
+                                                    <div class="form-group">
+                                                        <h5 class="py-1 text-center text-dark">Pregunta 2</h5>
+                                                        <label for="inputPregunta2" class="text-dark">Escribir pregunta</label>
+                                                        <textarea class="form-control" name="preguntaQ2" id="inputPregunta2" rows="3"
+                                                            required [(ngModel)]="preguntaQ2" placeholder="Pregunta ..."></textarea>
+                                                    </div>
+                                                    <label for="tituloCuatroRespuestas" class="text-dark">Escribir las cuatro posibles
+                                                        respuestas</label>
+                                                    <div class="form-group row">
+                                                        <label for="inputRespuesta2A" class="col-sm-2 col-form-label">Respuesta A)</label>
+                                                        <div class="col-sm-10">
+                                                            <textarea class="form-control" name="respuesta21" id="inputRespuesta2A" rows="1"
+                                                                required [(ngModel)]="respuesta21" placeholder="respuesta ..."></textarea>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group row">
+                                                        <label for="inputRespuesta2B" class="col-sm-2 col-form-label">Respuesta B)</label>
+                                                        <div class="col-sm-10">
+                                                            <textarea class="form-control" name="respuesta22" id="inputRespuesta2B" rows="1"
+                                                                required [(ngModel)]="respuesta22" placeholder="respuesta ..."></textarea>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group row">
+                                                        <label for="inputRespuesta2C" class="col-sm-2 col-form-label">Respuesta C)</label>
+                                                        <div class="col-sm-10">
+                                                            <textarea class="form-control" name="respuesta23" id="inputRespuesta2C" rows="1"
+                                                                required [(ngModel)]="respuesta23" placeholder="respuesta ..."></textarea>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group row">
+                                                        <label for="inputRespuesta2D" class="col-sm-2 col-form-label">Respuesta D)</label>
+                                                        <div class="col-sm-10">
+                                                            <textarea class="form-control" name="respuesta24" id="inputRespuesta2D" rows="1"
+                                                                required [(ngModel)]="respuesta24" placeholder="respuesta ..."></textarea>
+                                                        </div>
+                                                    </div>
+                                                    <label for="inputSelectPreguntaCorrecta" class="text-dark">Seleccione la respuesta
+                                                        correcta</label>
+                                                    <div class="form-grup row-1">
+                                                        <div class="form-group col-2">
+                                                            <select [(ngModel)]="respuestaCorrectaTSelected2" name="respuestaCorrectaTSelected2"
+                                                                id="inputRespuestaCorrecta2" class="form-control" ngModel required>
+                                                                <option [value]=1>A</option>
+                                                                <option [value]=2>B</option>
+                                                                <option [value]=3>C</option>
+                                                                <option [value]=4>D</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <!--el valor seleccionado es {{respuestaCorrectaSelected1}}-->
+                                                </div>
+                                                <div class="tab-pane fade p-3" id="pregunta3" role="tabpanel" aria-labelledby="three-tab">
+                                                    <div class="form-group">
+                                                        <h5 class="py-1 text-center text-dark">Pregunta 3</h5>
+                                                        <label for="inputPregunta3" class="text-dark">Escribir pregunta</label>
+                                                        <textarea class="form-control" name="preguntaQ3" id="inputPregunta3" rows="3"
+                                                            required [(ngModel)]="preguntaQ3" placeholder="Pregunta ..."></textarea>
+                                                    </div>
+                                                    <label for="tituloCuatroRespuestas" class="text-dark">Escribir las cuatro posibles
+                                                        respuestas</label>
+                                                    <div class="form-group row">
+                                                        <label for="inputRespuesta3A" class="col-sm-2 col-form-label">Respuesta A)</label>
+                                                        <div class="col-sm-10">
+                                                            <textarea class="form-control" name="respuesta31" id="inputRespuesta3A" rows="1"
+                                                                required [(ngModel)]="respuesta31" placeholder="respuesta ..."></textarea>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group row">
+                                                        <label for="inputRespuesta3B" class="col-sm-2 col-form-label">Respuesta B)</label>
+                                                        <div class="col-sm-10">
+                                                            <textarea class="form-control" name="respuesta32" id="inputRespuesta3B" rows="1"
+                                                                required [(ngModel)]="respuesta32" placeholder="respuesta ..."></textarea>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group row">
+                                                        <label for="inputRespuesta3C" class="col-sm-2 col-form-label">Respuesta C)</label>
+                                                        <div class="col-sm-10">
+                                                            <textarea class="form-control" name="respuesta33" id="inputRespuesta3C" rows="1"
+                                                                required [(ngModel)]="respuesta33" placeholder="respuesta ..."></textarea>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group row">
+                                                        <label for="inputRespuesta3D" class="col-sm-2 col-form-label">Respuesta D)</label>
+                                                        <div class="col-sm-10">
+                                                            <textarea class="form-control" name="respuesta34" id="inputRespuesta3D" rows="1"
+                                                                required [(ngModel)]="respuesta34" placeholder="respuesta ..."></textarea>
+                                                        </div>
+                                                    </div>
+                                                    <label for="inputSelectPreguntaCorrecta" class="text-dark">Seleccione la respuesta
+                                                        correcta</label>
+                                                    <div class="form-grup row-1">
+                                                        <div class="form-group col-2">
+                                                            <select [(ngModel)]="respuestaCorrectaTSelected3" name="respuestaCorrectaTSelected3"
+                                                                id="inputRespuestaCorrecta3" class="form-control" ngModel required>
+                                                                <option [value]=1>A</option>
+                                                                <option [value]=2>B</option>
+                                                                <option [value]=3>C</option>
+                                                                <option [value]=4>D</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <!--el valor seleccionado es {{respuestaCorrectaSelected1}}-->
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div> 
+                        </div>
+                    </div>
+                    <hr class="style1">
+
+                    <!--Taller de la Actividad-->
+                    <div>
+                        <h3 style="cursor:context-menu" class="py-3 text-center text-white">Taller de la Actividad</h3>
+                        <div class="contenedor py-3">
+                            <form #frmBuscarTaller="ngForm">
+                                <div class="form-group">
+                                    <!--Barra busqueda-->
+                                    <label for="inputNombreTaller" class="text-white">Busqueda del Taller</label>
+                                    <div class="form-inline">
+                                        <input type="text" class="form-control col-md-8" id="inputTextoBusquedaTaller" placeholder="Busqueda por nombre" [(ngModel)]="nombreTallerSelected" name="inputBusquedaTaller">
+                                    </div>
+                                </div>
+                                <!--Filtros-->
+                                <label for="inputFiltrosTaller" class="text-white">Filtros:</label>
+                                <div class="form-row pb-3">
+                                    <div class="form-group col">
+                                        <label for="inputMateriaTaller" class="text-white">Materia</label>
+                                        <select [(ngModel)]="materiaTallerSelected" id="inputMateriaTaller" name="materiaTaller" class="form-control" ngModel required>
+                                            <option selected></option>
+                                            <option *ngFor="let mater of materia" [value]="mater.nombre_materia">{{mater.nombre_materia}}
+                                            </option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group col">
+                                        <label for="inputGradoTaller" class="text-white">Grado</label>
+                                        <select [(ngModel)]="gradoTallerSelected" id="inputGradoTaller" name="gradoTaller" class="form-control" ngModel required>
+                                            <option selected></option>
+                                            <option *ngFor="let grad of grado" [value]="grad.id_grado">{{grad.nombre_grado}}</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group col">
+                                        <label for="inputDocenteTaller" class="text-white">Profesor</label>
+                                        <select [(ngModel)]="docenteSelectedTaller" id="inputDocenteTaller" name="DocenteTaller" class="form-control" ngModel required>
+                                            <option selected></option>
+                                            <option *ngFor="let docen of docente" [value]="docen.id_docente">{{(docen.nombre_docente+" "+docen.apellido_docente)}}</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <!--Tabla de Resultados-->
+                                <label for="inputState" class="text-white">Resultados:</label>
+                                <div class="col container p-4 my bg-light rounded table-wrapper-scroll-y my-custom-scrollbar"
+                                    style="width: 95%; height: 450px">
+                                    <!--Resultado-->
+                                    <div class="row-1" *ngFor="let tallerREA of contenidoVisualizar | filterTaller: nombreTallerSelected:materiaTallerSelected:gradoTallerSelected:docenteSelectedTaller:ID_TipoContenido_Taller">
+                                        <div class="card mb-4 border-0" style="max-width: 1440px;">
+                                            <div class="card-footer p-2 bg-primary rounded-top">
+                                                <h5 class="card-title m-1">{{tallerREA.nombre_CREA}}</h5>
+                                            </div>
+                                            <div class="row no-gutters border border-top-0 border-secondary">
+                                                <div class="col-md-10" style="max-width: 840px;">
+                                                    <div class="card-body p-2">
+                                                        <p class="card-text ">Descripcion: {{tallerREA.descripcion_CREA}}.</p>
+                                                        <div>
+                                                            <p class="card-text"><small class="text-muted">Materia: {{tallerREA.materia}}</small></p>
+                                                        </div>
+                                                        <div>
+                                                            <p class="card-text"><small class="text-muted">Grado: {{tallerREA.id_grado}}</small></p>
+                                                        </div>
+                                                        <div>
+                                                            <p class="card-text"><small class="text-muted">Tipo de contenido: {{tallerREA.nombre_tipo_CREA}}</small></p>
+                                                        </div>  
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!--Boton Adjuntar Contenido-->
+                                            <div class="card-footer bg-secondary row justify-content-md-center no-gutters p-1">
+                                                <a class="btn btn-primary" data-toggle="modal" data-target="#mimodalejemplo3" (click)="saveDataTaller(tallerREA)" >Adjuntar</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <hr class="style1">
+                    
+                    <!--Creacion del Evaluacion-->
+                    <div>
+                        <h3 style="cursor:context-menu" class="py-3 text-center text-white">Evaluación</h3>
+                        <div class="contenedor py-3">
+                            <div class="form-group">
+                                <label for="inputDescripcionEvaluacion" class="text-white">Descripcion de la Evaluación</label>
+                                <textarea class="form-control" name="descripcion_evaluacion" id="inputDescripcionEvaluacion" rows="4" required
+                                    [(ngModel)]="descripcion_evaluacion" placeholder="Descripcion ..."></textarea>
+                            </div>
+                            <div class="container">
+                                <!--Tabs-->
+                                <div>
+                                    <label for="tituloPreguntasevaluacion" class="text-white">Preguntas de la Evaluación</label>
+                                </div>
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="card mt-3 tab-card">
+                                            <div class="card-header tab-card-header">
+                                                <!--Opcion Tab-->
+                                                <ul class="nav nav-tabs card-header-tabs" id="myTab" role="tablist">
+                                                    <li class="nav-item col">
+                                                        <a class="nav-link text-center" id="one-tabE" data-toggle="tab" href="#pregunta1E"
+                                                            role="tab" aria-controls="pregunta1E" aria-selected="true">Pregunta 1</a>
+                                                    </li>
+                                                    <li class="nav-item col">
+                                                        <a class="nav-link text-center" id="two-tabE" data-toggle="tab" href="#pregunta2E"
+                                                            role="tab" aria-controls="pregunta2E" aria-selected="false">Pregunta 2</a>
+                                                    </li>
+                                                    <li class="nav-item col">
+                                                        <a class="nav-link text-center" id="three-tabE" data-toggle="tab" href="#pregunta3E"
+                                                            role="tab" aria-controls="pregunta3E" aria-selected="false">Pregunta 3</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            
+                                            <div class="tab-content" id="myTabContent">
+                                                <!--Pregunta 1 Tabs-->
+                                                <div class="tab-pane fade show active p-3" id="pregunta1E" role="tabpanel" aria-labelledby="one-tabE">
+                                                    <div class="form-group">
+                                                        <h5 class="py-1 text-center text-dark">Pregunta 1</h5>
+                                                        <label for="inputPregunta1E" class="text-dark">Escribir pregunta</label>
+                                                        <textarea class="form-control" name="preguntaQ1E" id="inputPregunta1E" rows="3" required 
+                                                            [(ngModel)]="preguntaQ1E" placeholder="Pregunta ..."></textarea>
+                                                    </div>
+                                                    <label for="tituloCuatroRespuestasE" class="text-dark">Escribir las cuatro posibles respuestas</label>
+                                                    <div class="form-group row">
+                                                        <label for="inputRespuesta1AE" class="col-sm-2 col-form-label">Respuesta A)</label>
+                                                        <div class="col-sm-10">
+                                                            <textarea class="form-control" name="respuesta11E" id="inputRespuesta1AE" rows="1"
+                                                                required [(ngModel)]="respuesta11E" placeholder="respuesta ..."></textarea>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group row">
+                                                        <label for="inputRespuesta1BE" class="col-sm-2 col-form-label">Respuesta B)</label>
+                                                        <div class="col-sm-10">
+                                                            <textarea class="form-control" name="respuesta12E" id="inputRespuesta1BE" rows="1"
+                                                                required [(ngModel)]="respuesta12E" placeholder="respuesta ..."></textarea>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group row">
+                                                        <label for="inputRespuesta1CE" class="col-sm-2 col-form-label">Respuesta C)</label>
+                                                        <div class="col-sm-10">
+                                                            <textarea class="form-control" name="respuesta13E" id="inputRespuesta1CE" rows="1"
+                                                                required [(ngModel)]="respuesta13E" placeholder="respuesta ..."></textarea>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group row">
+                                                        <label for="inputRespuesta1DE" class="col-sm-2 col-form-label">Respuesta D)</label>
+                                                        <div class="col-sm-10">
+                                                            <textarea class="form-control" name="respuesta14E" id="inputRespuesta1DE" rows="1"
+                                                                required [(ngModel)]="respuesta14E" placeholder="respuesta ..."></textarea>
+                                                        </div>
+                                                    </div>
+                                                    <label for="inputSelectPreguntaCorrectaE" class="text-dark">Seleccione la respuesta correcta</label>
+                                                    <div class="form-grup row-1">
+                                                        <div class="form-group col-2">
+                                                            <select [(ngModel)]="respuestaCorrectaESelected1" name="respuestaCorrectaESelected1" id="inputRespuestaCorrecta1E" class="form-control" ngModel required>
+                                                                <option [value]=1>A</option>
+                                                                <option [value]=2>B</option>
+                                                                <option [value]=3>C</option>
+                                                                <option [value]=4>D</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <!--Pregunta 2 Tabs-->
+                                                <div class="tab-pane fade p-3" id="pregunta2E" role="tabpanel" aria-labelledby="two-tabE">
+                                                    <div class="form-group">
+                                                        <h5 class="py-1 text-center text-dark">Pregunta 2</h5>
+                                                        <label for="inputPregunta2E" class="text-dark">Escribir pregunta</label>
+                                                        <textarea class="form-control" name="preguntaQ2E" id="inputPregunta2E" rows="3"
+                                                            required [(ngModel)]="preguntaQ2E" placeholder="Pregunta ..."></textarea>
+                                                    </div>
+                                                    <label for="tituloCuatroRespuestasE" class="text-dark">Escribir las cuatro posibles respuestas</label>
+                                                    <div class="form-group row">
+                                                        <label for="inputRespuesta2AE" class="col-sm-2 col-form-label">Respuesta A)</label>
+                                                        <div class="col-sm-10">
+                                                            <textarea class="form-control" name="respuesta21E" id="inputRespuesta2AE" rows="1"
+                                                                required [(ngModel)]="respuesta21E" placeholder="respuesta ..."></textarea>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group row">
+                                                        <label for="inputRespuesta2BE" class="col-sm-2 col-form-label">Respuesta B)</label>
+                                                        <div class="col-sm-10">
+                                                            <textarea class="form-control" name="respuesta22E" id="inputRespuesta2BE" rows="1"
+                                                                required [(ngModel)]="respuesta22E" placeholder="respuesta ..."></textarea>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group row">
+                                                        <label for="inputRespuesta2CE" class="col-sm-2 col-form-label">Respuesta C)</label>
+                                                        <div class="col-sm-10">
+                                                            <textarea class="form-control" name="respuesta23E" id="inputRespuesta2CE" rows="1"
+                                                                required [(ngModel)]="respuesta23E" placeholder="respuesta ..."></textarea>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group row">
+                                                        <label for="inputRespuesta2DE" class="col-sm-2 col-form-label">Respuesta D)</label>
+                                                        <div class="col-sm-10">
+                                                            <textarea class="form-control" name="respuesta24E" id="inputRespuesta2DE" rows="1"
+                                                                required [(ngModel)]="respuesta24E" placeholder="respuesta ..."></textarea>
+                                                        </div>
+                                                    </div>
+                                                    <label for="inputSelectPreguntaCorrectaE" class="text-dark">Seleccione la respuesta correcta</label>
+                                                    <div class="form-grup row-1">
+                                                        <div class="form-group col-2">
+                                                            <select [(ngModel)]="respuestaCorrectaESelected2" name="respuestaCorrectaESelected2" id="inputRespuestaCorrecta2E" class="form-control" ngModel required>
+                                                                <option [value]=1>A</option>
+                                                                <option [value]=2>B</option>
+                                                                <option [value]=3>C</option>
+                                                                <option [value]=4>D</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <!--Pregunta 3 Tabs-->
+                                                <div class="tab-pane fade p-3" id="pregunta3E" role="tabpanel" aria-labelledby="three-tabE">
+                                                    <div class="form-group">
+                                                        <h5 class="py-1 text-center text-dark">Pregunta 3</h5>
+                                                        <label for="inputPregunta3E" class="text-dark">Escribir pregunta</label>
+                                                        <textarea class="form-control" name="preguntaQ3E" id="inputPregunta3E" rows="3"
+                                                            required [(ngModel)]="preguntaQ3E" placeholder="Pregunta ..."></textarea>
+                                                    </div>
+                                                    <label for="tituloCuatroRespuestasE" class="text-dark">Escribir las cuatro posibles respuestas</label>
+                                                    <div class="form-group row">
+                                                        <label for="inputRespuesta3AE" class="col-sm-2 col-form-label">Respuesta A)</label>
+                                                        <div class="col-sm-10">
+                                                            <textarea class="form-control" name="respuesta31E" id="inputRespuesta3AE" rows="1"
+                                                                required [(ngModel)]="respuesta31E" placeholder="respuesta ..."></textarea>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group row">
+                                                        <label for="inputRespuesta3BE" class="col-sm-2 col-form-label">Respuesta B)</label>
+                                                        <div class="col-sm-10">
+                                                            <textarea class="form-control" name="respuesta32E" id="inputRespuesta3BE" rows="1"
+                                                                required [(ngModel)]="respuesta32E" placeholder="respuesta ..."></textarea>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group row">
+                                                        <label for="inputRespuesta3CE" class="col-sm-2 col-form-label">Respuesta C)</label>
+                                                        <div class="col-sm-10">
+                                                            <textarea class="form-control" name="respuesta33E" id="inputRespuesta3CE" rows="1"
+                                                                required [(ngModel)]="respuesta33E" placeholder="respuesta ..."></textarea>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group row">
+                                                        <label for="inputRespuesta3DE" class="col-sm-2 col-form-label">Respuesta D)</label>
+                                                        <div class="col-sm-10">
+                                                            <textarea class="form-control" name="respuesta34E" id="inputRespuesta3DE" rows="1"
+                                                                required [(ngModel)]="respuesta34E" placeholder="respuesta ..."></textarea>
+                                                        </div>
+                                                    </div>
+                                                    <label for="inputSelectPreguntaCorrectaE" class="text-dark">Seleccione la respuesta correcta</label>
+                                                    <div class="form-grup row-1">
+                                                        <div class="form-group col-2">
+                                                            <select [(ngModel)]="respuestaCorrectaESelected3" name="respuestaCorrectaESelected3" id="inputRespuestaCorrecta3E" class="form-control" ngModel required>
+                                                                <option [value]=1>A</option>
+                                                                <option [value]=2>B</option>
+                                                                <option [value]=3>C</option>
+                                                                <option [value]=4>D</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div> 
+                        </div>
+                    </div>
+                    <hr class="style1">
+                    <br>
+                    
+                    <!--Boton Crear Actividad-->
+                    <div class="row pb-4 justify-content-md-center no-gutters">
+                        <a class="btn bg-warning px-5 py-4 font-weight-bold"  data-toggle="modal" data-target="#mimodalejemplo" (click)="onCrearActividad(frmCrearActividad)">Crear Actividad</a>
+                    </div>
+
+                </form>
+                <hr class="style1">
+            </div>
+        </div>  
+    </div>  
+
+    <!-- Modal Confirmar Actividad Creada-->
+    <div class="modal fade" id="mimodalejemplo" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header bg-light">
+                    <h5 class="modal-title" id="myModalLabel">Mensaje</h5>
+                    <button class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body" *ngIf="subiendo">
+                    Creando la Actividad. Espera por favor.
+                </div>
+                <div class="modal-body text-info" *ngIf="correcto">
+                    La Actividad ha sido creada.
+                </div>
+                <div class="modal-body text-danger" *ngIf="error">
+                    La Actividad no se ha podido crear. Verifica que has ingresado todos los 
+                    datos requeridos.
+                </div>
+                <div class="modal-body text-danger" *ngIf="error2">
+                    La Actividad no se ha podido crear. Verifica que has 
+                    adjuntado el contenido y el taller.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Modal Adjuntar Contenido-->
+    <div class="modal fade" id="mimodalejemplo2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel2">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header bg-light">
+                    <h5 class="modal-title" id="myModalLabel">Mensaje</h5>
+                    <button class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body text-info">
+                    El Contenido ha sido adjuntado
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Modal Adjuntar Taller-->
+    <div class="modal fade" id="mimodalejemplo3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel3">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header bg-light">
+                    <h5 class="modal-title" id="myModalLabel">Mensaje</h5>
+                    <button class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body text-info">
+                    El Taller ha sido adjuntado
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</div>
