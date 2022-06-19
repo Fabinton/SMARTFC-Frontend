@@ -33,6 +33,7 @@ import { BusquedaVisitanteComponent } from './Visitante/busqueda-visitante/busqu
 import { HeaderVisitanteComponent } from './Visitante/header-visitante/header-visitante.component';
 import { DudasComponent } from './dudas/dudas.component';
 import { MetricasComponent } from './metricas/metricas.component';
+import { CalificacionComponent } from './calificacion/calificacion.component';
 
 @NgModule({
   declarations:[
@@ -59,7 +60,8 @@ import { MetricasComponent } from './metricas/metricas.component';
     BusquedaVisitanteComponent,
     HeaderVisitanteComponent,
     DudasComponent,
-    MetricasComponent
+    MetricasComponent,
+    CalificacionComponent
   ],
   imports:[
       CommonModule,
