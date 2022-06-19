@@ -106,6 +106,7 @@ export class MetricasComponent implements OnInit {
 
   //consultar todos las Actividades y verificar el nombre de la materia, competencia y profesor con sus respectivos ID´s
   getActividades() {
+    /** EN ESTE METODO SE DEBE SETAER LA INFORMACIÓN DE CALIFIACIONES DE CADA VIDEO*/
     this.ActividadService.allCompetencias().subscribe(res => {
       this.competencias = res as CompetenciaI[];
 
@@ -374,5 +375,24 @@ export class MetricasComponent implements OnInit {
       return false;
     }
   }
+
+  calificacion: number = 3;
+  listQualification = [
+    {
+      "quantity": 1
+    },
+    {
+      "quantity": 2
+    },
+    {
+      "quantity": 3
+    },
+    {
+      "quantity": 4
+    },
+    {
+      "quantity": 5
+    }
+  ]
 
 }

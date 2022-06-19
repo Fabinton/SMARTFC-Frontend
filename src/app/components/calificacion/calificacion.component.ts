@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-calificacion',
@@ -6,13 +6,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./calificacion.component.css']
 })
 export class CalificacionComponent implements OnInit {
+  @Input() calificacion: number;
   public stars: boolean[] = Array(5).fill(false);
   constructor() { 
-    let ratingg = 2;
-    this.stars = this.stars.map((_, i) => ratingg > i);
   }
 
   ngOnInit(): void {
+    this.setStart();
+  }
+
+  setStart(){
+    this.stars = this.stars.map((_, i) => this.calificacion > i);
   }
 
 }
