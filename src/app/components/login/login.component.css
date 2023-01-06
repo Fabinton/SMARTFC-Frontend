@@ -1,0 +1,39 @@
+.login-cart{
+    height: 490px;
+    width: 500px;
+    background: #f5f5f5;
+    float:left;
+    position:relative;
+    overflow:hidden;
+    vertical-align: bottom;
+    
+}
+.logo-cart{
+    width:30%;
+    position:absolute;
+    top:0;
+    bottom:0;
+    
+}
+
+.logo-cont{
+    position: absolute;
+    top: 7%;
+    left: 125%;
+    margin: -25px 0 0 -25px;
+}
+.txt-logo{
+    display: block;
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.logo-cart > .inp-login{
+    position:absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    max-width: 50%;
+    text-align: center;
+
+}
