@@ -1,39 +1,132 @@
 .login-cart{
-    height: 490px;
-    width: 500px;
+    height: 790px;
+    width: 600px;
     background: #f5f5f5;
-    float:left;
-    position:relative;
-    overflow:hidden;
-    vertical-align: bottom;
-    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
 }
 .logo-cart{
-    width:30%;
-    position:absolute;
-    top:0;
-    bottom:0;
-    
+    display: flex;
 }
 
 .logo-cont{
-    position: absolute;
-    top: 7%;
-    left: 125%;
-    margin: -25px 0 0 -25px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
 }
 .txt-logo{
-    display: block;
-  width: 60%;
+  display: flex;
+  width: 55%;
   margin-left: auto;
   margin-right: auto;
 }
-.logo-cart > .inp-login{
-    position:absolute;
-    top:50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    max-width: 50%;
+
+.inp-email{
+    display: flex;
     text-align: center;
+    margin-bottom: 2%;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+}
+.inp-emailtxt{
+    display: flex;
+    border: 1px solid #f5eeee;
+    text-align: center;
+    height: 30px;
+    border-radius: 0.5rem;
+    padding: 0.5px;
+}
+
+.inp-emailtxt::placeholder{
+    color: #a19e9e; 
+}
+.inp-emailtxt:focus {
+    outline: none;
+    border: 3px solid #70C2E5;
+    box-shadow: 2px 2px 0.5px 0.5px #c6e4f1;   
+}
+
+
+.inp-passw{
+    display: flex;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%
+}
+.inp-passtxt{
+    display: flex;
+    border: 1px solid #f5eeee;
+    text-align: center;
+    height: 30px;
+    border-radius: 0.5rem !important;
+}
+.inp-passtxt::placeholder{
+    color: #a19e9e; 
+}
+.inp-passtxt:focus{
+    outline: none;
+    border: 3px solid #70C2E5;
+    box-shadow: 2px 2px 0.5px 0.5px #c6e4f1;   
+    
+}
+.btnlogin{
+    width: 90%;
+    display: flex;
+    padding: 15px 30px;
+    border: none;
+    background-color: #70C2E5;
+    box-shadow: 2px 2px 0.5px 0.5px #c6e4f1;
+    color: white;
+    justify-content: center;
+    margin: auto;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+.btnlogin:hover {
+    background-color: #c6e4f1;
+    transform: translateY(-2px);
+  }
+  
+.txtcuenta{
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+.txtreg{
+    color: #70C2E5;
+ 
+}
+.endlogin{display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
 
 }
+.txtservidor{
+    cursor: pointer;
+    color: #70C2E5;
+    margin-left: 10px;
+    row-gap: 1;
+}
+.imapp{
+    cursor: pointer;
+    width: 45%; 
+    height:45%;
+ 
+}
+
+
+
+
+@media screen and ( min-width:40em) {
+    .product-grid{
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-gap: 15px;
+    }
+}   

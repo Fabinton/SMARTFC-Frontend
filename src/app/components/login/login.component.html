@@ -9,13 +9,13 @@
                         <img src="assets/img/smartFCLogo.png" class="txt-logo" alt="Logo" >
                     </div>
                 </div>
-                <div class="inp-login">
+                <div>
                     <form #frmLogin="ngForm" >
-                        <div class="input-group mb-2">
-                            <input type="text" name="correo_electronico" class="form-control input_user col-10 mx-auto" value="" placeholder="Correo Electronico" ngModel required>
+                        <div class="inp-email">
+                            <input type="email" class="inp-emailtxt" name="correo_electronico"  value="" placeholder="Correo Electronico" ngModel required>
                         </div>
-                        <div class="input-group mb-2">
-                            <input type="password" name="contrasena" class="form-control input_pass col-10 mx-auto" value="" placeholder="Contraseña" ngModel required>
+                        <div class="inp-passw">
+                            <input type="password" class="inp-passtxt" name="contrasena"  value="" placeholder="Contraseña" ngModel required>
                         </div>
                     </form>
                     <div class="" style="height: 10px;">
@@ -24,28 +24,28 @@
                             <div class="text-danger text-center" *ngIf="error3">Error Servidor</div>
                     </div>
                 </div>
-                <div class="d-flex justify-content-center mt-2 login_container">
-                    <a name="button" style="cursor: pointer" class="btn bg-primary col text-white" (click)="onLoginDocente(frmLogin)">Ingresar</a>
+                <div>
+                    <button class="btnlogin" (click)="onLoginDocente(frmLogin)">Iniciar sesión</button>
                 </div>
-                <div class="d-flex justify-content-center mt-1 login_container">
-                    <a name="button" class="btn bg-danger col text-white" routerLink="/registroProfesor">Registrarse</a>
+                <div>
+                    <button class="btnlogin" (click)="onLoginVisitante()">Sincroniza datos usario</button>
                 </div>
-                <div class="d-flex justify-content-center mt-1 login_container">
-                    <a name="button" style="cursor: pointer" class="btn bg-warning col text-white" (click)="onLoginVisitante()">Visitante</a>
+                <div>
+                    <button class="btnlogin" (click)="onLoginAdmin(frmLogin)">Login como Administrador</button>
                 </div>
-                <div class="d-flex justify-content-center mt-1 login_container">
-                    <a name="button" style="cursor: pointer" class="btn bg-secondary col text-white" (click)="onLoginAdmin(frmLogin)">Administrador</a>
+                <div class="txtcuenta">
+                    <a > ¿No tienes cuenta? <a name="button" class="txtreg" routerLink="/registroProfesor">Registrate</a></a>
                 </div>
                 <div class="mt-4 mx-0">
                     <!--<div class="d-flex justify-content-center links">
                         <a href="#">Olvidastes tu contraseña?</a>
                     </div>-->
-                    <div class="row align-items-center justify-content-between">
-                        <div class="col-2"><span class="text-white" style="cursor: pointer" data-toggle="modal" data-target="#mimodalejemplo">Servidor:</span>
+                    <div class="endlogin">
+                        <div class="txtservidor"><span data-toggle="modal" data-target="#mimodalejemplo">Servidor:</span>
                             <span class="text-info pl-1" *ngIf="correctoIP">Conectado</span>
                             <span class="text-danger pl-1" *ngIf="errorIP">Desconectado</span>
                         </div>
-                        <img src="assets/img/downloadApp1.png" class="" width=45% height=45% class="rounded float-right pr-1" alt="Logo" style="cursor: pointer" (click)="downloadApp()">
+                        <img src="assets/img/downloadApp1.png" class="imapp"  alt="Logo"  (click)="downloadApp()">
                     </div>
                 </div>
             </div>
