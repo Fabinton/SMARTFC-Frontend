@@ -1,0 +1,27 @@
+.btnAddQuestion {
+    background-color: #28a745!important;
+    width: 20%;
+    height: 40px;
+    border-radius: 10px;
+}
+.tableQuestion {
+    width: 100%;
+    border-radius: 10px;
+    background: #eee;
+ }
+ 
+ .thQuestion, .tdQuestion {
+    width: auto;
+    text-align: center;
+    vertical-align: top;
+    border-spacing: 0;
+    padding: 0.3em;
+ }
+ 
+ .divRadioBtn{
+     display: flex;
+ }
+ .radioBtn{
+    margin-right: 10px;
+    height: 24px;
+ }
