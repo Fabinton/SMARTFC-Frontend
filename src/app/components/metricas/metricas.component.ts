@@ -106,11 +106,13 @@ export class MetricasComponent implements OnInit {
 
   //consultar todos las Actividades y verificar el nombre de la materia, competencia y profesor con sus respectivos ID´s
   getActividades() {
+    console.log("Hola1");
     this.ActividadService.allCompetencias().subscribe(res => {
+      console.log("Hola2");
       this.competencias = res as CompetenciaI[];
 
       this.ActividadService.allActivities().subscribe(res => {
-        //console.log(res);
+        console.log(res);
         this.ActividadService.actividades = res as ActividadI[];
         this.actividadVisualizar = res as ActividadVisualizaI[];
         //console.log(this.ActividadService.actividades.length);
@@ -235,7 +237,7 @@ export class MetricasComponent implements OnInit {
                 if(this.eventos[n].check_a3 == this.actividadToSave.CA3){
                   this.notaA3 = 5;
                 }
-                if(this.eventos[n].check_Ea1 == this.actividadToSave.ECA1){
+                /*if(this.eventos[n].check_Ea1 == this.actividadToSave.ECA1){
                   this.notaEA1 = 5;
                 }
                 if(this.eventos[n].check_Ea2 == this.actividadToSave.ECA2){
@@ -243,8 +245,15 @@ export class MetricasComponent implements OnInit {
                 }
                 if(this.eventos[n].check_Ea3 == this.actividadToSave.ECA3){
                   this.notaEA3 = 5;
+                }*/
+                
+                /*let sumQuestions = 0;
+                for (let index = 0; index < this.eventos[n].questions.length; index++) {
+                  const element = this.eventos[n].questions[index];
+                  sumQuestions += element;
                 }
-    
+                nota_evaluacionTemp = nota_evaluacionTemp/this.eventos[n].questions.length;*/
+
                 var nota_quizTemp = parseFloat(((this.notaA1 + this.notaA2 + this.notaA3)/3).toFixed(2));
                 var nota_evaluacionTemp = parseFloat(((this.notaEA1 + this.notaEA2 + this.notaEA3)/3).toFixed(2));
                 var nota_finalTemp = parseFloat(((nota_quizTemp + nota_evaluacionTemp)/2).toFixed(2)); 
