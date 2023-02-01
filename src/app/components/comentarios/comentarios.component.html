@@ -1,0 +1,52 @@
+<div class="row-1">
+    <div>
+        <h5 style="cursor:context-menu" class="">Comentarios</h5>
+    </div>
+    <div class="card">
+        <ul class="list-group list-group-flush" *ngFor="let comment of comments  | slice:-1">
+
+            <div class="row">
+                <div class=" col-md-8 ">
+                    <a class="card-text"><small class="text-muted">{{comment.comentario}} </small></a>
+                </div>
+                <div class="  col-md-4 "><a class="card-text"><small class="text-muted">{{comment.createdAt |
+                            date:'medium':'MMM d, y, h:mm:ss a'}}</small></a></div>
+            </div>
+
+        </ul>
+        <a class="badge badge-primary" style="color: #fff" (click)="openPopup()">Ver todos los
+            comentarios</a>
+    </div>
+</div>
+
+<div class="modal" tabindex="-1" role="dialog" [ngStyle]="{'display':displayStyle}">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Todos los comentarios</h4>
+            </div>
+            <div class="modal-body">
+                <div class="card">
+                    <ul class="list-group list-group-flush" *ngFor="let comment of comments">
+
+                        <div class="row">
+                            <div class=" col-md-8 ">
+                                <a class="card-text"><small class="text-muted">{{comment.comentario}} </small></a>
+                            </div>
+                            <div class="  col-md-4 "><a class="card-text"><small class="text-muted">{{comment.createdAt
+                                        |
+                                        date:'medium':'MMM d, y, h:mm:ss a'}}</small></a></div>
+                        </div>
+
+                    </ul>
+                </div>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary  btn-sm" (click)="closePopup()">
+                    Cerrar
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
