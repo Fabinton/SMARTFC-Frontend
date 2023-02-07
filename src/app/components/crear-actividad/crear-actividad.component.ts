@@ -21,7 +21,6 @@ import { NgForm } from '@angular/forms';
 })
 export class CrearActividadComponent implements OnInit {
 
-  //#region Región de variables
   //Elementos de Busqueda de Contenido
   contenidoToSave:contenidoREAI;
   tallerToSave:contenidoREAI;
@@ -73,20 +72,10 @@ export class CrearActividadComponent implements OnInit {
   temp2:any;
   tallerVerificacion:boolean;
   contenidoVerificacion:boolean;
-  headersQuestion:any[];
-  questionList:any[];
-  headersQuestionOptions:any[];
-  questionOptionsList:any[];
-  questionOptionsListCorrect:any[];
-  dictionary:any[];
-
-  descripcion_Pregunta: string;
-  //#endregion
 
   constructor(private AuthDService: AuthDService, private ActividadService: ActividadService, private ContentREAService: ContentREAService, private router: Router) { }
 
   ngOnInit() {
-    this.dictionary = ['A','B','C','D','E', 'F', 'G', 'H'];
     window.scrollTo(0, 0);
     this.comprobacionLogin();
     this.ID_TipoContenido_Taller = 5;
@@ -100,9 +89,6 @@ export class CrearActividadComponent implements OnInit {
     //console.log('prueba', this.id_docenteAuth, this.id_colegioAuth);
     this.getOptions();
     this.getContenidos();
-
-    this.questionOptionsListCorrect = new Array();
-    
   }
 
   //Obtener los datos de los Options
@@ -140,18 +126,6 @@ export class CrearActividadComponent implements OnInit {
 
   //consultar todos los ContenidosREA y verificar el nombre de la materia y contenido con sus respectivos ID´s
   getContenidos() {
-    this.headersQuestion = [
-      'id',
-      'question',
-      'Opciones'
-    ];
-    this.headersQuestionOptions = [
-      'id',
-      'Respuesta',
-      'Opciones'
-    ];
-    this.questionList = [ ];
-    this.questionOptionsList = [ ];
     this.ContentREAService.allSubject().subscribe(res => {
       this.materia = res as MateriaI[];
 
@@ -198,7 +172,7 @@ export class CrearActividadComponent implements OnInit {
     this.error2 = true;
     this.subiendo = false;
 
-    if (true) {
+    if (this.tallerVerificacion == true && this.contenidoVerificacion == true) {
       this.correcto = false;
       this.error = false;
       this.error2 = false;
@@ -241,7 +215,7 @@ export class CrearActividadComponent implements OnInit {
         var idGlobal = "" + this.id_colegioAuth + this.newCont;
         this.newID = parseInt(idGlobal);
 
-        /*if (this.contenidoToSave.tipo_CREA == 1) {
+        if (this.contenidoToSave.tipo_CREA == 1) {
           this.videoOpt = 1;
           this.urlvideoOpt = this.contenidoToSave.urlrepositorio;
           this.documentoOpt = 0;
@@ -280,7 +254,7 @@ export class CrearActividadComponent implements OnInit {
           this.urlaudioOpt = "no";
           this.htmlOpt = 1;
           this.urlhtmlOpt = this.contenidoToSave.urlrepositorio;
-        }*/
+        }
 
         //console.log("prueba:", form.value.nombre_actividad);
 
@@ -292,22 +266,22 @@ export class CrearActividadComponent implements OnInit {
           id_docente: this.id_docenteAuth,
           id_materia: this.materiaSelectedA,
           id_grado: this.gradoSelectedA,
-          id_materiaActiva: 1,
+          id_materiaActiva: this.miMateriaSelectedA,
           id_competencia: this.competenciaSelectedA,
           titulo_actividad: form.value.nombre_actividad,
           descripcion_actividad: form.value.descripcion_actividad,
-          id_contenidoREA: 100,
-          video: 1,
-          urlvideo: "http://localhost:3000/public/repositorio/pmG9sQcP0D8",
-          documento: 0,
-          urldocumento: "no",
-          audio: 0,
-          urlaudio: "no",
-          html: 0,
-          urlhtml: "no",
-          id_taller: 100,
+          id_contenidoREA: this.contenidoToSave.id_CREA,
+          video: this.videoOpt,
+          urlvideo: this.urlvideoOpt,
+          documento: this.documentoOpt,
+          urldocumento: this.urldocumentoOpt,
+          audio: this.audioOpt,
+          urlaudio: this.urlaudioOpt,
+          html: this.htmlOpt,
+          urlhtml: this.urlhtmlOpt,
+          id_taller: this.tallerToSave.id_CREA,
           taller: 0,
-          urltaller: "http://localhost:3000/public/repositorio/dePEDJFV86uxQWGngs",
+          urltaller: this.tallerToSave.urlrepositorio,
           descripcion_test: form.value.descripcion_quiz,
           Q1: form.value.preguntaQ1,
           A11: form.value.respuesta11,
@@ -329,7 +303,24 @@ export class CrearActividadComponent implements OnInit {
           CA3: this.respuestaCorrectaTSelected3,
           evaluacion: 0,
           descripcion_evaluacion: form.value.descripcion_evaluacion,
-          preguntas: this.questionList,
+          EQ1: form.value.preguntaQ1E,
+          EA11: form.value.respuesta11E,
+          EA12: form.value.respuesta12E,
+          EA13: form.value.respuesta13E,
+          EA14: form.value.respuesta14E,
+          ECA1: form.value.respuestaCorrectaESelected1,
+          EQ2: form.value.preguntaQ2E,
+          EA21: form.value.respuesta21E,
+          EA22: form.value.respuesta22E,
+          EA23: form.value.respuesta23E,
+          EA24: form.value.respuesta24E,
+          ECA2: form.value.respuestaCorrectaESelected2,
+          EQ3: form.value.preguntaQ3E,
+          EA31: form.value.respuesta31E,
+          EA32: form.value.respuesta32E,
+          EA33: form.value.respuesta33E,
+          EA34: form.value.respuesta34E,
+          ECA3: form.value.respuestaCorrectaESelected3,
           autor: this.AuthDService.getnombreApellidoDocente(),
           id_autor: this.id_docenteAuth
         }
@@ -345,7 +336,7 @@ export class CrearActividadComponent implements OnInit {
             this.error = true;
             this.subiendo = false;
           } else {
-            /*const contenidoREAInfo = {
+            const contenidoREAInfo = {
               id_CREA: this.contenidoToSave.id_CREA,
               en_uso: (this.contenidoToSave.en_uso + 1)
             }
@@ -363,11 +354,7 @@ export class CrearActividadComponent implements OnInit {
                 this.subiendo = false;
                 this.resetForm(form);
               });
-            });*/
-            this.correcto = true;
-                this.error = false;
-                this.subiendo = false;
-                this.resetForm(form);
+            });
           }
         });
       });
@@ -411,79 +398,4 @@ export class CrearActividadComponent implements OnInit {
     }
   }
   
-  getQuetions(){
-    this.questionList
-  }
-  onClickAddQuestion() {
-    this.questionOptionsListCorrect = new Array();
-    this.questionOptionsList = new Array();
-    this.descripcion_Pregunta = '';
-  }
-
-  onCrearAgregarP(form: NgForm) {
-    if(form.valid) {
-      let nextItem = this.questionList.length + 1;
-      let jona = {id: nextItem, question: form.value.descripcion_Pregunta, type: form.value.sh, options: null, correct: null};
-      if(form.value.sh == 0) {
-        jona.options = this.questionOptionsList;
-        jona.correct = this.dictionary[form.value.respuestaCorrectaESelected1];
-        
-      }
-      this.questionList.push(jona);
-      this.getQuetions();
-      document.getElementById("closeModal").click();
-    } else {
-      //Faltan campos
-    }
-  }
-  editQuestion(form: NgForm, row) {
-    this.questionOptionsListCorrect = new Array();
-    this.descripcion_Pregunta = row.question;
-    if(row.options != null) {
-      this.questionOptionsList = row.options;
-      this.resetListQuestionsOptions();
-    } else {
-      this.questionOptionsList = new Array();
-    }
-  }
-  deleteQuestion(row) {
-    for (let index = 0; index < this.questionList.length; index++) {
-      const element = this.questionList[index];
-      if(element.id == row.id) {
-        this.questionList.splice(index,1);
-      }
-    }
-    for (let index = 0; index < this.questionList.length; index++) {
-      const element = this.questionList[index];
-      element.id = index + 1;
-    }
-  }
-
-  onCrearRespuesta(form: NgForm) {
-    let value = this.dictionary[this.questionOptionsList.length];
-    
-    //let nextItem = this.questionOptionsList.length + 1;
-    if(form.value.respuesta11E.length > 0 && this.questionOptionsList.length < 10) {
-      this.questionOptionsListCorrect.push({id: this.questionOptionsListCorrect.length, value: value});
-      let jona = {id: value, question: form.value.respuesta11E};
-      this.questionOptionsList.push(jona);
-    }
-  }
-  deleteQuestionOption(row) {
-    this.questionOptionsListCorrect = new Array();
-    for (let index = 0; index < this.questionOptionsList.length; index++) {
-      const element = this.questionOptionsList[index];
-      if(element.id == row.id) {
-        this.questionOptionsList.splice(index,1);
-      }
-    }
-    this.resetListQuestionsOptions();
-  }
-  resetListQuestionsOptions() {
-    for (let index = 0; index < this.questionOptionsList.length; index++) {
-      const element = this.questionOptionsList[index];
-      element.id = this.dictionary[index];
-      this.questionOptionsListCorrect.push({id: this.questionOptionsList.length, value: element.id});
-    }
-  }
 }

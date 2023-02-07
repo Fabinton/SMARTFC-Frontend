@@ -447,52 +447,12 @@
                             <div class="form-group">
                                 <label for="inputDescripcionEvaluacion" class="text-white">Descripcion de la Evaluación</label>
                                 <textarea class="form-control" name="descripcion_evaluacion" id="inputDescripcionEvaluacion" rows="4" required
-                                    [(ngModel)]="descripcion_evaluacion" placeholder="Escriba aquí la descripción"></textarea>
+                                    [(ngModel)]="descripcion_evaluacion" placeholder="Descripcion ..."></textarea>
                             </div>
-                            <div>
-                                <input type="button" class="btnAddQuestion" data-toggle="modal" data-target="#modalAddQuestion" value="Añadir pregunta" (click)="onClickAddQuestion()">
-                            </div>
-                            <br>
-                            <div>
-                                <table class="tableQuestion table table-striped">
-                                    <tr>
-                                        <th class="thQuestion" *ngFor="let head of headersQuestion">{{head}}</th>
-                                    </tr>
-                                    <tr *ngFor="let row of questionList">
-                                        <td class="tdQuestion">{{row.id}}</td>
-                                        <td class="tdQuestion" *ngIf="row.type">{{row.question}}</td>
-                                        <td class="tdQuestion" *ngIf="!row.type">
-                                            {{row.question}}
-                                            <ul>
-                                                <li *ngFor="let row2 of row.options">{{row2.id}} - {{row2.question}}</li>
-                                            </ul>
-                                            Correcta: {{row.correct}}
-                                        </td>
-                                        <td class="text-center">
-                                            <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#modalAddQuestion" (click)="editQuestion(frmCrearPregunta,row)">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil" viewBox="0 0 16 16">
-                                                    <path d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168l10-10zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207 11.207 2.5zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293l6.5-6.5zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325z"/>
-                                                </svg>
-                                            </button>
-                                            <button type="button" class="btn btn-danger btn-sm" (click)="deleteQuestion(row)">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
-                                                    <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z"/>
-                                                    <path fill-rule="evenodd" d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z"/>
-                                                </svg>
-                                            </button>
-                                        </td>
-                                    </tr>
-                                </table>
-                                <ol>
-                                    <li *ngFor="let acti of lista;let i=index">
-                                      {{acti}} <a (click)="borrar(i)" href="#">Borra?</a>
-                                    </li>
-                                  </ol>
-                            </div>
-                            <div class="container" hidden>
+                            <div class="container">
                                 <!--Tabs-->
                                 <div>
-                                    <label for="tituloPreguntasevaluacion" class="text-white">PregAgregaruntas de la Evaluación</label>
+                                    <label for="tituloPreguntasevaluacion" class="text-white">Preguntas de la Evaluación</label>
                                 </div>
                                 <div class="row">
                                     <div class="col">
@@ -504,7 +464,7 @@
                                                         <a class="nav-link text-center" id="one-tabE" data-toggle="tab" href="#pregunta1E"
                                                             role="tab" aria-controls="pregunta1E" aria-selected="true">Pregunta 1</a>
                                                     </li>
-                                                    <li class="nav-item col">Fe
+                                                    <li class="nav-item col">
                                                         <a class="nav-link text-center" id="two-tabE" data-toggle="tab" href="#pregunta2E"
                                                             role="tab" aria-controls="pregunta2E" aria-selected="false">Pregunta 2</a>
                                                     </li>
@@ -747,111 +707,5 @@
             </div>
         </div>
     </div>
-
-    <!--Modal Crear Pregunta-->
-    <div class="modal fade" id="modalAddQuestion" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header bg-light">
-                    <h5 class="modal-title" id="myModalLabel">Crear Pregunta</h5>
-                    <button class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <form #frmCrearPregunta="ngForm">
-                        <!--<div class="form-group">
-                            <label for="inputNombrePregunta" class="text-white ">Nombre de la Actividad</label>
-                            <input type="text" name="nombre_pregunta" class="form-control col-md-8" id="inputNombrePregunta" placeholder="Nombre Actividad" required [(ngModel)]="nombre_actividad">
-                        </div>-->
-                        <div class="form-group divRadioBtn" id="masOpciones">
-                            <label for="">Tipo de pregunta:</label>
-                            <input [value]="1" class="radioBtn" [(ngModel)]="sh" name="sh" type="radio" [checked]="isChecked" />Abierta
-                            <input [value]="0" class="radioBtn" [(ngModel)]="sh" name="sh" type="radio" [checked]="!isChecked" />Cerrada
-                          </div>
-                        <div class="form-group">
-                            <label for="inputDescripcionPregunta" class="text-white"></label>Ingrese pregunta:
-                            <textarea class="form-control" name="descripcion_Pregunta" id="inputDescripcionPregunta" 
-                                rows="4" required [(ngModel)]="descripcion_Pregunta" placeholder="Escriba aquí la pregunta"></textarea>
-                        </div>
-                        <div *ngIf="sh == 1"></div>
-                        <div *ngIf="sh == 0">
-                            <label for="">Agregue las cuatro posibles respuestas:</label>
-                            <div>
-                                <div class="form-group row">
-                                    <label for="inputRespuesta1AE" class="col-sm-2 col-form-label">Respuesta</label>
-                                    <div class="col-sm-10">
-                                        <textarea class="form-control" name="respuesta11E" id="inputRespuesta1AE" rows="1"
-                                        required [(ngModel)]="respuesta11E" placeholder="respuesta ..."></textarea>
-                                    </div>
-                                </div>
-                                <div class="row pb-4 justify-content-md-center no-gutters" >
-                                    <a class="btn bg-warning" (click)="onCrearRespuesta(frmCrearPregunta)">Addcionar respuesta</a>
-                                </div>
-                                <!--<div class="form-group row">
-                                    <label for="inputRespuesta1BE" class="col-sm-2 col-form-label">Respuesta B)</label>
-                                    <div class="col-sm-10">
-                                        <textarea class="form-control" name="respuesta12E" id="inputRespuesta1BE" rows="1"
-                                            required [(ngModel)]="respuesta12E" placeholder="respuesta ..."></textarea>
-                                    </div>
-                                </div>
-                                <div class="form-group row">
-                                    <label for="inputRespuesta1CE" class="col-sm-2 col-form-label">Respuesta C)</label>
-                                    <div class="col-sm-10">
-                                        <textarea class="form-control" name="respuesta13E" id="inputRespuesta1CE" rows="1"
-                                            required [(ngModel)]="respuesta13E" placeholder="respuesta ..."></textarea>
-                                    </div>
-                                </div>
-                                <div class="form-group row">
-                                    <label for="inputRespuesta1DE" class="col-sm-2 col-form-label">Respuesta D)</label>
-                                    <div class="col-sm-10">
-                                        <textarea class="form-control" name="respuesta14E" id="inputRespuesta1DE" rows="1"
-                                            required [(ngModel)]="respuesta14E" placeholder="respuesta ..."></textarea>
-                                    </div>
-                                </div>-->
-
-                                <div>
-                                    <table class="tableQuestion">
-                                        <tr>
-                                            <th class="thQuestion" *ngFor="let head of headersQuestionOptions">{{head}}</th>
-                                        </tr>
-                                        <tr *ngFor="let row of questionOptionsList">
-                                            <td class="text-center">{{row.id}}</td>
-                                            <td class="text-center">{{row.question}}</td>
-                                            <td class="text-center">
-                                                <button type="button" class="btn btn-primary btn-sm" (click)="deleteQuestionOption(row)">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
-                                                    <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z"/>
-                                                    <path fill-rule="evenodd" d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z"/>
-                                                  </svg>
-                                                </button>
-                                            </td>
-                                        </tr>
-                                    </table>
-                                </div>
-
-                                <label for="inputSelectPreguntaCorrectaE" class="text-dark">Seleccione la respuesta correcta</label>
-                                <div class="form-grup row-1">
-                                    <div class="form-group col-2">
-                                        <select [(ngModel)]="respuestaCorrectaESelected1" name="respuestaCorrectaESelected1" id="inputRespuestaCorrecta1E" class="form-control" ngModel required>
-                                            <option *ngFor="let row2 of questionOptionsListCorrect" [value]="row2.id">{{row2.value}}</option>
-                                        </select>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row pb-4 justify-content-md-center no-gutters" >
-                            <input id="closeModal" name="prodId" type="hidden" value="xm234jq" data-dismiss="modal">
-                            <a class="btn bg-warning px-5 py-4 font-weight-bold" (click)="onCrearAgregarP(frmCrearPregunta)">Crear</a>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
     
 </div>
-
-<script>
-
-</script>

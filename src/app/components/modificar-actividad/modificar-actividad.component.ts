@@ -301,7 +301,7 @@ export class ModificarActividadComponent implements OnInit {
         this.actividadToSave.A34 = form.value.A34;
         this.actividadToSave.CA3 = form.value.CA3;
         this.actividadToSave.descripcion_evaluacion = form.value.descripcion_evaluacion;
-        /*this.actividadToSave.EQ1 = form.value.EQ1;
+        this.actividadToSave.EQ1 = form.value.EQ1;
         this.actividadToSave.EA11 = form.value.EA11;
         this.actividadToSave.EA12 = form.value.EA12;
         this.actividadToSave.EA13 = form.value.EA13;
@@ -318,7 +318,7 @@ export class ModificarActividadComponent implements OnInit {
         this.actividadToSave.EA32 = form.value.EA32;
         this.actividadToSave.EA33 = form.value.EA33;
         this.actividadToSave.EA34 = form.value.EA34;
-        this.actividadToSave.ECA3 = form.value.ECA3;*/
+        this.actividadToSave.ECA3 = form.value.ECA3;
 
         //console.log('datosActividadModificada', this.actividadToSave);
 
@@ -441,7 +441,7 @@ export class ModificarActividadComponent implements OnInit {
           this.actividadToSave.CA3 = form.value.CA3;
           this.actividadToSave.evaluacion = 0;
           this.actividadToSave.descripcion_evaluacion = form.value.descripcion_evaluacion;
-          /*this.actividadToSave.EQ1 = form.value.EQ1;
+          this.actividadToSave.EQ1 = form.value.EQ1;
           this.actividadToSave.EA11 = form.value.EA11;
           this.actividadToSave.EA12 = form.value.EA12;
           this.actividadToSave.EA13 = form.value.EA13;
@@ -458,7 +458,7 @@ export class ModificarActividadComponent implements OnInit {
           this.actividadToSave.EA32 = form.value.EA32;
           this.actividadToSave.EA33 = form.value.EA33;
           this.actividadToSave.EA34 = form.value.EA34;
-          this.actividadToSave.ECA3 = form.value.ECA3;*/
+          this.actividadToSave.ECA3 = form.value.ECA3;
 
           //console.log('datosActividadModificada', this.actividadToSave);
 
