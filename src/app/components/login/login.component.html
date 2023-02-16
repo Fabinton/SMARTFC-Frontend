@@ -9,16 +9,18 @@
                         <img src="assets/img/smartFCLogo.png" class="txt-logo" alt="Logo" >
                     </div>
                 </div>
-                <div>
+                <div class="signupFrm"v>
                     <form #frmLogin="ngForm" >
-                        <div class="inp-email">
-                            <input type="email" class="inp-emailtxt" name="correo_electronico"  value="" placeholder="Correo Electronico" ngModel required>
+                        <div class="inputContainer">
+                            <input type="email" class="inp-emailtxt" name="correo_electronico" id="correo" value="" placeholder="Correo Electronico" ngModel required>
+                            <label for="correo" class="label">Correo Electronico</label>
                         </div>
-                        <div class="inp-passw">
-                            <input type="password" class="inp-passtxt" name="contrasena"  value="" placeholder="Contraseña" ngModel required>
+                        <div class="inputContainer">
+                            <input type="password" class="inp-passtxt" name="contrasena" id="pass" value="" placeholder="Contraseña" ngModel required>
+                            <label for="pass" class="labelcx">Contraseña</label>
                         </div>
                     </form>
-                    <div class="" style="height: 10px;">
+                    <div class="" >
                             <div class="text-danger text-center" *ngIf="error1">El correo o la contraseña son incorrectos</div>
                             <div class="text-danger text-center" *ngIf="error2">El usuario o la contraseña son incorrectos</div>
                             <div class="text-danger text-center" *ngIf="error3">Error Servidor</div>
