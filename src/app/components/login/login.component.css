@@ -8,6 +8,7 @@
 }
 .logo-cart{
     display: flex;
+    padding-top: 10px;
 }
 
 .logo-cont{
@@ -26,7 +27,6 @@
 .signupFrm {
     display: flex;
     justify-content: center;
-    height: 100vh;
     width: 80%;
     margin-left: auto;
     margin-right: auto;
@@ -41,22 +41,24 @@
   }
 
    .label {
-    position: absolute;
+    position: relative;
+    width: fit-content;
     top: 50%;
-    transform: translateY(-330%);
+    transform: translateY(-120%);
     color: #DADCE0;
     font-size: 16px;
     transition: 0.5s;
-    margin-left: 4%;
+    margin-left: 2%;
   } 
   .labelcx {
-    position: absolute;
+    position: relative;
+    width: fit-content;
     top: 50%;
-    transform: translateY(-170%);
+    transform: translateY(-120%);
     color: #DADCE0;
     font-size: 16px;
     transition: 0.5s;
-    margin-left: 4%;
+    margin-left: 2%;
   } 
 .inp-email{
     display: flex;
@@ -84,9 +86,9 @@
 }
 
 .inp-emailtxt:focus + .label {
-    transform: translateY(-390%);
+    transform: translateY(-170%);
     color: #70C2E5;
-    background-color: #ffffff;;
+    background-color: #ffffff;
 }
 
 
@@ -116,7 +118,7 @@
 }
 
 .inp-passtxt:focus + .labelcx {
-    transform: translateY(-240%);
+    transform: translateY(-170%);
     color: #70C2E5;
     background-color: #ffffff;;
 }
@@ -134,7 +136,7 @@
     border-radius: 6px;
     cursor: pointer;
     font-size: 16px;
-    margin-bottom: 15px;
+    margin-bottom: 5px;
 }
 .btnlogin:hover {
     background-color: #c6e4f1;
