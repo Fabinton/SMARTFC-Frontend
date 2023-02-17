@@ -19,12 +19,12 @@
                     <div class="reg-cont">
                         <div class="form-group col">
                             <div class="form-group ">
-                                <label for="inputNombreDocente" class="la-reg">Nombre del profesor</label>
+                                <label for="inputNombreDocente" class="la-reg">Nombre del Estudiante</label>
                                 <input type="text" name="nombre_docente" class="form-control col" id="inputNombreDocente"
                                     placeholder="Nombre" required [(ngModel)]="AuthDService.selectedDocente.nombre_docente">
                             </div>
                             <div class="form-group">
-                                <label for="inputApellidoDocente" class="la-reg ">Apellidos del profesor</label>
+                                <label for="inputApellidoDocente" class="la-reg ">Apellidos del Estudiante</label>
                                 <input type="text" name="apellido_docente" class="form-control col" id="inputApellidoDocente"
                                     placeholder="Apellidos" required [(ngModel)]="AuthDService.selectedDocente.apellido_docente">
                             </div>
@@ -62,7 +62,7 @@
                                 </select>
                             </div>
                             <div class="form-group col">
-                                <button class="btnreg" data-toggle="modal" data-target="#mimodalejemplo" (click)="onCrearDocente(frmRegistroProfesor)">Crear Profesor</button>
+                                <button class="btnreg" data-toggle="modal" data-target="#mimodalejemplo" (click)="onCrearDocente(frmRegistroProfesor)">Crear Estudiante</button>
                             </div>
                         </div>
                     </div>
