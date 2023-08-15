@@ -322,6 +322,19 @@
 <path fill="none" stroke="#000000" d="M3600,-122.2458C3600,-136.1772 3600,-153 3600,-153 3600,-153 3805.1365,-153 3805.1365,-153"/>
 <polygon fill="#000000" stroke="#000000" points="3805.1366,-156.5001 3815.1365,-153 3805.1365,-149.5001 3805.1366,-156.5001"/>
 </g>
+
+<!-- FilterRetroTallerPipe -->
+<g id="node23" class="node">
+<title>FilterRetroTallerPipe</title>
+<polygon fill="#ffffb3" stroke="#000000" points="3652.1416,-122 3547.8584,-122 3547.8584,-86 3652.1416,-86 3652.1416,-122"/>
+<text text-anchor="middle" x="3600" y="-99.8" font-family="Times,serif" font-size="14.00" fill="#000000">FilterRetroTallerPipe</text>
+</g>
+<!-- FilterRetroTallerPipe&#45;&gt;AppModule -->
+<g id="edge23" class="edge">
+<title>FilterRetroTallerPipe&#45;&gt;AppModule</title>
+<path fill="none" stroke="#000000" d="M3600,-122.2458C3600,-136.1772 3600,-153 3600,-153 3600,-153 3805.1365,-153 3805.1365,-153"/>
+<polygon fill="#000000" stroke="#000000" points="3805.1366,-156.5001 3815.1365,-153 3805.1365,-149.5001 3805.1366,-156.5001"/>
+</g>
 <!-- FooterComponent -->
 <g id="node24" class="node">
 <title>FooterComponent</title>

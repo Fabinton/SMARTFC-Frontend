@@ -14,12 +14,10 @@ export interface EventoI {
     count_video: number,
     check_video: number,
     check_documento: number,
-    check_a1: number,
-    check_a2: number,
-    check_a3: number,
+    check_a1: string,
+    check_a2: string,
+    check_a3: string,
     check_profile: number,
-    check_Ea1: number,
-    check_Ea2: number,
-    check_Ea3: number,
+    answers:[],
     oculto: number
 }

@@ -1,2 +1,2 @@
 # SMARTFC-Frontend
-En este repositorio se encuentra el frontend de la plataforma web SMARTFC
+Aplicación web en angular para SMARTFC

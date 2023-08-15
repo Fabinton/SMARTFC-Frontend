@@ -177,7 +177,7 @@ export class MetricasComponent implements OnInit {
   //Imprimir Metricas de la Actividad seleccionanda en el Modal 
   getActividadinModal(actividad: ActividadI) {
     this.loadReviews(actividad);
-    this.loadComments(actividad);
+    //this.loadComments(actividad);
     this.ActividadService.selectedActividad = actividad;
     this.saveDataActivity(actividad);
     this.metricasActividad = new MetricaActividadI;
@@ -214,7 +214,8 @@ export class MetricasComponent implements OnInit {
                 var check_evaluacionTemp = 0;
 
                 //Consultar si el estudiante hizo la evaluacion
-                if (this.eventos[n].check_Ea1 && 0 < this.eventos[n].check_Ea1) {
+                //if (this.eventos[n].answers && 0 < this.eventos[n].answers) {
+                if (this.eventos[n].answers && 0 < 2) {
                   check_evaluacionTemp = 1;
                 }
                 else {
@@ -226,11 +227,12 @@ export class MetricasComponent implements OnInit {
                 this.contContenido = this.contContenido + this.eventos[n].check_video;
                 this.contQuiz = this.contQuiz + this.eventos[n].check_answer;
                 this.contTaller = this.contTaller + this.eventos[n].check_download;
-                if (this.eventos[n].check_Ea1 && 0 < this.eventos[n].check_Ea1) {
+                if (this.eventos[n].answers && 0 < 2) {
+                //if (this.eventos[n].answers && 0 < this.eventos[n].answers) {
                   this.contEvaluacion = this.contEvaluacion + 1;
                 }
 
-                this.notaA1 = 0; this.notaA2 = 0; this.notaA3 = 0; this.notaEA1 = 0; this.notaEA2 = 0; this.notaEA3 = 0;
+                this.notaA1 = 0; this.notaA2 = 0; this.notaA3 = 0; this.notaEA1 = 0; 
 
                 //Evaluar respuestas del evento
                 if (this.eventos[n].check_a1 == this.actividadToSave.CA1) {
@@ -242,7 +244,29 @@ export class MetricasComponent implements OnInit {
                 if (this.eventos[n].check_a3 == this.actividadToSave.CA3) {
                   this.notaA3 = 5;
                 }
-                if (this.eventos[n].check_Ea1 == this.actividadToSave.ECA1) {
+                
+              const keys = Object.keys(this.eventos[n].answers);
+              console.log('keys ',this.eventos[n].answers);
+              keys.forEach((key) => {
+              const value = this.eventos[n].answers[key];
+              const objeto = JSON.parse(value);
+              const array = Object.entries(objeto).map(([key, value]) => ({ clave: key, valor: value }));
+              console.log('array s 253  ',array);
+              console.log('dataquestion dd ',this.actividadToSave.questions);
+              console.log('dataquestion ',this.actividadToSave.questions[0].correct);
+              for (let i = 0; i < array.length; i++) {
+                console.log('entro al for ');
+                if (array[i].valor === this.actividadToSave.questions[i].correct) {
+                  this.notaEA1 = this.notaEA1 + 5;
+                }    
+                else {   
+                  this.notaEA1 = this.notaEA1 + 0;
+                    }
+                  }
+                });
+                console.log('this.notaEA1 ',this.notaEA1);
+
+               /* if (this.eventos[n].check_Ea1 == this.actividadToSave.ECA1) {
                   this.notaEA1 = 5;
                 }
                 if (this.eventos[n].check_Ea2 == this.actividadToSave.ECA2) {
@@ -250,12 +274,13 @@ export class MetricasComponent implements OnInit {
                 }
                 if (this.eventos[n].check_Ea3 == this.actividadToSave.ECA3) {
                   this.notaEA3 = 5;
-                }
+                }*/
 
                 var nota_quizTemp = parseFloat(((this.notaA1 + this.notaA2 + this.notaA3) / 3).toFixed(2));
-                var nota_evaluacionTemp = parseFloat(((this.notaEA1 + this.notaEA2 + this.notaEA3) / 3).toFixed(2));
+                var cantPreguntas = this.actividadToSave.questions.length;
+                var nota_evaluacionTemp = parseFloat(((this.notaEA1 ) / cantPreguntas).toFixed(2));
                 var nota_finalTemp = parseFloat(((nota_quizTemp + nota_evaluacionTemp) / 2).toFixed(2));
-
+                console.log('nota evaluacion ', nota_evaluacionTemp);
                 this.contNotaQuiz = this.contNotaQuiz + nota_quizTemp;
                 this.contNotaEvaluacion = this.contNotaEvaluacion + nota_evaluacionTemp;
                 this.contNotaFinal = this.contNotaFinal + nota_finalTemp;
@@ -394,12 +419,12 @@ export class MetricasComponent implements OnInit {
     })
   }
 
-  loadComments(actividad) {
-    this.ActividadService.loadComments(actividad.id_contenidoREA).subscribe(res => {
-      this.comments = res;
-    }, error => {
-      console.log(error)
-    })
-  }
+  // loadComments(actividad) {
+  //   this.ActividadService.loadComments(actividad.id_contenidoREA).subscribe(res => {
+  //     this.comments = res;
+  //   }, error => {
+  //     console.log(error)
+  //   })
+  // }
 
 }
