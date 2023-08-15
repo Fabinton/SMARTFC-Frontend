@@ -54,6 +54,7 @@ import { MetricasComponent } from './components/metricas/metricas.component';
 import { FilterEstudianteMetricasPipe } from './pipes/filter-estudiante-metricas.pipe';
 import { FilterMiMateriasPipe } from './pipes/filter-mi-materias.pipe';
 import { FilterTallerPipe } from './pipes/filter-taller.pipe';
+import { FilterRetroTallerPipe } from './pipes/filter-retrotaller.pipe';
 import { CalificacionComponent } from "./components/index.paginas";
 import { ComentariosComponent } from './components/comentarios/comentarios.component';
 
@@ -98,6 +99,7 @@ import { ComentariosComponent } from './components/comentarios/comentarios.compo
     FilterEstudianteMetricasPipe,
     FilterMiMateriasPipe,
     FilterTallerPipe,
+    FilterRetroTallerPipe,
     CalificacionComponent,
     ComentariosComponent
   ],

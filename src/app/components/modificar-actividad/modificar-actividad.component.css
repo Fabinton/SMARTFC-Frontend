@@ -1,0 +1,39 @@
+.btnAddQuestion {
+    background-color: #28a745;
+    width: 20%;
+    height: 40px;
+    border-radius: 10px;
+    color: white;
+    font-weight: 600;
+    border-color: black;
+    cursor: pointer;
+    outline: none;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+  
+.btnAddQuestion:hover {
+    background-color: #218838;
+    transform: scale(1.05);
+}
+
+.tableQuestion {
+    width: 100%;
+    border-radius: 10px;
+    background: #eee;
+ }
+ 
+ .thQuestion, .tdQuestion {
+    width: auto;
+    text-align: center;
+    vertical-align: top;
+    border-spacing: 0;
+    padding: 0.3em;
+ }
+ 
+ .divRadioBtn{
+     display: flex;
+ }
+ .radioBtn{
+    margin-right: 10px;
+    height: 24px;
+ }

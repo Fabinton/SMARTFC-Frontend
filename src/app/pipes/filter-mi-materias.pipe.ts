@@ -27,5 +27,4 @@ export class FilterMiMateriasPipe implements PipeTransform {
       return items;
     }
   }
-
 }

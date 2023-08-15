@@ -26,6 +26,7 @@ export class ModificarActividadComponent implements OnInit {
   //Elementos de Busqueda de Contenido
   contenidoToSave:contenidoREAI;
   tallerToSave:contenidoREAI;
+  retroToSave:contenidoREAI;
   contenidos:contenidoREAI[];
   materia:MateriaI[];
   grado:GradoI[];
@@ -58,13 +59,16 @@ export class ModificarActividadComponent implements OnInit {
   id_colegioAuth:number;
   contenidoAct:contenidoREAVisualizarI;
   tallerAct:contenidoREAVisualizarI;
+  retroTallerAct:contenidoREAVisualizarI;
   verificationSaveContent:boolean;
   verificationSaveTaller:boolean;
+  verificationSaveRetroTaller:boolean;
   verificationSaveActividad:boolean;
   ID_TipoContenido_Taller:number;
   id_docente_ActividadSelected:number;
   contenidoRes:any;
   tallerRes:any;
+  retroTallerRes:any;
 
   correcto1:boolean;
   correcto2:boolean;
@@ -76,6 +80,20 @@ export class ModificarActividadComponent implements OnInit {
   evaluacionActivado:boolean;
   tallerDesactivado:boolean;
   evaluacionDesactivado:boolean;
+  retroalimentacionActivado:boolean;
+  retroalimentacionDesactivado:boolean;
+  questionList:any[];
+  headersQuestion:any[];
+  //headersQuestionOptions:any[];
+  questionOptionsList:any[];
+  questionOptionsListCorrect:any[];
+
+  clickorigin:boolean=false;
+  sh:number =0;
+  rowselected:number=-1;
+  dictionary = ['A','B','C','D'];
+  retroA:string;
+  descripcion_Pregunta: string;
 
   constructor(private AuthDService: AuthDService, private ActividadService: ActividadService, private ContentREAService: ContentREAService, private router: Router) { }
 
@@ -90,8 +108,10 @@ export class ModificarActividadComponent implements OnInit {
     this.error2 = false;
     this.tallerActivado = false;
     this.evaluacionActivado = false;
+    this.retroalimentacionActivado = false;
     this.tallerDesactivado = false;
     this.evaluacionDesactivado = false;
+    this.retroalimentacionDesactivado = false;
 
     this.getOptions();
     this.getContenidos();
@@ -102,8 +122,10 @@ export class ModificarActividadComponent implements OnInit {
     this.actividadToSave2 = new ActividadI();
     this.contenidoAct = {nombre_CREA:"",cont:0,id_CREA:0,nombre_tipo_CREA:"",id_grado:0,materia:"",descripcion_CREA:""};
     this.tallerAct = {nombre_CREA:"",cont:0,id_CREA:0,nombre_tipo_CREA:"",id_grado:0,materia:"",descripcion_CREA:""};
+    this.retroTallerAct = {nombre_CREA:"",cont:0,id_CREA:0,nombre_tipo_CREA:"",id_grado:0,materia:"",descripcion_CREA:""};
     this.verificationSaveContent = false;
     this.verificationSaveTaller = false;
+    this.verificationSaveRetroTaller = false;
     this.verificationSaveActividad = false;
   }
 
@@ -128,9 +150,10 @@ export class ModificarActividadComponent implements OnInit {
       this.materiaActiva = res as MateriaActivaI[];
     });
   }
-
+  
   //consultar todos los ContenidosREA y verificar el nombre de la materia y contenido con sus respectivos ID´s
   getContenidos() {
+   
     this.ContentREAService.allSubject().subscribe(res => {
       this.materia = res as MateriaI[];
 
@@ -230,6 +253,8 @@ export class ModificarActividadComponent implements OnInit {
           this.actividadToSave.urlaudio = "no";
           this.actividadToSave.html = 0;
           this.actividadToSave.urlhtml = "no";
+          this.actividadToSave.retroalimentacion = 0;
+          this.actividadToSave.urlretrotaller = "no";
         }
         if (this.contenidoToSave.tipo_CREA == 2) {
           this.actividadToSave.video = 0;
@@ -240,6 +265,8 @@ export class ModificarActividadComponent implements OnInit {
           this.actividadToSave.urlaudio = "no";
           this.actividadToSave.html = 0;
           this.actividadToSave.urlhtml = "no";
+          this.actividadToSave.retroalimentacion = 0;
+          this.actividadToSave.urlretrotaller = "no";
         }
         if (this.contenidoToSave.tipo_CREA == 3) {
           this.actividadToSave.video = 0;
@@ -250,6 +277,8 @@ export class ModificarActividadComponent implements OnInit {
           this.actividadToSave.urlaudio = this.contenidoToSave.urlrepositorio;
           this.actividadToSave.html = 0;
           this.actividadToSave.urlhtml = "no";
+          this.actividadToSave.retroalimentacion = 0;
+          this.actividadToSave.urlretrotaller = "no";
         }
         if (this.contenidoToSave.tipo_CREA == 4) {
           this.actividadToSave.video = 0;
@@ -260,6 +289,21 @@ export class ModificarActividadComponent implements OnInit {
           this.actividadToSave.urlaudio = "no";
           this.actividadToSave.html = 1;
           this.actividadToSave.urlhtml = this.contenidoToSave.urlrepositorio;
+          this.actividadToSave.retroalimentacion = 0;
+          this.actividadToSave.urlretrotaller = "no";
+        }
+
+        if (this.contenidoToSave.tipo_CREA == 5) {
+          this.actividadToSave.video = 0;
+          this.actividadToSave.urlvideo = "no";
+          this.actividadToSave.documento = 0;
+          this.actividadToSave.urldocumento = "no";
+          this.actividadToSave.audio = 0;
+          this.actividadToSave.urlaudio = "no";
+          this.actividadToSave.html = 0;
+          this.actividadToSave.urlhtml = "no";
+          this.actividadToSave.retroalimentacion = 1;
+          this.actividadToSave.urlretrotaller = this.contenidoToSave.urlrepositorio;
         }
 
         this.actividadToSave.id_contenidoREA = this.contenidoToSave.id_CREA;
@@ -270,6 +314,13 @@ export class ModificarActividadComponent implements OnInit {
         this.actividadToSave.id_taller = this.tallerToSave.id_CREA;
         this.actividadToSave.taller = 1;
         this.actividadToSave.urltaller = this.tallerToSave.urlrepositorio;
+      }
+
+      //cambiar informacion de retrotaller en la Actividad al identificar que se a seleccionado un nuevo retrotaller
+      if (this.verificationSaveRetroTaller == true) {
+        this.actividadToSave.id_retrotaller = this.retroToSave.id_CREA;
+        this.actividadToSave.retroalimentacion = 1;
+        this.actividadToSave.urlretrotaller = this.retroToSave.urlrepositorio;
       }
 
       //Verificar si la Actividad es del docente que la esta modificando
@@ -288,38 +339,24 @@ export class ModificarActividadComponent implements OnInit {
         this.actividadToSave.A13 = form.value.A13;
         this.actividadToSave.A14 = form.value.A14;
         this.actividadToSave.CA1 = form.value.CA1;
+        this.actividadToSave.RQ1 = form.value.retroA1;
         this.actividadToSave.Q2 = form.value.Q2;
         this.actividadToSave.A21 = form.value.A21;
         this.actividadToSave.A22 = form.value.A22;
         this.actividadToSave.A23 = form.value.A23;
         this.actividadToSave.A24 = form.value.A24;
         this.actividadToSave.CA2 = form.value.CA2;
+        this.actividadToSave.RQ2 = form.value.retroA2;
         this.actividadToSave.Q3 = form.value.Q3;
         this.actividadToSave.A31 = form.value.A31;
         this.actividadToSave.A32 = form.value.A32;
         this.actividadToSave.A33 = form.value.A33;
         this.actividadToSave.A34 = form.value.A34;
         this.actividadToSave.CA3 = form.value.CA3;
+        this.actividadToSave.RQ3 = form.value.retroA3;
         this.actividadToSave.descripcion_evaluacion = form.value.descripcion_evaluacion;
-        this.actividadToSave.EQ1 = form.value.EQ1;
-        this.actividadToSave.EA11 = form.value.EA11;
-        this.actividadToSave.EA12 = form.value.EA12;
-        this.actividadToSave.EA13 = form.value.EA13;
-        this.actividadToSave.EA14 = form.value.EA14;
-        this.actividadToSave.ECA1 = form.value.ECA1;
-        this.actividadToSave.EQ2 = form.value.EQ2;
-        this.actividadToSave.EA21 = form.value.EA21;
-        this.actividadToSave.EA22 = form.value.EA22;
-        this.actividadToSave.EA23 = form.value.EA23;
-        this.actividadToSave.EA24 = form.value.EA24;
-        this.actividadToSave.ECA2 = form.value.ECA2;
-        this.actividadToSave.EQ3 = form.value.EQ3;
-        this.actividadToSave.EA31 = form.value.EA31;
-        this.actividadToSave.EA32 = form.value.EA32;
-        this.actividadToSave.EA33 = form.value.EA33;
-        this.actividadToSave.EA34 = form.value.EA34;
-        this.actividadToSave.ECA3 = form.value.ECA3;
-
+        this.actividadToSave.questions = this.questionList;
+       
         //console.log('datosActividadModificada', this.actividadToSave);
 
         this.ActividadService.uploadActivity(this.actividadToSave).subscribe(res => {
@@ -357,6 +394,24 @@ export class ModificarActividadComponent implements OnInit {
             this.ContentREAService.uploadEstadoContentREA(tallerNuevoInfo).subscribe(res => {
               //console.log('nuevo contenido', res);
               this.ContentREAService.uploadEstadoContentREA(tallerViejoInfo).subscribe(res => {
+                //console.log('viejo contenido', res);
+              });
+            });
+          }
+
+          if (this.verificationSaveRetroTaller == true) {
+            const retroTallerViejoInfo = {
+              id_CREA: this.retroTallerRes.content.id_CREA,
+              en_uso: (this.retroTallerRes.content.en_uso - 1)
+            }
+            const retroTallerNuevoInfo = {
+              id_CREA: this.retroToSave.id_CREA,
+              en_uso: (this.retroToSave.en_uso + 1)
+            }
+  
+            this.ContentREAService.uploadEstadoContentREA(retroTallerNuevoInfo).subscribe(res => {
+              //console.log('nuevo contenido', res);
+              this.ContentREAService.uploadEstadoContentREA(retroTallerViejoInfo).subscribe(res => {
                 //console.log('viejo contenido', res);
               });
             });
@@ -421,45 +476,31 @@ export class ModificarActividadComponent implements OnInit {
           this.actividadToSave.descripcion_actividad = form.value.descripcion_actividad;
           this.actividadToSave.descripcion_test = form.value.descripcion_test;
           this.actividadToSave.taller = 0;
+          this.actividadToSave.retroalimentacion = 0;
           this.actividadToSave.Q1 = form.value.Q1;
           this.actividadToSave.A11 = form.value.A11;
           this.actividadToSave.A12 = form.value.A12;
           this.actividadToSave.A13 = form.value.A13;
           this.actividadToSave.A14 = form.value.A14;
           this.actividadToSave.CA1 = form.value.CA1;
+          this.actividadToSave.RQ1 = form.value.retroA1;
           this.actividadToSave.Q2 = form.value.Q2;
           this.actividadToSave.A21 = form.value.A21;
           this.actividadToSave.A22 = form.value.A22;
           this.actividadToSave.A23 = form.value.A23;
           this.actividadToSave.A24 = form.value.A24;
           this.actividadToSave.CA2 = form.value.CA2;
+          this.actividadToSave.RQ2 = form.value.retroA2;
           this.actividadToSave.Q3 = form.value.Q3;
           this.actividadToSave.A31 = form.value.A31;
           this.actividadToSave.A32 = form.value.A32;
           this.actividadToSave.A33 = form.value.A33;
           this.actividadToSave.A34 = form.value.A34;
           this.actividadToSave.CA3 = form.value.CA3;
+          this.actividadToSave.RQ3 = form.value.retroA3;
           this.actividadToSave.evaluacion = 0;
           this.actividadToSave.descripcion_evaluacion = form.value.descripcion_evaluacion;
-          this.actividadToSave.EQ1 = form.value.EQ1;
-          this.actividadToSave.EA11 = form.value.EA11;
-          this.actividadToSave.EA12 = form.value.EA12;
-          this.actividadToSave.EA13 = form.value.EA13;
-          this.actividadToSave.EA14 = form.value.EA14;
-          this.actividadToSave.ECA1 = form.value.ECA1;
-          this.actividadToSave.EQ2 = form.value.EQ2;
-          this.actividadToSave.EA21 = form.value.EA21;
-          this.actividadToSave.EA22 = form.value.EA22;
-          this.actividadToSave.EA23 = form.value.EA23;
-          this.actividadToSave.EA24 = form.value.EA24;
-          this.actividadToSave.ECA2 = form.value.ECA2;
-          this.actividadToSave.EQ3 = form.value.EQ3;
-          this.actividadToSave.EA31 = form.value.EA31;
-          this.actividadToSave.EA32 = form.value.EA32;
-          this.actividadToSave.EA33 = form.value.EA33;
-          this.actividadToSave.EA34 = form.value.EA34;
-          this.actividadToSave.ECA3 = form.value.ECA3;
-
+          this.actividadToSave.questions=this.questionList;
           //console.log('datosActividadModificada', this.actividadToSave);
 
           this.ActividadService.createActivity(this.actividadToSave).subscribe(res => {
@@ -517,6 +558,27 @@ export class ModificarActividadComponent implements OnInit {
                 });
               }
 
+              if (this.verificationSaveRetroTaller == true) {
+                const retroTallerNuevoInfo = {
+                  id_CREA: this.retroToSave.id_CREA,
+                  en_uso: (this.retroToSave.en_uso + 1)
+                }
+
+                this.ContentREAService.uploadEstadoContentREA(retroTallerNuevoInfo).subscribe(res => {
+                  //console.log('nuevo contenido', res);
+                });
+              }
+              else {
+                const retroTallerViejoInfo = {
+                  id_CREA: this.retroTallerRes.content.id_CREA,
+                  en_uso: (this.retroTallerRes.content.en_uso + 1)
+                }
+
+                this.ContentREAService.uploadEstadoContentREA(retroTallerViejoInfo).subscribe(res => {
+                  //console.log('viejo contenido', res);
+                });
+              }
+
               this.correcto1 = false;
               this.correcto2 = true;
               this.error1 = false;
@@ -533,19 +595,162 @@ export class ModificarActividadComponent implements OnInit {
     }
   }
 
+  //metodo para arreglar
+  resetListQuestionsOptions() {
+    const letters = ["A", "B", "C", "D"];
+    for (let index = 0; index < this.questionOptionsList.length; index++) {
+      const element = this.questionOptionsList[index];
+      element.id = letters[index]; // Usar las letras en lugar del índice
+      this.questionOptionsListCorrect.push({ id: element.id, value: element.question });
+    }
+  }
+  
+  getQuetions(){
+    this.questionList
+  }
+
+  onCrearRespuesta(form: NgForm) {
+    let value = this.dictionary[this.questionOptionsList.length];
+    let nextItem = this.questionOptionsList.length;
+    if(form.value.respuesta11E.length > 0 && this.questionOptionsList.length < 4) {
+      this.questionOptionsListCorrect.push({id: this.questionOptionsListCorrect.length, value: value});
+      let jona = {id: value, question: form.value.respuesta11E};
+      this.questionOptionsList.push(jona);
+      form.controls['respuesta11E'].setValue('');
+    }
+  }
+
+  onCrearAgregarP(form: NgForm) {
+    this.clickorigin = false;
+    if (form.valid) {
+      let nextItem = this.questionList.length + 1;
+      let jona = { id: nextItem, question: form.value.descripcion_Pregunta, type: form.value.sh, options: null, correct: null, retro: null };
+  
+      if (form.value.sh == 0) {
+        jona.options = this.questionOptionsList;
+        jona.correct = form.value.respuestaCorrectaESelected1; // Asignar la letra de la opción seleccionada
+        jona.retro = form.value.retro;
+      }
+      this.questionList.push(jona);
+      this.getQuetions();
+      document.getElementById("closeModal").click();
+    } else {
+      // Faltan campos
+    }
+  }
+  
+  onEditP(form: NgForm) {
+    if (form.valid) {
+      let updatetest = this.questionList.find((x) => x.id === this.rowselected);
+      if (updatetest) {
+        updatetest = {
+          id: this.rowselected,
+          question: form.value.descripcion_Pregunta,
+          type: form.value.sh,
+          options: null,
+          correct: null,
+          retro: null,
+        };
+        this.questionList[this.rowselected - 1] = updatetest;
+        this.resetListQuestionsOptions();
+
+         //  let nextItem = this.questionList.length + 1;
+      //  let jona = {id: nextItem, question: form.value.descripcion_Pregunta, type: form.value.sh, options: null, correct: null};
+  
+        if (form.value.sh == 0) {
+          updatetest.options = this.questionOptionsList;
+          updatetest.correct = form.value.respuestaCorrectaESelected1; // Asignar el valor correspondiente del formulario
+          updatetest.retro = form.value.retro;
+        }
+  
+        this.getQuetions();
+        console.log(this.questionList);
+        document.getElementById("closeModal").click();
+        this.clickorigin = false;
+      } else {
+        console.log("");
+      }
+    } else {
+      console.log("El formulario no es válido.");
+    }
+  }
+
+  deleteQuestion(row) {
+    for (let index = 0; index < this.questionList.length; index++) {
+      const element = this.questionList[index];
+      if(element.id == row.id) {
+        this.questionList.splice(index,1);
+      }
+    }
+    for (let index = 0; index < this.questionList.length; index++) {
+      const element = this.questionList[index];
+      element.id = index + 1;
+    }
+  }
+
+  deleteQuestionOption(row) {
+    this.questionOptionsListCorrect = new Array();
+    for (let index = 0; index < this.questionOptionsList.length; index++) {
+      const element = this.questionOptionsList[index];
+      if(element.id == row.id) {
+        this.questionOptionsList.splice(index,1);
+      }
+    }
+    this.resetListQuestionsOptions();
+  }
+
+  onClickAddQuestion() {
+    this.clickorigin=false;
+    this.sh=0;
+    this.questionOptionsListCorrect = new Array();
+    this.questionOptionsList = new Array();
+    this.descripcion_Pregunta = '';
+    this.retroA = '';
+  }
+
+  editQuestion(form: NgForm, row) {
+    this.sh = row.type;
+    this.rowselected=row.id;    
+    this.clickorigin=true;
+    this.questionOptionsListCorrect = new Array();
+    this.descripcion_Pregunta = row.question;
+    this.retroA = row.retro;
+    if(row.options != null) {
+      this.questionOptionsList = row.options;
+      this.resetListQuestionsOptions();
+    } else {
+      this.questionOptionsList = new Array();
+    }
+  }
+
   //Imprimir datos de la Actividad seleccionanda en el Form 
   getActividadinForm(actividad: ActividadI) {
     this.verificationSaveContent = false;
     this.verificationSaveTaller = false;
-    
+    this.verificationSaveRetroTaller = false;
+    //console.log(this.retroTallerAct);
+    this.headersQuestion = [
+      'id',
+      'question',
+      'Opciones'
+    ];
     this.ActividadService.selectedActividad = actividad;
+    console.log(actividad);
     this.saveDataActivity(actividad);
+    this.questionList=actividad.questions;
+    //console.log(actividad.questions);
     this.materiaSelectedAM = this.actividadToSave.id_materia;
     this.gradoSelecteAM = this.actividadToSave.id_grado;
+    this.miMateriaSelectedA = this.actividadToSave.id_materiaActiva;
+    
     //console.log(this.materiaSelectedAM, this.gradoSelecteAM);
     //console.log(this.ContentREAService.contenidosREA);
     const TallerInfo = {
       id_contenidoREA: this.ActividadService.selectedActividad.id_taller,
+    }
+
+    const retroTallerInfo = {
+      id_contenidoREA: this.ActividadService.selectedActividad.id_retrotaller,
     }
 
     //Obtener contenido original de la actividad
@@ -554,6 +759,7 @@ export class ModificarActividadComponent implements OnInit {
       this.contenidoAct.nombre_CREA = this.contenidoRes.content.nombre_CREA;
       this.contenidoAct.descripcion_CREA = this.contenidoRes.content.descripcion_CREA;
       this.contenidoAct.id_grado = this.contenidoRes.content.id_grado;
+      
 
       for(let x=0; x < this.materia.length ;x++){
         if(this.contenidoRes.content.id_materia == this.materia[x].id_materia){
@@ -585,6 +791,27 @@ export class ModificarActividadComponent implements OnInit {
           this.tallerAct.nombre_tipo_CREA = this.tipoContenido[y].nombre_tipoContenido;
         }
       }
+      //console.log('contenidoAct', this.contenidoAct);
+    })
+
+    //Obtener retrotaller original de la actividad
+    this.ContentREAService.loadContentREA(retroTallerInfo).subscribe(res =>{
+      this.retroTallerRes = res;
+      this.retroTallerAct.nombre_CREA = this.retroTallerRes.content.nombre_CREA;
+      this.retroTallerAct.descripcion_CREA = this.retroTallerRes.content.descripcion_CREA;
+      this.retroTallerAct.id_grado = this.retroTallerRes.content.id_grado;
+
+      for(let x=0; x < this.materia.length ;x++){
+        if(this.retroTallerRes.content.id_materia == this.materia[x].id_materia){
+          this.retroTallerAct.materia = this.materia[x].nombre_materia;
+        }
+      }
+      for(let y=0; y < this.tipoContenido.length ;y++){
+        if(this.retroTallerRes.content.tipo_CREA == this.tipoContenido[y].id_tipoContenido){
+          this.retroTallerAct.nombre_tipo_CREA = this.tipoContenido[y].nombre_tipoContenido;
+        }
+      }
+      //console.log(this.retroTallerAct);
       //console.log('contenidoAct', this.contenidoAct);
     })
   }
@@ -620,6 +847,18 @@ export class ModificarActividadComponent implements OnInit {
     //console.log('bandera',this.verificationSaveTaller)
   }
 
+  saveDataRetroTaller(retrotallerhtml){
+    this.retroToSave = retrotallerhtml;
+    //console.log("taller guardado:", this.tallerToSave);
+    if (this.retroTallerRes.content.id_CREA != this.retroToSave.id_CREA) {
+      this.verificationSaveRetroTaller = true;
+    }
+    else{
+      this.verificationSaveRetroTaller = false;
+    }
+    //console.log('bandera',this.verificationSaveTaller)
+  }
+
   //Almacenar info temporal de una Actividad
   seccionActivity(actividad){
     this.actividadToSave2 = actividad;
@@ -637,10 +876,23 @@ export class ModificarActividadComponent implements OnInit {
     if(this.actividadToSave2.evaluacion == 1){
       this.evaluacionActivado = true;
       this.evaluacionDesactivado = false;
+      console.log('entro eva al 1');
     }
     else{
       this.evaluacionActivado = false;
       this.evaluacionDesactivado = true;
+      console.log('entro eva al 0');
+    }
+
+    if(this.actividadToSave2.retroalimentacion == 1){
+      this.retroalimentacionActivado = true;
+      this.retroalimentacionDesactivado = false;
+      console.log('entro retro al 1');
+    }
+    else{
+      this.retroalimentacionActivado = false;
+      this.retroalimentacionDesactivado = true;
+      console.log('entro retro al 0');
     }
     //console.log(this.tallerActivado,this.tallerDesactivado,this.evaluacionActivado,this.evaluacionDesactivado);
   }
@@ -650,7 +902,8 @@ export class ModificarActividadComponent implements OnInit {
     const newSeccionActividad = {
       id_actividad: this.actividadToSave2.id_actividad,
       taller: 1,
-      evaluacion: this.actividadToSave2.evaluacion
+      evaluacion: this.actividadToSave2.evaluacion,
+      retroalimentacion : this.actividadToSave2.retroalimentacion
     }
 
     this.ActividadService.uploadSectionsActivity(newSeccionActividad).subscribe(res =>{
@@ -662,7 +915,8 @@ export class ModificarActividadComponent implements OnInit {
     const newSeccionActividad = {
       id_actividad: this.actividadToSave2.id_actividad,
       taller: 0,
-      evaluacion: this.actividadToSave2.evaluacion
+      evaluacion: this.actividadToSave2.evaluacion,
+      retroalimentacion: this.actividadToSave2.retroalimentacion
     }
 
     this.ActividadService.uploadSectionsActivity(newSeccionActividad).subscribe(res =>{
@@ -674,7 +928,8 @@ export class ModificarActividadComponent implements OnInit {
     const newSeccionActividad = {
       id_actividad: this.actividadToSave2.id_actividad,
       taller: this.actividadToSave2.taller,
-      evaluacion: 1
+      evaluacion: 1,
+      retroalimentacion: this.actividadToSave2.retroalimentacion
     }
 
     this.ActividadService.uploadSectionsActivity(newSeccionActividad).subscribe(res =>{
@@ -686,7 +941,8 @@ export class ModificarActividadComponent implements OnInit {
     const newSeccionActividad = {
       id_actividad: this.actividadToSave2.id_actividad,
       taller: this.actividadToSave2.taller,
-      evaluacion: 0
+      evaluacion: 0,
+      retroalimentacion : this.actividadToSave2.retroalimentacion
     }
 
     this.ActividadService.uploadSectionsActivity(newSeccionActividad).subscribe(res =>{
@@ -694,6 +950,34 @@ export class ModificarActividadComponent implements OnInit {
       this.getActividades();
     });
   }
+
+ //Activar o Desactivar Retroalimentacion de la Actividad
+    activarRetroalimentacion(){
+      const newSeccionActividad = {
+        id_actividad: this.actividadToSave2.id_actividad,
+        taller: this.actividadToSave2.taller,
+        evaluacion: this.actividadToSave2.evaluacion,
+        retroalimentacion : 1
+      }
+  
+      this.ActividadService.uploadSectionsActivity(newSeccionActividad).subscribe(res =>{
+        //console.log(res);
+        this.getActividades();
+      });
+    }
+    desactivarRetroalimentacion(){
+      const newSeccionActividad = {
+        id_actividad: this.actividadToSave2.id_actividad,
+        taller: this.actividadToSave2.taller,
+        evaluacion: this.actividadToSave2.evaluacion,
+        retroalimentacion : 0
+      }
+  
+      this.ActividadService.uploadSectionsActivity(newSeccionActividad).subscribe(res =>{
+        //console.log(res);
+        this.getActividades();
+      });
+    }
 
   //Resetear pagina
   resetPage(){
@@ -709,6 +993,7 @@ export class ModificarActividadComponent implements OnInit {
       window.scrollTo(0, 0);
       this.verificationSaveContent = false;
       this.verificationSaveTaller = false;
+      this.verificationSaveRetroTaller = false;
       this.verificationSaveActividad = false;
       //this.contenidoToSave = new contenidoREAI();
       this.actividadToSave = new ActividadI();
@@ -716,6 +1001,7 @@ export class ModificarActividadComponent implements OnInit {
       this.ActividadService.selectedActividad = new ActividadI();
       this.contenidoAct = {nombre_CREA:"",cont:0,id_CREA:0,nombre_tipo_CREA:"",id_grado:0,materia:"",descripcion_CREA:""};
       this.tallerAct = {nombre_CREA:"",cont:0,id_CREA:0,nombre_tipo_CREA:"",id_grado:0,materia:"",descripcion_CREA:""};
+      this.retroTallerAct = {nombre_CREA:"",cont:0,id_CREA:0,nombre_tipo_CREA:"",id_grado:0,materia:"",descripcion_CREA:""};
       //console.log('reseteo');
     }
   }

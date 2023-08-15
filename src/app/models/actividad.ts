@@ -2,9 +2,9 @@ export class ActividadI {
 
     constructor(id_actividad = 0, cont = 0, id_colegio = 0, id_docente = 0, id_materia = 0, id_grado = 0, id_materiaActiva = 0, id_competencia = 0, titulo_actividad = '', 
                 descripcion_actividad = '',id_contenidoREA = 0, video = 0, urlvideo = '', lectura = 0, urllectura = '', html = 0, urlhtml = '',
-                Q1 = '', A11 = '', A12 = '', A13 = '', A14 = '', CA1 = 0, Q2 = '', A21 = '', A22 = '', A23 = '', A24 = '', CA2 = 0,
-                Q3 = '', A31 = '', A32 = '', A33 = '', A34 = '', CA3 = 0, audio = 0, urlaudio = '', descripcion_test = '',
-                id_taller = 0, taller = 0, urltaller = '', evaluacion = 0, descripcion_evaluacion = '', autor = '', id_autor = 0){
+                Q1 = '', A11 = '', A12 = '', A13 = '', A14 = '', CA1 = '', RQ1='', Q2 = '', A21 = '', A22 = '', A23 = '', A24 = '', CA2 = '', RQ2='',
+                Q3 = '', A31 = '', A32 = '', A33 = '', A34 = '', CA3 = '', RQ3='', audio = 0, urlaudio = '', descripcion_test = '',
+                id_taller = 0, taller = 0, urltaller = '',id_retrotaller =0,urlretrotaller= '',evaluacion = 0, descripcion_evaluacion = '', preguntas = null, autor = '', id_autor = 0,retroalimentacion =0){
                     this.id_actividad = id_actividad;
                     this.cont = cont;
                     this.id_colegio = id_colegio;
@@ -27,6 +27,8 @@ export class ActividadI {
                     this.id_taller = id_taller;
                     this.taller = taller;
                     this.urltaller = urltaller;
+                    this.id_retrotaller = id_retrotaller;
+                    this.urlretrotaller = urlretrotaller;
                     this.descripcion_test = descripcion_test;
                     this.Q1 = Q1;
                     this.A11 = A11;
@@ -34,40 +36,27 @@ export class ActividadI {
                     this.A13 = A13;
                     this.A14 = A14;
                     this.CA1 = CA1;
+                    this.RQ1 = RQ1;
                     this.Q2 = Q2;
                     this.A21 = A21;
                     this.A22 = A22;
                     this.A23 = A23;
                     this.A24 = A24;
                     this.CA2 = CA2;
+                    this.RQ2 = RQ2;
                     this.Q3 = Q3;
                     this.A31 = A31;
                     this.A32 = A32;
                     this.A33 = A33;
                     this.A34 = A34;
                     this.CA3 = CA3;
+                    this.RQ3 = RQ3;
                     this.evaluacion = evaluacion;
                     this.descripcion_evaluacion = descripcion_evaluacion;
-                    this.EQ1 = Q1;
-                    this.EA11 = A11;
-                    this.EA12 = A12;
-                    this.EA13 = A13;
-                    this.EA14 = A14;
-                    this.ECA1 = CA1;
-                    this.EQ2 = Q2;
-                    this.EA21 = A21;
-                    this.EA22 = A22;
-                    this.EA23 = A23;
-                    this.EA24 = A24;
-                    this.ECA2 = CA2;
-                    this.EQ3 = Q3;
-                    this.EA31 = A31;
-                    this.EA32 = A32;
-                    this.EA33 = A33;
-                    this.EA34 = A34;
-                    this.ECA3 = CA3;
+                    this.questions = preguntas;
                     this.autor = autor;
                     this.id_autor = id_autor;
+                    this.retroalimentacion = retroalimentacion;
     }
 
     id_actividad: number;
@@ -92,45 +81,34 @@ export class ActividadI {
     id_taller: number;
     taller: number;
     urltaller: string;
+    id_retrotaller: number;
+    urlretrotaller : string;
     descripcion_test: string;
     Q1: string;
     A11: string;
     A12: string;
     A13: string;
     A14: string;
-    CA1: number;
+    CA1: string;
+    RQ1: string;
     Q2: string;
     A21: string;
     A22: string;
     A23: string;
     A24: string;
-    CA2: number;
+    CA2: string;
+    RQ2: string;
     Q3: string;
     A31: string;
     A32: string;
     A33: string;
     A34: string;
-    CA3: number;
+    CA3: string;
+    RQ3: string;
     evaluacion: number;
     descripcion_evaluacion: string;
-    EQ1: string;
-    EA11: string;
-    EA12: string;
-    EA13: string;
-    EA14: string;
-    ECA1: number;
-    EQ2: string;
-    EA21: string;
-    EA22: string;
-    EA23: string;
-    EA24: string;
-    ECA2: number;
-    EQ3: string;
-    EA31: string;
-    EA32: string;
-    EA33: string;
-    EA34: string;
-    ECA3: number;
+    questions: any;
     autor: string;
     id_autor: number;
+    retroalimentacion: number;
 }

@@ -30,5 +30,4 @@ export class FilterMateriaactivaAdminPipe implements PipeTransform {
       return items;
     }
   }
-
 }
