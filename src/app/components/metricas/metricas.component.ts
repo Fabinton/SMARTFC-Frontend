@@ -15,13 +15,120 @@ import { MetricaActividadI } from '../../models/metricaActividad';
 import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 import { Review } from '../../models/review';
-
+import { ChartDataSets, ChartOptions } from 'chart.js';
+import { Label, Color } from 'ng2-charts';
+import ChartDataLabels from 'chartjs-plugin-datalabels';
 @Component({
   selector: 'app-metricas',
   templateUrl: './metricas.component.html',
   styleUrls: ['./metricas.component.css']
 })
 export class MetricasComponent implements OnInit {
+
+  public actionChartData: ChartDataSets[] = [
+    { data: [0, 0, 0, 0] },
+
+  ];
+  public notasChartData: ChartDataSets[] = [
+    { data: [0, 0, 0] },
+
+  ];
+  public notasEstudiantesChartData: ChartDataSets[] = [
+    { data: [0, 0, 0] },
+
+  ];
+
+  public progresoActividadChartData: ChartDataSets[] = [
+    { data: [0, 0] },
+
+  ];
+  public actionChartLabels: Label[] = ['Vieron Contenido', 'Hicieron el quiz', 'Hicieron el Taller', 'Hicieron la Evaluación'];
+  public notasChartLabels: Label[] = ['Promedio Quiz', 'Promedio Taller', 'Promedio Evaluacion'];
+  public notasEstudiantesChartLabels: Label[] = ['Nota Quiz', 'Nota Evaluacion', 'Nota Final'];
+  public progresoActividadChartLabels: Label[] = ['Progreso Actividad', ''];
+
+  public actionChartOptions: ChartOptions = {
+    responsive: true,
+    legend: {
+      display: false
+    },
+    plugins: {
+      datalabels: {
+        anchor: 'end',
+        align: 'end',
+        font: {
+          weight: 'bold'
+        },
+        formatter: (value, context) => {
+          return value; //muestra el valor estatico en el grafico
+        },
+      },
+    },
+  };
+
+
+  public progresoActividadOptions: ChartOptions = {
+    cutoutPercentage: 70,
+    responsive: true,
+  };
+
+  public notasChartOptions: ChartOptions = {
+    responsive: true,
+    legend: {
+      display: false
+    },
+    scales: {
+
+      yAxes: [{
+        ticks: {
+          beginAtZero: true,
+          max: 6,
+          stepSize: 1
+        }
+      }]
+
+
+    },
+    plugins: {
+      datalabels: {
+        anchor: 'end',
+        align: 'end',
+        font: {
+          weight: 'bold'
+        },
+        formatter: (value, context) => {
+          return value; //muestra el valor estatico en el grafico
+        },
+      },
+    },
+  };
+  public lineChartColors: Color[] = [
+    {
+      backgroundColor: [
+        'rgb(255, 99, 132)',
+        'rgb(54, 162, 235)',
+        'rgb(255, 205, 86)',
+        'rgb(155, 205, 86)'
+      ]
+    }
+  ];
+
+  public progresoActividadColors: Color[] = [
+    {
+      backgroundColor: [
+        'rgb(40, 167, 69)',
+        'transparent'
+      ]
+    }
+  ];
+
+
+  public lineChartLegend = true;
+  public lineChartType = 'doughnut';
+  public notasChartType = 'bar';
+  public progresoActividadChartType = 'doughnut';
+  public lineChartPlugins = [ChartDataLabels];
+
 
   actividades: ActividadI[];
   estudiantes: EstuadianteI[];
@@ -94,7 +201,28 @@ export class MetricasComponent implements OnInit {
 
     this.getOptions();
     this.getActividades();
+
   }
+  cards: { titulo: string; descripcion: string, color: string }[] = [];
+  getcardsInfo(): void {
+    console.log("se cargo las cards");
+    this.cards = [{ titulo: this.metricaVisualizarToSave.inicio, descripcion: "¿Inició la Actividad?", color: this.metricaVisualizarToSave.inicio.toUpperCase() === "SI" ? 'bg-success' : 'bg-warning' }
+      , { titulo: this.metricaVisualizarToSave.contenido, descripcion: "¿Vio el Contenido?", color: this.metricaVisualizarToSave.contenido.toUpperCase() === "SI" ? 'bg-success' : 'bg-warning' }
+      , { titulo: this.metricaVisualizarToSave.count_contenido.toString(), descripcion: "# Visualizaciones", color: this.metricaVisualizarToSave.count_contenido === 0 ? 'bg-warning' : 'bg-success' }
+      , { titulo: this.metricaVisualizarToSave.quiz, descripcion: "¿Hizo el Quiz?", color: this.metricaVisualizarToSave.quiz.toUpperCase() === "SI" ? 'bg-success' : 'bg-warning' }
+      , { titulo: this.metricaVisualizarToSave.taller, descripcion: " ¿Hizo el Taller?", color: this.metricaVisualizarToSave.taller.toUpperCase() === "SI" ? 'bg-success' : 'bg-warning' }
+      , { titulo: this.metricaVisualizarToSave.evaluacion, descripcion: "¿Hizo la Evaluación?", color: this.metricaVisualizarToSave.evaluacion.toUpperCase() === "SI" ? 'bg-success' : 'bg-warning' }
+    ]
+    //dataset notas estudiantes individual
+    this.notasEstudiantesChartData = [{ data: [this.metricaVisualizarToSave.nota_quiz, this.metricaVisualizarToSave.nota_evaluacion, this.metricaVisualizarToSave.nota_final], barPercentage: 0.65 }];
+  }
+
+  // El estudiante inico la Actividad: No
+  // El estudiante vio el Contenido: No
+  // Numero de veces que vio el contenido: 0
+  // El estudiante hizo el Quiz: Si
+  // El estudiante hizo el Taller: No
+  // El estudiante hizo la Evaluación: Si
 
   getOptions() {
     this.AuthDService.allSubject().subscribe(res => {
@@ -140,38 +268,39 @@ export class MetricasComponent implements OnInit {
     });
   }
 
+  porcentajenuevo: number = 0;
   getAvanceEstudianteModal(metricaEstudiante) {
+
     this.saveDataMetricaVisualizar(metricaEstudiante);
 
-    this.bar20 = false;
-    this.bar40 = false;
-    this.bar60 = false;
-    this.bar80 = false;
-    this.bar100 = false;
+    this.porcentajenuevo = 0;
 
     if (metricaEstudiante.check_inicio == 1) {
-      if (metricaEstudiante.check_contenido == 1) {
-        if (metricaEstudiante.check_quiz == 1) {
-          if (metricaEstudiante.check_taller == 1) {
-            if (metricaEstudiante.check_evaluacion == 1) {
-              this.bar100 = true;
-            }
-            else {
-              this.bar80 = true;
-            }
-          }
-          else {
-            this.bar60 = true;
-          }
-        }
-        else {
-          this.bar40 = true;
-        }
-      }
-      else {
-        this.bar20 = true;
-      }
+
+      this.porcentajenuevo += 20;
     }
+    if (metricaEstudiante.check_contenido == 1) {
+
+      this.porcentajenuevo += 20;
+    }
+    if (metricaEstudiante.check_quiz == 1) {
+
+      this.porcentajenuevo += 20;
+    }
+    if (metricaEstudiante.check_taller == 1) {
+
+      this.porcentajenuevo += 20;
+    }
+    if (metricaEstudiante.check_evaluacion == 1) {
+
+      this.porcentajenuevo += 20;
+    }
+
+    this.progresoActividadChartData = [
+      { data: [this.porcentajenuevo, 100 - this.porcentajenuevo] },
+
+    ];
+    this.getcardsInfo();
   }
 
   //Imprimir Metricas de la Actividad seleccionanda en el Modal 
@@ -181,7 +310,7 @@ export class MetricasComponent implements OnInit {
     this.ActividadService.selectedActividad = actividad;
     this.saveDataActivity(actividad);
     this.metricasActividad = new MetricaActividadI;
-
+    console.log(this.ActividadService.selectedActividad);
     this.metricas = new Array;
     this.metricasVisualizar = new Array;
 
@@ -228,11 +357,11 @@ export class MetricasComponent implements OnInit {
                 this.contQuiz = this.contQuiz + this.eventos[n].check_answer;
                 this.contTaller = this.contTaller + this.eventos[n].check_download;
                 if (this.eventos[n].answers && 0 < 2) {
-                //if (this.eventos[n].answers && 0 < this.eventos[n].answers) {
+                  //if (this.eventos[n].answers && 0 < this.eventos[n].answers) {
                   this.contEvaluacion = this.contEvaluacion + 1;
                 }
 
-                this.notaA1 = 0; this.notaA2 = 0; this.notaA3 = 0; this.notaEA1 = 0; 
+                this.notaA1 = 0; this.notaA2 = 0; this.notaA3 = 0; this.notaEA1 = 0;
 
                 //Evaluar respuestas del evento
                 if (this.eventos[n].check_a1 == this.actividadToSave.CA1) {
@@ -244,41 +373,41 @@ export class MetricasComponent implements OnInit {
                 if (this.eventos[n].check_a3 == this.actividadToSave.CA3) {
                   this.notaA3 = 5;
                 }
-                
-              const keys = Object.keys(this.eventos[n].answers);
-              console.log('keys ',this.eventos[n].answers);
-              keys.forEach((key) => {
-              const value = this.eventos[n].answers[key];
-              const objeto = JSON.parse(value);
-              const array = Object.entries(objeto).map(([key, value]) => ({ clave: key, valor: value }));
-              console.log('array s 253  ',array);
-              console.log('dataquestion dd ',this.actividadToSave.questions);
-              console.log('dataquestion ',this.actividadToSave.questions[0].correct);
-              for (let i = 0; i < array.length; i++) {
-                console.log('entro al for ');
-                if (array[i].valor === this.actividadToSave.questions[i].correct) {
-                  this.notaEA1 = this.notaEA1 + 5;
-                }    
-                else {   
-                  this.notaEA1 = this.notaEA1 + 0;
+
+                const keys = Object.keys(this.eventos[n].answers);
+                console.log('keys ', this.eventos[n].answers);
+                keys.forEach((key) => {
+                  const value = this.eventos[n].answers[key];
+                  const objeto = JSON.parse(value);
+                  const array = Object.entries(objeto).map(([key, value]) => ({ clave: key, valor: value }));
+                  console.log('array s 253  ', array);
+                  console.log('dataquestion dd ', this.actividadToSave.questions);
+                  console.log('dataquestion ', this.actividadToSave.questions[0].correct);
+                  for (let i = 0; i < array.length; i++) {
+                    console.log('entro al for ');
+                    if (array[i].valor === this.actividadToSave.questions[i].correct) {
+                      this.notaEA1 = this.notaEA1 + 5;
+                    }
+                    else {
+                      this.notaEA1 = this.notaEA1 + 0;
                     }
                   }
                 });
-                console.log('this.notaEA1 ',this.notaEA1);
+                console.log('this.notaEA1 ', this.notaEA1);
 
-               /* if (this.eventos[n].check_Ea1 == this.actividadToSave.ECA1) {
-                  this.notaEA1 = 5;
-                }
-                if (this.eventos[n].check_Ea2 == this.actividadToSave.ECA2) {
-                  this.notaEA2 = 5;
-                }
-                if (this.eventos[n].check_Ea3 == this.actividadToSave.ECA3) {
-                  this.notaEA3 = 5;
-                }*/
+                /* if (this.eventos[n].check_Ea1 == this.actividadToSave.ECA1) {
+                   this.notaEA1 = 5;
+                 }
+                 if (this.eventos[n].check_Ea2 == this.actividadToSave.ECA2) {
+                   this.notaEA2 = 5;
+                 }
+                 if (this.eventos[n].check_Ea3 == this.actividadToSave.ECA3) {
+                   this.notaEA3 = 5;
+                 }*/
 
                 var nota_quizTemp = parseFloat(((this.notaA1 + this.notaA2 + this.notaA3) / 3).toFixed(2));
                 var cantPreguntas = this.actividadToSave.questions.length;
-                var nota_evaluacionTemp = parseFloat(((this.notaEA1 ) / cantPreguntas).toFixed(2));
+                var nota_evaluacionTemp = parseFloat(((this.notaEA1) / cantPreguntas).toFixed(2));
                 var nota_finalTemp = parseFloat(((nota_quizTemp + nota_evaluacionTemp) / 2).toFixed(2));
                 console.log('nota evaluacion ', nota_evaluacionTemp);
                 this.contNotaQuiz = this.contNotaQuiz + nota_quizTemp;
@@ -310,7 +439,15 @@ export class MetricasComponent implements OnInit {
           this.metricasActividad.quiz = this.contQuiz;
           this.metricasActividad.taller = this.contTaller;
           this.metricasActividad.evaluacion = this.contEvaluacion;
+          console.log([this.contContenido, this.contQuiz, this.contTaller, this.contEvaluacion]);
+          this.actionChartData = [
+            { data: [this.contContenido, this.contQuiz, this.contTaller, this.contEvaluacion], label: "" },
 
+          ];
+          this.notasChartData = [
+            { data: [this.metricasActividad.nota_quiz, this.metricasActividad.nota_evaluacion, this.metricasActividad.nota_final], label: "", barPercentage: 0.65 },
+
+          ];
           //console.log('metricasActividad', this.metricasActividad);
           //console.log('metricas', this.metricas);
 

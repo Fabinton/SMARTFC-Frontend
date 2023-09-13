@@ -57,6 +57,8 @@ import { FilterTallerPipe } from './pipes/filter-taller.pipe';
 import { FilterRetroTallerPipe } from './pipes/filter-retrotaller.pipe';
 import { CalificacionComponent } from "./components/index.paginas";
 import { ComentariosComponent } from './components/comentarios/comentarios.component';
+import { ChartsModule, ThemeService } from 'ng2-charts';
+import { NgCircleProgressModule } from 'ng-circle-progress';
 
 
 @NgModule({
@@ -109,9 +111,20 @@ import { ComentariosComponent } from './components/comentarios/comentarios.compo
     app_routing,
     HttpClientModule,
     FormsModule,
-    CommonModule
+    CommonModule,
+    ChartsModule,
+    NgCircleProgressModule.forRoot({
+      // set defaults here
+      radius: 100,
+      outerStrokeWidth: 16,
+      innerStrokeWidth: 8,
+      outerStrokeColor: "#78C000",
+      innerStrokeColor: "#C7E596",
+      animationDuration: 300,
+
+    })
   ],
-  providers: [AuthDService, ContentREAService, ActividadService],
+  providers: [AuthDService, ContentREAService, ActividadService, ThemeService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
