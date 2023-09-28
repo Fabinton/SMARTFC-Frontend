@@ -59,7 +59,7 @@ import { CalificacionComponent } from "./components/index.paginas";
 import { ComentariosComponent } from './components/comentarios/comentarios.component';
 import { ChartsModule, ThemeService } from 'ng2-charts';
 import { NgCircleProgressModule } from 'ng-circle-progress';
-
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
@@ -122,7 +122,8 @@ import { NgCircleProgressModule } from 'ng-circle-progress';
       innerStrokeColor: "#C7E596",
       animationDuration: 300,
 
-    })
+    }),
+    FontAwesomeModule,
   ],
   providers: [AuthDService, ContentREAService, ActividadService, ThemeService],
   bootstrap: [AppComponent]

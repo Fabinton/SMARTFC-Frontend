@@ -18,13 +18,14 @@ import { Review } from '../../models/review';
 import { ChartDataSets, ChartOptions } from 'chart.js';
 import { Label, Color } from 'ng2-charts';
 import ChartDataLabels from 'chartjs-plugin-datalabels';
+import { faCoffee, faThumbtack, faUniversity } from '@fortawesome/free-solid-svg-icons';
 @Component({
   selector: 'app-metricas',
   templateUrl: './metricas.component.html',
   styleUrls: ['./metricas.component.css']
 })
 export class MetricasComponent implements OnInit {
-
+  faCoffee = faUniversity;
   public actionChartData: ChartDataSets[] = [
     { data: [0, 0, 0, 0] },
 
@@ -102,26 +103,28 @@ export class MetricasComponent implements OnInit {
       },
     },
   };
+
   public lineChartColors: Color[] = [
     {
       backgroundColor: [
-        'rgb(255, 99, 132)',
-        'rgb(54, 162, 235)',
-        'rgb(255, 205, 86)',
-        'rgb(155, 205, 86)'
+        
+        'rgb(255,140,0)',
+        'rgb(255,140,0)',
+        'rgb(255,140,0)',
+        'rgb(255,140,0)',
       ]
     }
   ];
-
-  public progresoActividadColors: Color[] = [
+  public actionChartColors: Color[] = [
     {
       backgroundColor: [
-        'rgb(40, 167, 69)',
-        'transparent'
+        'rgb(54, 162, 235)',
+        'rgb(54, 162, 235)',
+        'rgb(54, 162, 235)',
+        'rgb(54, 162, 235)',
       ]
     }
   ];
-
 
   public lineChartLegend = true;
   public lineChartType = 'doughnut';

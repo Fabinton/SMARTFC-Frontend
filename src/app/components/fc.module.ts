@@ -35,6 +35,7 @@ import { DudasComponent } from './dudas/dudas.component';
 import { MetricasComponent } from './metricas/metricas.component';
 import { ChartsModule, ThemeService } from 'ng2-charts';
 import { NgCircleProgressModule } from 'ng-circle-progress';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 @NgModule({
   declarations: [
     AppComponent,
@@ -78,7 +79,8 @@ import { NgCircleProgressModule } from 'ng-circle-progress';
       animationDuration: 300,
       responsive: true,
 
-    })
+    }),
+    FontAwesomeModule,
   ],
   providers: [AuthDService, ContentREAService, ActividadService, ThemeService],
   bootstrap: [AppComponent]
