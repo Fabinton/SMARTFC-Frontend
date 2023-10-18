@@ -253,7 +253,7 @@
                             </div>
                         </div>
                         <!-- En esta parte van las metricas del video esta comentado porque no se implemnta en esta version -->
-                        <!-- <div>
+                        <div>
                             <h5 style="cursor:context-menu" class="">Metricas Video:</h5>
                         </div>
                         <hr class="style10">
@@ -261,7 +261,7 @@
                             <div class="card mb-4 border-0" style="max-width: 1440px;">
                                 <div class="row no-gutters ">
                                     <div class="col" style="max-width: 840px;">
-                                        <div class="card-body p-2">
+                                        <div class="card-body p-2 text-metricas">
                                             <div>
                                                 <a class="card-text"><small class="text-muted">Contenido: </small></a>
 
@@ -285,7 +285,7 @@
 
                                         </div>
                                     </div>
-                                    <div class="col my-auto" style="max-width: 840px;">
+                                    <div class="col my-auto" style="max-width: 860px;">
                                         <div class="card-body p-2">
                                             <div *ngFor=" let review of reviews">
                                                 <div class="row">
@@ -307,8 +307,10 @@
                                 </div>
 
                             </div>
+                            <hr class="style10">
                             <app-comentarios [comments]="comments" ></app-comentarios>
-                        </div> -->
+                        </div>
+                        <hr class="style10">
                         <!--Buscar Esdtudiante-->
                         <label class="pt-2">Buscador:</label>
                         <div class="form-group">

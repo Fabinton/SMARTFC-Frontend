@@ -14,10 +14,11 @@
         <div>
             <div class="contenedor py-3">
                 <form #frmBorrarActividad="ngForm" (ngSubmit)="onBorrarActividad(frmBorrarActividad)">
-                    <div class="form-group">
+                    <div class="form-row pb-3">
                         <!--Barra busqueda-->
                         <br>
-                        <div class="form-inline">
+                        <div class="form-group col-md-10">
+                            <label for="inputBusquedaActividad" class="text-white">Nombre de la Actividad</label>
                             <input type="text" class="form-control col-md-8" id="inputTextoBusquedaActividad"
                                 placeholder="Busqueda por nombre de la Actividad" [(ngModel)]="nombreActividadSelected" name="inputBusquedaActividad">
                         </div>

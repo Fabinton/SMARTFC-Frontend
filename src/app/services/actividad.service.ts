@@ -64,8 +64,8 @@ export class ActividadService {
     return this.httpClient.get<Review[]>(`http://${this.localStorageService.getItem("IPSERVER")}:3000/loadCalificaciones/`+id_CREA)
   }
 
-  // loadComments(id_CREA){
-  //   return this.httpClient.get<Comment[]>(`http://${this.localStorageService.getItem("IPSERVER")}:3000/loadComentarios/`+id_CREA)
-  // }
+  loadComments(id_CREA){
+    return this.httpClient.get<Comment[]>(`http://${this.localStorageService.getItem("IPSERVER")}:3000/loadComentarios/`+id_CREA)
+  }
 
 }

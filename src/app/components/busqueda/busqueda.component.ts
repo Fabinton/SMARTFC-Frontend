@@ -24,6 +24,7 @@ export class BusquedaComponent implements OnInit {
 
   //Elementos de Busqueda de Contenido
   tallerToSave:contenidoREAI;
+  retroToSave:contenidoREAI;
   contenidoToSave:contenidoREAI;
   contenidos:contenidoREAI[];
   materia:MateriaI[];
@@ -51,7 +52,10 @@ export class BusquedaComponent implements OnInit {
   ID_TipoContenido_Taller:number;
   contenidoAct:contenidoREAVisualizarI;
   tallerAct:contenidoREAVisualizarI;
-
+  retroTallerAct:contenidoREAVisualizarI;
+  retroTallerRes:any;
+  questionList:any[];
+  headersQuestion:any[];
   IPServer:string;
 
   constructor(private AuthDService: AuthDService, private ActividadService: ActividadService, private ContentREAService: ContentREAService, private router: Router) {
@@ -68,6 +72,7 @@ export class BusquedaComponent implements OnInit {
     this.getActividades();
     this.contenidoAct = {nombre_CREA:"", cont:0, id_CREA:0,nombre_tipo_CREA:"",id_grado:0,materia:"",descripcion_CREA:""};
     this.tallerAct = {nombre_CREA:"", cont:0, id_CREA:0,nombre_tipo_CREA:"",id_grado:0,materia:"",descripcion_CREA:""};
+    this.retroTallerAct = {nombre_CREA:"",cont:0,id_CREA:0,nombre_tipo_CREA:"",id_grado:0,materia:"",descripcion_CREA:""};
   }
 
   //Obtener los datos de los Options
@@ -164,10 +169,19 @@ export class BusquedaComponent implements OnInit {
   //Imprimir datos de la Actividad seleccionanda en el Modal 
   getActividadinModal(actividad: ActividadI) {
     this.ActividadService.selectedActividad = actividad;
+    this.headersQuestion = [
+      'id',
+      'Pregunta',
+    ];
+    this.questionList=actividad.questions;
     this.saveDataActivity(actividad);
     //console.log(this.ContentREAService.contenidosREA);
     const TallerInfo = {
       id_contenidoREA: this.ActividadService.selectedActividad.id_taller,
+    }
+
+    const retroTallerInfo = {
+      id_contenidoREA: this.ActividadService.selectedActividad.id_retrotaller,
     }
 
     //Obtener contenido original de la actividad
@@ -209,6 +223,27 @@ export class BusquedaComponent implements OnInit {
       }
       //console.log('contenidoAct', this.contenidoAct);
     })
+
+    //Obtener retrotaller original de la actividad
+    this.ContentREAService.loadContentREA(retroTallerInfo).subscribe(res =>{
+      this.retroTallerRes = res;
+      this.retroTallerAct.nombre_CREA = this.retroTallerRes.content.nombre_CREA;
+      this.retroTallerAct.descripcion_CREA = this.retroTallerRes.content.descripcion_CREA;
+      this.retroTallerAct.id_grado = this.retroTallerRes.content.id_grado;
+
+      for(let x=0; x < this.materia.length ;x++){
+        if(this.retroTallerRes.content.id_materia == this.materia[x].id_materia){
+          this.retroTallerAct.materia = this.materia[x].nombre_materia;
+        }
+      }
+      for(let y=0; y < this.tipoContenido.length ;y++){
+        if(this.retroTallerRes.content.tipo_CREA == this.tipoContenido[y].id_tipoContenido){
+          this.retroTallerAct.nombre_tipo_CREA = this.tipoContenido[y].nombre_tipoContenido;
+        }
+      }
+      //console.log(this.retroTallerAct);
+      //console.log('contenidoAct', this.contenidoAct);
+    })
   }
 
   //Abrir nueva ventana con el contenido Buscado
@@ -235,6 +270,14 @@ export class BusquedaComponent implements OnInit {
     window.open(urlLoad, "_blank");
   }
 
+  //Abrir nueva ventana con el Taller de la actividad Buscada
+  verRetroTallerActividad(){
+    const urlcut = this.retroTallerRes.content.urlrepositorio.substring(41);
+    const urlLoad = 'http://'+this.IPServer+':3000/repositorio/'+urlcut;
+    //console.log('urlload', urlLoad);
+    window.open(urlLoad, "_blank");
+  }
+
   //Almacenar info temporal de un ContenidoREA
   saveDataContent(contenidoREAhtml){
     this.contenidoToSave = contenidoREAhtml;
@@ -249,6 +292,10 @@ export class BusquedaComponent implements OnInit {
   saveDataTaller(tallerhtml){
     this.tallerToSave = tallerhtml;
     //console.log("taller guardado:", this.tallerToSave);
+  }
+
+  saveDataRetroTaller(retrotallerhtml){
+    this.retroToSave = retrotallerhtml;
   }
 
   comprobacionLogin(){

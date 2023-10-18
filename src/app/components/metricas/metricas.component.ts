@@ -177,7 +177,7 @@ export class MetricasComponent implements OnInit {
   //Imprimir Metricas de la Actividad seleccionanda en el Modal 
   getActividadinModal(actividad: ActividadI) {
     this.loadReviews(actividad);
-    //this.loadComments(actividad);
+    this.loadComments(actividad);
     this.ActividadService.selectedActividad = actividad;
     this.saveDataActivity(actividad);
     this.metricasActividad = new MetricaActividadI;
@@ -419,12 +419,12 @@ export class MetricasComponent implements OnInit {
     })
   }
 
-  // loadComments(actividad) {
-  //   this.ActividadService.loadComments(actividad.id_contenidoREA).subscribe(res => {
-  //     this.comments = res;
-  //   }, error => {
-  //     console.log(error)
-  //   })
-  // }
+  loadComments(actividad) {
+    this.ActividadService.loadComments(actividad.id_contenidoREA).subscribe(res => {
+      this.comments = res;
+    }, error => {
+      console.log(error)
+    })
+  }
 
 }

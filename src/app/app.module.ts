@@ -6,7 +6,17 @@ import { app_routing } from "./app.routes";
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatStepperModule } from '@angular/material/stepper';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatInputModule } from '@angular/material/input';
+import { MatButtonModule } from '@angular/material/button';
+import {MatNativeDateModule} from '@angular/material';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
+
+import {MatIconModule} from '@angular/material/icon';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {platformBrowserDynamic} from '@angular/platform-browser-dynamic';
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -58,7 +68,6 @@ import { FilterRetroTallerPipe } from './pipes/filter-retrotaller.pipe';
 import { CalificacionComponent } from "./components/index.paginas";
 import { ComentariosComponent } from './components/comentarios/comentarios.component';
 
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -109,7 +118,16 @@ import { ComentariosComponent } from './components/comentarios/comentarios.compo
     app_routing,
     HttpClientModule,
     FormsModule,
-    CommonModule
+    CommonModule,
+    MatStepperModule, 
+    BrowserAnimationsModule, 
+    MatInputModule, 
+    MatButtonModule,
+    MatNativeDateModule,
+    MatIconModule,
+    MatFormFieldModule,
+    MatProgressBarModule,
+    ReactiveFormsModule
   ],
   providers: [AuthDService, ContentREAService, ActividadService],
   bootstrap: [AppComponent]
