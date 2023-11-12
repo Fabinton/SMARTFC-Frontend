@@ -220,12 +220,7 @@ export class MetricasComponent implements OnInit {
     this.notasEstudiantesChartData = [{ data: [this.metricaVisualizarToSave.nota_quiz, this.metricaVisualizarToSave.nota_evaluacion, this.metricaVisualizarToSave.nota_final], barPercentage: 0.65 }];
   }
 
-  // El estudiante inico la Actividad: No
-  // El estudiante vio el Contenido: No
-  // Numero de veces que vio el contenido: 0
-  // El estudiante hizo el Quiz: Si
-  // El estudiante hizo el Taller: No
-  // El estudiante hizo la Evaluación: Si
+
 
   getOptions() {
     this.AuthDService.allSubject().subscribe(res => {
