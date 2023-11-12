@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ChangeDetectorRef } from '@angular/core';
+
 import { Router } from "@angular/router";
 import { ContentREAService } from '../../services/content-rea.service';
 import { contenidoREAI } from '../../models/contenidoREA';
@@ -12,15 +13,15 @@ import { DocenteI } from '../../models/docente';
 import { ActividadService } from '../../services/actividad.service';
 import { AuthDService } from '../../services/auth-d.service';
 import { MateriaActivaI } from '../../models/materiaActiva';
-import { NgForm } from '@angular/forms';
+import { NgForm, Validators, FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-crear-actividad',
   templateUrl: './crear-actividad.component.html',
-  styleUrls: ['./crear-actividad.component.css']
+  styleUrls: ['./crear-actividad.component.css'],
 })
 export class CrearActividadComponent implements OnInit {
-
+  
   //#region Región de variables
   //Elementos de Busqueda de Contenido
   contenidoToSave:contenidoREAI;
@@ -49,6 +50,11 @@ export class CrearActividadComponent implements OnInit {
   docenteSelectedA:number;
   competenciaSelectedA:number;
   respuestaCorrectaSelected:number;
+  uploadedFiles: Array <File>;
+  urlFinal:string;
+  urlSelected:any;
+  contenidoSeleccionado:boolean;
+  nombreContenido:String;
   newCont:number;
   newID: number;
   temp: number;
@@ -93,9 +99,11 @@ export class CrearActividadComponent implements OnInit {
   retroA:string;
   actividadEnviada:boolean = false;
   public mostrarErrores: boolean = false;
+  mostrarAlertaEvaluacion: boolean = false;
+
   //#endregion
 
-  constructor(private AuthDService: AuthDService, private ActividadService: ActividadService, private ContentREAService: ContentREAService, private router: Router) { }
+  constructor(private AuthDService: AuthDService,private cdr: ChangeDetectorRef ,private ActividadService: ActividadService, private ContentREAService: ContentREAService, private router: Router) { }
 
   ngOnInit() {
     this.dictionary = ['A','B','C','D'];
@@ -107,13 +115,15 @@ export class CrearActividadComponent implements OnInit {
     this.error = false;
     this.error2 = false;
     this.subiendo = false;
-
+    this.contenidoSeleccionado = false;
+    
+    this.nombreContenido = '...';
     this.id_docenteAuth = this.AuthDService.getIdDocente();
     this.id_colegioAuth = this.AuthDService.getIdColegioDocente();
     //console.log('prueba', this.id_docenteAuth, this.id_colegioAuth);
     this.getOptions();
     this.getContenidos();
-
+    this.ContentREAService.selectedContenidoREA = new contenidoREAI();
     this.questionOptionsListCorrect = new Array();
 
   }
@@ -150,12 +160,12 @@ export class CrearActividadComponent implements OnInit {
       //console.log('prueba2', infoDocente)
     });
   }
-
+  
   //consultar todos los ContenidosREA y verificar el nombre de la materia y contenido con sus respectivos ID´s
   getContenidos() {
     this.headersQuestion = [
       'id',
-      'question',
+      'Pregunta',
       'Opciones'
     ];
     this.headersQuestionOptions = [
@@ -197,6 +207,15 @@ export class CrearActividadComponent implements OnInit {
     });
   }
 
+  switchActivado: boolean = false; // Inicialmente desactivado
+
+  onSwitchChange() {
+    this.switchActivado = !this.switchActivado; // Cambiar el estado del interruptor
+    //console.log("boton es: ", this.switchActivado);
+    this.cdr.detectChanges();
+  }
+
+
   //Consultar todas las actividades en Mongo
   getActividades(){
     this.ActividadService.allActivities().subscribe(res =>{
@@ -212,12 +231,12 @@ export class CrearActividadComponent implements OnInit {
     this.error2 = true;
     this.subiendo = false;
     this.mostrarErrores = true;
+    this.mostrarAlertaEvaluacion = false;
 
     if (true) {
       this.correcto = false;
-      this.error = false;
-      this.error2 = false;
-      this.subiendo = true;
+      this.error = true;
+      this.subiendo = false;
 
       this.ActividadService.allActivities().subscribe(res => {
         //console.log(res);
@@ -344,8 +363,10 @@ export class CrearActividadComponent implements OnInit {
           id_taller: this.tallerToSave.id_CREA,
           taller: 0,
           urltaller: this.tallerToSave.urlrepositorio,
-          id_retrotaller: this.retroTallerToSave.id_CREA,
-          urlretrotaller: this.retroTallerToSave.urlrepositorio,
+          // id_retrotaller: this.retroTallerToSave.id_CREA,
+          // urlretrotaller: this.retroTallerToSave.urlrepositorio,
+          id_retrotaller: this.switchActivado ? this.retroTallerToSave.id_CREA: null,
+          urlretrotaller: this.switchActivado ? this.retroTallerToSave.urlrepositorio: "",
           descripcion_test: form.value.descripcion_quiz,
           Q1: form.value.preguntaQ1,
           A11: form.value.respuesta11,
@@ -375,55 +396,204 @@ export class CrearActividadComponent implements OnInit {
           id_autor: this.id_docenteAuth,
           retroalimentacion: 0,
         }
+        //console.log('datosActividad', newActividad);
+ 
+        // Validacion Taller
+        if (this.tallerToSave.id_CREA != null) {
+          this.error2 = false;
+        }
+        
+        // Validacion Evaluación
+        if (this.questionList.length > 0) {
+          // El campo de evaluación está vacío, muestra la alerta
+          this.mostrarAlertaEvaluacion = false;
+          this.ActividadService.createActivity(newActividad).subscribe(res => {
+            console.log('res',res);
+            this.temp2 = res;
+  
+            if (this.temp2.Estado == "Error Crear Actividad") {
+              this.correcto = false;
+              this.error = true;
+              this.subiendo = false;
+            } else {
+              const contenidoREAInfo = {
+                id_CREA: this.contenidoToSave.id_CREA,
+                en_uso: (this.contenidoToSave.en_uso + 1)
+              };
+              const tallerInfo = {
+                id_CREA: this.tallerToSave.id_CREA,
+                en_uso: (this.tallerToSave.en_uso + 1)
+              };
+            
+              // Verificamos si switchActivado es true y retroTallerToSave tiene un valor
+              if (this.switchActivado && this.retroTallerToSave) {
+                const retrotallerInfo = {
+                  id_CREA: this.retroTallerToSave.id_CREA,
+                  en_uso: (this.retroTallerToSave.en_uso + 1)
+                };
+            
+                // Actualizamos retrotallerInfo solo si se cumplen las condiciones
+                this.ContentREAService.uploadEstadoContentREA(retrotallerInfo).subscribe(res => {
+                  console.log(res);
+                });
+              }
+            
+              // Actualizamos contenidoREAInfo y tallerInfo
+              this.ContentREAService.uploadEstadoContentREA(contenidoREAInfo).subscribe(res => {
+                console.log(res);
+                this.ContentREAService.uploadEstadoContentREA(tallerInfo).subscribe(res => {
+                  console.log(res);
+                  this.correcto = true;
+                  this.error = false;
+                  this.subiendo = false;
+                  this.mostrarErrores = false;
+                  this.actividadEnviada = true;
+                  this.resetForm(form);
+                });
+              });
+            }
+            
+          });
+        } else {
+            // El campo de evaluación no está vacío, continuar con la creación de la actividad
+            this.mostrarAlertaEvaluacion = true;      
+        }
+      });
+    }
+  }
 
-        console.log('datosActividad', newActividad);
+  // Agregar Contenido Nuevo
+  //Cargar archivo a subir
+  onFileChange(e){
+    this.correcto = false;
+    this.error = true;
+    //console.log('archivo', e)
+    this.uploadedFiles = e.target.files;
+    this.nombreContenido = e.target.files[0].name;
+    this.contenidoSeleccionado = true;
+  }
 
-        this.ActividadService.createActivity(newActividad).subscribe(res => {
-          console.log('res',res);
+  //Funcion leer y subir informacion y archivo del formulario a Mongo
+  onSubirContenido(form: NgForm):void{
+    this.correcto = false;
+    this.error = false;
+    this.error2 = true;
+    this.subiendo = false;
+    
+    //console.log('urlFinal', this.urlSelected.url);
+    if (this.contenidoSeleccionado == true) {
+      this.ContentREAService.allContent().subscribe(res => {
+        //console.log(res);
+        this.ContentREAService.contenidosREA = res as contenidoREAI[];
+        //console.log('Contenidos',  this.ContentREAService.contenidosREA);
+
+        //Generar Cont
+        if (this.ContentREAService.contenidosREA.length == 0) {
+          this.newCont = 1;
+        }
+        else {
+          if (this.ContentREAService.contenidosREA.length) {
+            this.newCont = 1;
+          }
+          for (let n = 0; n < this.ContentREAService.contenidosREA.length; n++) {
+            for (let i = 0; i < this.ContentREAService.contenidosREA.length; i++) {
+              if (this.ContentREAService.contenidosREA[i].id_colegio == this.id_colegioAuth) {
+                if (this.ContentREAService.contenidosREA.length) {
+                  this.newCont = 1;
+                }
+                if (n + 1 == this.ContentREAService.contenidosREA[i].cont) {
+                  this.newCont = n + 2;
+                  this.temp = 0;
+                  i = this.ContentREAService.contenidosREA.length;
+                }
+                else {
+                  this.newCont = n + 1;
+                  this.temp = 1;
+                }
+              }
+            }
+            if (this.temp == 1) {
+              n = this.ContentREAService.contenidosREA.length + 1;
+            }
+          }
+        }
+
+        //Generar ID
+        var idGlobal = "" + this.id_colegioAuth + this.newCont;
+        this.newID = parseInt(idGlobal);
+        //console.log('nuevaID y cont', this.newID, this.newCont);
+
+        const newContenidoREA = {
+          //id_CREA: Math.floor((Math.random() * 100) + 1),
+          id_CREA: this.newID,
+          cont: this.newCont,
+          tipo_CREA: this.tipoContenidoSelected,
+          id_docente: this.id_docenteAuth,
+          id_materia: this.materiaSelected,
+          id_grado: this.gradoSelected,
+          id_colegio: this.id_colegioAuth,
+          nombre_CREA: form.value.nombre_CREA,
+          urlrepositorio: 'Temporal',
+          descripcion_CREA: form.value.descripcion_CREA,
+          en_uso: 0
+        }
+
+        //console.log('datosContenido', newContenidoREA);
+
+        this.correcto = false;
+        this.error = false;
+        this.error2 = false;
+        this.subiendo = true;
+
+        this.ContentREAService.createContentREA(newContenidoREA).subscribe(res => {
+          //this.router.navigateByUrl('/inicioProfesores')
+          //console.log('res',res);
           this.temp2 = res;
+          console.log("123", this.temp2);
 
-          if (this.temp2.Estado == "Error Crear Actividad") {
+          if (this.temp2.Estado == "Error Crear Contenido") {
             this.correcto = false;
             this.error = true;
             this.subiendo = false;
           } else {
-            const contenidoREAInfo = {
-              id_CREA: this.contenidoToSave.id_CREA,
-              en_uso: (this.contenidoToSave.en_uso + 1)
+            this.correcto = false;
+            this.error = false;
+            this.subiendo = true;
+
+            /*para subir multiples archivos*/
+            let formData = new FormData();
+            for (let i = 0; i < this.uploadedFiles.length; i++) {
+              formData.append("uploads[]", this.uploadedFiles[i], this.uploadedFiles[i].name)
             }
-            const tallerInfo = {
-              id_CREA: this.tallerToSave.id_CREA,
-              en_uso: (this.tallerToSave.en_uso + 1)
-            }
-            const retrotallerInfo = {
-              id_CREA: this.retroTallerToSave.id_CREA,
-              en_uso: (this.retroTallerToSave.en_uso + 1)
-            }
-            this.ContentREAService.uploadEstadoContentREA(contenidoREAInfo).subscribe(res => {
-              console.log(res);
-              this.ContentREAService.uploadEstadoContentREA(tallerInfo).subscribe(res => {
-                console.log(res);
-                this.ContentREAService.uploadEstadoContentREA(retrotallerInfo).subscribe(res => {
+
+            this.ContentREAService.uploadFile(formData).subscribe((res) => {
+              //console.log('url-res', res);
+              this.urlSelected = res;
+
+              const newUrl = {
+                id_CREA: this.newID,
+                urlrepositorio: this.urlSelected.url
+              }
+
+              //console.log('newUrl', newUrl);
+
+              this.ContentREAService.uploadURLContentREA(newUrl).subscribe((res) => {
+                //console.log('res', res);
+                this.ContentREAService.uploadEstadoContentREA(this.contenidoToSave).subscribe(res =>{
+                  //console.log(res);
+                  this.correcto = true;
+                  this.getContenidos();
+                });
                 this.correcto = true;
                 this.error = false;
                 this.subiendo = false;
-                this.mostrarErrores = false;
-                this.actividadEnviada = true;
                 this.resetForm(form);
-                });
               });
             });
           }
         });
       });
     }
-
-    // else{
-    //   // Ejemplo: Marcar campos inválidos en rojo
-    //   Object.keys(form.controls).forEach(controlName => {
-    //   form.controls[controlName].markAsTouched();
-    // });
-    // }
   }
 
   getQuetions(){
@@ -592,11 +762,10 @@ export class CrearActividadComponent implements OnInit {
     //console.log("taller guardado:", this.tallerToSave);
   }
 
-  //Almacenar info temporal de un Taller
+  //Almacenar info temporal de una RetroTaller
   saveDataRetroTaller(retrotallerhtml){
     this.retroTallerToSave = retrotallerhtml;
     this.retroTallerVerificacion = true;
-    //console.log("retro taller guardado:", this.retroTallerToSave);
   }
 
   //Almacenar info temporal de un ContenidoREA
@@ -615,6 +784,9 @@ export class CrearActividadComponent implements OnInit {
   resetForm(form?: NgForm) {
     if (form) {
       form.reset();
+      this.contenidoSeleccionado = false;
+      this.nombreContenido = "...";
+      this.ContentREAService.selectedContenidoREA = new contenidoREAI();
       window.scrollTo(0, 0);
       this.temp = 0;
     }
@@ -628,6 +800,4 @@ export class CrearActividadComponent implements OnInit {
       return false;
     }
   }
-
-
 }

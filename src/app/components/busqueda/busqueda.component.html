@@ -495,6 +495,40 @@
                         </div>
                         <hr class="style1b">
 
+                        <!--Retroalimentacion Taller Actividad-->
+                        <div>
+                            <h5 style="cursor:context-menu" class="">Retroalimentación Taller:</h5>
+                        </div>
+                        <div class="row-1">
+                            <div class="card mb-4 border-0" style="max-width: 1440px;">
+                                <div class="card-footer p-2 bg-primary rounded-top">
+                                    <h5 style="cursor:context-menu" class="card-title m-1">{{retroTallerAct.nombre_CREA}}</h5>
+                                </div>
+                                <div class="row no-gutters">
+                                    <div class="col-md-10" style="max-width: 840px;">
+                                        <div class="card-body p-2">
+                                            <p class="card-text ">Descripcion: {{retroTallerAct.descripcion_CREA}}</p>
+                                            <div>
+                                                <p class="card-text"><small class="text-muted">Materia: {{retroTallerAct.materia}}</small></p>
+                                            </div>
+                                            <div>
+                                                <p class="card-text"><small class="text-muted">Grado: {{retroTallerAct.id_grado}}</small></p>
+                                            </div>
+                                            <div>
+                                                <p class="card-text"><small class="text-muted">Tipo de contenido:
+                                                        {{retroTallerAct.nombre_tipo_CREA}}</small></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--Boton ver Taller-->
+                                <div class="card-footer bg-secondary row justify-content-md-center no-gutters p-1">
+                                    <a class="btn btn-primary" (click)="verRetroTallerActividad()">Ver</a>
+                                </div>
+                            </div> 
+                        </div>
+                        <hr class="style1b">
+
                         <!--Evaluacion del contenido-->
                         <div>
                             <h5 style="cursor:context-menu" class="">Evaluacion:</h5>
@@ -509,116 +543,30 @@
                                     <div class="col">
                                         <div class="card mt-3 tab-card">
                                             <div class="card-header tab-card-header bg-light">
-                                                <!--Opcion Tab-->
-                                                <nav>
-                                                    <div class="nav nav-tabs" id="nav-tab" role="tablist">
-                                                        <a class="col nav-item nav-link text-center active" id="nav-Pregunta1E-tab"
-                                                            data-toggle="tab" href="#nav-Pregunta1E" role="tab" aria-controls="nav-Pregunta1E"
-                                                            aria-selected="true">Pregunta 1</a>
-                                                        <a class="col nav-item nav-link text-center" id="nav-Pregunta2E-tab" data-toggle="tab"
-                                                            href="#nav-Pregunta2E" role="tab" aria-controls="nav-Pregunta2E"
-                                                            aria-selected="false">Pregunta 2</a>
-                                                        <a class="col nav-item nav-link text-center" id="nav-Pregunta3E-tab" data-toggle="tab"
-                                                            href="#nav-Pregunta3E" role="tab" aria-controls="nav-Pregunta3E"
-                                                            aria-selected="false">Pregunta 3</a>
-                                                    </div>
-                                                </nav>
-                        
-                                                <!--Tabs Resultados-->
-                                                <div class="tab-content" id="nav-tabContent">
-                                                    <br>
-                                                    <!--Tab 1-->
-                                                    <div class="tab-pane fade show active" id="nav-Pregunta1E" role="tabpanel" aria-labelledby="nav-Pregunta1E-tab">
-                                                        <div class="form-group">
-                                                            <h5 class="py-1 text-center text-dark">Pregunta 1</h5>
-                                                            <div class="">
-                                                                <label class="">Pregunta: {{ActividadService.selectedActividad.EQ1}}</label>
-                                                            </div>
-                                                        </div>
-                                                        <label class="text-dark">Posibles Respuestas:</label>
-                                                        <div class="form-group row">
-                                                            <div class="pl-5">
-                                                                <label class="">A) {{ActividadService.selectedActividad.EA11}}</label>
-                                                            </div>
-                                                        </div>
-                                                        <div class="form-group row">
-                                                            <div class="pl-5">
-                                                                <label class="">B) {{ActividadService.selectedActividad.EA12}}</label>
-                                                            </div>
-                                                        </div>
-                                                        <div class="form-group row">
-                                                            <div class="pl-5">
-                                                                <label class="">C) {{ActividadService.selectedActividad.EA13}}</label>
-                                                            </div>
-                                                        </div>
-                                                        <div class="form-group row">
-                                                            <div class="pl-5">
-                                                                <label class="">D) {{ActividadService.selectedActividad.EA14}}</label>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-
-                                                    <!--Tab 2-->
-                                                    <div class="tab-pane fade" id="nav-Pregunta2E" role="tabpanel" aria-labelledby="nav-Pregunta2E-tab">
-                                                        <div class="form-group">
-                                                            <h5 class="py-1 text-center text-dark">Pregunta 2</h5>
-                                                            <div class="">
-                                                                <label class="">Pregunta: {{ActividadService.selectedActividad.EQ2}}</label>
-                                                            </div>
-                                                        </div>
-                                                        <label class="text-dark">Posibles Respuestas:</label>
-                                                        <div class="form-group row">
-                                                            <div class="pl-5">
-                                                                <label class="">A) {{ActividadService.selectedActividad.EA21}}</label>
-                                                            </div>
-                                                        </div>
-                                                        <div class="form-group row">
-                                                            <div class="pl-5">
-                                                                <label class="">B) {{ActividadService.selectedActividad.EA22}}</label>
-                                                            </div>
-                                                        </div>
-                                                        <div class="form-group row">
-                                                            <div class="pl-5">
-                                                                <label class="">C) {{ActividadService.selectedActividad.EA23}}</label>
-                                                            </div>
-                                                        </div>
-                                                        <div class="form-group row">
-                                                            <div class="pl-5">
-                                                                <label class="">D) {{ActividadService.selectedActividad.EA24}}</label>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-
-                                                    <!--Tab 3-->
-                                                    <div class="tab-pane fade" id="nav-Pregunta3E" role="tabpanel" aria-labelledby="nav-Pregunta3E-tab">
-                                                        <div class="form-group">
-                                                            <h5 class="py-1 text-center text-dark">Pregunta 3</h5>
-                                                            <div class="">
-                                                                <label class="">Pregunta: {{ActividadService.selectedActividad.EQ3}}</label>
-                                                            </div>
-                                                        </div>
-                                                        <label class="text-dark">Posibles Respuestas:</label>
-                                                        <div class="form-group row">
-                                                            <div class="pl-5">
-                                                                <label class="">A) {{ActividadService.selectedActividad.EA31}}</label>
-                                                            </div>
-                                                        </div>
-                                                        <div class="form-group row">
-                                                            <div class="pl-5">
-                                                                <label class="">B) {{ActividadService.selectedActividad.EA32}}</label>
-                                                            </div>
-                                                        </div>
-                                                        <div class="form-group row">
-                                                            <div class="pl-5">
-                                                                <label class="">C) {{ActividadService.selectedActividad.EA33}}</label>
-                                                            </div>
-                                                        </div>
-                                                        <div class="form-group row">
-                                                            <div class="pl-5">
-                                                                <label class="">D) {{ActividadService.selectedActividad.EA34}}</label>
-                                                            </div>
-                                                        </div>
-                                                    </div>
+                                                <div>
+                                                    <table class="tableQuestion table table-striped">
+                                                        <tr>
+                                                            <th class="thQuestion" *ngFor="let head of headersQuestion">
+                                                                {{head}}</th>
+                                                        </tr>
+                                                        <tr *ngFor="let row of questionList">
+                                                            <td class="tdQuestion">{{row.id}}</td>
+                                                            <td class="tdQuestion" *ngIf="row.type">{{row.question}}
+                                                            </td>
+                                                            <td class="tdQuestion" *ngIf="!row.type">
+                                                                {{row.question}}
+                                                                <ul>
+                                                                    <li *ngFor="let row2 of row.options">{{row2.id}} -
+                                                                        {{row2.question}}</li>
+                                                                </ul>
+                                                                <ul>
+                                                                    Correcta: {{row.correct}}<br>
+                                                                    Retroalimentación: {{row.retro}}
+                                                                </ul>
+                                                            </td>
+                                                            
+                                                        </tr>
+                                                    </table>
                                                 </div>
                                             </div>
                                         </div>

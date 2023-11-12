@@ -16,24 +16,126 @@
     transform: scale(1.05);
 }
 
+.btnAddContent{
+    background-color: #007bff;
+    width: 34%;
+    height: 40px;
+    border-radius: 10px;
+    color: white;
+    font-weight: 600;
+    border-color: black;
+    cursor: pointer;
+    outline: none;
+    transition: background-color 0.3s ease, transform 0.2s ease;    
+}
+
+.btnAddContent:hover {
+    background-color: blue;
+    transform: scale(1.05);
+}
+
 .tableQuestion {
     width: 100%;
+    border-collapse: collapse;
     border-radius: 10px;
     background: #eee;
- }
- 
- .thQuestion, .tdQuestion {
-    width: auto;
+    overflow-x: auto;
+}
+
+.thQuestion, .tdQuestion {
     text-align: center;
     vertical-align: top;
-    border-spacing: 0;
+    border: 4px solid #ddd;
+    padding: 0.5em;
+}
+
+.thQuestion {
+    font-weight: bold;
+    background-color: #333;
+    color: white;
+}
+
+.trQuestion:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tr:first-child {
+    font-weight: bold;
+    background-color: #ffc107;
+}
+
+.tdQuestion {
     padding: 0.3em;
- }
+    transition: background-color 0.3s ease;
+}
  
- .divRadioBtn{
+.divRadioBtn{
      display: flex;
- }
- .radioBtn{
+}
+.radioBtn{
     margin-right: 10px;
     height: 24px;
- }
+}
+
+ /* Estilos base para el contenedor del switch */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+/* Estilos para el input (checkbox) oculto */
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+  
+  /* Estilos para el control visual del switch */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc; /* Color de fondo cuando está desactivado */
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+    border-radius: 34px;
+}
+  
+  /* Estilos para el control visual del switch cuando está activado */
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white; /* Color de fondo cuando está activado */
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+    border-radius: 50%;
+}
+  
+  /* Estilos para el switch cuando está activado */
+input:checked + .slider {
+    background-color: #ffc107; /* Cambia el color de fondo cuando está activado */
+}
+  
+  /* Estilos para el control visual del switch cuando está activado */
+input:checked + .slider:before {
+    -webkit-transform: translateX(26px); /* Mueve el control visual a la posición activada */
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+/* Cambiar el color del botón a verde cuando se pasa el cursor sobre él */
+.btn.btn-primary:hover {
+    background-color: #4CAF50; /* Cambia al color verde que desees */
+    color: white; /* Cambia el color del texto para que sea legible en el fondo verde */
+    font-size: 16px;
+    font-weight: 600;
+}

@@ -1,1 +1,49 @@
-/* You can add global styles to this file, and also import other style files */
+/* Cambiar el color de fondo de los botones de navegación */
+.mat-horizontal-stepper-header-container .mat-step-header .mat-step-icon-selected {
+    background-color: #ffc107; /* Cambia a tu color preferido */
+    color: black;
+    font-weight: 500;
+    font-size: 20px;
+    transition: background-color 0.3s, color 0.3s; /* Agrega una transición para suavizar el cambio */
+    border-width: 10px;
+}
+
+/* Aumentar el tamaño del círculo del paso */
+.mat-step-icon {
+    color: white;
+    width: 50px; /* Ajusta el tamaño del círculo según tus necesidades */
+    height: 50px; /* Ajusta el tamaño del círculo según tus necesidades */
+    border: 1.5px solid #ffc107; /* Cambia a tu color preferido */
+    border-radius: 50%; /* Hace que el círculo sea redondeado */
+}
+
+/* Cambiar el color del círculo del paso cuando se hace hover */
+.mat-step-header:hover .mat-step-icon {
+    background-color: #ffc107; /* Cambia a tu color preferido */
+    color: black; /* Cambia el color del ícono */
+    font-size: 20px;
+    font-weight: 600;
+}
+    
+/* Cambiar el color del texto de los botones de navegación */
+.mat-horizontal-stepper-header-container .mat-step-header .mat-step-label {
+    color: white; /* Cambia a tu color preferido */
+    font-size: 22px;
+    font-family: Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 500;
+}
+
+/* Aumentar el grosor y cambiar el estilo de la línea de separación */
+.mat-horizontal-stepper-header-container .mat-stepper-horizontal-line {
+    border-top: 2px dashed #ffc107; /* Cambia "your-color" al color deseado */
+    border-radius: 4px; /* Ajusta la curvatura de la línea si lo deseas */
+}
+
+/* Cambiar el estilo de la línea de separación cuando está completa a una línea punteada */
+.mat-horizontal-stepper-header-container .mat-step-header-completed .mat-stepper-horizontal-line {
+    border-top: 3px dashed #4CAF50; /* Cambia "#4CAF50" al color deseado para pasos completados */
+}
+
+
+  
+  

@@ -171,7 +171,26 @@
                                             <h6>{{metricasActividad.inicio}}</h6>
 
                                         </div>
+
                                         <div class="col-sm-6">
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- En esta parte van las metricas del video esta comentado porque no se implemnta en esta version -->
+                        <div>
+                            <h5 style="cursor:context-menu" class="">Metricas Video:</h5>
+                        </div>
+                        <hr class="style10">
+                        <div class="row-1">
+                            <div class="card mb-4 border-0" style="max-width: 1440px;">
+                                <div class="row no-gutters ">
+                                    <div class="col" style="max-width: 840px;">
+                                        <div class="card-body p-2 text-metricas">
+                                            <div>
+                                                <a class="card-text"><small class="text-muted">Contenido: </small></a>
+
 
 
                                             <div class="row-1">
@@ -224,6 +243,7 @@
                                             </div>
                                         </div>
                                     </div>
+
                                 </div>
                                 <!--Metricas Globales Actividad-->
 
@@ -263,6 +283,22 @@
                                                         [legend]="lineChartLegend" [chartType]="notasChartType"
                                                         [plugins]="lineChartPlugins">
                                                     </canvas>
+
+                                    <div class="col my-auto" style="max-width: 860px;">
+                                        <div class="card-body p-2">
+                                            <div *ngFor=" let review of reviews">
+                                                <div class="row">
+                                                    <div class="col-sm">
+                                                        <a class="card-text">
+                                                            <app-calificacion [calificacion]="review.rating">
+                                                            </app-calificacion>
+                                                        </a>
+                                                    </div>
+                                                    <div class="col-sm">
+                                                        <span
+                                                            style="margin-left: 3px; font-weight: bold;">{{review.rating}}</span>
+                                                    </div>
+
                                                 </div>
 
                                             </div>
@@ -270,6 +306,28 @@
                                     </div>
                                 </div>
                             </div>
+
+                            <hr class="style10">
+                            <app-comentarios [comments]="comments" ></app-comentarios>
+                        </div>
+                        <hr class="style10">
+                        <!--Buscar Esdtudiante-->
+                        <label class="pt-2">Buscador:</label>
+                        <div class="form-group">
+                            <input type="text" class="form-control col-md-8" id="inputTextoBusquedaEstudiante"
+                                placeholder="Nombre / Apellido" [(ngModel)]="palabraClaveESelected"
+                                name="palabraClaveESelected">
+                        </div>
+                        <div class="form-group col-4">
+                            <label for="inputOption" class="">Estudiantes que:</label>
+                            <select [(ngModel)]="optionSelected" id="inputOption" name="optionSelected"
+                                class="form-control" ngModel required>
+                                <option selected></option>
+                                <option *ngFor="let option of options" style="overflow-y: scroll;"
+                                    [value]="option.valor">{{option.opcion}}</option>
+                            </select>
+                        </div>
+
 
 
 

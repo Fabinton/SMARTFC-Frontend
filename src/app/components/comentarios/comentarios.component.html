@@ -5,7 +5,7 @@
     <div class="card">
         <ul class="list-group list-group-flush" *ngFor="let comment of comments  | slice:-1">
 
-            <div class="row">
+            <div class="row" style="margin-bottom: 5px;">
                 <div class=" col-md-8 ">
                     <a class="card-text"><small class="text-muted">{{comment.comentario}} </small></a>
                 </div>
@@ -14,9 +14,13 @@
             </div>
 
         </ul>
-        <a class="badge badge-primary" style="color: #fff" (click)="openPopup()">Ver todos los
-            comentarios</a>
+        <!-- <a class="badge badge-primary" style="color: #fff; width: 180px; height: 25px; margin-left: 60px;" (click)="openPopup()">Ver todos los
+            comentarios</a> -->
     </div>
+    <button class="btn btn-warning" style="color: black; width: 230px; height: 40px; margin-left: 270px; margin-top: 10px; font-weight: 700;"
+     (click)="openPopup()">
+        Ver todos los Comentarios
+    </button>
 </div>
 
 <div class="modal" tabindex="-1" role="dialog" [ngStyle]="{'display':displayStyle}">

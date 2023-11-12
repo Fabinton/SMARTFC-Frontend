@@ -17,6 +17,7 @@ export class ComentariosComponent implements OnInit {
   
   openPopup() {
     this.displayStyle = "block";
+   
   }
   closePopup() {
     this.displayStyle = "none";
