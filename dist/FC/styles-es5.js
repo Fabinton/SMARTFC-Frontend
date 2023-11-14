@@ -285,7 +285,7 @@
   /*! no static exports found */
   /***/
   function _(module, exports, __webpack_require__) {
-    module.exports = __webpack_require__( /*! C:\Users\magda\OneDrive\Documentos\FRONT\SMARTFC-Frontend\SMARTFC-Frontend\src\styles.css */"./src/styles.css");
+    module.exports = __webpack_require__( /*! C:\smartfc\SMARTFC-Frontend\src\styles.css */"./src/styles.css");
 
     /***/
   }

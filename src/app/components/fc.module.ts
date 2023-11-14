@@ -1,7 +1,7 @@
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
-import { HttpClientModule } from '@angular/common/http'; 
+import { HttpClientModule } from '@angular/common/http';
 import { FCRoutingModule } from './fc-routing.module';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -33,9 +33,11 @@ import { BusquedaVisitanteComponent } from './Visitante/busqueda-visitante/busqu
 import { HeaderVisitanteComponent } from './Visitante/header-visitante/header-visitante.component';
 import { DudasComponent } from './dudas/dudas.component';
 import { MetricasComponent } from './metricas/metricas.component';
-
+import { ChartsModule, ThemeService } from 'ng2-charts';
+import { NgCircleProgressModule } from 'ng-circle-progress';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 @NgModule({
-  declarations:[
+  declarations: [
     AppComponent,
     HeaderComponent,
     FooterComponent,
@@ -61,13 +63,26 @@ import { MetricasComponent } from './metricas/metricas.component';
     DudasComponent,
     MetricasComponent
   ],
-  imports:[
-      CommonModule,
-      FormsModule,
-      FCRoutingModule,
-      HttpClientModule
+  imports: [
+    CommonModule,
+    FormsModule,
+    FCRoutingModule,
+    HttpClientModule,
+    ChartsModule,
+    NgCircleProgressModule.forRoot({
+      // set defaults here
+      radius: 100,
+      outerStrokeWidth: 20,
+      innerStrokeWidth: 0,
+      outerStrokeColor: "#78C000",
+      innerStrokeColor: "#C7E596",
+      animationDuration: 300,
+      responsive: true,
+
+    }),
+    FontAwesomeModule,
   ],
-  providers:[AuthDService, ContentREAService, ActividadService],
+  providers: [AuthDService, ContentREAService, ActividadService, ThemeService],
   bootstrap: [AppComponent]
 })
 export class FCModule { }
