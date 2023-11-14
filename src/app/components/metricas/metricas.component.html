@@ -172,8 +172,6 @@
 
                                         </div>
                                         <div class="col-sm-6">
-
-
                                             <div class="row-1">
                                                 <div class="mb-4 border-0" style="max-width: 1440px;">
                                                     <div class="row no-gutters">
@@ -264,83 +262,76 @@
                                                         [plugins]="lineChartPlugins">
                                                     </canvas>
                                                 </div>
-
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-
-
-
                         </div>
                     </div>
-                    
-                    <div class="card">
+                    <div class="card mt-3">
                         <div class="card-body">
+                     <!-- En esta parte van las metricas del video esta comentado porque no se implemnta en esta version -->
                             <div>
-                                <h5 style="cursor:context-menu" class="">Metricas Video:</h5>
+                                <h5>Metricas Video</h5>
                             </div>
-                            <div class="col" style="max-width: 840px;">
-                                <div class="card-body p-2 text-metricas">
-                                    <div>
-                                        <a class="card-text"><small class="text-muted">Contenido: </small></a>
-
+                            <div class="row-1">
+                                <div class=" mb-4 border-0" style="max-width: 1440px;">
+                                    <div class="row no-gutters ">
+                                        <div class="col" style="max-width: 840px;">
+                                            <div class=" p-2 text-metricas">
+                                                <div>
+                                                    <a class="card-text"><small class="text-muted">Contenido: </small></a>
+    
+                                                </div>
+                                                <div>
+                                                    <a class="card-text"><small class="text-muted">Calidad: </small></a>
+    
+                                                </div>
+                                                <div>
+                                                    <a class="card-text"><small class="text-muted">Diseño: </small></a>
+    
+                                                </div>
+                                                <div>
+                                                    <a class="card-text"><small class="text-muted"> Motivación: </small></a>
+    
+                                                </div>
+                                                <div>
+                                                    <a class="card-text"><small class="text-muted"> Sonido: </small></a>
+    
+                                                </div>
+    
+                                            </div>
+                                        </div>
+                                        <div class="col my-auto" style="max-width: 860px;">
+                                            <div class="card-body p-2">
+                                                <div *ngFor=" let review of reviews">
+                                                    <div class="row">
+                                                        <div class="col-sm">
+                                                            <a class="card-text">
+                                                                <app-calificacion [calificacion]="review.rating">
+                                                                </app-calificacion>
+                                                            </a>
+                                                        </div>
+                                                        <div class="col-sm">
+                                                            <span
+                                                                style="margin-left: 3px; font-weight: bold;">{{review.rating}}</span>
+                                                        </div>
+                                                    </div>
+    
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div>
-                                        <a class="card-text"><small class="text-muted">Calidad: </small></a>
-
-                                    </div>
-                                    <div>
-                                        <a class="card-text"><small class="text-muted">Diseño: </small></a>
-
-                                    </div>
-                                    <div>
-                                        <a class="card-text"><small class="text-muted"> Motivación: </small></a>
-
-                                    </div>
-                                    <div>
-                                        <a class="card-text"><small class="text-muted"> Sonido: </small></a>
-
-                                    </div>
-
+    
                                 </div>
+                                <app-comentarios [comments]="comments" ></app-comentarios>
                             </div>
                         </div>
                     </div>
-                     <!-- En esta parte van las metricas del video esta comentado porque no se implemnta en esta version -->
                      
                     
-                    <div class="row-1">
-                        <div class="card mb-4 border-0" style="max-width: 1440px;">
-                            <div class="row no-gutters ">
-                                
-                                <div class="col my-auto" style="max-width: 860px;">
-                                    <div class="card-body p-2">
-                                        <div *ngFor=" let review of reviews">
-                                            <div class="row">
-                                                <div class="col-sm">
-                                                    <a class="card-text">
-                                                        <app-calificacion [calificacion]="review.rating">
-                                                        </app-calificacion>
-                                                    </a>
-                                                </div>
-                                                <div class="col-sm">
-                                                    <span
-                                                        style="margin-left: 3px; font-weight: bold;">{{review.rating}}</span>
-                                                </div>
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                        
-                       
-                    </div>
-
+                    
                     <div class="card mt-3">
                         <div class="card-body">
                             <!--Buscar Esdtudiante-->
@@ -389,7 +380,6 @@
                         </div>
 
                     </div>
-                    <app-comentarios [comments]="comments" ></app-comentarios>
                     <div class="card mt-3">
                         <div class="card-body">
                             <!--Boton cerrar modal-->

@@ -23,6 +23,308 @@ webpackEmptyAsyncContext.id = "./$$_lazy_route_resource lazy recursive";
 
 /***/ }),
 
+/***/ "./node_modules/moment/locale sync recursive ^\\.\\/.*$":
+/*!**************************************************!*\
+  !*** ./node_modules/moment/locale sync ^\.\/.*$ ***!
+  \**************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var map = {
+	"./af": "./node_modules/moment/locale/af.js",
+	"./af.js": "./node_modules/moment/locale/af.js",
+	"./ar": "./node_modules/moment/locale/ar.js",
+	"./ar-dz": "./node_modules/moment/locale/ar-dz.js",
+	"./ar-dz.js": "./node_modules/moment/locale/ar-dz.js",
+	"./ar-kw": "./node_modules/moment/locale/ar-kw.js",
+	"./ar-kw.js": "./node_modules/moment/locale/ar-kw.js",
+	"./ar-ly": "./node_modules/moment/locale/ar-ly.js",
+	"./ar-ly.js": "./node_modules/moment/locale/ar-ly.js",
+	"./ar-ma": "./node_modules/moment/locale/ar-ma.js",
+	"./ar-ma.js": "./node_modules/moment/locale/ar-ma.js",
+	"./ar-sa": "./node_modules/moment/locale/ar-sa.js",
+	"./ar-sa.js": "./node_modules/moment/locale/ar-sa.js",
+	"./ar-tn": "./node_modules/moment/locale/ar-tn.js",
+	"./ar-tn.js": "./node_modules/moment/locale/ar-tn.js",
+	"./ar.js": "./node_modules/moment/locale/ar.js",
+	"./az": "./node_modules/moment/locale/az.js",
+	"./az.js": "./node_modules/moment/locale/az.js",
+	"./be": "./node_modules/moment/locale/be.js",
+	"./be.js": "./node_modules/moment/locale/be.js",
+	"./bg": "./node_modules/moment/locale/bg.js",
+	"./bg.js": "./node_modules/moment/locale/bg.js",
+	"./bm": "./node_modules/moment/locale/bm.js",
+	"./bm.js": "./node_modules/moment/locale/bm.js",
+	"./bn": "./node_modules/moment/locale/bn.js",
+	"./bn-bd": "./node_modules/moment/locale/bn-bd.js",
+	"./bn-bd.js": "./node_modules/moment/locale/bn-bd.js",
+	"./bn.js": "./node_modules/moment/locale/bn.js",
+	"./bo": "./node_modules/moment/locale/bo.js",
+	"./bo.js": "./node_modules/moment/locale/bo.js",
+	"./br": "./node_modules/moment/locale/br.js",
+	"./br.js": "./node_modules/moment/locale/br.js",
+	"./bs": "./node_modules/moment/locale/bs.js",
+	"./bs.js": "./node_modules/moment/locale/bs.js",
+	"./ca": "./node_modules/moment/locale/ca.js",
+	"./ca.js": "./node_modules/moment/locale/ca.js",
+	"./cs": "./node_modules/moment/locale/cs.js",
+	"./cs.js": "./node_modules/moment/locale/cs.js",
+	"./cv": "./node_modules/moment/locale/cv.js",
+	"./cv.js": "./node_modules/moment/locale/cv.js",
+	"./cy": "./node_modules/moment/locale/cy.js",
+	"./cy.js": "./node_modules/moment/locale/cy.js",
+	"./da": "./node_modules/moment/locale/da.js",
+	"./da.js": "./node_modules/moment/locale/da.js",
+	"./de": "./node_modules/moment/locale/de.js",
+	"./de-at": "./node_modules/moment/locale/de-at.js",
+	"./de-at.js": "./node_modules/moment/locale/de-at.js",
+	"./de-ch": "./node_modules/moment/locale/de-ch.js",
+	"./de-ch.js": "./node_modules/moment/locale/de-ch.js",
+	"./de.js": "./node_modules/moment/locale/de.js",
+	"./dv": "./node_modules/moment/locale/dv.js",
+	"./dv.js": "./node_modules/moment/locale/dv.js",
+	"./el": "./node_modules/moment/locale/el.js",
+	"./el.js": "./node_modules/moment/locale/el.js",
+	"./en-au": "./node_modules/moment/locale/en-au.js",
+	"./en-au.js": "./node_modules/moment/locale/en-au.js",
+	"./en-ca": "./node_modules/moment/locale/en-ca.js",
+	"./en-ca.js": "./node_modules/moment/locale/en-ca.js",
+	"./en-gb": "./node_modules/moment/locale/en-gb.js",
+	"./en-gb.js": "./node_modules/moment/locale/en-gb.js",
+	"./en-ie": "./node_modules/moment/locale/en-ie.js",
+	"./en-ie.js": "./node_modules/moment/locale/en-ie.js",
+	"./en-il": "./node_modules/moment/locale/en-il.js",
+	"./en-il.js": "./node_modules/moment/locale/en-il.js",
+	"./en-in": "./node_modules/moment/locale/en-in.js",
+	"./en-in.js": "./node_modules/moment/locale/en-in.js",
+	"./en-nz": "./node_modules/moment/locale/en-nz.js",
+	"./en-nz.js": "./node_modules/moment/locale/en-nz.js",
+	"./en-sg": "./node_modules/moment/locale/en-sg.js",
+	"./en-sg.js": "./node_modules/moment/locale/en-sg.js",
+	"./eo": "./node_modules/moment/locale/eo.js",
+	"./eo.js": "./node_modules/moment/locale/eo.js",
+	"./es": "./node_modules/moment/locale/es.js",
+	"./es-do": "./node_modules/moment/locale/es-do.js",
+	"./es-do.js": "./node_modules/moment/locale/es-do.js",
+	"./es-mx": "./node_modules/moment/locale/es-mx.js",
+	"./es-mx.js": "./node_modules/moment/locale/es-mx.js",
+	"./es-us": "./node_modules/moment/locale/es-us.js",
+	"./es-us.js": "./node_modules/moment/locale/es-us.js",
+	"./es.js": "./node_modules/moment/locale/es.js",
+	"./et": "./node_modules/moment/locale/et.js",
+	"./et.js": "./node_modules/moment/locale/et.js",
+	"./eu": "./node_modules/moment/locale/eu.js",
+	"./eu.js": "./node_modules/moment/locale/eu.js",
+	"./fa": "./node_modules/moment/locale/fa.js",
+	"./fa.js": "./node_modules/moment/locale/fa.js",
+	"./fi": "./node_modules/moment/locale/fi.js",
+	"./fi.js": "./node_modules/moment/locale/fi.js",
+	"./fil": "./node_modules/moment/locale/fil.js",
+	"./fil.js": "./node_modules/moment/locale/fil.js",
+	"./fo": "./node_modules/moment/locale/fo.js",
+	"./fo.js": "./node_modules/moment/locale/fo.js",
+	"./fr": "./node_modules/moment/locale/fr.js",
+	"./fr-ca": "./node_modules/moment/locale/fr-ca.js",
+	"./fr-ca.js": "./node_modules/moment/locale/fr-ca.js",
+	"./fr-ch": "./node_modules/moment/locale/fr-ch.js",
+	"./fr-ch.js": "./node_modules/moment/locale/fr-ch.js",
+	"./fr.js": "./node_modules/moment/locale/fr.js",
+	"./fy": "./node_modules/moment/locale/fy.js",
+	"./fy.js": "./node_modules/moment/locale/fy.js",
+	"./ga": "./node_modules/moment/locale/ga.js",
+	"./ga.js": "./node_modules/moment/locale/ga.js",
+	"./gd": "./node_modules/moment/locale/gd.js",
+	"./gd.js": "./node_modules/moment/locale/gd.js",
+	"./gl": "./node_modules/moment/locale/gl.js",
+	"./gl.js": "./node_modules/moment/locale/gl.js",
+	"./gom-deva": "./node_modules/moment/locale/gom-deva.js",
+	"./gom-deva.js": "./node_modules/moment/locale/gom-deva.js",
+	"./gom-latn": "./node_modules/moment/locale/gom-latn.js",
+	"./gom-latn.js": "./node_modules/moment/locale/gom-latn.js",
+	"./gu": "./node_modules/moment/locale/gu.js",
+	"./gu.js": "./node_modules/moment/locale/gu.js",
+	"./he": "./node_modules/moment/locale/he.js",
+	"./he.js": "./node_modules/moment/locale/he.js",
+	"./hi": "./node_modules/moment/locale/hi.js",
+	"./hi.js": "./node_modules/moment/locale/hi.js",
+	"./hr": "./node_modules/moment/locale/hr.js",
+	"./hr.js": "./node_modules/moment/locale/hr.js",
+	"./hu": "./node_modules/moment/locale/hu.js",
+	"./hu.js": "./node_modules/moment/locale/hu.js",
+	"./hy-am": "./node_modules/moment/locale/hy-am.js",
+	"./hy-am.js": "./node_modules/moment/locale/hy-am.js",
+	"./id": "./node_modules/moment/locale/id.js",
+	"./id.js": "./node_modules/moment/locale/id.js",
+	"./is": "./node_modules/moment/locale/is.js",
+	"./is.js": "./node_modules/moment/locale/is.js",
+	"./it": "./node_modules/moment/locale/it.js",
+	"./it-ch": "./node_modules/moment/locale/it-ch.js",
+	"./it-ch.js": "./node_modules/moment/locale/it-ch.js",
+	"./it.js": "./node_modules/moment/locale/it.js",
+	"./ja": "./node_modules/moment/locale/ja.js",
+	"./ja.js": "./node_modules/moment/locale/ja.js",
+	"./jv": "./node_modules/moment/locale/jv.js",
+	"./jv.js": "./node_modules/moment/locale/jv.js",
+	"./ka": "./node_modules/moment/locale/ka.js",
+	"./ka.js": "./node_modules/moment/locale/ka.js",
+	"./kk": "./node_modules/moment/locale/kk.js",
+	"./kk.js": "./node_modules/moment/locale/kk.js",
+	"./km": "./node_modules/moment/locale/km.js",
+	"./km.js": "./node_modules/moment/locale/km.js",
+	"./kn": "./node_modules/moment/locale/kn.js",
+	"./kn.js": "./node_modules/moment/locale/kn.js",
+	"./ko": "./node_modules/moment/locale/ko.js",
+	"./ko.js": "./node_modules/moment/locale/ko.js",
+	"./ku": "./node_modules/moment/locale/ku.js",
+	"./ku.js": "./node_modules/moment/locale/ku.js",
+	"./ky": "./node_modules/moment/locale/ky.js",
+	"./ky.js": "./node_modules/moment/locale/ky.js",
+	"./lb": "./node_modules/moment/locale/lb.js",
+	"./lb.js": "./node_modules/moment/locale/lb.js",
+	"./lo": "./node_modules/moment/locale/lo.js",
+	"./lo.js": "./node_modules/moment/locale/lo.js",
+	"./lt": "./node_modules/moment/locale/lt.js",
+	"./lt.js": "./node_modules/moment/locale/lt.js",
+	"./lv": "./node_modules/moment/locale/lv.js",
+	"./lv.js": "./node_modules/moment/locale/lv.js",
+	"./me": "./node_modules/moment/locale/me.js",
+	"./me.js": "./node_modules/moment/locale/me.js",
+	"./mi": "./node_modules/moment/locale/mi.js",
+	"./mi.js": "./node_modules/moment/locale/mi.js",
+	"./mk": "./node_modules/moment/locale/mk.js",
+	"./mk.js": "./node_modules/moment/locale/mk.js",
+	"./ml": "./node_modules/moment/locale/ml.js",
+	"./ml.js": "./node_modules/moment/locale/ml.js",
+	"./mn": "./node_modules/moment/locale/mn.js",
+	"./mn.js": "./node_modules/moment/locale/mn.js",
+	"./mr": "./node_modules/moment/locale/mr.js",
+	"./mr.js": "./node_modules/moment/locale/mr.js",
+	"./ms": "./node_modules/moment/locale/ms.js",
+	"./ms-my": "./node_modules/moment/locale/ms-my.js",
+	"./ms-my.js": "./node_modules/moment/locale/ms-my.js",
+	"./ms.js": "./node_modules/moment/locale/ms.js",
+	"./mt": "./node_modules/moment/locale/mt.js",
+	"./mt.js": "./node_modules/moment/locale/mt.js",
+	"./my": "./node_modules/moment/locale/my.js",
+	"./my.js": "./node_modules/moment/locale/my.js",
+	"./nb": "./node_modules/moment/locale/nb.js",
+	"./nb.js": "./node_modules/moment/locale/nb.js",
+	"./ne": "./node_modules/moment/locale/ne.js",
+	"./ne.js": "./node_modules/moment/locale/ne.js",
+	"./nl": "./node_modules/moment/locale/nl.js",
+	"./nl-be": "./node_modules/moment/locale/nl-be.js",
+	"./nl-be.js": "./node_modules/moment/locale/nl-be.js",
+	"./nl.js": "./node_modules/moment/locale/nl.js",
+	"./nn": "./node_modules/moment/locale/nn.js",
+	"./nn.js": "./node_modules/moment/locale/nn.js",
+	"./oc-lnc": "./node_modules/moment/locale/oc-lnc.js",
+	"./oc-lnc.js": "./node_modules/moment/locale/oc-lnc.js",
+	"./pa-in": "./node_modules/moment/locale/pa-in.js",
+	"./pa-in.js": "./node_modules/moment/locale/pa-in.js",
+	"./pl": "./node_modules/moment/locale/pl.js",
+	"./pl.js": "./node_modules/moment/locale/pl.js",
+	"./pt": "./node_modules/moment/locale/pt.js",
+	"./pt-br": "./node_modules/moment/locale/pt-br.js",
+	"./pt-br.js": "./node_modules/moment/locale/pt-br.js",
+	"./pt.js": "./node_modules/moment/locale/pt.js",
+	"./ro": "./node_modules/moment/locale/ro.js",
+	"./ro.js": "./node_modules/moment/locale/ro.js",
+	"./ru": "./node_modules/moment/locale/ru.js",
+	"./ru.js": "./node_modules/moment/locale/ru.js",
+	"./sd": "./node_modules/moment/locale/sd.js",
+	"./sd.js": "./node_modules/moment/locale/sd.js",
+	"./se": "./node_modules/moment/locale/se.js",
+	"./se.js": "./node_modules/moment/locale/se.js",
+	"./si": "./node_modules/moment/locale/si.js",
+	"./si.js": "./node_modules/moment/locale/si.js",
+	"./sk": "./node_modules/moment/locale/sk.js",
+	"./sk.js": "./node_modules/moment/locale/sk.js",
+	"./sl": "./node_modules/moment/locale/sl.js",
+	"./sl.js": "./node_modules/moment/locale/sl.js",
+	"./sq": "./node_modules/moment/locale/sq.js",
+	"./sq.js": "./node_modules/moment/locale/sq.js",
+	"./sr": "./node_modules/moment/locale/sr.js",
+	"./sr-cyrl": "./node_modules/moment/locale/sr-cyrl.js",
+	"./sr-cyrl.js": "./node_modules/moment/locale/sr-cyrl.js",
+	"./sr.js": "./node_modules/moment/locale/sr.js",
+	"./ss": "./node_modules/moment/locale/ss.js",
+	"./ss.js": "./node_modules/moment/locale/ss.js",
+	"./sv": "./node_modules/moment/locale/sv.js",
+	"./sv.js": "./node_modules/moment/locale/sv.js",
+	"./sw": "./node_modules/moment/locale/sw.js",
+	"./sw.js": "./node_modules/moment/locale/sw.js",
+	"./ta": "./node_modules/moment/locale/ta.js",
+	"./ta.js": "./node_modules/moment/locale/ta.js",
+	"./te": "./node_modules/moment/locale/te.js",
+	"./te.js": "./node_modules/moment/locale/te.js",
+	"./tet": "./node_modules/moment/locale/tet.js",
+	"./tet.js": "./node_modules/moment/locale/tet.js",
+	"./tg": "./node_modules/moment/locale/tg.js",
+	"./tg.js": "./node_modules/moment/locale/tg.js",
+	"./th": "./node_modules/moment/locale/th.js",
+	"./th.js": "./node_modules/moment/locale/th.js",
+	"./tk": "./node_modules/moment/locale/tk.js",
+	"./tk.js": "./node_modules/moment/locale/tk.js",
+	"./tl-ph": "./node_modules/moment/locale/tl-ph.js",
+	"./tl-ph.js": "./node_modules/moment/locale/tl-ph.js",
+	"./tlh": "./node_modules/moment/locale/tlh.js",
+	"./tlh.js": "./node_modules/moment/locale/tlh.js",
+	"./tr": "./node_modules/moment/locale/tr.js",
+	"./tr.js": "./node_modules/moment/locale/tr.js",
+	"./tzl": "./node_modules/moment/locale/tzl.js",
+	"./tzl.js": "./node_modules/moment/locale/tzl.js",
+	"./tzm": "./node_modules/moment/locale/tzm.js",
+	"./tzm-latn": "./node_modules/moment/locale/tzm-latn.js",
+	"./tzm-latn.js": "./node_modules/moment/locale/tzm-latn.js",
+	"./tzm.js": "./node_modules/moment/locale/tzm.js",
+	"./ug-cn": "./node_modules/moment/locale/ug-cn.js",
+	"./ug-cn.js": "./node_modules/moment/locale/ug-cn.js",
+	"./uk": "./node_modules/moment/locale/uk.js",
+	"./uk.js": "./node_modules/moment/locale/uk.js",
+	"./ur": "./node_modules/moment/locale/ur.js",
+	"./ur.js": "./node_modules/moment/locale/ur.js",
+	"./uz": "./node_modules/moment/locale/uz.js",
+	"./uz-latn": "./node_modules/moment/locale/uz-latn.js",
+	"./uz-latn.js": "./node_modules/moment/locale/uz-latn.js",
+	"./uz.js": "./node_modules/moment/locale/uz.js",
+	"./vi": "./node_modules/moment/locale/vi.js",
+	"./vi.js": "./node_modules/moment/locale/vi.js",
+	"./x-pseudo": "./node_modules/moment/locale/x-pseudo.js",
+	"./x-pseudo.js": "./node_modules/moment/locale/x-pseudo.js",
+	"./yo": "./node_modules/moment/locale/yo.js",
+	"./yo.js": "./node_modules/moment/locale/yo.js",
+	"./zh-cn": "./node_modules/moment/locale/zh-cn.js",
+	"./zh-cn.js": "./node_modules/moment/locale/zh-cn.js",
+	"./zh-hk": "./node_modules/moment/locale/zh-hk.js",
+	"./zh-hk.js": "./node_modules/moment/locale/zh-hk.js",
+	"./zh-mo": "./node_modules/moment/locale/zh-mo.js",
+	"./zh-mo.js": "./node_modules/moment/locale/zh-mo.js",
+	"./zh-tw": "./node_modules/moment/locale/zh-tw.js",
+	"./zh-tw.js": "./node_modules/moment/locale/zh-tw.js"
+};
+
+
+function webpackContext(req) {
+	var id = webpackContextResolve(req);
+	return __webpack_require__(id);
+}
+function webpackContextResolve(req) {
+	if(!__webpack_require__.o(map, req)) {
+		var e = new Error("Cannot find module '" + req + "'");
+		e.code = 'MODULE_NOT_FOUND';
+		throw e;
+	}
+	return map[req];
+}
+webpackContext.keys = function webpackContextKeys() {
+	return Object.keys(map);
+};
+webpackContext.resolve = webpackContextResolve;
+module.exports = webpackContext;
+webpackContext.id = "./node_modules/moment/locale sync recursive ^\\.\\/.*$";
+
+/***/ }),
+
 /***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/app.component.html":
 /*!**************************************************************************!*\
   !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/app.component.html ***!
@@ -305,7 +607,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<app-header></app-header>\r\n\r\n<!--Contenedor Contenido Pagina-->\r\n<div class=\"mb-5 container py-3\">\r\n\r\n    <!-- Metricas -->\r\n    <div class=\"container m-auto pb-2 bg-success rounded-top\">\r\n        <h1 style=\"cursor:context-menu\" class=\"mt-5 pt-4 text-center\">Metricas</h1>\r\n    </div>\r\n    <!--Contenedor busqueda-->\r\n    <div class=\"container pt-1 bg-secondary rounded-bottom\">\r\n        <div>\r\n            <div class=\"contenedor py-3\">\r\n                <form>\r\n                    <div class=\"tab-pane fade show active\" id=\"nav-Pregunta1ACT\" role=\"tabpanel\"\r\n                        aria-labelledby=\"nav-Pregunta1ACT-tab\">\r\n                        <div class=\"form-group\">\r\n                            <h4 style=\"cursor:context-menu\" class=\"pb-1 pt-3 text-center text-white font-weight-bold\">\r\n                                Buscar Actividades</h4>\r\n                            <!--Buscar Actividad-->\r\n                            <div>\r\n                                <div class=\"contenedor py-3\">\r\n                                    <form #frmBuscarActividad=\"ngForm\"\r\n                                        (ngSubmit)=\"saveDataActividad(frmBuscarActvidad)\">\r\n                                        <div class=\"form-group\">\r\n                                            <!--Barra busqueda-->\r\n                                            <br>\r\n                                            <div class=\"form-inline\">\r\n                                                <input type=\"text\" class=\"form-control col-md-8\"\r\n                                                    id=\"inputTextoBusquedaActividad\"\r\n                                                    placeholder=\"Busqueda por nombre de la Actividad\"\r\n                                                    [(ngModel)]=\"nombreActividadSelected\"\r\n                                                    name=\"nombreActividadSelected\">\r\n                                            </div>\r\n                                        </div>\r\n                                        <label for=\"inputState\" class=\"text-white\">Filtros:</label>\r\n                                        <div class=\"form-row pb-3\">\r\n                                            <!--Filtros-->\r\n                                            <div class=\"form-group col-3\">\r\n                                                <label for=\"inputMateriaA\" class=\"text-white\">Materia</label>\r\n                                                <select [(ngModel)]=\"materiaSelectedA\" id=\"inputMateriaA\"\r\n                                                    name=\"materiaA\" class=\"form-control\" ngModel required>\r\n                                                    <option selected></option>\r\n                                                    <option *ngFor=\"let mater of materias\" [value]=\"mater.id_materia\">\r\n                                                        {{mater.nombre_materia}}</option>\r\n                                                </select>\r\n                                            </div>\r\n                                            <div class=\"form-group col-3\">\r\n                                                <label for=\"inputGradoA\" class=\"text-white\">Grado</label>\r\n                                                <select [(ngModel)]=\"gradoSelectedA\" id=\"inputGradoA\" name=\"gradoA\"\r\n                                                    class=\"form-control\" ngModel required>\r\n                                                    <option selected></option>\r\n                                                    <option *ngFor=\"let grad of grados\" [value]=\"grad.id_grado\">\r\n                                                        {{grad.nombre_grado}}\r\n                                                    </option>\r\n                                                </select>\r\n                                            </div>\r\n                                        </div>\r\n                                        <!--Filtro Competencia-->\r\n                                        <div class=\"form-group col px-0\">\r\n                                            <label for=\"inputDocenteA\" class=\"text-white\">Buscador Competencia</label>\r\n                                            <input type=\"text\" class=\"form-control col-5\"\r\n                                                id=\"inputTextoBusquedaCompetencia\" placeholder=\"Ingrese palabra clave\"\r\n                                                [(ngModel)]=\"nombreCompetenciaSelected\" name=\"inputBusquedaCompetencia\">\r\n                                        </div>\r\n                                        <div class=\"form-row pb-3\">\r\n                                            <div class=\"form-group col\">\r\n                                                <label for=\"inputDocenteA\" class=\"text-white\">Competencia</label>\r\n                                                <select [(ngModel)]=\"competenciaSelectedA\" id=\"inputCompetenciaA\"\r\n                                                    name=\"competenciaA\" class=\"form-control\"\r\n                                                    onfocus='if(this.options.length > 2){ this.size = 8; }'\r\n                                                    onblur='this.size=1;' onchange='this.size=1; this.blur();' ngModel\r\n                                                    required>\r\n                                                    <option class=\"col-auto px-0\" selected></option>\r\n                                                    <option class=\"col-auto px-0\" selected [value]=0>Sin Competencia\r\n                                                    </option>\r\n                                                    <option class=\"col-auto px-0\"\r\n                                                        *ngFor=\"let compe of competencias | filterCompetencia: nombreCompetenciaSelected:materiaSelectedA:gradoSelectedA\"\r\n                                                        [value]=\"compe.id_competencia\">{{(compe.nombre_competencia)}}\r\n                                                    </option>\r\n                                                </select>\r\n                                                <!--el valor seleccionado es {{competenciaSelectedA}}-->\r\n                                            </div>\r\n                                        </div>\r\n                                        <!--Tabla de Resultados-->\r\n                                        <label for=\"inputState\" class=\"text-white\">Resultados:</label>\r\n                                        <div class=\"col container p-4 my bg-light rounded table-wrapper-scroll-y my-custom-scrollbar\"\r\n                                            style=\"width: 95%; height: 450px\">\r\n                                            <!--Resultado-->\r\n                                            <div class=\"row-1\"\r\n                                                *ngFor=\"let actividad of actividadVisualizar | filterActividad: nombreActividadSelected:materiaSelectedA:gradoSelectedA:id_docenteAuth:competenciaSelectedA\">\r\n                                                <div class=\"card mb-4 border-0\" style=\"max-width: 1440px;\">\r\n                                                    <div class=\"card-footer p-2 bg-warning rounded-top\">\r\n                                                        <h5 class=\"card-title m-1\">{{actividad.titulo_actividad}}</h5>\r\n                                                    </div>\r\n                                                    <div class=\"row no-gutters border border-top-0 border-secondary\">\r\n                                                        <div class=\"col\" style=\"max-width: 840px;\">\r\n                                                            <div class=\"card-body p-2\">\r\n                                                                <p class=\"card-text \">Descripcion:\r\n                                                                    {{actividad.descripcion_actividad}}.</p>\r\n                                                                <div>\r\n                                                                    <p class=\"card-text\"><small\r\n                                                                            class=\"text-muted\">Materia:\r\n                                                                            {{actividad.materia}}</small></p>\r\n                                                                </div>\r\n                                                                <div>\r\n                                                                    <p class=\"card-text\"><small\r\n                                                                            class=\"text-muted\">Grado:\r\n                                                                            {{actividad.id_grado}}</small></p>\r\n                                                                </div>\r\n                                                                <div>\r\n                                                                    <p class=\"card-text\"><small\r\n                                                                            class=\"text-muted\">Competencia:\r\n                                                                            {{actividad.competencia}}</small></p>\r\n                                                                </div>\r\n                                                                <div>\r\n                                                                    <p class=\"card-text\"><small\r\n                                                                            class=\"text-muted\">Profesor:\r\n                                                                            {{actividad.docente}}</small></p>\r\n                                                                </div>\r\n                                                            </div>\r\n                                                        </div>\r\n                                                    </div>\r\n                                                    <!--Boton ver Metricas Actividad-->\r\n                                                    <div\r\n                                                        class=\"card-footer bg-secondary row justify-content-md-center no-gutters p-1\">\r\n                                                        <a class=\"btn bg-success font-weight-bold\" data-toggle=\"modal\"\r\n                                                            data-target=\"#mimodalejemplo\"\r\n                                                            (click)=\"getActividadinModal(actividad)\">Ver Metricas</a>\r\n                                                    </div>\r\n                                                </div>\r\n                                            </div>\r\n                                        </div>\r\n                                    </form>\r\n                                </div>\r\n                            </div>\r\n                        </div>\r\n                    </div>\r\n                </form>\r\n            </div>\r\n        </div>\r\n        <hr class=\"style10\">\r\n        <br>\r\n    </div>\r\n\r\n    <!-- Modal Actividad Seleccionada -->\r\n    <div class=\"modal fade col\" id=\"mimodalejemplo\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"myModalLabel\"\r\n        style=\"overflow-y: scroll;\">\r\n        <div class=\"modal-dialog modal-lg\" role=\"document\">\r\n            <div class=\"modal-content \">\r\n                <div class=\"modal-header bg-light\">\r\n                    <h4 class=\"modal-title text-center my-0\" id=\"myModalLabel\">Actividad Seleccionada</h4>\r\n                    <button type=\"button\" class=\"close \" data-dismiss=\"modal\" aria-label=\"Close\">\r\n                        <span aria-hidden=\"true\">&times;</span>\r\n                    </button>\r\n                </div>\r\n                <div class=\"modal-body bg-light\">\r\n                    <div class=\"\">\r\n                        <div>\r\n                            <h3 style=\"cursor:context-menu\" class=\"text-center bg-warning py-4\">\r\n                                {{ActividadService.selectedActividad.titulo_actividad}}</h3>\r\n                        </div>\r\n                        <div class=\"row-1\">\r\n                            <div class=\"card mb-4 border-0\" style=\"max-width: 1440px;\">\r\n                                <div class=\"row no-gutters\">\r\n                                    <div class=\"col-md-10\" style=\"max-width: 840px;\">\r\n                                        <div class=\"card-body p-2\">\r\n                                            <div>\r\n                                                <h5 class=\"\">Descripcion:\r\n                                                    {{ActividadService.selectedActividad.descripcion_actividad}}</h5>\r\n                                            </div>\r\n                                            <div>\r\n                                                <p class=\"card-text\"><small class=\"text-muted\">Materia:\r\n                                                        {{ActividadService.selectedActividad.materia}}</small>\r\n                                                </p>\r\n                                            </div>\r\n                                            <div>\r\n                                                <p class=\"card-text\"><small class=\"text-muted\">Grado:\r\n                                                        {{ActividadService.selectedActividad.id_grado}}</small>\r\n                                                </p>\r\n                                            </div>\r\n                                            <div>\r\n                                                <p class=\"card-text\"><small class=\"text-muted\">Competencia:\r\n                                                        {{ActividadService.selectedActividad.competencia}}</small></p>\r\n                                            </div>\r\n                                            <div>\r\n                                                <p class=\"card-text\"><small class=\"text-muted\">Profesor:\r\n                                                        {{ActividadService.selectedActividad.docente}}</small>\r\n                                                </p>\r\n                                            </div>\r\n                                        </div>\r\n                                    </div>\r\n                                </div>\r\n                            </div>\r\n                        </div>\r\n                        <hr class=\"style10\">\r\n\r\n                        <!--Metricas Globales Actividad-->\r\n                        <div>\r\n                            <h5 style=\"cursor:context-menu\" class=\"\">Metricas Actividad:</h5>\r\n                        </div>\r\n                        <p class=\"card-text mb-1 ml-2\">Estudiantes participando en la Actividad:\r\n                            {{metricasActividad.inicio}} </p>\r\n                        <div class=\"row-1\">\r\n                            <div class=\"card mb-4 border-0\" style=\"max-width: 1440px;\">\r\n                                <div class=\"row no-gutters \">\r\n                                    <div class=\"col\" style=\"max-width: 840px;\">\r\n                                        <div class=\"card-body p-2\">\r\n                                            <p class=\"card-text mb-1 ml-2\">Acciones</p>\r\n                                            <div>\r\n                                                <a class=\"card-text\"><small class=\"text-muted\">Estudiantes que vieron el\r\n                                                        Contenido: </small></a>\r\n                                                <a> {{metricasActividad.contenido}}</a>\r\n                                            </div>\r\n                                            <div>\r\n                                                <a class=\"card-text\"><small class=\"text-muted\">Estudiantes que hicieron\r\n                                                        el Quiz: </small></a>\r\n                                                <a> {{metricasActividad.quiz}}</a>\r\n                                            </div>\r\n                                            <div>\r\n                                                <a class=\"card-text\"><small class=\"text-muted\">Estudiantes que hicieron\r\n                                                        el Taller: </small></a>\r\n                                                <a> {{metricasActividad.taller}}</a>\r\n                                            </div>\r\n                                            <div>\r\n                                                <a class=\"card-text\"><small class=\"text-muted\">Estudiantes que hicieron\r\n                                                        la Evaluación: </small></a>\r\n                                                <a> {{metricasActividad.evaluacion}}</a>\r\n                                            </div>\r\n                                        </div>\r\n                                    </div>\r\n                                    <div class=\"col my-auto\" style=\"max-width: 840px;\">\r\n                                        <div class=\"card-body p-2\">\r\n                                            <p class=\"card-text mb-1 ml-2\">Notas</p>\r\n                                            <div>\r\n                                                <a class=\"card-text\"><small class=\"text-muted\">Promedio Nota Quiz de\r\n                                                        todos los estudiantes: </small></a>\r\n                                                <a> {{metricasActividad.nota_quiz}}</a>\r\n                                            </div>\r\n                                            <div>\r\n                                                <a class=\"card-text\"><small class=\"text-muted\">Promedio Nota Evaluacion\r\n                                                        de todos los estudiantes: </small></a>\r\n                                                <a> {{metricasActividad.nota_evaluacion}}</a>\r\n                                            </div>\r\n                                            <div>\r\n                                                <a class=\"card-text\"><small class=\"text-muted\">Promedio Nota Final de\r\n                                                        todos los estudiantes: </small></a>\r\n                                                <a> {{metricasActividad.nota_final}}</a>\r\n                                            </div>\r\n                                        </div>\r\n                                    </div>\r\n                                </div>\r\n                            </div>\r\n                        </div>\r\n                        <!-- En esta parte van las metricas del video esta comentado porque no se implemnta en esta version -->\r\n                        <div>\r\n                            <h5 style=\"cursor:context-menu\" class=\"\">Metricas Video:</h5>\r\n                        </div>\r\n                        <hr class=\"style10\">\r\n                        <div class=\"row-1\">\r\n                            <div class=\"card mb-4 border-0\" style=\"max-width: 1440px;\">\r\n                                <div class=\"row no-gutters \">\r\n                                    <div class=\"col\" style=\"max-width: 840px;\">\r\n                                        <div class=\"card-body p-2 text-metricas\">\r\n                                            <div>\r\n                                                <a class=\"card-text\"><small class=\"text-muted\">Contenido: </small></a>\r\n\r\n                                            </div>\r\n                                            <div>\r\n                                                <a class=\"card-text\"><small class=\"text-muted\">Calidad: </small></a>\r\n\r\n                                            </div>\r\n                                            <div>\r\n                                                <a class=\"card-text\"><small class=\"text-muted\">Diseño: </small></a>\r\n\r\n                                            </div>\r\n                                            <div>\r\n                                                <a class=\"card-text\"><small class=\"text-muted\"> Motivación: </small></a>\r\n\r\n                                            </div>\r\n                                            <div>\r\n                                                <a class=\"card-text\"><small class=\"text-muted\"> Sonido: </small></a>\r\n\r\n                                            </div>\r\n\r\n                                        </div>\r\n                                    </div>\r\n                                    <div class=\"col my-auto\" style=\"max-width: 860px;\">\r\n                                        <div class=\"card-body p-2\">\r\n                                            <div *ngFor=\" let review of reviews\">\r\n                                                <div class=\"row\">\r\n                                                    <div class=\"col-sm\">\r\n                                                        <a class=\"card-text\">\r\n                                                            <app-calificacion [calificacion]=\"review.rating\">\r\n                                                            </app-calificacion>\r\n                                                        </a>\r\n                                                    </div>\r\n                                                    <div class=\"col-sm\">\r\n                                                        <span\r\n                                                            style=\"margin-left: 3px; font-weight: bold;\">{{review.rating}}</span>\r\n                                                    </div>\r\n                                                </div>\r\n\r\n                                            </div>\r\n                                        </div>\r\n                                    </div>\r\n                                </div>\r\n\r\n                            </div>\r\n                            <hr class=\"style10\">\r\n                            <app-comentarios [comments]=\"comments\" ></app-comentarios>\r\n                        </div>\r\n                        <hr class=\"style10\">\r\n                        <!--Buscar Esdtudiante-->\r\n                        <label class=\"pt-2\">Buscador:</label>\r\n                        <div class=\"form-group\">\r\n                            <input type=\"text\" class=\"form-control col-md-8\" id=\"inputTextoBusquedaEstudiante\"\r\n                                placeholder=\"Nombre / Apellido\" [(ngModel)]=\"palabraClaveESelected\"\r\n                                name=\"palabraClaveESelected\">\r\n                        </div>\r\n                        <div class=\"form-group col-4\">\r\n                            <label for=\"inputOption\" class=\"\">Estudiantes que:</label>\r\n                            <select [(ngModel)]=\"optionSelected\" id=\"inputOption\" name=\"optionSelected\"\r\n                                class=\"form-control\" ngModel required>\r\n                                <option selected></option>\r\n                                <option *ngFor=\"let option of options\" style=\"overflow-y: scroll;\"\r\n                                    [value]=\"option.valor\">{{option.opcion}}</option>\r\n                            </select>\r\n                        </div>\r\n\r\n                        <!--Resultado Estudiantes-->\r\n                        <div class=\"pt-4 row mx-auto\">\r\n                            <table\r\n                                class=\"mx-auto text-white m-auto rounded table-secondary table-striped table-wrapper-scroll-y my-custom-scrollbar\"\r\n                                style=\"height: 256px;\">\r\n                                <thead class=\"bg-secondary\">\r\n                                    <th class=\"pl-3 pr-5 py-2 text-white\">Nombre Estudiante</th>\r\n                                    <th class=\"pl-4 pr-4 py-2 text-white text-center\">Accion</th>\r\n                                </thead>\r\n                                <tbody class=\"bg-light\">\r\n                                    <tr mdbTableCol\r\n                                        *ngFor=\"let metrica of metricasVisualizar | filterEstudianteMetricas: palabraClaveESelected:optionSelected\">\r\n                                        <td class=\"pl-3 pr-5 py-2 text-dark\">{{ metrica.estudiante }}</td>\r\n                                        <td class=\"pl-4 pr-4 py-2\">\r\n                                            <a class=\"btn bg-success py-0 px-1 text-dark font-weight-bold\"\r\n                                                data-toggle=\"modal\" data-target=\"#mimodalejemplo2\"\r\n                                                (click)=\"getAvanceEstudianteModal(metrica)\">ver Metricas</a>\r\n                                        </td>\r\n                                    </tr>\r\n                                </tbody>\r\n                            </table>\r\n                        </div>\r\n                        <hr class=\"style10\">\r\n\r\n                        <!--Opcion de Reinicio de Actividad-->\r\n                        <div>\r\n                            <h5 style=\"cursor:context-menu\" class=\"\">Reinicio de Actividad:</h5>\r\n                        </div>\r\n                        <label class=\"pt-2\">Al reiniciar la actividad, los datos actuales de los estudiantes que se han\r\n                            almacenado\r\n                            ya no seran tomados encuentas en esta Actividad para generar sus Metricas. Las nuevas\r\n                            Metricas de la\r\n                            actividad seran generadas con los nuevos datos que se obtengan en adelante de los actuales\r\n                            estudiantes\r\n                            o de los nuevos estudiantes.\r\n                        </label>\r\n                        <!--Boton Reiniciar Actividad-->\r\n                        <div class=\"row pt-3 justify-content-md-center no-gutters bg-light\">\r\n                            <button type=\"button\" class=\"btn btn-default bg-warning font-weight-bold\"\r\n                                data-dismiss=\"modal\" data-toggle=\"modal\" data-target=\"#mimodalejemplo3\">Reiniciar\r\n                                Actividad</button>\r\n                        </div>\r\n                        <hr class=\"style10\">\r\n\r\n                    </div>\r\n                </div>\r\n                <div class=\"modal-footer justify-content-md-center no-gutters bg-light\">\r\n                    <button type=\"button\" class=\"btn btn-default bg-warning font-weight-bold\"\r\n                        data-dismiss=\"modal\">Cerrar</button>\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </div>\r\n\r\n    <!-- Modal Metricas Estudiante -->\r\n    <div class=\"modal fade\" id=\"mimodalejemplo2\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"myModalLabel2\">\r\n        <div class=\"modal-dialog modal-lg\" role=\"document\">\r\n            <div class=\"modal-content\">\r\n                <div class=\"modal-header bg-light\">\r\n                    <h4 class=\"modal-title\" id=\"myModalLabel\">Metricas Estudiante</h4>\r\n                    <button class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\">\r\n                        <span aria-hidden=\"true\">&times;</span>\r\n                    </button>\r\n                </div>\r\n                <div class=\"modal-body bg-light\">\r\n                    <!--Metricas Globales Actividad-->\r\n                    <div class=\"pb-2\">\r\n                        <h5 style=\"cursor:context-menu\" class=\"\">Estudiante: {{ metricaVisualizarToSave.estudiante }}\r\n                        </h5>\r\n                    </div>\r\n                    <div class=\"pb-1 row\">\r\n                        <h6 style=\"cursor:context-menu\" class=\"col-3\">Progreso Actividad: </h6>\r\n                    </div>\r\n                    <div class=\"progress\">\r\n                        <div *ngIf=\"bar20\" class=\"progress-bar progress-bar-striped bg-success progress-bar-animated \"\r\n                            role=\"progressbar\" aria-valuenow=\"20\" aria-valuemin=\"0\" aria-valuemax=\"100\"\r\n                            style=\"width:20%\">\r\n                            20%\r\n                        </div>\r\n                        <div *ngIf=\"bar40\" class=\"progress-bar progress-bar-striped bg-success progress-bar-animated \"\r\n                            role=\"progressbar\" aria-valuenow=\"40\" aria-valuemin=\"0\" aria-valuemax=\"100\"\r\n                            style=\"width:40%\">\r\n                            40%\r\n                        </div>\r\n                        <div *ngIf=\"bar60\" class=\"progress-bar progress-bar-striped bg-success progress-bar-animated \"\r\n                            role=\"progressbar\" aria-valuenow=\"60\" aria-valuemin=\"0\" aria-valuemax=\"100\"\r\n                            style=\"width:60%\">\r\n                            60%\r\n                        </div>\r\n                        <div *ngIf=\"bar80\" class=\"progress-bar progress-bar-striped bg-success progress-bar-animated \"\r\n                            role=\"progressbar\" aria-valuenow=\"80\" aria-valuemin=\"0\" aria-valuemax=\"100\"\r\n                            style=\"width:80%\">\r\n                            80%\r\n                        </div>\r\n                        <div *ngIf=\"bar100\" class=\"progress-bar progress-bar-striped bg-success progress-bar-animated \"\r\n                            role=\"progressbar\" aria-valuenow=\"100\" aria-valuemin=\"0\" aria-valuemax=\"100\"\r\n                            style=\"width:100%\">\r\n                            100%\r\n                        </div>\r\n                    </div>\r\n                    <div class=\"row-1\">\r\n                        <div class=\"card mb-4 border-0\" style=\"max-width: 1440px;\">\r\n                            <div class=\"row no-gutters \">\r\n                                <div class=\"col\" style=\"max-width: 840px;\">\r\n                                    <div class=\"card-body p-2\">\r\n                                        <p class=\"card-text mb-1 ml-2\">Acciones</p>\r\n                                        <div>\r\n                                            <a class=\"card-text\"><small class=\"text-muted\">El estudiante inico la\r\n                                                    Actividad: </small></a>\r\n                                            <a> {{metricaVisualizarToSave.inicio}}</a>\r\n                                        </div>\r\n                                        <div>\r\n                                            <a class=\"card-text\"><small class=\"text-muted\">El estudiante vio el\r\n                                                    Contenido: </small></a>\r\n                                            <a> {{metricaVisualizarToSave.contenido}}</a>\r\n                                        </div>\r\n                                        <div>\r\n                                            <a class=\"card-text\"><small class=\"text-muted\">Numero de veces que vio el\r\n                                                    contenido: </small></a>\r\n                                            <a> {{metricaVisualizarToSave.count_contenido}}</a>\r\n                                        </div>\r\n                                        <div>\r\n                                            <a class=\"card-text\"><small class=\"text-muted\">El estudiante hizo el Quiz:\r\n                                                </small></a>\r\n                                            <a> {{metricaVisualizarToSave.quiz}}</a>\r\n                                        </div>\r\n                                        <div>\r\n                                            <a class=\"card-text\"><small class=\"text-muted\">El estudiante hizo el Taller:\r\n                                                </small></a>\r\n                                            <a> {{metricaVisualizarToSave.taller}}</a>\r\n                                        </div>\r\n                                        <div>\r\n                                            <a class=\"card-text\"><small class=\"text-muted\">El estudiante hizo la\r\n                                                    Evaluación: </small></a>\r\n                                            <a> {{metricaVisualizarToSave.evaluacion}}</a>\r\n                                        </div>\r\n                                    </div>\r\n                                </div>\r\n                                <div class=\"col my-auto\" style=\"max-width: 840px;\">\r\n                                    <div class=\"card-body p-2\">\r\n                                        <p class=\"card-text mb-1 ml-2\">Notas</p>\r\n                                        <div>\r\n                                            <a class=\"card-text\"><small class=\"text-muted\">Nota Quiz del estudiante:\r\n                                                </small></a>\r\n                                            <a> {{metricaVisualizarToSave.nota_quiz}}</a>\r\n                                        </div>\r\n                                        <div>\r\n                                            <a class=\"card-text\"><small class=\"text-muted\">Nota Evaluacion del\r\n                                                    estudiante: </small></a>\r\n                                            <a> {{metricaVisualizarToSave.nota_evaluacion}}</a>\r\n                                        </div>\r\n                                        <div>\r\n                                            <a class=\"card-text\"><small class=\"text-muted\">Nota Final del estudiante:\r\n                                                </small></a>\r\n                                            <a> {{metricaVisualizarToSave.nota_final}}</a>\r\n                                        </div>\r\n                                    </div>\r\n                                </div>\r\n                            </div>\r\n                        </div>\r\n                    </div>\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </div>\r\n\r\n    <!--Modal Confirmar Reiniciar Actividad -->\r\n    <div class=\"modal fade\" id=\"mimodalejemplo3\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"myModalLabel3\">\r\n        <div class=\"modal-dialog\" role=\"document\">\r\n            <div class=\"modal-content\">\r\n                <div class=\"modal-header bg-light\">\r\n                    <h5 class=\"modal-title\" id=\"myModalLabel\">Confirmar Acción</h5>\r\n                    <button class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\">\r\n                        <span aria-hidden=\"true\">&times;</span>\r\n                    </button>\r\n                </div>\r\n                <div class=\"modal-body\">\r\n                    Para reiniciar la Actividad presione Aceptar, de lo contrario presione X\r\n                    para cancelar.\r\n                </div>\r\n                <div class=\"modal-footer justify-content-md-center no-gutters bg-light py-1\">\r\n                    <button class=\"btn btn-default bg-warning font-weight-bold\" data-dismiss=\"modal\"\r\n                        (click)=\"reiniciarActividad()\">Aceptar</button>\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </div>\r\n\r\n</div>");
+/* harmony default export */ __webpack_exports__["default"] = ("<app-header></app-header>\r\n\r\n<!--Contenedor Contenido Pagina-->\r\n<div class=\"mb-5 container py-3\">\r\n\r\n    <!-- Metricas -->\r\n    <div class=\"container m-auto pb-2 bg-success rounded-top\">\r\n        <h1 style=\"cursor:context-menu\" class=\"mt-5 pt-4 text-center\">Metricas</h1>\r\n    </div>\r\n    <!--Contenedor busqueda-->\r\n    <div class=\"container pt-1 bg-secondary rounded-bottom\">\r\n        <div>\r\n            <div class=\"contenedor py-3\">\r\n                <form>\r\n                    <div class=\"tab-pane fade show active\" id=\"nav-Pregunta1ACT\" role=\"tabpanel\"\r\n                        aria-labelledby=\"nav-Pregunta1ACT-tab\">\r\n                        <div class=\"form-group\">\r\n                            <h4 style=\"cursor:context-menu\" class=\"pb-1 pt-3 mb-3 text-white font-weight-bold\">\r\n                                Buscar Actividades</h4>\r\n                            <!--Buscar Actividad-->\r\n                            <div>\r\n                                <form #frmBuscarActividad=\"ngForm\" (ngSubmit)=\"saveDataActividad(frmBuscarActvidad)\">\r\n                                    <div class=\"form-row\">\r\n\r\n                                        <div class=\"col-sm-6\">\r\n\r\n                                            <label for=\"inputTextoBusquedaActividad\" class=\"text-white\">Buscador\r\n                                                Actividad</label>\r\n                                            <input type=\"text\" class=\"form-control\" id=\"inputTextoBusquedaActividad\"\r\n                                                placeholder=\"Busqueda por nombre de la Actividad\"\r\n                                                [(ngModel)]=\"nombreActividadSelected\" name=\"nombreActividadSelected\">\r\n\r\n                                        </div>\r\n                                        <div class=\"col-sm-3\">\r\n                                            <label for=\"inputMateriaA\" class=\"text-white\">Materia</label>\r\n                                            <select [(ngModel)]=\"materiaSelectedA\" id=\"inputMateriaA\" name=\"materiaA\"\r\n                                                class=\"form-control\" ngModel required>\r\n                                                <option selected></option>\r\n                                                <option *ngFor=\"let mater of materias\" [value]=\"mater.id_materia\">\r\n                                                    {{mater.nombre_materia}}</option>\r\n                                            </select>\r\n                                        </div>\r\n                                        <div class=\"col-sm-3\">\r\n                                            <label for=\"inputGradoA\" class=\"text-white\">Grado</label>\r\n                                            <select [(ngModel)]=\"gradoSelectedA\" id=\"inputGradoA\" name=\"gradoA\"\r\n                                                class=\"form-control\" ngModel required>\r\n                                                <option selected></option>\r\n                                                <option *ngFor=\"let grad of grados\" [value]=\"grad.id_grado\">\r\n                                                    {{grad.nombre_grado}}\r\n                                                </option>\r\n                                            </select>\r\n                                        </div>\r\n\r\n                                    </div>\r\n                                    <div class=\"form-row mt-3\">\r\n                                        <div class=\"col-sm-6\">\r\n                                            <label for=\"inputDocenteA\" class=\"text-white\">Buscador Competencia</label>\r\n                                            <input type=\"text\" class=\"form-control\" id=\"inputTextoBusquedaCompetencia\"\r\n                                                placeholder=\"Ingrese palabra clave\"\r\n                                                [(ngModel)]=\"nombreCompetenciaSelected\" name=\"inputBusquedaCompetencia\">\r\n                                        </div>\r\n                                        <div class=\"col-sm-6\">\r\n                                            <label for=\"inputDocenteA\" class=\"text-white\">Competencia</label>\r\n                                            <select [(ngModel)]=\"competenciaSelectedA\" id=\"inputCompetenciaA\"\r\n                                                name=\"competenciaA\" class=\"form-control\"\r\n                                                onfocus='if(this.options.length > 2){ this.size = 8; }'\r\n                                                onblur='this.size=1;' onchange='this.size=1; this.blur();' ngModel\r\n                                                required>\r\n                                                <option class=\"col-auto px-0\" selected></option>\r\n                                                <option class=\"col-auto px-0\" selected [value]=0>Sin Competencia\r\n                                                </option>\r\n                                                <option class=\"col-auto px-0\"\r\n                                                    *ngFor=\"let compe of competencias | filterCompetencia: nombreCompetenciaSelected:materiaSelectedA:gradoSelectedA\"\r\n                                                    [value]=\"compe.id_competencia\">{{(compe.nombre_competencia)}}\r\n                                                </option>\r\n                                            </select>\r\n                                        </div>\r\n\r\n                                    </div>\r\n                                </form>\r\n                                <div class=\"contenedor py-3\">\r\n                                    <form #frmBuscarActividad=\"ngForm\"\r\n                                        (ngSubmit)=\"saveDataActividad(frmBuscarActvidad)\">\r\n\r\n                                        <!--Tabla de Resultados-->\r\n                                        <label for=\"inputState\" class=\"text-white\">Resultados:</label>\r\n                                        <div class=\"col container p-4 my bg-light rounded table-wrapper-scroll-y my-custom-scrollbar\"\r\n                                            style=\"width: 95%; height: 450px\">\r\n                                            <!--Resultado-->\r\n                                            <div class=\"row-1\"\r\n                                                *ngFor=\"let actividad of actividadVisualizar | filterActividad: nombreActividadSelected:materiaSelectedA:gradoSelectedA:id_docenteAuth:competenciaSelectedA\">\r\n                                                <div class=\"card mb-4 border-0\" style=\"max-width: 1440px;\">\r\n                                                    <div class=\"card-footer p-2 bg-warning rounded-top\">\r\n                                                        <h5 class=\"card-title m-1\">{{actividad.titulo_actividad}}</h5>\r\n                                                    </div>\r\n                                                    <div class=\"row no-gutters border border-top-0 border-secondary\">\r\n                                                        <div class=\"col\" style=\"max-width: 840px;\">\r\n                                                            <div class=\"card-body p-2\">\r\n                                                                <p class=\"card-text \">Descripcion:\r\n                                                                    {{actividad.descripcion_actividad}}.</p>\r\n                                                                <div>\r\n                                                                    <p class=\"card-text\"><small\r\n                                                                            class=\"text-muted\">Materia:\r\n                                                                            {{actividad.materia}}</small></p>\r\n                                                                </div>\r\n                                                                <div>\r\n                                                                    <p class=\"card-text\"><small\r\n                                                                            class=\"text-muted\">Grado:\r\n                                                                            {{actividad.id_grado}}</small></p>\r\n                                                                </div>\r\n                                                                <div>\r\n                                                                    <p class=\"card-text\"><small\r\n                                                                            class=\"text-muted\">Competencia:\r\n                                                                            {{actividad.competencia}}</small></p>\r\n                                                                </div>\r\n                                                                <div>\r\n                                                                    <p class=\"card-text\"><small\r\n                                                                            class=\"text-muted\">Profesor:\r\n                                                                            {{actividad.docente}}</small></p>\r\n                                                                </div>\r\n\r\n                                                            </div>\r\n                                                        </div>\r\n                                                    </div>\r\n                                                    <!--Boton ver Metricas Actividad-->\r\n                                                    <div\r\n                                                        class=\"card-footer bg-secondary row justify-content-md-center no-gutters p-1\">\r\n                                                        <a class=\"btn bg-success font-weight-bold\" data-toggle=\"modal\"\r\n                                                            data-target=\"#mimodalejemplo\"\r\n                                                            (click)=\"getActividadinModal(actividad)\">Ver Metricas</a>\r\n                                                    </div>\r\n                                                </div>\r\n                                            </div>\r\n                                        </div>\r\n                                    </form>\r\n                                </div>\r\n                            </div>\r\n                        </div>\r\n                    </div>\r\n                </form>\r\n            </div>\r\n        </div>\r\n        <hr class=\"style10\">\r\n        <br>\r\n    </div>\r\n\r\n    <!-- Modal Actividad Seleccionada -->\r\n    <div class=\"modal fade col\" id=\"mimodalejemplo\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"myModalLabel\"\r\n        style=\"overflow-y: scroll;\">\r\n        <div class=\"modal-dialog modal-lg\" role=\"document\">\r\n            <div class=\"modal-content \">\r\n\r\n\r\n\r\n                <div class=\"modal-header bg-warning\">\r\n                    <h4 class=\"modal-title text-center my-0\" id=\"myModalLabel\">\r\n                        {{ActividadService.selectedActividad.titulo_actividad}}</h4>\r\n                    <button type=\"button\" class=\"close \" data-dismiss=\"modal\" aria-label=\"Close\">\r\n                        <span aria-hidden=\"true\">&times;</span>\r\n                    </button>\r\n                </div>\r\n                <div class=\"modal-body bg-light\">\r\n                    <div class=\"card\">\r\n                        <div class=\"card-body\">\r\n                            <div class=\"\">\r\n                                <div class=\"container\">\r\n                                    <div class=\"row\">\r\n                                        <div class=\"col-sm-6 text-center\">\r\n                                            <h5>Total de estudiantes</h5>\r\n                                            <img src=\"assets/img/iconrobot.png\" class=\"rounded-circle\">\r\n                                            <h6>{{metricasActividad.inicio}}</h6>\r\n\r\n                                        </div>\r\n                                        <div class=\"col-sm-6\">\r\n                                            <div class=\"row-1\">\r\n                                                <div class=\"mb-4 border-0\" style=\"max-width: 1440px;\">\r\n                                                    <div class=\"row no-gutters\">\r\n                                                        <div class=\"col-md-10\" style=\"max-width: 840px;\">\r\n                                                            <div class=\"p-2\">\r\n\r\n                                                                <div>\r\n                                                                    <p class=\"card-text\"><small\r\n                                                                            class=\"text-muted\">Grado:\r\n                                                                            {{ActividadService.selectedActividad.id_grado}}</small>\r\n                                                                    </p>\r\n                                                                </div>\r\n                                                                <div>\r\n                                                                    <p class=\"card-text\"><small\r\n                                                                            class=\"text-muted\">Materia:\r\n                                                                            {{ActividadService.selectedActividad.materia}}</small>\r\n                                                                    </p>\r\n                                                                </div>\r\n                                                                <div>\r\n                                                                    <p class=\"card-text\"><small\r\n                                                                            class=\"text-muted\">Profesor:\r\n                                                                            {{ActividadService.selectedActividad.docente}}</small>\r\n                                                                    </p>\r\n                                                                </div>\r\n\r\n                                                                <div>\r\n                                                                    <p class=\"card-text\"><small\r\n                                                                            class=\"text-muted\">Competencia:\r\n                                                                            {{ActividadService.selectedActividad.competencia}}</small>\r\n                                                                    </p>\r\n                                                                </div>\r\n\r\n                                                                <div>\r\n                                                                    <p class=\"card-text\">\r\n                                                                        <small class=\"text-muted\">Descripción:\r\n                                                                            {{ActividadService.selectedActividad.descripcion_actividad}}</small>\r\n                                                                    </p>\r\n                                                                </div>\r\n                                                            </div>\r\n                                                            <div class=\"text-center\"><button type=\"button\"\r\n                                                                    class=\"btn btn-default bg-danger font-weight-bold text-white \"\r\n                                                                    data-dismiss=\"modal\" data-toggle=\"modal\"\r\n                                                                    data-target=\"#mimodalejemplo3\">Reiniciar\r\n                                                                    Actividad</button></div>\r\n                                                        </div>\r\n                                                    </div>\r\n                                                </div>\r\n                                            </div>\r\n                                        </div>\r\n                                    </div>\r\n                                </div>\r\n                                <!--Metricas Globales Actividad-->\r\n\r\n                            </div>\r\n                        </div>\r\n                    </div>\r\n                    <div class=\"card mt-3\">\r\n                        <div class=\"card-body\">\r\n                            <div>\r\n                                <h5 style=\"cursor:context-menu\">Metri\r\n                                    \r\n                                    cas Actividad Grupales</h5>\r\n                            </div>\r\n                            <div class=\"row-1\">\r\n                                <div class=\"mb-4 border-0\" style=\"max-width: 1440px;\">\r\n                                    <div class=\"row no-gutters \">\r\n                                        <div class=\"col\" style=\"max-width: 840px;\">\r\n                                            <div class=\"card-body p-2\">\r\n                                                <h6 class=\"text-center\">Acciones de Actividad</h6>\r\n                                                <div style=\"display: block; height: 300px; width: 300px;\">\r\n                                                    <canvas baseChart width=\"200\" height=\"200\"\r\n                                                        [datasets]=\"actionChartData\" [labels]=\"actionChartLabels\"\r\n                                                        [options]=\"actionChartOptions\" [colors]=\"actionChartColors\"\r\n                                                        [legend]=\"lineChartLegend\" [chartType]=\"notasChartType\"\r\n                                                        [plugins]=\"lineChartPlugins\">\r\n                                                    </canvas>\r\n                                                </div>\r\n                                            </div>\r\n                                        </div>\r\n                                        <div class=\"col my-auto\" style=\"max-width: 840px;\">\r\n                                            <div class=\"card-body p-2\">\r\n                                                <h6 class=\"text-center\">Promedio de Notas</h6>\r\n                                                <div style=\"display: block; height: 300px; width: 300px;\">\r\n                                                    <canvas baseChart width=\"200\" height=\"200\"\r\n                                                        [datasets]=\"notasChartData\" [labels]=\"notasChartLabels\"\r\n                                                        [options]=\"notasChartOptions\" [colors]=\"lineChartColors\"\r\n                                                        [legend]=\"lineChartLegend\" [chartType]=\"notasChartType\"\r\n                                                        [plugins]=\"lineChartPlugins\">\r\n                                                    </canvas>\r\n                                                </div>\r\n                                            </div>\r\n                                        </div>\r\n                                    </div>\r\n                                </div>\r\n                            </div>\r\n                        </div>\r\n                    </div>\r\n                    <div class=\"card mt-3\">\r\n                        <div class=\"card-body\">\r\n                     <!-- En esta parte van las metricas del video esta comentado porque no se implemnta en esta version -->\r\n                            <div>\r\n                                <h5>Metricas Video</h5>\r\n                            </div>\r\n                            <div class=\"row-1\">\r\n                                <div class=\" mb-4 border-0\" style=\"max-width: 1440px;\">\r\n                                    <div class=\"row no-gutters \">\r\n                                        <div class=\"col\" style=\"max-width: 840px;\">\r\n                                            <div class=\" p-2 text-metricas\">\r\n                                                <div>\r\n                                                    <a class=\"card-text\"><small class=\"text-muted\">Contenido: </small></a>\r\n    \r\n                                                </div>\r\n                                                <div>\r\n                                                    <a class=\"card-text\"><small class=\"text-muted\">Calidad: </small></a>\r\n    \r\n                                                </div>\r\n                                                <div>\r\n                                                    <a class=\"card-text\"><small class=\"text-muted\">Diseño: </small></a>\r\n    \r\n                                                </div>\r\n                                                <div>\r\n                                                    <a class=\"card-text\"><small class=\"text-muted\"> Motivación: </small></a>\r\n    \r\n                                                </div>\r\n                                                <div>\r\n                                                    <a class=\"card-text\"><small class=\"text-muted\"> Sonido: </small></a>\r\n    \r\n                                                </div>\r\n    \r\n                                            </div>\r\n                                        </div>\r\n                                        <div class=\"col my-auto\" style=\"max-width: 860px;\">\r\n                                            <div class=\"card-body p-2\">\r\n                                                <div *ngFor=\" let review of reviews\">\r\n                                                    <div class=\"row\">\r\n                                                        <div class=\"col-sm\">\r\n                                                            <a class=\"card-text\">\r\n                                                                <app-calificacion [calificacion]=\"review.rating\">\r\n                                                                </app-calificacion>\r\n                                                            </a>\r\n                                                        </div>\r\n                                                        <div class=\"col-sm\">\r\n                                                            <span\r\n                                                                style=\"margin-left: 3px; font-weight: bold;\">{{review.rating}}</span>\r\n                                                        </div>\r\n                                                    </div>\r\n    \r\n                                                </div>\r\n                                            </div>\r\n                                        </div>\r\n                                    </div>\r\n    \r\n                                </div>\r\n                                <app-comentarios [comments]=\"comments\" ></app-comentarios>\r\n                            </div>\r\n                        </div>\r\n                    </div>\r\n                     \r\n                    \r\n                    \r\n                    <div class=\"card mt-3\">\r\n                        <div class=\"card-body\">\r\n                            <!--Buscar Esdtudiante-->\r\n                            <h5 class=\"pt-2 \">Metricas de Actividades Individuales</h5>\r\n                            <div class=\"form-row\">\r\n                                <div class=\"col-sm-8\">\r\n                                    <label for=\"inputTextoBusquedaEstudiante\" class=\"\">Buscar Estudiante:</label>\r\n                                    <input type=\"text\" class=\"form-control\" id=\"inputTextoBusquedaEstudiante\"\r\n                                        placeholder=\"Nombre / Apellido\" [(ngModel)]=\"palabraClaveESelected\"\r\n                                        name=\"palabraClaveESelected\">\r\n                                </div>\r\n                                <div class=\"col-sm-4\">\r\n                                    <label for=\"inputOption\" class=\"\">Estudiantes que:</label>\r\n                                    <select [(ngModel)]=\"optionSelected\" id=\"inputOption\" name=\"optionSelected\"\r\n                                        class=\"form-control\" ngModel required>\r\n                                        <option selected></option>\r\n                                        <option *ngFor=\"let option of options\" style=\"overflow-y: scroll;\"\r\n                                            [value]=\"option.valor\">{{option.opcion}}</option>\r\n                                    </select>\r\n                                </div>\r\n                            </div>\r\n\r\n\r\n                            <!--Resultado Estudiantes-->\r\n                            <div class=\"pt-4 row mx-auto\">\r\n                                <table\r\n                                    class=\"mx-auto text-white table-striped table-wrapper-scroll-y my-custom-scrollbar\"\r\n                                    style=\"height: 256px;\">\r\n                                    <thead class=\"bg-dark \">\r\n                                        <th class=\"pl-3 pr-5 py-2 text-white\">Nombre Estudiante</th>\r\n                                        <th class=\"pl-4 pr-4 py-2 text-white text-center\">Acción</th>\r\n                                    </thead>\r\n                                    <tbody class=\"bg-light\">\r\n                                        <tr mdbTableCol\r\n                                            *ngFor=\"let metrica of metricasVisualizar | filterEstudianteMetricas: palabraClaveESelected:optionSelected\">\r\n                                            <td class=\"pl-3 pr-5 py-2 text-dark\">{{ metrica.estudiante }}</td>\r\n                                            <td class=\"pl-4 pr-4 py-2\">\r\n                                                <a class=\"btn bg-warning py-0 px-1 text-dark font-weight-bold\"\r\n                                                    data-toggle=\"modal\" data-target=\"#mimodalejemplo2\"\r\n                                                    (click)=\"getAvanceEstudianteModal(metrica)\">ver Metricas</a>\r\n                                            </td>\r\n                                        </tr>\r\n                                    </tbody>\r\n                                </table>\r\n                            </div>\r\n                        </div>\r\n\r\n                    </div>\r\n                    <div class=\"card mt-3\">\r\n                        <div class=\"card-body\">\r\n                            <!--Boton cerrar modal-->\r\n                            <div class=\"row pt-3 justify-content-md-center no-gutters bg-light\">\r\n                                <button type=\"button\" class=\"btn btn-default bg-warning font-weight-bold ml-3\"\r\n                                    data-dismiss=\"modal\">Cerrar</button>\r\n                            </div>\r\n                        </div>\r\n                    </div>\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </div>\r\n\r\n    <!-- Modal Metricas Estudiante -->\r\n    <div class=\"modal fade\" id=\"mimodalejemplo2\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"myModalLabel2\">\r\n        <div class=\"modal-dialog modal-lg\" role=\"document\">\r\n            <div class=\"modal-content\">\r\n                <div class=\"modal-header bg-warning\">\r\n                    <h3 class=\"modal-title\" id=\"myModalLabel\">Metricas Estudiante</h3>\r\n                    <button class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\">\r\n                        <span aria-hidden=\"true\">&times;</span>\r\n                    </button>\r\n                </div>\r\n                <div class=\"modal-body bg-light\">\r\n                    <!--Metricas Individuales Actividad-->\r\n                    <div class=\"pb-2\">\r\n                        <h3 style=\"cursor:context-menu\" class=\"font-weight-bolder  text-center\">{{\r\n                            metricaVisualizarToSave.estudiante }}\r\n                        </h3>\r\n                    </div>\r\n                    <div class=\"container\">\r\n                        <h5 class=\"\">Acciones</h5>\r\n                        <div class=\"row \" >\r\n                            <div class=\"col-sm-4\" *ngFor=\"let card of cards\" >\r\n                                <div class=\"card bg-success text-dark mt-3\" [ngClass]=\"card.color\">\r\n                                    <div class=\"card-body inline\" style=\"padding: 8px !important;\">\r\n                                        <h5 class=\"text-center \">{{ card.titulo }}</h5>\r\n                                        <p class=\"card-text text-center\">{{ card.descripcion }}</p>\r\n                                    </div>\r\n                                </div>\r\n                            </div>\r\n                        </div>\r\n                    </div>\r\n                    <!-- <div class=\"container\">\r\n                        <h5 class=\"mt-3\">Acciones</h5>\r\n                        <div class=\"row\">\r\n                            <div class=\"col-sm-4\" *ngFor=\"let card of cards\">\r\n                                <div class=\"card bg-success text-dark mt-3\" [ngClass]=\"card.color\">\r\n                                    <fa-icon [icon]=\"faCoffee\" size=\"7x\" class=\"card-img\" alt=\"Card image\"\r\n                                        style=\"color: white; opacity: 0.5; \"></fa-icon>\r\n                                    <div class=\"card-body\">\r\n                                        <div class=\"card-img-overlay\">\r\n                                            <h5 class=\"card-title text-center\">{{ card.titulo }}</h5>\r\n                                            <p class=\"card-text text-center font-weight-bold\">{{ card.descripcion }}</p>\r\n                                        </div>\r\n                                    </div>\r\n                                </div>\r\n                            </div>\r\n                        </div>\r\n                    </div> -->\r\n\r\n                    <div class=\"container mt-3\">\r\n                        <div class=\"row\">\r\n                            <div class=\"col-sm-6\">\r\n                                <circle-progress [percent]=\"porcentajenuevo\" [radius]=\"85\" [outerStrokeWidth]=\"20\"\r\n                                    [innerStrokeWidth]=\"0\" [outerStrokeColor]=\"'#78C000'\" [innerStrokeColor]=\"'#239B56'\"\r\n                                    [unitsFontSize]=\"42\" [animation]=\"true\" [titleFontSize]=\"35\" [titleFontWeight]=\"700\"\r\n                                    [subtitle]=\"'Progreso Estudiante'\" [subtitleFontWeight]=\"500\"\r\n                                    [subtitleFontSize]=\"15\" [responsive]=\"true\"\r\n                                    [animationDuration]=\"1000\"></circle-progress>\r\n                            </div>\r\n                            <div class=\"col-sm-6\">\r\n                                <h6 class=\"text-center\">Notas</h6>\r\n                                <div style=\"display: block; \">\r\n                                    <canvas baseChart width=\"300\" height=\"300\" [datasets]=\"notasEstudiantesChartData\"\r\n                                        [labels]=\"notasEstudiantesChartLabels\" [options]=\"notasChartOptions\"\r\n                                        [colors]=\"lineChartColors\" [legend]=\"lineChartLegend\"\r\n                                        [chartType]=\"notasChartType\" [plugins]=\"lineChartPlugins\">\r\n                                    </canvas>\r\n                                </div>\r\n                            </div>\r\n                        </div>\r\n                    </div>\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </div>\r\n\r\n    <!--Modal Confirmar Reiniciar Actividad -->\r\n    <div class=\"modal fade\" id=\"mimodalejemplo3\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"myModalLabel3\">\r\n        <div class=\"modal-dialog\" role=\"document\">\r\n            <div class=\"modal-content\">\r\n                <div class=\"modal-header bg-light\">\r\n                    <h5 class=\"modal-title\" id=\"myModalLabel\">¿Desea reiniciar la actividad?</h5>\r\n                    <button class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\">\r\n                        <span aria-hidden=\"true\">&times;</span>\r\n                    </button>\r\n                </div>\r\n                <div class=\"modal-body\">\r\n                    Recuerde, una vez que se reinicie la actividad los datos de sus estudiantes\r\n                    se eliminan definitivamente.\r\n                    Presione <b>Aceptar</b> si desea continuar, de lo contrario presione <b>X</b> para cancelar.\r\n                </div>\r\n                <div class=\"modal-footer justify-content-md-center no-gutters bg-light py-1\">\r\n                    <button class=\"btn btn-default bg-warning font-weight-bold\" data-dismiss=\"modal\"\r\n                        (click)=\"reiniciarActividad()\">Aceptar</button>\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</div>");
 
 /***/ }),
 
@@ -750,10 +1052,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _pipes_filter_retrotaller_pipe__WEBPACK_IMPORTED_MODULE_57__ = __webpack_require__(/*! ./pipes/filter-retrotaller.pipe */ "./src/app/pipes/filter-retrotaller.pipe.ts");
 /* harmony import */ var _components_index_paginas__WEBPACK_IMPORTED_MODULE_58__ = __webpack_require__(/*! ./components/index.paginas */ "./src/app/components/index.paginas.ts");
 /* harmony import */ var _components_comentarios_comentarios_component__WEBPACK_IMPORTED_MODULE_59__ = __webpack_require__(/*! ./components/comentarios/comentarios.component */ "./src/app/components/comentarios/comentarios.component.ts");
+/* harmony import */ var ng2_charts__WEBPACK_IMPORTED_MODULE_60__ = __webpack_require__(/*! ng2-charts */ "./node_modules/ng2-charts/fesm2015/ng2-charts.js");
+/* harmony import */ var ng_circle_progress__WEBPACK_IMPORTED_MODULE_61__ = __webpack_require__(/*! ng-circle-progress */ "./node_modules/ng-circle-progress/fesm2015/ng-circle-progress.js");
+/* harmony import */ var _fortawesome_angular_fontawesome__WEBPACK_IMPORTED_MODULE_62__ = __webpack_require__(/*! @fortawesome/angular-fontawesome */ "./node_modules/@fortawesome/angular-fontawesome/fesm2015/angular-fontawesome.js");
 
 // RUTAS
 
 //Componentes
+
+
+
 
 
 
@@ -866,6 +1174,17 @@ AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
             _angular_common_http__WEBPACK_IMPORTED_MODULE_4__["HttpClientModule"],
             _angular_forms__WEBPACK_IMPORTED_MODULE_5__["FormsModule"],
             _angular_common__WEBPACK_IMPORTED_MODULE_28__["CommonModule"],
+            ng2_charts__WEBPACK_IMPORTED_MODULE_60__["ChartsModule"],
+            ng_circle_progress__WEBPACK_IMPORTED_MODULE_61__["NgCircleProgressModule"].forRoot({
+                // set defaults here
+                radius: 100,
+                outerStrokeWidth: 16,
+                innerStrokeWidth: 8,
+                outerStrokeColor: "#78C000",
+                innerStrokeColor: "#C7E596",
+                animationDuration: 300,
+            }),
+            _fortawesome_angular_fontawesome__WEBPACK_IMPORTED_MODULE_62__["FontAwesomeModule"],
             _angular_material_stepper__WEBPACK_IMPORTED_MODULE_6__["MatStepperModule"],
             _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_7__["BrowserAnimationsModule"],
             _angular_material_input__WEBPACK_IMPORTED_MODULE_8__["MatInputModule"],
@@ -876,7 +1195,7 @@ AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
             _angular_material_progress_bar__WEBPACK_IMPORTED_MODULE_11__["MatProgressBarModule"],
             _angular_forms__WEBPACK_IMPORTED_MODULE_5__["ReactiveFormsModule"]
         ],
-        providers: [_services_auth_d_service__WEBPACK_IMPORTED_MODULE_26__["AuthDService"], _services_content_rea_service__WEBPACK_IMPORTED_MODULE_27__["ContentREAService"], _services_actividad_service__WEBPACK_IMPORTED_MODULE_32__["ActividadService"]],
+        providers: [_services_auth_d_service__WEBPACK_IMPORTED_MODULE_26__["AuthDService"], _services_content_rea_service__WEBPACK_IMPORTED_MODULE_27__["ContentREAService"], _services_actividad_service__WEBPACK_IMPORTED_MODULE_32__["ActividadService"], ng2_charts__WEBPACK_IMPORTED_MODULE_60__["ThemeService"]],
         bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_15__["AppComponent"]]
     })
 ], AppModule);
@@ -4730,6 +5049,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _models_metricaActividad__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../models/metricaActividad */ "./src/app/models/metricaActividad.ts");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var chartjs_plugin_datalabels__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! chartjs-plugin-datalabels */ "./node_modules/chartjs-plugin-datalabels/dist/chartjs-plugin-datalabels.js");
+/* harmony import */ var chartjs_plugin_datalabels__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(chartjs_plugin_datalabels__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @fortawesome/free-solid-svg-icons */ "./node_modules/@fortawesome/free-solid-svg-icons/index.es.js");
+
+
 
 
 
@@ -4742,6 +5066,99 @@ let MetricasComponent = class MetricasComponent {
         this.AuthDService = AuthDService;
         this.ActividadService = ActividadService;
         this.router = router;
+        this.faCoffee = _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_8__["faUniversity"];
+        this.actionChartData = [
+            { data: [0, 0, 0, 0] },
+        ];
+        this.notasChartData = [
+            { data: [0, 0, 0] },
+        ];
+        this.notasEstudiantesChartData = [
+            { data: [0, 0, 0] },
+        ];
+        this.progresoActividadChartData = [
+            { data: [0, 0] },
+        ];
+        this.actionChartLabels = ['Vieron Contenido', 'Hicieron el quiz', 'Hicieron el Taller', 'Hicieron la Evaluación'];
+        this.notasChartLabels = ['Promedio Quiz', 'Promedio Taller', 'Promedio Evaluacion'];
+        this.notasEstudiantesChartLabels = ['Nota Quiz', 'Nota Evaluacion', 'Nota Final'];
+        this.progresoActividadChartLabels = ['Progreso Actividad', ''];
+        this.actionChartOptions = {
+            responsive: true,
+            legend: {
+                display: false
+            },
+            plugins: {
+                datalabels: {
+                    anchor: 'end',
+                    align: 'end',
+                    font: {
+                        weight: 'bold'
+                    },
+                    formatter: (value, context) => {
+                        return value; //muestra el valor estatico en el grafico
+                    },
+                },
+            },
+        };
+        this.progresoActividadOptions = {
+            cutoutPercentage: 70,
+            responsive: true,
+        };
+        this.notasChartOptions = {
+            responsive: true,
+            legend: {
+                display: false
+            },
+            scales: {
+                yAxes: [{
+                        ticks: {
+                            beginAtZero: true,
+                            max: 6,
+                            stepSize: 1
+                        }
+                    }]
+            },
+            plugins: {
+                datalabels: {
+                    anchor: 'end',
+                    align: 'end',
+                    font: {
+                        weight: 'bold'
+                    },
+                    formatter: (value, context) => {
+                        return value; //muestra el valor estatico en el grafico
+                    },
+                },
+            },
+        };
+        this.lineChartColors = [
+            {
+                backgroundColor: [
+                    'rgb(255,140,0)',
+                    'rgb(255,140,0)',
+                    'rgb(255,140,0)',
+                    'rgb(255,140,0)',
+                ]
+            }
+        ];
+        this.actionChartColors = [
+            {
+                backgroundColor: [
+                    'rgb(54, 162, 235)',
+                    'rgb(54, 162, 235)',
+                    'rgb(54, 162, 235)',
+                    'rgb(54, 162, 235)',
+                ]
+            }
+        ];
+        this.lineChartLegend = true;
+        this.lineChartType = 'doughnut';
+        this.notasChartType = 'bar';
+        this.progresoActividadChartType = 'doughnut';
+        this.lineChartPlugins = [chartjs_plugin_datalabels__WEBPACK_IMPORTED_MODULE_7___default.a];
+        this.cards = [];
+        this.porcentajenuevo = 0;
     }
     ngOnInit() {
         window.scrollTo(0, 0);
@@ -4774,6 +5191,18 @@ let MetricasComponent = class MetricasComponent {
         this.metricaVisualizarToSave = new _models_metricaVisualizar__WEBPACK_IMPORTED_MODULE_3__["MetricaVisualizarI"];
         this.getOptions();
         this.getActividades();
+    }
+    getcardsInfo() {
+        console.log("se cargo las cards");
+        this.cards = [{ titulo: this.metricaVisualizarToSave.inicio, descripcion: "¿Inició la Actividad?", color: this.metricaVisualizarToSave.inicio.toUpperCase() === "SI" ? 'bg-success' : 'bg-warning' },
+            { titulo: this.metricaVisualizarToSave.contenido, descripcion: "¿Vio el Contenido?", color: this.metricaVisualizarToSave.contenido.toUpperCase() === "SI" ? 'bg-success' : 'bg-warning' },
+            { titulo: this.metricaVisualizarToSave.count_contenido.toString(), descripcion: "# Visualizaciones", color: this.metricaVisualizarToSave.count_contenido === 0 ? 'bg-warning' : 'bg-success' },
+            { titulo: this.metricaVisualizarToSave.quiz, descripcion: "¿Hizo el Quiz?", color: this.metricaVisualizarToSave.quiz.toUpperCase() === "SI" ? 'bg-success' : 'bg-warning' },
+            { titulo: this.metricaVisualizarToSave.taller, descripcion: " ¿Hizo el Taller?", color: this.metricaVisualizarToSave.taller.toUpperCase() === "SI" ? 'bg-success' : 'bg-warning' },
+            { titulo: this.metricaVisualizarToSave.evaluacion, descripcion: "¿Hizo la Evaluación?", color: this.metricaVisualizarToSave.evaluacion.toUpperCase() === "SI" ? 'bg-success' : 'bg-warning' }
+        ];
+        //dataset notas estudiantes individual
+        this.notasEstudiantesChartData = [{ data: [this.metricaVisualizarToSave.nota_quiz, this.metricaVisualizarToSave.nota_evaluacion, this.metricaVisualizarToSave.nota_final], barPercentage: 0.65 }];
     }
     getOptions() {
         this.AuthDService.allSubject().subscribe(res => {
@@ -4817,34 +5246,26 @@ let MetricasComponent = class MetricasComponent {
     }
     getAvanceEstudianteModal(metricaEstudiante) {
         this.saveDataMetricaVisualizar(metricaEstudiante);
-        this.bar20 = false;
-        this.bar40 = false;
-        this.bar60 = false;
-        this.bar80 = false;
-        this.bar100 = false;
+        this.porcentajenuevo = 0;
         if (metricaEstudiante.check_inicio == 1) {
-            if (metricaEstudiante.check_contenido == 1) {
-                if (metricaEstudiante.check_quiz == 1) {
-                    if (metricaEstudiante.check_taller == 1) {
-                        if (metricaEstudiante.check_evaluacion == 1) {
-                            this.bar100 = true;
-                        }
-                        else {
-                            this.bar80 = true;
-                        }
-                    }
-                    else {
-                        this.bar60 = true;
-                    }
-                }
-                else {
-                    this.bar40 = true;
-                }
-            }
-            else {
-                this.bar20 = true;
-            }
+            this.porcentajenuevo += 20;
         }
+        if (metricaEstudiante.check_contenido == 1) {
+            this.porcentajenuevo += 20;
+        }
+        if (metricaEstudiante.check_quiz == 1) {
+            this.porcentajenuevo += 20;
+        }
+        if (metricaEstudiante.check_taller == 1) {
+            this.porcentajenuevo += 20;
+        }
+        if (metricaEstudiante.check_evaluacion == 1) {
+            this.porcentajenuevo += 20;
+        }
+        this.progresoActividadChartData = [
+            { data: [this.porcentajenuevo, 100 - this.porcentajenuevo] },
+        ];
+        this.getcardsInfo();
     }
     //Imprimir Metricas de la Actividad seleccionanda en el Modal 
     getActividadinModal(actividad) {
@@ -4853,6 +5274,7 @@ let MetricasComponent = class MetricasComponent {
         this.ActividadService.selectedActividad = actividad;
         this.saveDataActivity(actividad);
         this.metricasActividad = new _models_metricaActividad__WEBPACK_IMPORTED_MODULE_4__["MetricaActividadI"];
+        console.log(this.ActividadService.selectedActividad);
         this.metricas = new Array;
         this.metricasVisualizar = new Array;
         this.contInicio = 0;
@@ -4967,6 +5389,13 @@ let MetricasComponent = class MetricasComponent {
                     this.metricasActividad.quiz = this.contQuiz;
                     this.metricasActividad.taller = this.contTaller;
                     this.metricasActividad.evaluacion = this.contEvaluacion;
+                    console.log([this.contContenido, this.contQuiz, this.contTaller, this.contEvaluacion]);
+                    this.actionChartData = [
+                        { data: [this.contContenido, this.contQuiz, this.contTaller, this.contEvaluacion], label: "" },
+                    ];
+                    this.notasChartData = [
+                        { data: [this.metricasActividad.nota_quiz, this.metricasActividad.nota_evaluacion, this.metricasActividad.nota_final], label: "", barPercentage: 0.65 },
+                    ];
                     //console.log('metricasActividad', this.metricasActividad);
                     //console.log('metricas', this.metricas);
                     //Creacion Metricas para Visualizar
@@ -8753,7 +9182,7 @@ Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_2__["platformB
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\magda\OneDrive\Documentos\FRONT\SMARTFC-Frontend\SMARTFC-Frontend\src\main.ts */"./src/main.ts");
+module.exports = __webpack_require__(/*! C:\smartfc\SMARTFC-Frontend\src\main.ts */"./src/main.ts");
 
 
 /***/ })
